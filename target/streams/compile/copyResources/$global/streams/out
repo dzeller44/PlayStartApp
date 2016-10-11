@@ -1,0 +1,11 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\application.conf,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\cloudbees.conf,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\cloudbees.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\evolutions,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\mail.conf.example,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\mail.conf.example)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\messages.en,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\messages.en)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\messages.fr,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\messages.fr)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\play.plugins,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\play.plugins)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\routes,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\evolutions\default,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\ebeantest\PlayStartApp\conf\evolutions\default\1.sql,C:\WebDev\ebeantest\PlayStartApp\target\scala-2.10\classes\evolutions\default\1.sql)[0m

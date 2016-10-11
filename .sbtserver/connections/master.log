@@ -1,0 +1,14 @@
+New log file opened at Fri Oct 07 12:30:26 MDT 2016 by 7676@OIT-ZELLERD-L2
+Taking next connection to: 59762
+New client attempting to connect on port: 59763-59762
+  Address = /165.127.33.24:59762
+This client on port 59763 has uuid 618bfac5-4483-471d-9c8d-a3eb0c08a07e configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-618bfac5-4483-471d-9c8d-a3eb0c08a07e
+Taking next connection to: 59762
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+1 daemon clients are connected.
+Server socket thread exiting.
+1 clients open, will close them...
+All client sockets have been closed.
+Closing the 7676@OIT-ZELLERD-L2 logs at Fri Oct 07 12:33:28 MDT 2016, goodbye.
