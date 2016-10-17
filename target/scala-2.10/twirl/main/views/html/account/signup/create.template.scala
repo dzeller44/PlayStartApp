@@ -21,40 +21,79 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class create extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Form[Application.Register],play.twirl.api.HtmlFormat.Appendable] {
+class create extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(signupForm: Form[Application.Register]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply():play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
-def /*3.6*/scripts/*3.13*/:play.twirl.api.HtmlFormat.Appendable = {_display_(
 
-Seq[Any](format.raw/*3.17*/("""
-        """),format.raw/*4.9*/("""<script src=""""),_display_(/*4.23*/routes/*4.29*/.Assets.at("javascripts/password.js")),format.raw/*4.66*/("""" type="text/javascript"></script>
-    """)))};
-Seq[Any](format.raw/*1.42*/("""
+Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.14*/("""
+   
+   
+   """),format.raw/*4.4*/("""<!-- ABOUT -->
+<section id="about">
 
-    """),format.raw/*5.6*/("""
+	<!-- Start Formoid form-->
+	<form class="formoid-solid-dark"
+		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+		method="post">
+		<div class="title">
+			<h2>New User Registration</h2>
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required">*</span>User Name:</label>
+			<div class="item-cont">
+				<input class="large" type="text" name="fullname" required="required"
+					placeholder="Choose a user name..." /><span class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required">*</span>Email:</label>
+			<div class="item-cont">
+				<input class="large" type="email" name="email" required="required"
+					placeholder="Choose a user name..." /><span class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-password">
+			<label class="title"><span class="required">*</span>Password:</label>
+			<div class="item-cont">
+				<input class="large" type="password" name="inputPassword" value=""
+					required="required" placeholder="Create a password..." /><span
+					class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-checkbox">
+			<div class="column column1">
+				<label><input type="checkbox" name="checkbox[]"
+					value="option 1" / required="required"><span>I agree
+						with the terms and conditions *</span></label>
+			</div>
+			<span class="clearfix"></span>
+		</div>
+		<div class="submit">
+			<input type="submit" value="Submit" />
+		</div>
+		<!-- This is needed for bottom shadow to appear... -->
+		<div></div>
+	</form>
 
-"""),_display_(/*7.2*/main(null, scripts)/*7.21*/ {_display_(Seq[Any](format.raw/*7.23*/("""
-    """),format.raw/*8.5*/("""<div class="span3">
-            &nbsp;
-    </div>
+	<div class="loginBlock">
+		<a href="#/login"><div class="loginText">Already have an account? Click here...</div></a>
+	</div>
 
-    <div class="span12">
-        <div class="well">
-        """),_display_(/*14.10*/createFormOnly(signupForm)),format.raw/*14.36*/("""
-        """),format.raw/*15.9*/("""</div>
-    </div>
+</section>
+<!-- //ABOUT -->
+   
 """)))}))
       }
     }
   }
 
-  def render(signupForm:Form[Application.Register]): play.twirl.api.HtmlFormat.Appendable = apply(signupForm)
+  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
 
-  def f:((Form[Application.Register]) => play.twirl.api.HtmlFormat.Appendable) = (signupForm) => apply(signupForm)
+  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
 
   def ref: this.type = this
 
@@ -67,11 +106,11 @@ Seq[Any](format.raw/*1.42*/("""
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Fri Oct 07 09:50:28 MDT 2016
-                  SOURCE: C:/WebDev/ebeantest/PlayStartApp/app/views/account/signup/create.scala.html
-                  HASH: edf139bb9099efe5a5493ac5d3259762da275761
-                  MATRIX: 782->1|900->48|915->55|995->59|1030->68|1070->82|1084->88|1141->125|1220->41|1252->165|1280->168|1307->187|1346->189|1377->194|1516->306|1563->332|1599->341
-                  LINES: 27->1|31->3|31->3|33->3|34->4|34->4|34->4|34->4|36->1|38->5|40->7|40->7|40->7|41->8|47->14|47->14|48->15
+                  DATE: Mon Oct 17 11:29:40 MDT 2016
+                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
+                  HASH: f299d5ab78508cc50e9702303c258e9b449ecd52
+                  MATRIX: 844->1|862->11|901->13|939->25
+                  LINES: 32->1|32->1|32->1|35->4
                   -- GENERATED --
               */
           

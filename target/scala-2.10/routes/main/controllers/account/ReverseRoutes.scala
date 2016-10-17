@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/WebDev/ebeantest/PlayStartApp/conf/routes
-// @DATE:Fri Oct 07 14:46:59 MDT 2016
+// @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
+// @DATE:Mon Oct 17 11:17:28 MDT 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }

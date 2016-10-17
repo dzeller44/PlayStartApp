@@ -55,8 +55,8 @@ Seq[Any](format.raw/*1.14*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Fri Oct 07 09:50:28 MDT 2016
-                  SOURCE: C:/WebDev/ebeantest/PlayStartApp/app/views/dashboard/index.scala.html
+                  DATE: Mon Oct 17 11:17:29 MDT 2016
+                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/dashboard/index.scala.html
                   HASH: 304e1c1492c5fb36b5718f8e8b8653644be4382d
                   MATRIX: 753->1|860->13|888->16|906->26|945->28|977->34
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5

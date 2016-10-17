@@ -74,8 +74,8 @@ Seq[Any](format.raw/*1.73*/("""
 object email extends email_Scope0.email
               /*
                   -- GENERATED --
-                  DATE: Fri Oct 07 09:50:28 MDT 2016
-                  SOURCE: C:/WebDev/ebeantest/PlayStartApp/app/views/account/settings/email.scala.html
+                  DATE: Mon Oct 17 11:17:28 MDT 2016
+                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/settings/email.scala.html
                   HASH: 1e715b40aeebca48c81810872cfc4068688a0187
                   MATRIX: 809->1|990->72|1018->91|1045->93|1057->98|1099->132|1138->134|1170->141|1224->175|1256->182|1284->190|1317->197|1384->255|1424->257|1461->267|1508->287|1692->450|1728->459|1868->572|1909->592|1962->615
                   LINES: 27->1|32->1|34->4|35->5|35->5|35->5|35->5|37->7|37->7|39->9|39->9|41->11|41->11|41->11|43->13|44->14|49->19|50->20|53->23|53->23|55->25

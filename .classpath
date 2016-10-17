@@ -120,7 +120,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/WebDev/eclipse/libs/mysql-connector-java-5.1.34.jar"/>
 	<classpathentry kind="lib" path="C:/WebDev/eclipse/libs/persistence-api-1.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/WebDev/ebeantest/PlayStartApp/target/scala-2.10/classes"/>
-	<classpathentry kind="lib" path="C:/WebDev/ebeantest/PlayStartApp/target/scala-2.10/routes"/>
+	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes"/>
+	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/routes"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -21,51 +21,72 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Form[Application.Register],Form[Application.Login],play.twirl.api.HtmlFormat.Appendable] {
+class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(signupForm: Form[Application.Register], loginForm: Form[Application.Login]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply():play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
-def /*3.2*/scripts/*3.9*/:play.twirl.api.HtmlFormat.Appendable = {_display_(
 
-Seq[Any](format.raw/*3.13*/("""
-    """),format.raw/*4.5*/("""<script src=""""),_display_(/*4.19*/routes/*4.25*/.Assets.at("javascripts/password.js")),format.raw/*4.62*/("""" type="text/javascript"></script>
-""")))};
-Seq[Any](format.raw/*1.78*/("""
+Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.14*/("""
 
-"""),format.raw/*5.2*/("""
 
-"""),_display_(/*7.2*/main(null, scripts)/*7.21*/ {_display_(Seq[Any](format.raw/*7.23*/("""
+"""),format.raw/*4.1*/("""<!-- ABOUT -->
+<section id="about">
 
-  """),_display_(/*9.4*/wflash()),format.raw/*9.12*/("""
-  """),format.raw/*10.3*/("""<div class="col-lg-6">
-      Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de amicitia) querebatur, quod omnibus in rebus homines diligentiores essent; capras et oves quot quisque haberet, dicere posse, amicos quot haberet, non posse dicere et in illis quidem parandis adhibere curam, in amicis eligendis neglegentis esse nec habere quasi signa quaedam et notas, quibus eos qui ad amicitias essent idonei, iudicarent. Sunt igitur firmi et stabiles et constantes eligendi; cuius generis est magna penuria. Et iudicare difficile est sane nisi expertum; experiendum autem est in ipsa amicitia. Ita praecurrit amicitia iudicium tollitque experiendi potestatem.
-  </div>
+	<!-- SERVICES -->
+	<div class="services_block padbot40" data-appear-top-offset="-200"
+		data-animated="fadeInUp">
 
-  <div class="col-lg-6">
-    <div class="well">
-      """),_display_(/*16.8*/login(loginForm)),format.raw/*16.24*/("""
-    """),format.raw/*17.5*/("""</div>
+		<!-- CONTAINER -->
+		<div class="container">
 
-    <div class="well">
-      """),_display_(/*20.8*/views/*20.13*/.html.account.signup.createFormOnly(signupForm)),format.raw/*20.60*/("""
-    """),format.raw/*21.5*/("""</div>
-    
-    <div>
-    	<a href="../app/views/signup2.html">Signup</a>
-    </div>
-    
-  </div>
+			<!-- ROW -->
+			<div class="row">
+				<div class="col-sm-2 margbot30"></div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="#/login">
+						<p>
+							<img src=""""),_display_(/*20.19*/routes/*20.25*/.Assets.at("/img/icon_provider.png")),format.raw/*20.61*/(""""> <b>Business User</b>
+						</p> <span>If you are a provider of services...</span>
+					</a>
+				</div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="#/login">
+						<p>
+							<img src=""""),_display_(/*27.19*/routes/*27.25*/.Assets.at("/img/icon_emergency_mgr2.png")),format.raw/*27.67*/(""""> <b>Emergency
+								Manager</b>
+						</p> <span>If you are looking for services...</span>
+					</a>
+				</div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="#/login">
+						<p>
+							<img src=""""),_display_(/*35.19*/routes/*35.25*/.Assets.at("/img/icon_admin.png")),format.raw/*35.58*/(""""> <b>Administrator</b>
+						</p> <span>Admin Only...</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- //ROW -->
+	</div>
+	<!-- //CONTAINER -->
+	</div>
+	<!-- //SERVICES -->
+
+
+</section>
+<!-- //ABOUT -->
+
 """)))}))
       }
     }
   }
 
-  def render(signupForm:Form[Application.Register],loginForm:Form[Application.Login]): play.twirl.api.HtmlFormat.Appendable = apply(signupForm,loginForm)
+  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
 
-  def f:((Form[Application.Register],Form[Application.Login]) => play.twirl.api.HtmlFormat.Appendable) = (signupForm,loginForm) => apply(signupForm,loginForm)
+  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
 
   def ref: this.type = this
 
@@ -78,11 +99,11 @@ Seq[Any](format.raw/*1.78*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Fri Oct 07 13:20:54 MDT 2016
-                  SOURCE: C:/WebDev/ebeantest/PlayStartApp/app/views/index.scala.html
-                  HASH: d97ea509ef3dc12b674617b1a5d93c490ead99db
-                  MATRIX: 789->1|943->80|957->87|1037->91|1068->96|1108->110|1122->116|1179->153|1254->77|1282->189|1310->192|1337->211|1376->213|1406->218|1434->226|1464->229|2225->964|2262->980|2294->985|2358->1023|2372->1028|2440->1075|2472->1080
-                  LINES: 27->1|31->3|31->3|33->3|34->4|34->4|34->4|34->4|36->1|38->5|40->7|40->7|40->7|42->9|42->9|43->10|49->16|49->16|50->17|53->20|53->20|53->20|54->21
+                  DATE: Mon Oct 17 11:22:10 MDT 2016
+                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/index.scala.html
+                  HASH: ba7a17e1a768ecee2b2d4cbccde5f3902142a4cc
+                  MATRIX: 827->1|845->11|884->13|913->16|1332->408|1347->414|1404->450|1648->667|1663->673|1726->715|1980->942|1995->948|2049->981
+                  LINES: 32->1|32->1|32->1|35->4|51->20|51->20|51->20|58->27|58->27|58->27|66->35|66->35|66->35
                   -- GENERATED --
               */
           

@@ -59,8 +59,8 @@ Seq[Any](format.raw/*1.34*/("""
 object twitterBootstrapInput extends twitterBootstrapInput_Scope0.twitterBootstrapInput
               /*
                   -- GENERATED --
-                  DATE: Fri Oct 07 09:50:28 MDT 2016
-                  SOURCE: C:/WebDev/ebeantest/PlayStartApp/app/views/twitterBootstrapInput.scala.html
+                  DATE: Mon Oct 17 11:17:28 MDT 2016
+                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/twitterBootstrapInput.scala.html
                   HASH: fd7acefa8416986502a99805f451d3ad454a23fe
                   MATRIX: 791->1|918->33|946->96|973->97|1023->121|1053->143|1092->145|1128->151|1174->171|1190->179|1213->182|1242->185|1258->193|1284->199|1323->213|1339->221|1365->227|1396->232|1446->256|1462->264|1503->285|1539->295|1570->317|1610->319|1646->328|1697->352|1714->360|1757->382|1797->392|1825->393
                   LINES: 27->1|32->1|34->5|35->6|35->6|35->6|35->6|35->6|36->7|36->7|36->7|36->7|36->7|36->7|37->8|37->8|37->8|38->9|38->9|38->9|38->9|39->10|39->10|39->10|40->11|40->11|40->11|40->11|41->12|42->13
