@@ -1,25 +1,51 @@
-@(signupForm: Form[Application.Register], loginForm: Form[Application.Login])
+@main(null) {
 
-@scripts = {
-    <script src="@routes.Assets.at("javascripts/password.js")" type="text/javascript"></script>
-}
 
-@main(null, scripts) {
+<!-- ABOUT -->
+<section id="about">
 
-  @wflash()
+	<!-- SERVICES -->
+	<div class="services_block padbot40" data-appear-top-offset="-200"
+		data-animated="fadeInUp">
 
-  <div class="col-lg-6">
-    <div class="well">
-      @login(loginForm)
-    </div>
+		<!-- CONTAINER -->
+		<div class="container">
 
-    <div class="well">
-      @views.html.account.signup.createFormOnly(signupForm)
-    </div>
-    
-    <div>
-    	<a href="../app/views/signup2.html">Signup</a>
-    </div>
-    
-  </div>
+			<!-- ROW -->
+			<div class="row">
+				<div class="col-sm-2 margbot30"></div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="#/login">
+						<p>
+							<img src="@routes.Assets.at("/img/icon_provider.png")"> <b>Business User</b>
+						</p> <span>If you are a provider of services...</span>
+					</a>
+				</div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="#/login">
+						<p>
+							<img src="@routes.Assets.at("/img/icon_emergency_mgr2.png")"> <b>Emergency
+								Manager</b>
+						</p> <span>If you are looking for services...</span>
+					</a>
+				</div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="#/login">
+						<p>
+							<img src="@routes.Assets.at("/img/icon_admin.png")"> <b>Administrator</b>
+						</p> <span>Admin Only...</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- //ROW -->
+	</div>
+	<!-- //CONTAINER -->
+	</div>
+	<!-- //SERVICES -->
+
+
+</section>
+<!-- //ABOUT -->
+
 }
