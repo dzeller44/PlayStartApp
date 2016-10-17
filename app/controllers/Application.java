@@ -10,6 +10,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.libs.Json;
 import views.html.index;
+import views.html.auth;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
@@ -138,6 +139,10 @@ public class Application extends Controller {
 			session("email", loginForm.get().email);
 			return GO_DASHBOARD;
 		}
+	}
+	
+	public Result openLogin() {
+		return ok(auth.render());
 	}
 
 	/**
