@@ -71,7 +71,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object created extends created_Scope0.created
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 10:20:39 MDT 2016
+                  DATE: Tue Oct 18 10:48:41 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/created.scala.html
                   HASH: 719a173265e7feabf4d78205069af6a40c666bee
                   MATRIX: 846->1|859->7|898->9|927->12|1372->430|1423->460|1524->534|1539->540|1578->558
