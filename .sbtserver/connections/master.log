@@ -1,13 +1,14 @@
-New log file opened at Tue Oct 18 12:22:33 MDT 2016 by 2700@OIT-ZELLERD-L2
-Taking next connection to: 51239
-New client attempting to connect on port: 51240-51239
-  Address = /165.127.33.117:51239
-This client on port 51240 has uuid dceb3fd2-e6c0-449b-a627-165208f470f2 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-dceb3fd2-e6c0-449b-a627-165208f470f2
-Taking next connection to: 51239
+New log file opened at Tue Oct 18 14:29:18 MDT 2016 by 9796@OIT-ZELLERD-L2
+Taking next connection to: 60928
+New client attempting to connect on port: 60929-60928
+  Address = /165.127.33.117:60928
+This client on port 60929 has uuid 321fd1d3-97ea-4482-9188-83e871254cd6 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-321fd1d3-97ea-4482-9188-83e871254cd6
+Taking next connection to: 60928
 Checking to see if clients are empty...
 No non-daemon clients connected after 3 min. Shutting down.
 Server socket thread exiting.
 0 clients open, will close them...
 All client sockets have been closed.
-Closing the 2700@OIT-ZELLERD-L2 logs at Tue Oct 18 12:25:33 MDT 2016, goodbye.
+Closing the 9796@OIT-ZELLERD-L2 logs at Tue Oct 18 14:32:19 MDT 2016, goodbye.
+18 14:29:47 MDT 2016, goodbye.

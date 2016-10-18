@@ -129,7 +129,7 @@ public class Application extends Controller {
 	 */
 	public Result authenticate() {
 		Form<Login> loginForm = form(Login.class).bindFromRequest();
-
+		System.out.println("authenticate");
 		Form<Register> registerForm = form(Register.class);
 
 		if (loginForm.hasErrors()) {
@@ -142,6 +142,7 @@ public class Application extends Controller {
 	}
 	
 	public Result openLogin() {
+		System.out.println("openLogin");
 		return ok(auth.render());
 	}
 
