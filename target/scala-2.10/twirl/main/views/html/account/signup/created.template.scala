@@ -31,12 +31,26 @@ class created extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,For
 
 Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("""
 
-    """),format.raw/*3.5*/("""<h3>"""),_display_(/*3.10*/Messages("signup.successfull")),format.raw/*3.40*/("""</h3>
-    """),_display_(/*4.6*/Messages("signup.msg.created")),format.raw/*4.36*/("""
+ """),format.raw/*3.2*/("""<section id="confirmSignup">
+	<!-- Start Formoid form-->
+	<form class="formoid-solid-dark"
+		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+		method="post">
+		<div class="title">
+			<h2>Success</h2>
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required"></span>"""),_display_(/*12.56*/Messages("signup.msg.created")),format.raw/*12.86*/("""</label>
+		</div>
+		<div class="submit">
+			<input type="submit" a href=""""),_display_(/*15.34*/routes/*15.40*/.Application.index),format.raw/*15.58*/(""""
+				value="Continue" />
+		</div>
+		<!-- This is needed for bottom shadow to appear... -->
+		<div></div>
+	</form>
 
-    """),format.raw/*6.5*/("""<div class="form-actions">
-        <a href=""""),_display_(/*7.19*/routes/*7.25*/.Application.index),format.raw/*7.43*/("""" class="btn btn-default">"""),_display_(/*7.70*/Messages("goback")),format.raw/*7.88*/("""</a>
-    </div>
+</section>
 """)))}))
       }
     }
@@ -57,11 +71,11 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object created extends created_Scope0.created
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 09:14:21 MDT 2016
+                  DATE: Tue Oct 18 09:54:26 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/created.scala.html
-                  HASH: a04822f48d59af6debc05bcef8bba08b8e891861
-                  MATRIX: 846->1|859->7|898->9|930->15|961->20|1011->50|1047->61|1097->91|1129->97|1200->142|1214->148|1252->166|1305->193|1343->211
-                  LINES: 32->1|32->1|32->1|34->3|34->3|34->3|35->4|35->4|37->6|38->7|38->7|38->7|38->7|38->7
+                  HASH: 719a173265e7feabf4d78205069af6a40c666bee
+                  MATRIX: 846->1|859->7|898->9|927->12|1372->430|1423->460|1524->534|1539->540|1578->558
+                  LINES: 32->1|32->1|32->1|34->3|43->12|43->12|46->15|46->15|46->15
                   -- GENERATED --
               */
           

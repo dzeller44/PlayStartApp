@@ -31,10 +31,7 @@ class create extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 
 Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.14*/("""
    
-   
-   """),format.raw/*4.4*/("""<!-- ABOUT -->
-<section id="about">
-
+"""),format.raw/*3.1*/("""<section id="signup">
 	<!-- Start Formoid form-->
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
@@ -84,7 +81,6 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 	</div>
 
 </section>
-<!-- //ABOUT -->
    
 """)))}))
       }
@@ -106,11 +102,11 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 09:14:21 MDT 2016
+                  DATE: Tue Oct 18 09:54:26 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: 148063d921908b55be539870b07c91c4e4bb28d6
-                  MATRIX: 844->1|862->11|901->13|939->25
-                  LINES: 32->1|32->1|32->1|35->4
+                  HASH: 7840a72047ea7f850751befee4944a6ffa69e16e
+                  MATRIX: 844->1|862->11|901->13|932->18
+                  LINES: 32->1|32->1|32->1|34->3
                   -- GENERATED --
               */
           

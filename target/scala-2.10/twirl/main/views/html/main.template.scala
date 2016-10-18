@@ -49,32 +49,33 @@ Seq[Any](format.raw/*1.62*/("""
 		<link href=""""),_display_(/*18.16*/routes/*18.22*/.Assets.at("css/owl.carousel.css")),format.raw/*18.56*/("""" rel="stylesheet">
 		<link href=""""),_display_(/*19.16*/routes/*19.22*/.Assets.at("css/style.css")),format.raw/*19.49*/("""" rel="stylesheet" type="text/css" />
 		<link href=""""),_display_(/*20.16*/routes/*20.22*/.Assets.at("css/formoid/formoid-solid-dark.css")),format.raw/*20.70*/("""" rel="stylesheet" type="text/css" />
-      
-	    <script data-main=""""),_display_(/*22.26*/routes/*22.32*/.Assets.at("js/main.js")),format.raw/*22.56*/("""" src=""""),_display_(/*22.64*/routes/*22.70*/.Assets.at("lib/requirejs/require.js")),format.raw/*22.108*/(""""></script>
-	   	<script src=""""),_display_(/*23.20*/routes/*23.26*/.Assets.at("js/bootstrap.js")),format.raw/*23.55*/("""" type="text/javascript"></script>
-	    <script src=""""),_display_(/*24.20*/routes/*24.26*/.Assets.at("js/password.js")),format.raw/*24.54*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*25.17*/routes/*25.23*/.Assets.at("js/jquery.min.js")),format.raw/*25.53*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*26.17*/routes/*26.23*/.Assets.at("js/bootstrap.min.js")),format.raw/*26.56*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*27.17*/routes/*27.23*/.Assets.at("js/jquery.prettyPhoto.js")),format.raw/*27.61*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*28.17*/routes/*28.23*/.Assets.at("js/jquery.nicescroll.min.js")),format.raw/*28.64*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*29.17*/routes/*29.23*/.Assets.at("js/superfish.min.js")),format.raw/*29.56*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*30.17*/routes/*30.23*/.Assets.at("js/jquery.flexslider-min.js")),format.raw/*30.64*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*31.17*/routes/*31.23*/.Assets.at("js/owl.carousel.js")),format.raw/*31.55*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*32.17*/routes/*32.23*/.Assets.at("js/animate.js")),format.raw/*32.50*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*33.17*/routes/*33.23*/.Assets.at("js/jquery.BlackAndWhite.js")),format.raw/*33.63*/(""""></script>
-		<script src=""""),_display_(/*34.17*/routes/*34.23*/.Assets.at("js/myscript.js")),format.raw/*34.51*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*35.17*/routes/*35.23*/.Assets.at("js/global.js")),format.raw/*35.49*/("""" type="text/javascript"></script>
-		<script src=""""),_display_(/*36.17*/routes/*36.23*/.Assets.at("javascripts/password.js")),format.raw/*36.60*/("""" type="text/javascript"></script>
+         
+	    <script data-main=""""),_display_(/*22.26*/routes/*22.32*/.Assets.at("js/main.js")),format.raw/*22.56*/("""" src=""""),_display_(/*22.64*/routes/*22.70*/.Assets.at("js/require.js")),format.raw/*22.97*/(""""></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	   	<script src=""""),_display_(/*24.20*/routes/*24.26*/.Assets.at("js/bootstrap.js")),format.raw/*24.55*/("""" type="text/javascript"></script>
+	    <script src=""""),_display_(/*25.20*/routes/*25.26*/.Assets.at("js/password.js")),format.raw/*25.54*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*26.17*/routes/*26.23*/.Assets.at("js/jquery.min.js")),format.raw/*26.53*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*27.17*/routes/*27.23*/.Assets.at("js/bootstrap.min.js")),format.raw/*27.56*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*28.17*/routes/*28.23*/.Assets.at("js/jquery.prettyPhoto.js")),format.raw/*28.61*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*29.17*/routes/*29.23*/.Assets.at("js/jquery.nicescroll.min.js")),format.raw/*29.64*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*30.17*/routes/*30.23*/.Assets.at("js/superfish.min.js")),format.raw/*30.56*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*31.17*/routes/*31.23*/.Assets.at("js/jquery.flexslider-min.js")),format.raw/*31.64*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*32.17*/routes/*32.23*/.Assets.at("js/owl.carousel.js")),format.raw/*32.55*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*33.17*/routes/*33.23*/.Assets.at("js/animate.js")),format.raw/*33.50*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*34.17*/routes/*34.23*/.Assets.at("js/jquery.BlackAndWhite.js")),format.raw/*34.63*/(""""></script>
+		<script src=""""),_display_(/*35.17*/routes/*35.23*/.Assets.at("js/myscript.js")),format.raw/*35.51*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*36.17*/routes/*36.23*/.Assets.at("js/global.js")),format.raw/*36.49*/("""" type="text/javascript"></script>
+		<script src=""""),_display_(/*37.17*/routes/*37.23*/.Assets.at("js/password.js")),format.raw/*37.51*/("""" type="text/javascript"></script>
 	    <script>
 						//PrettyPhoto
-						jQuery(document).ready(function() """),format.raw/*39.41*/("""{"""),format.raw/*39.42*/("""
-							"""),format.raw/*40.8*/("""$("a[rel^='prettyPhoto']").prettyPhoto();
-						"""),format.raw/*41.7*/("""}"""),format.raw/*41.8*/(""");
+						jQuery(document).ready(function() """),format.raw/*40.41*/("""{"""),format.raw/*40.42*/("""
+							"""),format.raw/*41.8*/("""$("a[rel^='prettyPhoto']").prettyPhoto();
+						"""),format.raw/*42.7*/("""}"""),format.raw/*42.8*/(""");
 
 						//BlackAndWhite
-						$(window).load(function() """),format.raw/*44.33*/("""{"""),format.raw/*44.34*/("""
-							"""),format.raw/*45.8*/("""$('.client_img').BlackAndWhite("""),format.raw/*45.39*/("""{"""),format.raw/*45.40*/("""
-								"""),format.raw/*46.9*/("""hoverEffect : true, // default true
+						$(window).load(function() """),format.raw/*45.33*/("""{"""),format.raw/*45.34*/("""
+							"""),format.raw/*46.8*/("""$('.client_img').BlackAndWhite("""),format.raw/*46.39*/("""{"""),format.raw/*46.40*/("""
+								"""),format.raw/*47.9*/("""hoverEffect : true, // default true
 								// set the path to BnWWorker.js for a superfast implementation
 								webworkerPath : false,
 								// for the images with a fluid width and height
@@ -83,22 +84,22 @@ Seq[Any](format.raw/*1.62*/("""
 								invertHoverEffect : false,
 								// this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
 								intensity : 1,
-								speed : """),format.raw/*55.17*/("""{"""),format.raw/*55.18*/(""" """),format.raw/*55.19*/("""//this property could also be just speed: value for both fadeIn and fadeOut
+								speed : """),format.raw/*56.17*/("""{"""),format.raw/*56.18*/(""" """),format.raw/*56.19*/("""//this property could also be just speed: value for both fadeIn and fadeOut
 									fadeIn : 300, // 200ms for fadeIn animations
 									fadeOut : 300
 								// 800ms for fadeOut animations
-								"""),format.raw/*59.9*/("""}"""),format.raw/*59.10*/(""",
-								onImageReady : function(img) """),format.raw/*60.38*/("""{"""),format.raw/*60.39*/("""
-									"""),format.raw/*61.10*/("""// this callback gets executed anytime an image is converted
-								"""),format.raw/*62.9*/("""}"""),format.raw/*62.10*/("""
-							"""),format.raw/*63.8*/("""}"""),format.raw/*63.9*/(""");
-						"""),format.raw/*64.7*/("""}"""),format.raw/*64.8*/(""");
+								"""),format.raw/*60.9*/("""}"""),format.raw/*60.10*/(""",
+								onImageReady : function(img) """),format.raw/*61.38*/("""{"""),format.raw/*61.39*/("""
+									"""),format.raw/*62.10*/("""// this callback gets executed anytime an image is converted
+								"""),format.raw/*63.9*/("""}"""),format.raw/*63.10*/("""
+							"""),format.raw/*64.8*/("""}"""),format.raw/*64.9*/(""");
+						"""),format.raw/*65.7*/("""}"""),format.raw/*65.8*/(""");
 					</script>    
     </head>
     <body>
 
 <!-- PRELOADER -->
-	<img id="preloader" src=""""),_display_(/*70.28*/routes/*70.34*/.Assets.at("img/preloader.gif")),format.raw/*70.65*/("""" alt="" />
+	<img id="preloader" src=""""),_display_(/*71.28*/routes/*71.34*/.Assets.at("img/preloader.gif")),format.raw/*71.65*/("""" alt="" />
 	<!-- //PRELOADER -->
 	<div class="preloader_hide">
 
@@ -117,7 +118,7 @@ Seq[Any](format.raw/*1.62*/("""
 
 						<!-- LOGO -->
 						<div class="logo pull-left">
-							<a href="/"><img src=""""),_display_(/*89.31*/routes/*89.37*/.Assets.at("img/co/DHSEM_Logo_80px.png")),format.raw/*89.77*/(""""></a>
+							<a href="/"><img src=""""),_display_(/*90.31*/routes/*90.37*/.Assets.at("img/co/DHSEM_Logo_80px.png")),format.raw/*90.77*/(""""></a>
 						</div>
 						<!-- //LOGO -->
 
@@ -169,7 +170,12 @@ Seq[Any](format.raw/*1.62*/("""
 
 
   			<!--  <div ng-view></div> -->
-  			<div>"""),_display_(/*141.12*/content),format.raw/*141.19*/("""</div>
+  			<!-- Used for padding and scrolling -->
+			<section id="blankMain">
+				<!-- BLANK -->
+				<div class="services_block padbot40" data-appear-top-offset="-200"></div>
+			</section>
+  			<div>"""),_display_(/*147.12*/content),format.raw/*147.19*/("""</div>
   
   
   			<!-- Used for padding and scrolling -->
@@ -266,11 +272,11 @@ Seq[Any](format.raw/*1.62*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 09:14:21 MDT 2016
+                  DATE: Tue Oct 18 09:54:26 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/main.scala.html
-                  HASH: 119efb8b25fa53f4592a1683326b2a6205e886d5
-                  MATRIX: 751->1|906->61|934->63|1140->243|1154->249|1203->278|1558->606|1573->612|1619->637|1664->655|1679->661|1735->696|1815->749|1830->755|1883->787|1963->840|1978->846|2032->879|2112->932|2127->938|2177->967|2269->1032|2284->1038|2339->1072|2401->1107|2416->1113|2464->1140|2544->1193|2559->1199|2628->1247|2725->1317|2740->1323|2785->1347|2820->1355|2835->1361|2895->1399|2953->1430|2968->1436|3018->1465|3099->1519|3114->1525|3163->1553|3241->1604|3256->1610|3307->1640|3385->1691|3400->1697|3454->1730|3532->1781|3547->1787|3606->1825|3684->1876|3699->1882|3761->1923|3839->1974|3854->1980|3908->2013|3986->2064|4001->2070|4063->2111|4141->2162|4156->2168|4209->2200|4287->2251|4302->2257|4350->2284|4428->2335|4443->2341|4504->2381|4559->2409|4574->2415|4623->2443|4701->2494|4716->2500|4763->2526|4841->2577|4856->2583|4914->2620|5051->2729|5080->2730|5115->2738|5190->2786|5218->2787|5304->2845|5333->2846|5368->2854|5427->2885|5456->2886|5492->2895|5952->3327|5981->3328|6010->3329|6238->3530|6267->3531|6334->3570|6363->3571|6401->3581|6497->3650|6526->3651|6561->3659|6589->3660|6625->3669|6653->3670|6772->3762|6787->3768|6839->3799|7201->4134|7216->4140|7277->4180|8691->5566|8720->5573
-                  LINES: 27->1|32->1|34->3|39->8|39->8|39->8|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|53->22|53->22|53->22|53->22|53->22|53->22|54->23|54->23|54->23|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|58->27|58->27|58->27|59->28|59->28|59->28|60->29|60->29|60->29|61->30|61->30|61->30|62->31|62->31|62->31|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|66->35|66->35|66->35|67->36|67->36|67->36|70->39|70->39|71->40|72->41|72->41|75->44|75->44|76->45|76->45|76->45|77->46|86->55|86->55|86->55|90->59|90->59|91->60|91->60|92->61|93->62|93->62|94->63|94->63|95->64|95->64|101->70|101->70|101->70|120->89|120->89|120->89|172->141|172->141
+                  HASH: dd49c9ae1ec9fb7114a066d17b020e38ea40248a
+                  MATRIX: 751->1|906->61|934->63|1140->243|1154->249|1203->278|1558->606|1573->612|1619->637|1664->655|1679->661|1735->696|1815->749|1830->755|1883->787|1963->840|1978->846|2032->879|2112->932|2127->938|2177->967|2269->1032|2284->1038|2339->1072|2401->1107|2416->1113|2464->1140|2544->1193|2559->1199|2628->1247|2728->1320|2743->1326|2788->1350|2823->1358|2838->1364|2886->1391|3042->1520|3057->1526|3107->1555|3188->1609|3203->1615|3252->1643|3330->1694|3345->1700|3396->1730|3474->1781|3489->1787|3543->1820|3621->1871|3636->1877|3695->1915|3773->1966|3788->1972|3850->2013|3928->2064|3943->2070|3997->2103|4075->2154|4090->2160|4152->2201|4230->2252|4245->2258|4298->2290|4376->2341|4391->2347|4439->2374|4517->2425|4532->2431|4593->2471|4648->2499|4663->2505|4712->2533|4790->2584|4805->2590|4852->2616|4930->2667|4945->2673|4994->2701|5131->2810|5160->2811|5195->2819|5270->2867|5298->2868|5384->2926|5413->2927|5448->2935|5507->2966|5536->2967|5572->2976|6032->3408|6061->3409|6090->3410|6318->3611|6347->3612|6414->3651|6443->3652|6481->3662|6577->3731|6606->3732|6641->3740|6669->3741|6705->3750|6733->3751|6852->3843|6867->3849|6919->3880|7281->4215|7296->4221|7357->4261|8955->5831|8984->5838
+                  LINES: 27->1|32->1|34->3|39->8|39->8|39->8|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|53->22|53->22|53->22|53->22|53->22|53->22|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|58->27|58->27|58->27|59->28|59->28|59->28|60->29|60->29|60->29|61->30|61->30|61->30|62->31|62->31|62->31|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|66->35|66->35|66->35|67->36|67->36|67->36|68->37|68->37|68->37|71->40|71->40|72->41|73->42|73->42|76->45|76->45|77->46|77->46|77->46|78->47|87->56|87->56|87->56|91->60|91->60|92->61|92->61|93->62|94->63|94->63|95->64|95->64|96->65|96->65|102->71|102->71|102->71|121->90|121->90|121->90|178->147|178->147
                   -- GENERATED --
               */
           

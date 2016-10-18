@@ -31,14 +31,29 @@ class confirm extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,For
 
 Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("""
 
-    """),format.raw/*3.5*/("""<h3>"""),_display_(/*3.10*/Messages("signup.signup")),format.raw/*3.35*/(""" """),format.raw/*3.36*/("""- """),_display_(/*3.39*/Messages("confirmation")),format.raw/*3.63*/("""</h3>
+"""),format.raw/*3.1*/("""<section id="confirmEmail">
+	<!-- Start Formoid form-->
+	<form class="formoid-solid-dark"
+		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+		method="post">
+		<div class="title">
+			<h2>Account Activated</h2>
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required"></span>"""),_display_(/*12.56*/Messages("signup.signup")),format.raw/*12.81*/("""
+				"""),format.raw/*13.5*/("""- """),_display_(/*13.8*/Messages("signup.email.confirmed")),format.raw/*13.42*/("""</label>
+		</div>
+		<div class="submit">
+			<input type="submit" a href=""""),_display_(/*16.34*/routes/*16.40*/.Application.index),format.raw/*16.58*/(""""
+				value="Continue" />
+		</div>
+		<!-- This is needed for bottom shadow to appear... -->
+		<div></div>
+	</form>
 
-    """),_display_(/*5.6*/wflash()),format.raw/*5.14*/("""
+</section>
 
-    """),format.raw/*7.5*/("""<div class="form-actions">
-        <a href=""""),_display_(/*8.19*/routes/*8.25*/.Application.index),format.raw/*8.43*/("""" class="btn btn-default">"""),_display_(/*8.70*/Messages("goback")),format.raw/*8.88*/("""</a>
-    </div>
-""")))}),format.raw/*10.2*/("""
+""")))}),format.raw/*25.2*/("""
 """))
       }
     }
@@ -59,11 +74,11 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object confirm extends confirm_Scope0.confirm
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 09:14:21 MDT 2016
+                  DATE: Tue Oct 18 09:54:26 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/confirm.scala.html
-                  HASH: 9f2fbe04e8eb1061c7bb2fdf360a4c5a0a78d665
-                  MATRIX: 846->1|859->7|898->9|930->15|961->20|1006->45|1034->46|1063->49|1107->73|1144->85|1172->93|1204->99|1275->144|1289->150|1327->168|1380->195|1418->213|1465->230
-                  LINES: 32->1|32->1|32->1|34->3|34->3|34->3|34->3|34->3|34->3|36->5|36->5|38->7|39->8|39->8|39->8|39->8|39->8|41->10
+                  HASH: 2729a9371b23f14aa6c25763f324e3617a864d65
+                  MATRIX: 846->1|859->7|898->9|926->11|1380->438|1426->463|1458->468|1487->471|1542->505|1643->579|1658->585|1697->603|1856->732
+                  LINES: 32->1|32->1|32->1|34->3|43->12|43->12|44->13|44->13|44->13|47->16|47->16|47->16|56->25
                   -- GENERATED --
               */
           

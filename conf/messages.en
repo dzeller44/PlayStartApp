@@ -40,6 +40,7 @@ signup.reset.password=Reset your password
 signup.generate.password=Generate a password
 signup.msg.created=You will receive a confirmation email soon. Check your email to activate your account.
 signup.valid.email=Invalid Email
+signup.email.confirmed=Success - your email has been confirmed and your account is activated.
 
 resetpassword=Reset Password
 resetpassword.mailsent=A mail has been sent, please check your mail.

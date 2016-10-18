@@ -31,10 +31,7 @@ class auth extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format
 
 Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.14*/("""
 
-
-
-"""),format.raw/*5.1*/("""<!-- ABOUT -->
-<section id="about">
+"""),format.raw/*3.1*/("""<section id="authentication">
 	<!-- Start Formoid form-->
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
@@ -71,8 +68,8 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 	</div>
 
 </section>
-<!-- //ABOUT -->
-""")))}),format.raw/*44.2*/("""
+
+""")))}),format.raw/*41.2*/("""
 """))
       }
     }
@@ -93,11 +90,11 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 09:14:21 MDT 2016
+                  DATE: Tue Oct 18 09:54:26 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: 8eacc823b1f436ed1002dd9cebbb5b1ab597223c
-                  MATRIX: 825->1|843->11|882->13|916->21|2309->1384
-                  LINES: 32->1|32->1|32->1|36->5|75->44
+                  HASH: 7dde3cc88b582cde2743f0ff868ea0bfc7e45e5e
+                  MATRIX: 825->1|843->11|882->13|912->17|2282->1357
+                  LINES: 32->1|32->1|32->1|34->3|72->41
                   -- GENERATED --
               */
           

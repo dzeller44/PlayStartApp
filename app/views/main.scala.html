@@ -18,12 +18,13 @@
 		<link href="@routes.Assets.at("css/owl.carousel.css")" rel="stylesheet">
 		<link href="@routes.Assets.at("css/style.css")" rel="stylesheet" type="text/css" />
 		<link href="@routes.Assets.at("css/formoid/formoid-solid-dark.css")" rel="stylesheet" type="text/css" />
-      
+         
 	    <script data-main="@routes.Assets.at("js/main.js")" src="@routes.Assets.at("js/require.js")"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	   	<script src="@routes.Assets.at("js/bootstrap.js")" type="text/javascript"></script>
 	    <script src="@routes.Assets.at("js/password.js")" type="text/javascript"></script>
 		<script src="@routes.Assets.at("js/jquery.min.js")" type="text/javascript"></script>
-		<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("js/bootstrap.min.js")" type="text/javascript"></script>
 		<script src="@routes.Assets.at("js/jquery.prettyPhoto.js")" type="text/javascript"></script>
 		<script src="@routes.Assets.at("js/jquery.nicescroll.min.js")" type="text/javascript"></script>
 		<script src="@routes.Assets.at("js/superfish.min.js")" type="text/javascript"></script>
@@ -33,7 +34,7 @@
 		<script src="@routes.Assets.at("js/jquery.BlackAndWhite.js")"></script>
 		<script src="@routes.Assets.at("js/myscript.js")" type="text/javascript"></script>
 		<script src="@routes.Assets.at("js/global.js")" type="text/javascript"></script>
-		<script src="@routes.Assets.at("javascripts/password.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("js/password.js")" type="text/javascript"></script>
 	    <script>
 						//PrettyPhoto
 						jQuery(document).ready(function() {
@@ -138,6 +139,11 @@
 
 
   			<!--  <div ng-view></div> -->
+  			<!-- Used for padding and scrolling -->
+			<section id="blankMain">
+				<!-- BLANK -->
+				<div class="services_block padbot40" data-appear-top-offset="-200"></div>
+			</section>
   			<div>@content</div>
   
   

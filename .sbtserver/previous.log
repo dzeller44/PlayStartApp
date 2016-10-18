@@ -1,5 +1,5 @@
-New log file opened at Tue Oct 18 09:08:06 MDT 2016 by 2848@OIT-ZELLERD-L2
-jvm 2848@OIT-ZELLERD-L2
+New log file opened at Tue Oct 18 09:43:46 MDT 2016 by 1064@OIT-ZELLERD-L2
+jvm 1064@OIT-ZELLERD-L2
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.101-b13
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\WebDev\git\PlayAuthenticate\project, returning: (playauthenticate-build)
 Loading project definition from C:\WebDev\git\PlayAuthenticate\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@276f1d92, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@24a3b575, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -69,7 +69,7 @@ Set current project to PlayStartApp (in build file:/C:/WebDev/git/PlayAuthentica
 > server-handle-next-server-request
 > {file:/C:/WebDev/git/PlayAuthenticate/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@78d27323, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@1241d12e, check cycles: false
 Read from stdout: Updating {file:/C:/WebDev/git/PlayAuthenticate/}root...
 Updating {file:/C:/WebDev/git/PlayAuthenticate/}root...
 Other repositories:
@@ -84,7 +84,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.10.5 ...
 Resolving org.scala-lang#scala-library;2.10.5 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5cb53281
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@28bcd393
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5
 	found org.scala-lang#scala-library;2.10.5 in sbt-chain
 	[2.10.5] org.scala-lang#scala-library;2.10.5
@@ -7012,7 +7012,7 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	[NOT REQUIRED] org.scala-sbt#control;0.13.8-M3!control.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.8!akka-actor_2.10.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.10;2.3.8!akka-testkit_2.10.jar
-:: resolution report :: resolve 4952ms :: artifacts dl 197ms
+:: resolution report :: resolve 4612ms :: artifacts dl 254ms
 	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT compile produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-compile.xml
 	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT runtime produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-runtime.xml
 	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT test produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-test.xml
@@ -7027,37 +7027,536 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT pom produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-pom.xml
 	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT scala-tool produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-scala-tool.xml
 	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT fork-run produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-fork-run.xml
-	resolve done (4952ms resolve - 197ms download)
+	resolve done (4612ms resolve - 254ms download)
 Read from stdout: Done updating.
 Done updating.
-Total time: 6 s, completed Oct 18, 2016 9:14:44 AM
+Total time: 6 s, completed Oct 18, 2016 9:43:58 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@6ae96e10, check cycles: false
-Total time: 0 s, completed Oct 18, 2016 9:14:45 AM
+Running task... Cancel: sbt.server.ServerTaskCancellation@3fee03, check cycles: false
+Total time: 0 s, completed Oct 18, 2016 9:43:59 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/WebDev/git/PlayAuthenticate/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@881c3e3, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@1db1e028, check cycles: false
+Read from stdout: LESS compiling on 1 source(s)
+LESS compiling on 1 source(s)
+Read from stdout: CoffeeScript compiling on 1 source(s)
+CoffeeScript compiling on 1 source(s)
 
 Initial source changes: 
 	removed:Set()
-	added: Set()
+	added: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala, C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala, C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java, C:\WebDev\git\PlayAuthenticate\app\models\User.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java, C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java, C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala, C:\WebDev\git\PlayAuthenticate\app\models\Token.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java, C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java, C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java)
 	modified: Set()
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
+Initial directly invalidated sources: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala, C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala, C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java, C:\WebDev\git\PlayAuthenticate\app\models\User.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java, C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java, C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala, C:\WebDev\git\PlayAuthenticate\app\models\Token.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java, C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java, C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set()
+All initially invalidated sources: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala, C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala, C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java, C:\WebDev\git\PlayAuthenticate\app\models\User.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java, C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java, C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala, C:\WebDev\git\PlayAuthenticate\app\models\Token.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala, C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java, C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala, C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java, C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java, C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java)
 
+Recompiling all 45 sources: invalidated sources (45) exceeded 50.0% of all sources
+Read from stdout: Compiling 27 Scala sources and 18 Java sources to C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes...
+Compiling 27 Scala sources and 18 Java sources to C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes...
+Getting compiler-interface from component compiler for Scala 2.10.5
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.10.5
+Other repositories:
+Default repositories:
+Running cached compiler 2d8d1c73, interfacing (CompilerInterface) with Scala compiler version 2.10.5
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes;C:\activator-dist-1.3.10\repository\org.scala-lang\scala-library\2.10.5\jars\scala-library.jar
+	-classpath
+	C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes;C:\activator-dist-1.3.10\repository\com.typesafe.play\play-enhancer\1.1.0\jars\play-enhancer.jar;C:\activator-dist-1.3.10\repository\com.typesafe.play\twirl-api_2.10\1.1.1\jars\twirl-api_2.10.jar;C:\activator-dist-1.3.10\repository\org.apache.commons\commons-lang3\3.4\jars\commons-lang3.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-ebean_2.10\jars\play-ebean_2.10-1.0.0.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.10\jars\play-java-jdbc_2.10-2.4.0.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-jdbc_2.10\jars\play-jdbc_2.10-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.10\jars\play-jdbc-api_2.10-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play_2.10\jars\play_2.10-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.4.6.jar;C:\activator-dist-1.3.10\repository\org.javassist\javassist\3.19.0-GA\bundles\javassist.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-iteratees_2.10\jars\play-iteratees_2.10-2.4.6.jar;C:\activator-dist-1.3.10\repository\org.scala-stm\scala-stm_2.10\0.7\jars\scala-stm_2.10.jar;C:\activator-dist-1.3.10\repository\com.typesafe\config\1.3.0\bundles\config.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-json_2.10\jars\play-json_2.10-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-functional_2.10\jars\play-functional_2.10-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-datacommons_2.10\jars\play-datacommons_2.10-2.4.6.jar;C:\activator-dist-1.3.10\repository\joda-time\joda-time\2.8.1\jars\joda-time.jar;C:\activator-dist-1.3.10\repository\org.joda\joda-convert\1.7\jars\joda-convert.jar;C:\activator-dist-1.3.10\repository\org.scala-lang\scala-reflect\2.10.5\jars\scala-reflect.jar;C:\activator-dist-1.3.10\repository\com.fasterxml.jackson.core\jackson-core\2.5.4\bundles\jackson-core.jar;C:\activator-dist-1.3.10\repository\com.fasterxml.jackson.core\jackson-annotations\2.5.4\bundles\jackson-annotations.jar;C:\activator-dist-1.3.10\repository\com.fasterxml.jackson.core\jackson-databind\2.5.4\bundles\jackson-databind.jar;C:\activator-dist-1.3.10\repository\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\2.5.4\bundles\jackson-datatype-jdk8.jar;C:\activator-dist-1.3.10\repository\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\2.5.4\bundles\jackson-datatype-jsr310.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.4.6.jar;C:\activator-dist-1.3.10\repository\org.slf4j\slf4j-api\1.7.12\jars\slf4j-api.jar;C:\activator-dist-1.3.10\repository\org.slf4j\jul-to-slf4j\1.7.12\jars\jul-to-slf4j.jar;C:\activator-dist-1.3.10\repository\org.slf4j\jcl-over-slf4j\1.7.12\jars\jcl-over-slf4j.jar;C:\activator-dist-1.3.10\repository\ch.qos.logback\logback-core\1.1.3\jars\logback-core.jar;C:\activator-dist-1.3.10\repository\ch.qos.logback\logback-classic\1.1.3\jars\logback-classic.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.akka\akka-actor_2.10\jars\akka-actor_2.10-2.3.13.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.10\jars\akka-slf4j_2.10-2.3.13.jar;C:\activator-dist-1.3.10\repository\commons-codec\commons-codec\1.10\jars\commons-codec.jar;C:\Users\zellerd\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\zellerd\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\zellerd\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\activator-dist-1.3.10\repository\com.google.inject\guice\4.0\jars\guice.jar;C:\activator-dist-1.3.10\repository\javax.inject\javax.inject\1\jars\javax.inject.jar;C:\activator-dist-1.3.10\repository\aopalliance\aopalliance\1.0\jars\aopalliance.jar;C:\activator-dist-1.3.10\repository\com.google.inject.extensions\guice-assistedinject\4.0\jars\guice-assistedinject.jar;C:\activator-dist-1.3.10\repository\com.jolbox\bonecp\0.8.0.RELEASE\bundles\bonecp.jar;C:\activator-dist-1.3.10\repository\com.zaxxer\HikariCP\2.3.7\bundles\HikariCP.jar;C:\activator-dist-1.3.10\repository\com.h2database\h2\1.4.187\jars\h2.jar;C:\activator-dist-1.3.10\repository\tyrex\tyrex\1.0.1\jars\tyrex.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-java_2.10\jars\play-java_2.10-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.10\bundles\scala-java8-compat_2.10-0.3.0.jar;C:\activator-dist-1.3.10\repository\org.yaml\snakeyaml\1.15\bundles\snakeyaml.jar;C:\activator-dist-1.3.10\repository\org.hibernate\hibernate-validator\5.0.3.Final\jars\hibernate-validator.jar;C:\activator-dist-1.3.10\repository\javax.validation\validation-api\1.1.0.Final\jars\validation-api.jar;C:\activator-dist-1.3.10\repository\com.fasterxml\classmate\1.0.0\bundles\classmate.jar;C:\activator-dist-1.3.10\repository\org.jboss.logging\jboss-logging\3.2.1.Final\jars\jboss-logging.jar;C:\activator-dist-1.3.10\repository\org.springframework\spring-context\4.1.6.RELEASE\jars\spring-context.jar;C:\activator-dist-1.3.10\repository\org.springframework\spring-core\4.1.6.RELEASE\jars\spring-core.jar;C:\activator-dist-1.3.10\repository\org.springframework\spring-beans\4.1.6.RELEASE\jars\spring-beans.jar;C:\activator-dist-1.3.10\repository\org.reflections\reflections\0.9.9\jars\reflections.jar;C:\activator-dist-1.3.10\repository\net.jodah\typetools\0.4.3\bundles\typetools.jar;C:\activator-dist-1.3.10\repository\com.google.guava\guava\18.0\bundles\guava.jar;C:\activator-dist-1.3.10\repository\com.google.code.findbugs\jsr305\2.0.3\jars\jsr305.jar;C:\activator-dist-1.3.10\repository\org.apache.tomcat\tomcat-servlet-api\8.0.21\jars\tomcat-servlet-api.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.10\jars\play-jdbc-evolutions_2.10-2.4.0.jar;C:\Users\zellerd\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-4.6.2.jar;C:\Users\zellerd\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.jar;C:\Users\zellerd\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-4.5.3.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-server_2.10\jars\play-server_2.10-2.4.6.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-netty-server_2.10\jars\play-netty-server_2.10-2.4.6.jar;C:\activator-dist-1.3.10\repository\io.netty\netty\3.10.4.Final\bundles\netty.jar;C:\activator-dist-1.3.10\repository\com.typesafe.netty\netty-http-pipelining\1.1.4\jars\netty-http-pipelining.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-cache_2.10\jars\play-cache_2.10-2.4.6.jar;C:\activator-dist-1.3.10\repository\net.sf.ehcache\ehcache-core\2.6.11\jars\ehcache-core.jar;C:\Users\zellerd\.ivy2\cache\org.mindrot\jbcrypt\jars\jbcrypt-0.3m.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\play-mailer_2.10\jars\play-mailer_2.10-3.0.1.jar;C:\Users\zellerd\.ivy2\cache\org.apache.commons\commons-email\jars\commons-email-1.3.3.jar;C:\Users\zellerd\.ivy2\cache\javax.mail\mail\jars\mail-1.4.5.jar;C:\Users\zellerd\.ivy2\cache\javax.activation\activation\jars\activation-1.1.1.jar;C:\Users\zellerd\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.34.jar;C:\Users\zellerd\.ivy2\cache\com.typesafe.play\filters-helpers_2.10\jars\filters-helpers_2.10-2.4.6.jar
+Scala compilation took 9.782096349 s
+Attempting to call com.sun.tools.javac.api.JavacTool@531df2de directly...
+Read from stdout: C:\WebDev\git\PlayAuthenticate\app\models\User.java: Some input files use or override a deprecated API.
+C:\WebDev\git\PlayAuthenticate\app\models\User.java: Some input files use or override a deprecated API.
+Read from stdout: C:\WebDev\git\PlayAuthenticate\app\models\User.java: Recompile with -Xlint:deprecation for details.
+C:\WebDev\git\PlayAuthenticate\app\models\User.java: Recompile with -Xlint:deprecation for details.
+Java compilation took 1.417670277 s
+Java analysis took 0.501323388 s
+Java compile + analysis took 1.943059388 s
+Invalidating C:\WebDev\git\PlayAuthenticate\app\models\User.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\models\User.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\models\User.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\models\User.java)
+The C:\WebDev\git\PlayAuthenticate\app\models\User.java source file has the following regular definitions changed:
+	notify, find, refresh, findFutureRowCount, nextId, wait, Model$Find, email, setId, insert, equals, serverName, findEachWhile, all, findEach, setReadOnly, passwordHash, Model$Finder, db, query, ref, findByConfirmationToken, dateCreation, validated, findPagedList, setQuery, findByEmail, byId, setAutofetch, notifyAll, changePassword, setUseQueryCache, filter, setRawSql, select, getExpressionFactory, setUseCache, <init>, id, on, fullname, apply, findSet, order, findRowCount, orderBy, setMaxRows, delete, findIds, confirm, User, fetch, setLoadBeanCache, authenticate, toString, markAsDirty, confirmationToken, where, setFirstRow, getClass, update, type, save, findList, setForUpdate, findByFullname, hashCode, deleteById, findMap.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala: Set(<init>, apply, User)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\User.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala: Set(<init>, fullname, apply, User)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala: Set(<init>, apply, User)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala: Set(email, <init>, apply, User)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala: Set(<init>, apply, User)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala: Set(<init>, apply, User)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\Token.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala: Set(<init>, apply, User)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java source file has the following regular definitions changed:
+	enumerator, notify, FROM, movedPermanently, CONTENT_LANGUAGE, CREATED, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, CONTINUE, SET_COOKIE2, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, ctx, HOST, CONTENT_MD5, request, X_FORWARDED_PORT, paymentRequired, BAD_REQUEST, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, TRAILER, PROXY_AUTHENTICATE, AUTHORIZATION, CACHE_CONTROL, NOT_IMPLEMENTED, equals, PAYMENT_REQUIRED, RETRY_AFTER, PRECONDITION_FAILED, sendMailConfirmation, CONFLICT, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, REQUEST_TIMEOUT, MULTIPLE_CHOICES, redirectLocation, notFound, MOVED_PERMANENTLY, TE, CONTENT_LOCATION, PARTIAL_CONTENT, ETAG, LENGTH_REQUIRED, UNAUTHORIZED, UNSUPPORTED_MEDIA_TYPE, createFormOnly, create, REFERER, REQUEST_ENTITY_TOO_LARGE, ORIGIN, ACCEPT_LANGUAGE, NOT_MODIFIED, as, Results$StringChunks, Results$Todo, HTTP_VERSION_NOT_SUPPORTED, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, SWITCHING_PROTOCOLS, callback, TEMPORARY_REDIRECT, CONTENT_LENGTH, SET_COOKIE, notifyAll, AGE, BAD_GATEWAY, EXPECTATION_FAILED, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, OK, cookies, checkBeforeSave, ACCESS_CONTROL_ALLOW_HEADERS, found, unauthorized, response, FOUND, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, contentType, PROXY_AUTHORIZATION, GONE, ACCESS_CONTROL_ALLOW_CREDENTIALS, clearLang, cookie, NOT_ACCEPTABLE, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, TODO, sendMailAskForConfirmation, forbidden, X_FORWARDED_FOR, access$000, confirm, ACCEPTED, NO_CONTENT, disconnected, mailerClient, Signup, INTERNAL_SERVER_ERROR, onDisconnected, lambda$new$1, UPGRADE, NOT_FOUND, session, ACCEPT_ENCODING, EXPIRES, seeOther, REQUESTED_RANGE_NOT_SATISFIABLE, header, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, changeLang, GATEWAY_TIMEOUT, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, CONTENT_TRANSFER_ENCODING, lang, headers, Results$StatusHeader, NON_AUTHORITATIVE_INFORMATION, close, PRAGMA, save, IF_MATCH, PROXY_AUTHENTICATION_REQUIRED, RESET_CONTENT, SEE_OTHER, CONTENT_ENCODING, RANGE, USE_PROXY, Results$Chunks, REQUEST_URI_TOO_LONG, writable, FORBIDDEN, METHOD_NOT_ALLOWED, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, X_FORWARDED_PROTO, SERVICE_UNAVAILABLE, created, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(create, <init>, confirm, Signup, getClass, save)
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, index_Scope0, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, index, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala: Set(format, _display_, <init>, apply, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala: Set(format, _display_, <init>, apply, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala: Set(format, _display_, <init>, apply, index)
+Invalidating C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java)
+The C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java source file has the following regular definitions changed:
+	notify, printStackTrace, getLocalizedMessage, wait, equals, fillInStackTrace, initCause, AppException, getCause, notifyAll, getStackTrace, <init>, getMessage, setStackTrace, getSuppressed, addSuppressed, toString, getClass, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\User.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\utils\AppException.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, created_Scope0, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, created, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\ReverseRoutes.scala source file has the following regular definitions changed:
+	notify, _defaultPrefix, wait, $asInstanceOf, runPassword, equals, asInstanceOf, ReverseIndex, synchronized, $isInstanceOf, ReversePassword, notifyAll, isInstanceOf, <init>, ReverseEmail, ==, validateEmail, clone, toString, !=, getClass, ne, runEmail, eq, ##, finalize, index, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala: Set(<init>, !=, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala: Set(<init>, runEmail, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala: Set(<init>, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala: Set(runPassword, <init>, index)
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java source file has the following regular definitions changed:
+	enumerator, notify, FROM, movedPermanently, CONTENT_LANGUAGE, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, SET_COOKIE2, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, onUnauthorized, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, HOST, CONTENT_MD5, X_FORWARDED_PORT, paymentRequired, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, TRAILER, PROXY_AUTHENTICATE, AUTHORIZATION, CACHE_CONTROL, equals, RETRY_AFTER, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, redirectLocation, notFound, TE, CONTENT_LOCATION, getUsername, ETAG, REFERER, ORIGIN, ACCEPT_LANGUAGE, as, Results$StringChunks, Results$Todo, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, callback, CONTENT_LENGTH, SET_COOKIE, notifyAll, AGE, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, cookies, ACCESS_CONTROL_ALLOW_HEADERS, found, unauthorized, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, contentType, PROXY_AUTHORIZATION, ACCESS_CONTROL_ALLOW_CREDENTIALS, cookie, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, TODO, forbidden, X_FORWARDED_FOR, access$000, disconnected, onDisconnected, lambda$new$1, UPGRADE, session, ACCEPT_ENCODING, EXPIRES, seeOther, header, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, CONTENT_TRANSFER_ENCODING, headers, Results$StatusHeader, close, PRAGMA, IF_MATCH, CONTENT_ENCODING, RANGE, Results$Chunks, writable, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, X_FORWARDED_PROTO, created, hashCode, Secured.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java source file has the following regular definitions changed:
+	notify, Assets, wait, routes, equals, routes$javascript, notifyAll, <init>, Application, toString, getClass, Dashboard, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala: Set(routes, <init>, Application)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala: Set(routes, <init>, Application)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala: Set(routes, <init>, Application)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala: Set(Assets, routes, <init>)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala: Set(routes, <init>, Application)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala: Set(routes, <init>, Application)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(routes, <init>, Application)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(Assets, routes, <init>, Application)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala: Set(Assets, routes, <init>)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\javascript\JavaScriptReverseRoutes.scala source file has the following regular definitions changed:
+	notify, ReverseSignup, _defaultPrefix, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, create, notifyAll, isInstanceOf, <init>, ==, clone, confirm, runAsk, runReset, reset, toString, !=, getClass, ReverseReset, ask, save, ne, eq, ##, finalize, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java source file has the following regular definitions changed:
+	notify, wait, routes, equals, Email, routes$javascript, notifyAll, Password, <init>, toString, getClass, hashCode, Index.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala: Set(routes, <init>, Index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala: Set(routes, Email, <init>)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala: Set(routes, Email, Password, <init>)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala: Set(routes, Password, <init>)
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java source file has the following regular definitions changed:
+	notify, wait, routes, equals, routes$javascript, notifyAll, <init>, Signup, toString, getClass, Reset, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala: Set(routes, <init>, Reset)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(routes, <init>, Reset)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(routes, <init>, Reset)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala: Set(routes, <init>, Signup)
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\twitterBootstrapInput.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, twitterBootstrapInput, ne, eq, productIterator, twitterBootstrapInput_Scope0, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala: Set(format, _display_, <init>, apply, render, twitterBootstrapInput)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala: Set(format, _display_, <init>, apply, render, twitterBootstrapInput)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(format, _display_, <init>, apply, render, twitterBootstrapInput)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(format, _display_, <init>, apply, render, twitterBootstrapInput)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala: Set(format, _display_, <init>, apply, render, twitterBootstrapInput)
+Invalidating C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java)
+The C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java source file has the following regular definitions changed:
+	notify, Mail$Envelop, wait, subject, equals, Mail, run, envelop, notifyAll, toEmails, <init>, mailerClient, sendMail, message, toString, Mail$EnvelopJob, getClass, DELAY, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\utils\Mail.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\Token.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala source file has the following regular definitions changed:
+	notify, format, runAsk_Scope1, wait, $asInstanceOf, productArity, equals, runAsk_Scope0, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, runAsk, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, email, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, email_Scope0, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java source file has the following regular definitions changed:
+	enumerator, notify, FROM, movedPermanently, CONTENT_LANGUAGE, CREATED, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, CONTINUE, SET_COOKIE2, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, ctx, HOST, Reset$AskForm, CONTENT_MD5, request, X_FORWARDED_PORT, paymentRequired, BAD_REQUEST, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, inputPassword, email, TRAILER, PROXY_AUTHENTICATE, AUTHORIZATION, CACHE_CONTROL, NOT_IMPLEMENTED, equals, PAYMENT_REQUIRED, RETRY_AFTER, PRECONDITION_FAILED, CONFLICT, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, REQUEST_TIMEOUT, MULTIPLE_CHOICES, redirectLocation, notFound, MOVED_PERMANENTLY, TE, CONTENT_LOCATION, PARTIAL_CONTENT, ETAG, LENGTH_REQUIRED, UNAUTHORIZED, UNSUPPORTED_MEDIA_TYPE, REFERER, REQUEST_ENTITY_TOO_LARGE, ORIGIN, ACCEPT_LANGUAGE, NOT_MODIFIED, as, Results$StringChunks, Results$Todo, HTTP_VERSION_NOT_SUPPORTED, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, SWITCHING_PROTOCOLS, callback, TEMPORARY_REDIRECT, CONTENT_LENGTH, SET_COOKIE, notifyAll, AGE, BAD_GATEWAY, EXPECTATION_FAILED, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, OK, cookies, ACCESS_CONTROL_ALLOW_HEADERS, Reset$ResetForm, found, unauthorized, response, FOUND, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, sendFailedPasswordResetAttempt, contentType, PROXY_AUTHORIZATION, GONE, ACCESS_CONTROL_ALLOW_CREDENTIALS, clearLang, cookie, NOT_ACCEPTABLE, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, TODO, forbidden, X_FORWARDED_FOR, access$000, ACCEPTED, NO_CONTENT, disconnected, mailerClient, runAsk, INTERNAL_SERVER_ERROR, onDisconnected, lambda$new$1, UPGRADE, runReset, NOT_FOUND, session, ACCEPT_ENCODING, EXPIRES, seeOther, REQUESTED_RANGE_NOT_SATISFIABLE, reset, header, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, changeLang, GATEWAY_TIMEOUT, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPasswordChanged, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, ask, CONTENT_TRANSFER_ENCODING, lang, headers, Results$StatusHeader, NON_AUTHORITATIVE_INFORMATION, close, PRAGMA, Reset, IF_MATCH, PROXY_AUTHENTICATION_REQUIRED, RESET_CONTENT, SEE_OTHER, CONTENT_ENCODING, RANGE, USE_PROXY, Results$Chunks, REQUEST_URI_TOO_LONG, writable, FORBIDDEN, METHOD_NOT_ALLOWED, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, X_FORWARDED_PROTO, SERVICE_UNAVAILABLE, created, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(inputPassword, <init>, runReset, reset, lang, Reset)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(<init>, runAsk, runReset, reset, getClass, ask, Reset)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(<init>, runAsk, reset, ask, lang, Reset)
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\ReverseRoutes.scala source file has the following regular definitions changed:
+	notify, logout, _defaultPrefix, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, ReverseDashboard, ReverseAssets, notifyAll, isInstanceOf, <init>, at, ==, clone, authenticate, toString, openLogin, !=, getClass, ne, eq, ReverseApplication, ##, finalize, index, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala: Set(<init>, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala: Set(<init>, index)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Secured.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala: Set(logout, <init>, !=, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala: Set(<init>, at)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala: Set(<init>, authenticate)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala: Set(<init>, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(<init>, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(<init>, at, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala: Set(<init>, at, index)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, confirm_Scope0, ==, clone, confirm, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, createFormOnly, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, createFormOnly_Scope0, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, ask_Scope0, ask, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+Invalidating C:\WebDev\git\PlayAuthenticate\app\models\Token.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\models\Token.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\models\Token.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\models\Token.java)
+The C:\WebDev\git\PlayAuthenticate\app\models\Token.java source file has the following regular definitions changed:
+	notify, find, refresh, name, findFutureRowCount, nextId, wait, Model$Find, expirationTime, valueOf, email, setId, urlPath, insert, equals, serverName, findEachWhile, sendMailChangeMail, all, findEach, EXPIRATION_DAYS, setReadOnly, getDeclaringClass, $VALUES, Model$Finder, db, query, ref, dateCreation, getNewToken, findPagedList, setQuery, byId, setAutofetch, notifyAll, compareTo, setUseQueryCache, filter, setRawSql, select, getExpressionFactory, findByTokenAndType, setUseCache, <init>, sendMailResetPassword, on, apply, findSet, ordinal, order, findRowCount, token, orderBy, setMaxRows, delete, findIds, access$000, fetch, sendMail, setLoadBeanCache, values, toString, markAsDirty, where, setFirstRow, getClass, Token$TypeToken, userId, update, type, save, Token, isExpired, findList, setForUpdate, hashCode, deleteById, findMap, password.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\Token.java
+Invalidating C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java)
+The C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java source file has the following regular definitions changed:
+	notify, wait, ExceptionFactory, equals, getNewAppException, notifyAll, <init>, toString, getClass, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\utils\ExceptionFactory.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, login_Scope0, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, login, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\main.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, main, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply$default$2, apply, ==, clone, main_Scope0, copy, apply$default$1, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\created.template.scala: Set(format, _display_, main, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala: Set(format, _display_, main, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala: Set(format, _display_, main, <init>, apply, render)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala: Set(format, _display_, main, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\index.template.scala: Set(format, _display_, main, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala: Set(format, _display_, main, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\confirm.template.scala: Set(format, _display_, main, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(format, _display_, main, <init>, apply, render)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(format, _display_, main, <init>, apply, render)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala: Set(format, _display_, main, <init>, apply)
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\auth.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, auth, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, auth_Scope0, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\wflash.template.scala source file has the following regular definitions changed:
+	wflash, notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, wflash_Scope0, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\runAsk.template.scala: Set(wflash, format, _display_, <init>, apply, render)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala: Set(wflash, format, _display_, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala: Set(wflash, format, _display_, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala: Set(wflash, format, _display_, <init>, apply)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(wflash, format, _display_, <init>, apply, render)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(wflash, format, _display_, <init>, apply, render)
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java source file has the following regular definitions changed:
+	enumerator, notify, FROM, movedPermanently, CONTENT_LANGUAGE, CREATED, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, CONTINUE, SET_COOKIE2, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, ctx, HOST, CONTENT_MD5, request, X_FORWARDED_PORT, paymentRequired, BAD_REQUEST, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, TRAILER, PROXY_AUTHENTICATE, AUTHORIZATION, CACHE_CONTROL, NOT_IMPLEMENTED, equals, PAYMENT_REQUIRED, RETRY_AFTER, PRECONDITION_FAILED, indexChoice, CONFLICT, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, REQUEST_TIMEOUT, MULTIPLE_CHOICES, redirectLocation, notFound, MOVED_PERMANENTLY, TE, CONTENT_LOCATION, PARTIAL_CONTENT, ETAG, LENGTH_REQUIRED, UNAUTHORIZED, UNSUPPORTED_MEDIA_TYPE, REFERER, REQUEST_ENTITY_TOO_LARGE, ORIGIN, ACCEPT_LANGUAGE, NOT_MODIFIED, as, Results$StringChunks, Results$Todo, HTTP_VERSION_NOT_SUPPORTED, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, SWITCHING_PROTOCOLS, callback, TEMPORARY_REDIRECT, CONTENT_LENGTH, SET_COOKIE, notifyAll, AGE, BAD_GATEWAY, EXPECTATION_FAILED, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, OK, cookies, ACCESS_CONTROL_ALLOW_HEADERS, found, unauthorized, response, FOUND, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, contentType, PROXY_AUTHORIZATION, GONE, ACCESS_CONTROL_ALLOW_CREDENTIALS, clearLang, cookie, NOT_ACCEPTABLE, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, TODO, forbidden, X_FORWARDED_FOR, access$000, ACCEPTED, NO_CONTENT, disconnected, INTERNAL_SERVER_ERROR, onDisconnected, lambda$new$1, UPGRADE, NOT_FOUND, session, ACCEPT_ENCODING, EXPIRES, seeOther, REQUESTED_RANGE_NOT_SATISFIABLE, header, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, changeLang, GATEWAY_TIMEOUT, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, CONTENT_TRANSFER_ENCODING, lang, headers, Results$StatusHeader, NON_AUTHORITATIVE_INFORMATION, close, PRAGMA, IF_MATCH, PROXY_AUTHENTICATION_REQUIRED, RESET_CONTENT, SEE_OTHER, CONTENT_ENCODING, RANGE, USE_PROXY, Results$Chunks, REQUEST_URI_TOO_LONG, writable, FORBIDDEN, METHOD_NOT_ALLOWED, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, Dashboard, X_FORWARDED_PROTO, SERVICE_UNAVAILABLE, index, created, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(<init>, getClass, Dashboard, index)
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\javascript\JavaScriptReverseRoutes.scala source file has the following regular definitions changed:
+	notify, _defaultPrefix, wait, $asInstanceOf, runPassword, equals, asInstanceOf, ReverseIndex, synchronized, $isInstanceOf, ReversePassword, notifyAll, isInstanceOf, <init>, ReverseEmail, ==, validateEmail, clone, toString, !=, getClass, ne, runEmail, eq, ##, finalize, index, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, reset_Scope0, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, reset, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Reset.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\ReverseRoutes.scala source file has the following regular definitions changed:
+	notify, ReverseSignup, _defaultPrefix, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, create, notifyAll, isInstanceOf, <init>, ==, clone, confirm, runAsk, runReset, reset, toString, !=, getClass, ReverseReset, ask, save, ne, eq, ##, finalize, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala: Set(<init>, ask)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\ask.template.scala: Set(<init>, runAsk, reset, ask)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\reset\reset.template.scala: Set(<init>, runReset, reset)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala: Set(<init>, save)
+Invalidating C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java)
+The C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java source file has the following regular definitions changed:
+	notify, wait, equals, main, notifyAll, <init>, TestDB, toString, getClass, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\utils\TestDB.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\index.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, index_Scope0, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, index, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\logged.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, logged, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, logged_Scope0, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java source file has the following regular definitions changed:
+	enumerator, Application$Login, notify, FROM, movedPermanently, CONTENT_LANGUAGE, CREATED, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, CONTINUE, SET_COOKIE2, logout, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, ctx, HOST, CONTENT_MD5, request, X_FORWARDED_PORT, paymentRequired, BAD_REQUEST, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, inputPassword, email, TRAILER, PROXY_AUTHENTICATE, AUTHORIZATION, CACHE_CONTROL, NOT_IMPLEMENTED, equals, PAYMENT_REQUIRED, RETRY_AFTER, PRECONDITION_FAILED, CONFLICT, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, REQUEST_TIMEOUT, MULTIPLE_CHOICES, redirectLocation, notFound, MOVED_PERMANENTLY, TE, CONTENT_LOCATION, PARTIAL_CONTENT, Application$Register, validate, ETAG, LENGTH_REQUIRED, UNAUTHORIZED, UNSUPPORTED_MEDIA_TYPE, REFERER, REQUEST_ENTITY_TOO_LARGE, ORIGIN, ACCEPT_LANGUAGE, NOT_MODIFIED, as, Results$StringChunks, Results$Todo, HTTP_VERSION_NOT_SUPPORTED, GO_DASHBOARD, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, SWITCHING_PROTOCOLS, callback, TEMPORARY_REDIRECT, CONTENT_LENGTH, SET_COOKIE, notifyAll, AGE, isBlank, BAD_GATEWAY, EXPECTATION_FAILED, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, OK, cookies, ACCESS_CONTROL_ALLOW_HEADERS, found, unauthorized, response, FOUND, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, fullname, contentType, PROXY_AUTHORIZATION, GONE, ACCESS_CONTROL_ALLOW_CREDENTIALS, clearLang, cookie, NOT_ACCEPTABLE, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, Application, TODO, forbidden, X_FORWARDED_FOR, access$000, ACCEPTED, NO_CONTENT, disconnected, INTERNAL_SERVER_ERROR, onDisconnected, lambda$new$1, UPGRADE, NOT_FOUND, session, ACCEPT_ENCODING, EXPIRES, seeOther, REQUESTED_RANGE_NOT_SATISFIABLE, header, authenticate, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, changeLang, GATEWAY_TIMEOUT, openLogin, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, CONTENT_TRANSFER_ENCODING, lang, headers, Results$StatusHeader, NON_AUTHORITATIVE_INFORMATION, close, PRAGMA, IF_MATCH, PROXY_AUTHENTICATION_REQUIRED, RESET_CONTENT, SEE_OTHER, CONTENT_ENCODING, RANGE, USE_PROXY, Results$Chunks, REQUEST_URI_TOO_LONG, writable, FORBIDDEN, METHOD_NOT_ALLOWED, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, X_FORWARDED_PROTO, GO_HOME, SERVICE_UNAVAILABLE, index, created, hashCode, password.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(logout, <init>, Application, authenticate, openLogin, getClass, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\login.template.scala: Set(inputPassword, <init>, Application, authenticate, lang)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\createFormOnly.template.scala: Set(inputPassword, <init>, Application, lang)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Application.java
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java source file has the following regular definitions changed:
+	enumerator, notify, FROM, movedPermanently, CONTENT_LANGUAGE, CREATED, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, CONTINUE, SET_COOKIE2, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, ctx, HOST, CONTENT_MD5, request, X_FORWARDED_PORT, paymentRequired, BAD_REQUEST, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, email, TRAILER, PROXY_AUTHENTICATE, AUTHORIZATION, CACHE_CONTROL, NOT_IMPLEMENTED, equals, PAYMENT_REQUIRED, RETRY_AFTER, PRECONDITION_FAILED, CONFLICT, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, REQUEST_TIMEOUT, MULTIPLE_CHOICES, redirectLocation, notFound, MOVED_PERMANENTLY, TE, CONTENT_LOCATION, PARTIAL_CONTENT, ETAG, LENGTH_REQUIRED, UNAUTHORIZED, UNSUPPORTED_MEDIA_TYPE, REFERER, REQUEST_ENTITY_TOO_LARGE, ORIGIN, ACCEPT_LANGUAGE, NOT_MODIFIED, as, Results$StringChunks, Results$Todo, HTTP_VERSION_NOT_SUPPORTED, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, Email, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, SWITCHING_PROTOCOLS, callback, TEMPORARY_REDIRECT, CONTENT_LENGTH, SET_COOKIE, notifyAll, AGE, BAD_GATEWAY, EXPECTATION_FAILED, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, OK, cookies, ACCESS_CONTROL_ALLOW_HEADERS, found, unauthorized, response, FOUND, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, contentType, PROXY_AUTHORIZATION, GONE, ACCESS_CONTROL_ALLOW_CREDENTIALS, clearLang, cookie, validateEmail, NOT_ACCEPTABLE, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, TODO, forbidden, X_FORWARDED_FOR, access$000, ACCEPTED, NO_CONTENT, disconnected, mailerClient, INTERNAL_SERVER_ERROR, onDisconnected, lambda$new$1, UPGRADE, NOT_FOUND, session, ACCEPT_ENCODING, EXPIRES, seeOther, REQUESTED_RANGE_NOT_SATISFIABLE, header, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, changeLang, GATEWAY_TIMEOUT, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, CONTENT_TRANSFER_ENCODING, lang, headers, Results$StatusHeader, NON_AUTHORITATIVE_INFORMATION, close, PRAGMA, IF_MATCH, PROXY_AUTHENTICATION_REQUIRED, RESET_CONTENT, SEE_OTHER, Email$AskForm, CONTENT_ENCODING, RANGE, USE_PROXY, Results$Chunks, runEmail, REQUEST_URI_TOO_LONG, writable, FORBIDDEN, METHOD_NOT_ALLOWED, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, X_FORWARDED_PROTO, SERVICE_UNAVAILABLE, index, created, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\email.template.scala: Set(email, Email, <init>, lang, runEmail, index)
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(Email, <init>, validateEmail, getClass, runEmail, index)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\RoutesPrefix.scala source file has the following regular definitions changed:
+	notify, byNamePrefix, wait, $asInstanceOf, equals, prefix, asInstanceOf, RoutesPrefix, synchronized, $isInstanceOf, _prefix, notifyAll, isInstanceOf, ==, clone, toString, !=, getClass, setPrefix, ne, eq, ##, finalize, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\routes.java
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(prefix, asInstanceOf, RoutesPrefix, isInstanceOf, getClass, setPrefix)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\account\settings\routes.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\dashboard\index.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, index_Scope0, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, index, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\Dashboard.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala source file has the following regular definitions changed:
+	controllers_account_settings_Password_runPassword7_route, notify, controllers_account_Signup_create10_route, controllers_account_Signup_create10_invoker, controllers_account_settings_Password_runPassword7_invoker, badRequest, wait, $asInstanceOf, controllers_Assets_at18_invoker, controllers_Application_authenticate2_invoker, routes, createInvoker, equals, controllers_account_Reset_ask13_route, controllers_account_settings_Password_index6_invoker, prefix, asInstanceOf, documentation, controllers_Application_openLogin3_route, controllers_Application_index0_invoker, controllers_Dashboard_index1_route, synchronized, controllers_account_settings_Index_index5_route, $isInstanceOf, handlerFor, controllers_account_settings_Email_runEmail9_route, controllers_Application_logout4_route, controllers_Assets_at18_route, controllers_Dashboard_index1_invoker, controllers_account_settings_Email_runEmail9_invoker, controllers_account_settings_Index_index5_invoker, controllers_account_Signup_confirm12_route, controllers_account_Reset_runReset16_invoker, controllers_account_settings_Email_validateEmail17_invoker, notifyAll, controllers_account_settings_Email_index8_route, controllers_account_Reset_ask13_invoker, isInstanceOf, controllers_account_Reset_runReset16_route, errorHandler, controllers_account_Reset_runAsk14_invoker, <init>, ==, clone, controllers_account_Reset_reset15_invoker, controllers_Application_authenticate2_route, controllers_Application_logout4_invoker, controllers_account_Reset_reset15_route, Routes, controllers_Application_openLogin3_invoker, controllers_account_Signup_save11_invoker, toString, controllers_account_Signup_confirm12_invoker, !=, fakeValue, getClass, controllers_Application_index0_route, controllers_account_settings_Email_index8_invoker, ne, withPrefix, call, controllers_account_Signup_save11_route, eq, controllers_account_settings_Password_index6_route, defaultPrefix, controllers_account_Reset_runAsk14_route, ##, finalize, hashCode, controllers_account_settings_Email_validateEmail17_route.
+All member reference dependencies will be considered within this context.
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java source file has the following regular definitions changed:
+	enumerator, notify, FROM, movedPermanently, CONTENT_LANGUAGE, CREATED, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, CONTINUE, SET_COOKIE2, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, ctx, HOST, CONTENT_MD5, request, X_FORWARDED_PORT, paymentRequired, BAD_REQUEST, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, TRAILER, PROXY_AUTHENTICATE, AUTHORIZATION, CACHE_CONTROL, NOT_IMPLEMENTED, equals, PAYMENT_REQUIRED, RETRY_AFTER, PRECONDITION_FAILED, CONFLICT, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, REQUEST_TIMEOUT, MULTIPLE_CHOICES, redirectLocation, notFound, MOVED_PERMANENTLY, TE, CONTENT_LOCATION, PARTIAL_CONTENT, ETAG, LENGTH_REQUIRED, UNAUTHORIZED, UNSUPPORTED_MEDIA_TYPE, REFERER, REQUEST_ENTITY_TOO_LARGE, ORIGIN, ACCEPT_LANGUAGE, NOT_MODIFIED, as, Results$StringChunks, Results$Todo, HTTP_VERSION_NOT_SUPPORTED, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, SWITCHING_PROTOCOLS, callback, TEMPORARY_REDIRECT, CONTENT_LENGTH, SET_COOKIE, notifyAll, AGE, BAD_GATEWAY, EXPECTATION_FAILED, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, OK, cookies, ACCESS_CONTROL_ALLOW_HEADERS, found, unauthorized, response, FOUND, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, contentType, PROXY_AUTHORIZATION, GONE, ACCESS_CONTROL_ALLOW_CREDENTIALS, clearLang, cookie, NOT_ACCEPTABLE, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, TODO, forbidden, X_FORWARDED_FOR, access$000, ACCEPTED, NO_CONTENT, disconnected, INTERNAL_SERVER_ERROR, onDisconnected, lambda$new$1, UPGRADE, NOT_FOUND, session, ACCEPT_ENCODING, EXPIRES, seeOther, REQUESTED_RANGE_NOT_SATISFIABLE, header, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, changeLang, GATEWAY_TIMEOUT, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, CONTENT_TRANSFER_ENCODING, lang, headers, Results$StatusHeader, NON_AUTHORITATIVE_INFORMATION, close, PRAGMA, IF_MATCH, PROXY_AUTHENTICATION_REQUIRED, RESET_CONTENT, SEE_OTHER, CONTENT_ENCODING, RANGE, USE_PROXY, Results$Chunks, REQUEST_URI_TOO_LONG, writable, FORBIDDEN, METHOD_NOT_ALLOWED, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, X_FORWARDED_PROTO, SERVICE_UNAVAILABLE, index, created, hashCode, Index.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(<init>, getClass, index, Index)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\emailValidate.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, emailValidate, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode, emailValidate_Scope0.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Email.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\settings\password.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, password_Scope0, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode, password.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java
+Invalidating C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java)
+The C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java source file has the following regular definitions changed:
+	enumerator, notify, FROM, movedPermanently, CONTENT_LANGUAGE, CREATED, temporaryRedirect, Results$StringChunks$WhenReadyStringChunks, WARNING, CONTINUE, SET_COOKIE2, CONTENT_DISPOSITION, wrappedStatus, channel, CONTENT_TYPE, Results$Redirect, badRequest, wait, ACCESS_CONTROL_ALLOW_METHODS, USER_AGENT, ctx, HOST, CONTENT_MD5, request, X_FORWARDED_PORT, paymentRequired, BAD_REQUEST, logger, MAX_FORWARDS, X_FORWARDED_HOST, redirect, TRAILER, PROXY_AUTHENTICATE, runPassword, AUTHORIZATION, CACHE_CONTROL, NOT_IMPLEMENTED, equals, PAYMENT_REQUIRED, RETRY_AFTER, PRECONDITION_FAILED, CONFLICT, ACCEPT_CHARSET, Results$ByteChunks$WhenReadyByteChunks, onReady, VIA, REQUEST_TIMEOUT, MULTIPLE_CHOICES, redirectLocation, notFound, MOVED_PERMANENTLY, TE, CONTENT_LOCATION, PARTIAL_CONTENT, ETAG, LENGTH_REQUIRED, UNAUTHORIZED, UNSUPPORTED_MEDIA_TYPE, REFERER, REQUEST_ENTITY_TOO_LARGE, ORIGIN, ACCEPT_LANGUAGE, NOT_MODIFIED, as, Results$StringChunks, Results$Todo, HTTP_VERSION_NOT_SUPPORTED, ACCESS_CONTROL_ALLOW_ORIGIN, Results$Status, IF_RANGE, IF_UNMODIFIED_SINCE, toScala, SWITCHING_PROTOCOLS, callback, TEMPORARY_REDIRECT, CONTENT_LENGTH, SET_COOKIE, notifyAll, Password, AGE, BAD_GATEWAY, EXPECTATION_FAILED, CONNECTION, FORWARDED, Results$ByteChunks, Results$Chunks$Out, OK, cookies, ACCESS_CONTROL_ALLOW_HEADERS, found, unauthorized, response, FOUND, <init>, DATE, CONTENT_RANGE, sendResource, TRANSFER_ENCODING, contentType, PROXY_AUTHORIZATION, GONE, ACCESS_CONTROL_ALLOW_CREDENTIALS, clearLang, cookie, NOT_ACCEPTABLE, charset, status, EXPECT, LOCATION, VARY, WWW_AUTHENTICATE, TODO, forbidden, X_FORWARDED_FOR, access$000, ACCEPTED, NO_CONTENT, disconnected, mailerClient, INTERNAL_SERVER_ERROR, onDisconnected, lambda$new$1, UPGRADE, NOT_FOUND, session, ACCEPT_ENCODING, EXPIRES, seeOther, REQUESTED_RANGE_NOT_SATISFIABLE, header, toString, wrappedResult, lambda$onDisconnected$2, ACCEPT, changeLang, GATEWAY_TIMEOUT, whenReady, SERVER, ACCESS_CONTROL_REQUEST_METHOD, ACCESS_CONTROL_MAX_AGE, sendPath, LAST_MODIFIED, ACCESS_CONTROL_EXPOSE_HEADERS, ACCESS_CONTROL_REQUEST_HEADERS, flash, internalServerError, ok, ALLOW, COOKIE, IF_MODIFIED_SINCE, getClass, CONTENT_TRANSFER_ENCODING, lang, headers, Results$StatusHeader, NON_AUTHORITATIVE_INFORMATION, close, PRAGMA, IF_MATCH, PROXY_AUTHENTICATION_REQUIRED, RESET_CONTENT, SEE_OTHER, CONTENT_ENCODING, RANGE, USE_PROXY, Results$Chunks, REQUEST_URI_TOO_LONG, writable, FORBIDDEN, METHOD_NOT_ALLOWED, write, IF_NONE_MATCH, ACCEPT_RANGES, noContent, X_REQUESTED_WITH, X_FORWARDED_PROTO, SERVICE_UNAVAILABLE, index, created, hashCode.
+All member reference dependencies will be considered within this context.
+The following modified names cause invalidation of C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\router\Routes.scala: Set(runPassword, Password, <init>, getClass, index)
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Password.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\settings\Index.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\javascript\JavaScriptReverseRoutes.scala source file has the following regular definitions changed:
+	notify, logout, _defaultPrefix, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, ReverseDashboard, ReverseAssets, notifyAll, isInstanceOf, <init>, at, ==, clone, authenticate, toString, openLogin, !=, getClass, ne, eq, ReverseApplication, ##, finalize, index, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\target\scala-2.10\routes\main\controllers\routes.java
+Invalidating C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java)
+The C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java source file has the following regular definitions changed:
+	notify, wait, equals, notifyAll, <init>, toString, getClass, createPassword, hashCode, Hash, checkPassword.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\utils\Hash.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\models\User.java
+Invalidating C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala...
+Invalidating (transitively) by inheritance from C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala...
+Initial set of included nodes: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala)
+Invalidated by transitive inheritance dependency: Set(C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala)
+The C:\WebDev\git\PlayAuthenticate\target\scala-2.10\twirl\main\views\html\account\signup\create.template.scala source file has the following regular definitions changed:
+	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, create_Scope0, f, synchronized, _display_, $isInstanceOf, create, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, <init>, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\WebDev\git\PlayAuthenticate\app\controllers\account\Signup.java
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
 Copy resource mappings: 
 	(C:\WebDev\git\PlayAuthenticate\conf\application.conf,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\application.conf)
 	(C:\WebDev\git\PlayAuthenticate\conf\cloudbees.conf,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\cloudbees.conf)
@@ -7069,11 +7568,7 @@ Copy resource mappings:
 	(C:\WebDev\git\PlayAuthenticate\conf\routes,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\routes)
 	(C:\WebDev\git\PlayAuthenticate\conf\evolutions\default,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions\default)
 	(C:\WebDev\git\PlayAuthenticate\conf\evolutions\default\1.sql,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions\default\1.sql)
-Read from stdout: CoffeeScript compiling on 1 source(s)
-Read from stdout: LESS compiling on 1 source(s)
-CoffeeScript compiling on 1 source(s)
-LESS compiling on 1 source(s)
-Total time: 4 s, completed Oct 18, 2016 9:14:49 AM
+Total time: 18 s, completed Oct 18, 2016 9:44:19 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -7082,4 +7577,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 2848@OIT-ZELLERD-L2 logs at Tue Oct 18 09:17:38 MDT 2016, goodbye.
+Closing the 1064@OIT-ZELLERD-L2 logs at Tue Oct 18 09:46:48 MDT 2016, goodbye.
