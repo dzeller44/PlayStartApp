@@ -47,7 +47,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 			</div>
 		</div>
 		<div class="element-password">
-			<label class="title"><span class="required">*</span>Password</label>
+			<label class="title"><span class="required">*</span>Password:</label>
 			<div class="item-cont">
 				<input class="large" type="password" name="password" value=""
 					required="required" placeholder="Enter your password..." /><span
@@ -89,10 +89,10 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 10:48:41 MDT 2016
+                  DATE: Tue Oct 18 12:20:43 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: 2e2ef8a9443dd7ded78135f3035e3750b68961d2
-                  MATRIX: 825->1|843->11|882->13|912->17|2264->1339
+                  HASH: 0b5675dae2c5027396ff888308405513a327b407
+                  MATRIX: 825->1|843->11|882->13|912->17|2265->1340
                   LINES: 32->1|32->1|32->1|34->3|71->40
                   -- GENERATED --
               */

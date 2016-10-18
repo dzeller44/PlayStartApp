@@ -7,8 +7,10 @@ GET     /                           controllers.Application.index()
 GET     /dashboard                  controllers.Dashboard.index()
 
 POST    /login                      controllers.Application.authenticate()
-GET     /login                      controllers.Application.openLogin()
 GET     /logout                     controllers.Application.logout()
+
+GET     /auth                       controllers.Application.openLogin()
+POST    /auth                       controllers.Application.authenticate()
 
 GET     /settings                   controllers.account.settings.Index.index()
 GET     /settings/password          controllers.account.settings.Password.index()
