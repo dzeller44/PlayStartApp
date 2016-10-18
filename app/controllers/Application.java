@@ -133,9 +133,11 @@ public class Application extends Controller {
 		Form<Register> registerForm = form(Register.class);
 
 		if (loginForm.hasErrors()) {
-			//return badRequest(index.render(registerForm, loginForm));
-			return badRequest();
+			System.out.println("authenticate - bad request");
+			return badRequest(index.render());
+			//return badRequest();
 		} else {
+			System.out.println("authenticate - good request");
 			session("email", loginForm.get().email);
 			return GO_DASHBOARD;
 		}

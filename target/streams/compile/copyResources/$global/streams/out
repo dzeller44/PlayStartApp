@@ -1,0 +1,11 @@
+[debug] Copy resource mappings: 
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\application.conf,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\application.conf)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\cloudbees.conf,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\cloudbees.conf)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\evolutions,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\mail.conf.example,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\mail.conf.example)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\messages.en,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\messages.en)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\messages.fr,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\messages.fr)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\play.plugins,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\play.plugins)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\routes,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\routes)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\evolutions\default,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions\default)
+[debug] 	(C:\WebDev\git\PlayAuthenticate\conf\evolutions\default\1.sql,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions\default\1.sql)
