@@ -7,3 +7,4 @@
 2016-10-18 10:14:05,545 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
 2016-10-18 10:14:05,545 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
 2016-10-18 10:14:05,566 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-10-18 10:20:20,183 [INFO] from application in play-fork-run-akka.actor.default-dispatcher-28 - Shutting down connection pool.

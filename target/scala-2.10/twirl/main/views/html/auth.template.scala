@@ -89,7 +89,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 10:12:33 MDT 2016
+                  DATE: Tue Oct 18 10:20:39 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
                   HASH: 2e2ef8a9443dd7ded78135f3035e3750b68961d2
                   MATRIX: 825->1|843->11|882->13|912->17|2264->1339

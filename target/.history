@@ -27,3 +27,5 @@ compile
 clean
 compile
 run
+clean
+compile
