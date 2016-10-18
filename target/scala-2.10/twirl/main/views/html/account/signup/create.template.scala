@@ -70,7 +70,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 			<span class="clearfix"></span>
 		</div>
 		<div class="submit">
-			<input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" />
+			<input type="submit"  value="Submit" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -102,9 +102,9 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 10:48:41 MDT 2016
+                  DATE: Tue Oct 18 11:13:41 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: 7840a72047ea7f850751befee4944a6ffa69e16e
+                  HASH: fbbfb7a5b7824ba91e64d97171147b94b6a50ced
                   MATRIX: 844->1|862->11|901->13|932->18
                   LINES: 32->1|32->1|32->1|34->3
                   -- GENERATED --
