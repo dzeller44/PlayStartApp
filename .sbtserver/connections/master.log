@@ -1,10 +1,10 @@
-New log file opened at Tue Oct 18 09:59:42 MDT 2016 by 5332@OIT-ZELLERD-L2
-Taking next connection to: 50173
-New client attempting to connect on port: 50174-50173
-  Address = /165.127.33.117:50173
-This client on port 50174 has uuid cfedcbca-1cd5-49f1-b246-3c0b58caccec configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-cfedcbca-1cd5-49f1-b246-3c0b58caccec
-Taking next connection to: 50173
+New log file opened at Tue Oct 18 10:16:16 MDT 2016 by 712@OIT-ZELLERD-L2
+Taking next connection to: 50309
+New client attempting to connect on port: 50310-50309
+  Address = /165.127.33.117:50309
+This client on port 50310 has uuid f6f13985-6e96-4fdf-b61f-1e5f25be1814 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-f6f13985-6e96-4fdf-b61f-1e5f25be1814
+Taking next connection to: 50309
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 50173
+Taking next connection to: 50309

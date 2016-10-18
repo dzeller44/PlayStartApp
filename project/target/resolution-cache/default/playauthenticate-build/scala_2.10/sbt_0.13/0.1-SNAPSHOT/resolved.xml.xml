@@ -4,7 +4,7 @@
 		module="playauthenticate-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20161018093717"
+		publication="20161018101317"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

@@ -153,8 +153,8 @@
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#fork-run-protocol_2.10;2.4.6 ...[0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#run-support_2.10;2.4.6 ...[0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.sbtrc#client-2-10;0.3.1 ...[0m
-[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.4 ...[0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#serialization_2.10;0.1.0 ...[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.4 ...[0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-pickling_2.10;0.10.0 ...[0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.4 ...[0m
 [0m[[0minfo[0m] [0mResolving org.scalamacros#quasiquotes_2.10;2.0.1 ...[0m
@@ -191,6 +191,3 @@
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead[0m
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead[0m
 [0m[[0minfo[0m] [0mplay.api.Play - Application started (Dev)[0m
-[0m[[0minfo[0m] [0mStopping Play fork run ...[0m
-[0m[[0minfo[0m] [0mapplication - Shutting down connection pool.[0m
-[0m[[0minfo[0m] [0mForked Play process did not exit on its own, terminating it[0m

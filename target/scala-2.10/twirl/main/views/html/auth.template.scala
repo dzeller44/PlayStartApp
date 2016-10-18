@@ -55,8 +55,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 			</div>
 		</div>
 		<div class="submit">
-			<input type="submit" a
-				href="console.log('Clicked Login Submit');" value="Submit" />
+			<input type="submit" a href="window.alert('HELLO?');" value="Submit" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -69,7 +68,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 
 </section>
 
-""")))}),format.raw/*41.2*/("""
+""")))}),format.raw/*40.2*/("""
 """))
       }
     }
@@ -90,11 +89,11 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 09:54:26 MDT 2016
+                  DATE: Tue Oct 18 10:12:33 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: 7dde3cc88b582cde2743f0ff868ea0bfc7e45e5e
-                  MATRIX: 825->1|843->11|882->13|912->17|2282->1357
-                  LINES: 32->1|32->1|32->1|34->3|72->41
+                  HASH: 2e2ef8a9443dd7ded78135f3035e3750b68961d2
+                  MATRIX: 825->1|843->11|882->13|912->17|2264->1339
+                  LINES: 32->1|32->1|32->1|34->3|71->40
                   -- GENERATED --
               */
           
