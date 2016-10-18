@@ -181,8 +181,8 @@
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m(Server started, use Ctrl+D to stop and go back to the console...)[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mLESS compiling on 1 source(s)[0m
 [0m[[0minfo[0m] [0mCoffeeScript compiling on 1 source(s)[0m
+[0m[[0minfo[0m] [0mLESS compiling on 1 source(s)[0m
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead[0m
 [0m[[0minfo[0m] [0mapplication - Creating Pool for datasource 'default'[0m
 [0m[[0minfo[0m] [0mp.a.d.DefaultDBApi - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8[0m
@@ -191,3 +191,6 @@
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead[0m
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead[0m
 [0m[[0minfo[0m] [0mplay.api.Play - Application started (Dev)[0m
+[0m[[0minfo[0m] [0mStopping Play fork run ...[0m
+[0m[[0minfo[0m] [0mapplication - Shutting down connection pool.[0m
+[0m[[0minfo[0m] [0mForked Play process did not exit on its own, terminating it[0m

@@ -1,7 +1,7 @@
-New log file opened at Mon Oct 17 15:16:26 MDT 2016 by 3224@OIT-ZELLERD-L2
-Taking next connection to: 55993
-New client attempting to connect on port: 55994-55993
-  Address = /192.168.0.44:55993
-This client on port 55994 has uuid 8b0b5211-448c-454c-adc8-f49820009163 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-8b0b5211-448c-454c-adc8-f49820009163
-Taking next connection to: 55993
+New log file opened at Tue Oct 18 09:17:45 MDT 2016 by 1180@OIT-ZELLERD-L2
+Taking next connection to: 49652
+New client attempting to connect on port: 49653-49652
+  Address = /165.127.33.117:49652
+This client on port 49653 has uuid 517a91e0-e012-4969-abb9-a009269ab4a5 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-517a91e0-e012-4969-abb9-a009269ab4a5
+Taking next connection to: 49652

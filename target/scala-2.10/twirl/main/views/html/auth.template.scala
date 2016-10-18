@@ -30,9 +30,9 @@ class auth extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format
 
 
 Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.14*/("""
-	
-	
-	
+
+
+
 """),format.raw/*5.1*/("""<!-- ABOUT -->
 <section id="about">
 	<!-- Start Formoid form-->
@@ -58,7 +58,8 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 			</div>
 		</div>
 		<div class="submit">
-			<input type="submit" a href="controllers.routes.Application.authenticate();" value="Submit" />
+			<input type="submit" a
+				href="console.log('Clicked Login Submit');" value="Submit" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -71,7 +72,8 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 
 </section>
 <!-- //ABOUT -->
-""")))}))
+""")))}),format.raw/*44.2*/("""
+"""))
       }
     }
   }
@@ -91,11 +93,11 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Mon Oct 17 15:15:44 MDT 2016
+                  DATE: Tue Oct 18 09:14:21 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: 452f3a8f8a21a5fab1d57d398f1580cac2bcf42c
-                  MATRIX: 825->1|843->11|882->13|919->24
-                  LINES: 32->1|32->1|32->1|36->5
+                  HASH: 8eacc823b1f436ed1002dd9cebbb5b1ab597223c
+                  MATRIX: 825->1|843->11|882->13|916->21|2309->1384
+                  LINES: 32->1|32->1|32->1|36->5|75->44
                   -- GENERATED --
               */
           

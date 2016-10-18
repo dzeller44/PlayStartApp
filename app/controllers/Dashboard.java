@@ -16,4 +16,14 @@ public class Dashboard extends Controller {
     public Result index() {
         return ok(index.render(User.findByEmail(request().username())));
     }
+    
+    public Result indexChoice() {
+    	// Grab what link the user clicked...
+    	// session???
+    	// Open the default page - search?
+    	
+    	
+    	
+        return ok(index.render(User.findByEmail(request().username())));
+    }
 }
