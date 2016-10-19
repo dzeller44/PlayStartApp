@@ -35,7 +35,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 	<!-- Start Formoid form-->
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post">
+		method="post" action="">
 		<div class="title">
 			<h2>New User Registration</h2>
 		</div>
@@ -103,9 +103,9 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 18 15:30:50 MDT 2016
+                  DATE: Wed Oct 19 12:32:08 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: 64bfd0bc454c7807961dac5e4fe58366dcebddcf
+                  HASH: 77190c589cf6cb8cb14ac54bf617d7096513d355
                   MATRIX: 844->1|862->11|901->13|932->18
                   LINES: 32->1|32->1|32->1|34->3
                   -- GENERATED --

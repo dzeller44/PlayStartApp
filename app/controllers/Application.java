@@ -68,7 +68,7 @@ public class Application extends Controller {
 		 * @return null if validation ok, string with details otherwise
 		 */
 		public String validate() {
-
+			System.out.println("Login - validate()");
 			User user = null;
 			try {
 				user = User.authenticate(email, password);
