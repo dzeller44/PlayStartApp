@@ -34,17 +34,16 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 """),format.raw/*3.1*/("""<section id="confirmEmail">
 	<!-- Start Formoid form-->
 	<form class="formoid-solid-dark"
-		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post">
+		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px">
 		<div class="title">
 			<h2>Account Activated</h2>
 		</div>
 		<div class="element-input">
-			<label class="title"><span class="required"></span>"""),_display_(/*12.56*/Messages("signup.signup")),format.raw/*12.81*/("""
-				"""),format.raw/*13.5*/("""- """),_display_(/*13.8*/Messages("signup.email.confirmed")),format.raw/*13.42*/("""</label>
+			<label class="title"><span class="required"></span>"""),_display_(/*11.56*/Messages("signup.signup")),format.raw/*11.81*/("""
+				"""),format.raw/*12.5*/("""- """),_display_(/*12.8*/Messages("signup.email.confirmed")),format.raw/*12.42*/("""</label>
 		</div>
 		<div class="submit">
-			<input type="submit" a href=""""),_display_(/*16.34*/routes/*16.40*/.Application.index),format.raw/*16.58*/(""""
+			<input type="submit" onclick="window.location.href='/'"
 				value="Continue" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
@@ -53,7 +52,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 
 </section>
 
-""")))}),format.raw/*25.2*/("""
+""")))}),format.raw/*24.2*/("""
 """))
       }
     }
@@ -74,11 +73,11 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object confirm extends confirm_Scope0.confirm
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 19 12:32:08 MDT 2016
+                  DATE: Wed Oct 19 13:25:02 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/confirm.scala.html
-                  HASH: 2729a9371b23f14aa6c25763f324e3617a864d65
-                  MATRIX: 846->1|859->7|898->9|926->11|1380->438|1426->463|1458->468|1487->471|1542->505|1643->579|1658->585|1697->603|1856->732
-                  LINES: 32->1|32->1|32->1|34->3|43->12|43->12|44->13|44->13|44->13|47->16|47->16|47->16|56->25
+                  HASH: e1e2962966e91bac35ea29b7179d8a1c3369b37f
+                  MATRIX: 846->1|859->7|898->9|926->11|1364->422|1410->447|1442->452|1471->455|1526->489|1783->716
+                  LINES: 32->1|32->1|32->1|34->3|42->11|42->11|43->12|43->12|43->12|55->24
                   -- GENERATED --
               */
           

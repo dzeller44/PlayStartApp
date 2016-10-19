@@ -33,7 +33,25 @@ Seq[Any](format.raw/*1.14*/("""
 
 """),_display_(/*3.2*/main(user)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 
-    """),format.raw/*5.5*/("""DASHBOARD Example
+"""),format.raw/*5.1*/("""<section id="about">
+
+	<div class="services_block padbot40" data-appear-top-offset="-200"
+		data-animated="fadeInUp">
+
+		<!-- CONTAINER -->
+		<div class="container">
+
+			Welcome Page
+	
+	
+		</div>
+	</div>
+	<!-- //CONTAINER -->
+	</div>
+
+
+</section>
+
 
 """)))}))
       }
@@ -55,10 +73,10 @@ Seq[Any](format.raw/*1.14*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 19 12:32:08 MDT 2016
+                  DATE: Wed Oct 19 13:30:27 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/dashboard/index.scala.html
-                  HASH: 304e1c1492c5fb36b5718f8e8b8653644be4382d
-                  MATRIX: 753->1|860->13|888->16|906->26|945->28|977->34
+                  HASH: 293b3569fedde410c62c45cfd0a9c3c39cbc92b0
+                  MATRIX: 753->1|860->13|888->16|906->26|945->28|973->30
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5
                   -- GENERATED --
               */

@@ -1,3 +1,5 @@
+@(message: String)
+
 @main() {
 
 <section id="confirmEmail">
@@ -9,8 +11,7 @@
 			<h2>Invalid Login</h2>
 		</div>
 		<div class="element-input">
-			<label class="title"><span class="required"></span>@Messages("signup.signup")
-				- @Messages("signup.email.confirmed")</label>
+			<label class="title"><span class="required"></span>@message</label>
 		</div>
 		<div class="submit">
 			<input type="submit" a href="@routes.Application.index"

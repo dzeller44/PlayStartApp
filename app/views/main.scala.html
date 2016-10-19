@@ -96,7 +96,11 @@
 								<ul>
 									<li class="scroll_btn"><a href="/">Home</a></li>
 									<li class="scroll_btn"><a href="/signup">Register</a></li>
-									<li class="scroll_btn"><a href="/auth">Login</a></li>
+									@if(user != null) {
+										<li class="scroll_btn"><a href="/logout">Logout</a></li>
+									} else {
+  										<li class="scroll_btn"><a href="/auth">Login</a></li>
+									}
 								</ul>
 							</nav>
 						</div>

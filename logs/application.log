@@ -1,10 +1,42 @@
-2016-10-19 12:34:47,636 [INFO] from play.core.server.NettyServer in play-fork-run-akka.actor.default-dispatcher-14 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-10-19 12:35:40,500 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-10-19 12:35:40,511 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-10-19 12:35:41,200 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-10-19 12:35:42,534 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
-2016-10-19 12:35:42,535 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
-2016-10-19 12:35:42,535 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
-2016-10-19 12:35:42,535 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
-2016-10-19 12:35:42,562 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-10-19 12:36:10,233 [INFO] from application in play-fork-run-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2016-10-19 13:39:09,904 [INFO] from play.core.server.NettyServer in play-fork-run-akka.actor.default-dispatcher-6 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-10-19 13:39:15,149 [ERROR] from application in New I/O worker #1 - 
+
+! @71mo7b0na - Internal server error, for (GET) [/] ->
+ 
+play.forkrun.protocol.Serializers$playExceptionPickler$$anon$1: Compilation error[not enough arguments for method apply: (user: models.User, scripts: play.twirl.api.Html)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in class main.
+Unspecified value parameter user.]
+	at play.forkrun.protocol.Serializers$playExceptionPickler$.unpickle(Serializers.scala:159) ~[na:na]
+	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileFailureUnpickler1$2$.unpickle(Serializers.scala:175) ~[na:na]
+	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileResultUnpickler1$2$.unpickle(Serializers.scala:181) ~[na:na]
+	at scala.pickling.Unpickler$class.unpickleEntry(Pickler.scala:79) ~[na:na]
+	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileResultUnpickler1$2$.unpickleEntry(Serializers.scala:181) ~[na:na]
+	at scala.pickling.functions$.unpickle(functions.scala:11) ~[na:na]
+	at sbt.serialization.JsonValue$$anonfun$parse$1.apply(SerializedValue.scala:104) ~[na:na]
+	at scala.util.Try$.apply(Try.scala:161) ~[scala-library.jar:na]
+	at sbt.serialization.JsonValue.parse(SerializedValue.scala:104) ~[na:na]
+	at sbt.protocol.BuildValue.value(Values.scala:11) ~[na:na]
+	at sbt.protocol.TaskSuccess.resultWithCustomThrowable(Values.scala:65) ~[na:na]
+	at sbt.protocol.TaskResult$class.result(Values.scala:56) ~[na:na]
+	at sbt.protocol.TaskSuccess.result(Values.scala:62) ~[na:na]
+	at play.forkrun.ForkRun$$anonfun$reloading$1.applyOrElse(ForkRun.scala:197) ~[na:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:465) ~[akka-actor_2.10-2.3.13.jar:na]
+	at play.forkrun.ForkRun.aroundReceive(ForkRun.scala:152) ~[na:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516) ~[akka-actor_2.10-2.3.13.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487) ~[akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:254) ~[akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:221) ~[akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:231) ~[akka-actor_2.10-2.3.13.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.pollAndExecAll(ForkJoinPool.java:1253) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+2016-10-19 13:41:12,908 [WARN] from application in ForkJoinPool-1-worker-2 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-10-19 13:41:12,918 [INFO] from application in ForkJoinPool-1-worker-2 - Creating Pool for datasource 'default'
+2016-10-19 13:41:13,578 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-2 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-10-19 13:41:14,776 [WARN] from application in ForkJoinPool-1-worker-2 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
+2016-10-19 13:41:14,777 [WARN] from application in ForkJoinPool-1-worker-2 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
+2016-10-19 13:41:14,778 [WARN] from application in ForkJoinPool-1-worker-2 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
+2016-10-19 13:41:14,779 [WARN] from application in ForkJoinPool-1-worker-2 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead
+2016-10-19 13:41:14,792 [INFO] from play.api.Play in ForkJoinPool-1-worker-2 - Application started (Dev)
+2016-10-19 13:41:58,117 [INFO] from application in play-fork-run-akka.actor.default-dispatcher-15 - Shutting down connection pool.

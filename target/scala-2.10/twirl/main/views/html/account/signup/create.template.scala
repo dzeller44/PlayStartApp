@@ -78,7 +78,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 	</form>
 
 	<div class="loginBlock">
-		<a href="/login"><div class="loginText">Already have an account? Click here...</div></a>
+		<a href="/auth"><div class="loginText">Already have an account? Click here...</div></a>
 	</div>
 
 </section>
@@ -103,9 +103,9 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 19 12:32:08 MDT 2016
+                  DATE: Wed Oct 19 13:25:53 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: 77190c589cf6cb8cb14ac54bf617d7096513d355
+                  HASH: 296fb966d374893f286e35c8af084f020527854e
                   MATRIX: 844->1|862->11|901->13|932->18
                   LINES: 32->1|32->1|32->1|34->3
                   -- GENERATED --

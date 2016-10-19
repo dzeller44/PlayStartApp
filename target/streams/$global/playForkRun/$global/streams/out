@@ -181,8 +181,46 @@
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m(Server started, use Ctrl+D to stop and go back to the console...)[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mCoffeeScript compiling on 1 source(s)[0m
-[0m[[0minfo[0m] [0mLESS compiling on 1 source(s)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes...[0m
+[0m[[0minfo[0m] [0mCompiling 11 Scala sources to C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes...[0m
+[0m[[31merror[0m] [0mC:\WebDev\git\PlayAuthenticate\app\views\account\reset\ask.scala.html:9: not enough arguments for method apply: (user: models.User, scripts: play.twirl.api.Html)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in class main.[0m
+[0m[[0minfo[0m] [0mUnspecified value parameter user.[0m
+[0m[[31merror[0m] [0m@main() {[0m
+[0m[[31merror[0m] [0m     ^[0m
+[0m[[31merror[0m] [0mC:\WebDev\git\PlayAuthenticate\app\views\account\reset\runAsk.scala.html:7: not enough arguments for method apply: (user: models.User, scripts: play.twirl.api.Html)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in class main.[0m
+[0m[[0minfo[0m] [0mUnspecified value parameter user.[0m
+[0m[[31merror[0m] [0m@main() {[0m
+[0m[[31merror[0m] [0m     ^[0m
+[0m[[31merror[0m] [0mC:\WebDev\git\PlayAuthenticate\app\views\account\signup\confirm.scala.html:1: not enough arguments for method apply: (user: models.User, scripts: play.twirl.api.Html)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in class main.[0m
+[0m[[0minfo[0m] [0mUnspecified value parameter user.[0m
+[0m[[31merror[0m] [0m     ^[0m
+[0m[[31merror[0m] [0m@main() {[0m
+[0m[[31merror[0m] [0mC:\WebDev\git\PlayAuthenticate\app\views\account\signup\created.scala.html:1: not enough arguments for method apply: (user: models.User, scripts: play.twirl.api.Html)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in class main.[0m
+[0m[[0minfo[0m] [0mUnspecified value parameter user.[0m
+[0m[[31merror[0m] [0m@main() {[0m
+[0m[[31merror[0m] [0m     ^[0m
+[0m[[31merror[0m] [0mC:\WebDev\git\PlayAuthenticate\app\views\badlogin.scala.html:3: not enough arguments for method apply: (user: models.User, scripts: play.twirl.api.Html)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in class main.[0m
+[0m[[0minfo[0m] [0mUnspecified value parameter user.[0m
+[0m[[31merror[0m] [0m@main() {[0m
+[0m[[31merror[0m] [0m     ^[0m
+[0m[[31merror[0m] [0m5 errors found[0m
+[0m[[31merror[0m] [0mapplication - [0m
+[0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0m! @71mo7b0na - Internal server error, for (GET) [/] ->[0m
+[0m[[0minfo[0m] [0m [0m
+[0m[[0minfo[0m] [0mplay.forkrun.protocol.Serializers$playExceptionPickler$$anon$1: Compilation error[not enough arguments for method apply: (user: models.User, scripts: play.twirl.api.Html)(content: play.twirl.api.Html)play.twirl.api.HtmlFormat.Appendable in class main.[0m
+[0m[[0minfo[0m] [0mUnspecified value parameter user.][0m
+[0m[[0minfo[0m] [0m	at play.forkrun.protocol.Serializers$playExceptionPickler$.unpickle(Serializers.scala:159) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileFailureUnpickler1$2$.unpickle(Serializers.scala:175) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileResultUnpickler1$2$.unpickle(Serializers.scala:181) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at scala.pickling.Unpickler$class.unpickleEntry(Pickler.scala:79) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileResultUnpickler1$2$.unpickleEntry(Serializers.scala:181) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at scala.pickling.functions$.unpickle(functions.scala:11) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at sbt.serialization.JsonValue$$anonfun$parse$1.apply(SerializedValue.scala:104) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at scala.util.Try$.apply(Try.scala:161) ~[scala-library.jar:na][0m
+[0m[[0minfo[0m] [0m	at sbt.serialization.JsonValue.parse(SerializedValue.scala:104) ~[na:na][0m
+[0m[[0minfo[0m] [0m	at sbt.protocol.BuildValue.value(Values.scala:11) ~[na:na][0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes...[0m
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead[0m
 [0m[[0minfo[0m] [0mapplication - Creating Pool for datasource 'default'[0m
 [0m[[0minfo[0m] [0mp.a.d.DefaultDBApi - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8[0m
@@ -191,10 +229,6 @@
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead[0m
 [0m[[33mwarn[0m] [0mapplication - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 71: smtp is deprecated, use play.mailer instead[0m
 [0m[[0minfo[0m] [0mplay.api.Play - Application started (Dev)[0m
-[0m[[0minfo[0m] [0mopenLogin[0m
-[0m[[0minfo[0m] [0mLogin - validate()[0m
-[0m[[0minfo[0m] [0mauthenticate[0m
-[0m[[0minfo[0m] [0mauthenticate - bad request[0m
 [0m[[0minfo[0m] [0mStopping Play fork run ...[0m
 [0m[[0minfo[0m] [0mapplication - Shutting down connection pool.[0m
 [0m[[0minfo[0m] [0mJVM exiting, shutting down Play fork run ...[0m

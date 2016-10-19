@@ -1,7 +1,64 @@
-New log file opened at Wed Oct 19 12:34:14 MDT 2016 by 8752@OIT-ZELLERD-L2
-Taking next connection to: 50751
-New client attempting to connect on port: 50752-50751
-  Address = /165.127.33.87:50751
-This client on port 50752 has uuid 863f3903-4c20-4192-aa80-5268564fa7e6 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-863f3903-4c20-4192-aa80-5268564fa7e6
-Taking next connection to: 50751
+New log file opened at Wed Oct 19 13:33:18 MDT 2016 by 6676@OIT-ZELLERD-L2
+Taking next connection to: 51417
+New client attempting to connect on port: 51418-51417
+  Address = /165.127.33.87:51417
+This client on port 51418 has uuid 20dad254-0cce-4293-98c8-85365232f5c3 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-20dad254-0cce-4293-98c8-85365232f5c3
+Taking next connection to: 51417
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51417
+New client attempting to connect on port: 51456-51417
+  Address = /165.127.33.87:51417
+Handshake exception on socket: 51456
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 51417
+New client attempting to connect on port: 51457-51417
+  Address = /165.127.33.87:51417
+This client on port 51457 has uuid e13e0754-247c-47e9-84df-1c3d5b091da8 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-e13e0754-247c-47e9-84df-1c3d5b091da8
+Taking next connection to: 51417
+New client attempting to connect on port: 51504-51417
+  Address = /165.127.33.87:51417
+Handshake exception on socket: 51504
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 51417
+New client attempting to connect on port: 51505-51417
+  Address = /165.127.33.87:51417
+This client on port 51505 has uuid b7b41f0c-67ae-472b-8620-be9dcd25e36b configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-b7b41f0c-67ae-472b-8620-be9dcd25e36b
+Taking next connection to: 51417
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 6676@OIT-ZELLERD-L2 logs at Wed Oct 19 13:42:04 MDT 2016, goodbye.

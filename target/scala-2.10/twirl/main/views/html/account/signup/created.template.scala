@@ -34,17 +34,15 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
  """),format.raw/*3.2*/("""<section id="confirmSignup">
 	<!-- Start Formoid form-->
 	<form class="formoid-solid-dark"
-		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post">
+		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px">
 		<div class="title">
 			<h2>Success</h2>
 		</div>
 		<div class="element-input">
-			<label class="title"><span class="required"></span>"""),_display_(/*12.56*/Messages("signup.msg.created")),format.raw/*12.86*/("""</label>
+			<label class="title"><span class="required"></span>"""),_display_(/*11.56*/Messages("signup.msg.created")),format.raw/*11.86*/("""</label>
 		</div>
 		<div class="submit">
-			<input type="submit" a href=""""),_display_(/*15.34*/routes/*15.40*/.Application.index),format.raw/*15.58*/(""""
-				value="Continue" />
+			<input type="submit" onclick="window.location.href='/'" value="Continue" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -71,11 +69,11 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object created extends created_Scope0.created
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 19 12:32:08 MDT 2016
+                  DATE: Wed Oct 19 13:20:03 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/created.scala.html
-                  HASH: 719a173265e7feabf4d78205069af6a40c666bee
-                  MATRIX: 846->1|859->7|898->9|927->12|1372->430|1423->460|1524->534|1539->540|1578->558
-                  LINES: 32->1|32->1|32->1|34->3|43->12|43->12|46->15|46->15|46->15
+                  HASH: 16fa82cf11cd6eccb3375f3971c1ea55c0b829d4
+                  MATRIX: 846->1|859->7|898->9|927->12|1356->414|1407->444
+                  LINES: 32->1|32->1|32->1|34->3|42->11|42->11
                   -- GENERATED --
               */
           

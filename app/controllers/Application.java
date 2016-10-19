@@ -61,6 +61,8 @@ public class Application extends Controller {
 		public String email;
 		@Constraints.Required
 		public String password;
+		
+		String errMessage = "";
 
 		/**
 		 * Validate the authentication.
@@ -73,12 +75,15 @@ public class Application extends Controller {
 			try {
 				user = User.authenticate(email, password);
 			} catch (AppException e) {
-				return Messages.get("error.technical");
+				errMessage = Messages.get("error.technical");
+				return errMessage;
 			}
 			if (user == null) {
-				return Messages.get("invalid.user.or.password");
+				errMessage = Messages.get("invalid.user.or.password");
+				return errMessage;
 			} else if (!user.validated) {
-				return Messages.get("account.not.validated.check.mail");
+				errMessage = Messages.get("account.not.validated.check.mail");
+				return errMessage;
 			}
 			return null;
 		}
@@ -128,11 +133,14 @@ public class Application extends Controller {
 	 * @return Dashboard if auth OK or login form if auth KO
 	 */
 	public Result authenticate() {
+		String errorMessage = "";
+		
 		Form<Login> loginForm = form(Login.class).bindFromRequest();
 		System.out.println("authenticate");
 		Form<Register> registerForm = form(Register.class);
 
 		if (loginForm.hasErrors()) {
+			
 			System.out.println("authenticate - bad request");
 			return badRequest(index.render());
 			//return badRequest();
