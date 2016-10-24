@@ -122,5 +122,6 @@
 	<classpathentry kind="lib" path="C:/WebDev/eclipse/libs/persistence-api-1.0.2.jar"/>
 	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes"/>
 	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/routes"/>
+	<classpathentry kind="var" path="OpenCSV"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

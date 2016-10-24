@@ -75,7 +75,7 @@ Seq[Any](format.raw/*1.19*/("""
 object badlogin extends badlogin_Scope0.badlogin
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 19 13:18:32 MDT 2016
+                  DATE: Mon Oct 24 07:45:06 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/badlogin.scala.html
                   HASH: 4ca0642b603c162229f4f57b3fbbb08b25c6c4b9
                   MATRIX: 751->1|863->18|891->21|904->27|943->29|971->31|1421->454|1449->461|1550->535|1565->541|1604->559|1763->688

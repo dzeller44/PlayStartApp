@@ -99,7 +99,7 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Oct 19 13:18:32 MDT 2016
+                  DATE: Mon Oct 24 07:45:06 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/index.scala.html
                   HASH: ff4bc969da9b7461526d664ea87d595d22757ac2
                   MATRIX: 827->1|845->11|884->13|913->16|1332->408|1347->414|1404->450|1648->667|1663->673|1726->715|1980->942|1995->948|2049->981
