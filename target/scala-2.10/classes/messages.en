@@ -9,6 +9,7 @@ password=Password
 error.technical=Technical Error, please Retry
 validate=Validate
 reset=Reset
+cancel=Cancel
 
 account.not.validated.check.mail=Account not validated. Check your emails.
 account.successfully.validated=Account successfully validated
@@ -35,6 +36,7 @@ signin.your.password=Your password
 
 forgot.password=Forgot password?
 forgot.emailOrPassword=Forgot email or password?
+forgot.email=Forgot email?
 
 signup.signup=Sign Up
 signup.successfull=Sign Up - Successful !

@@ -48,8 +48,8 @@ public class Application extends Controller {
 			}
 		}
 
-		//return ok(index.render(form(Register.class), form(Login.class)));
-		return ok(index.render());
+		return ok(index.render(form(Register.class), form(Login.class)));
+		//return ok(index.render());
 	}
 
 	/**
@@ -142,7 +142,8 @@ public class Application extends Controller {
 		if (loginForm.hasErrors()) {
 			
 			System.out.println("authenticate - bad request");
-			return badRequest(index.render());
+			return badRequest(index.render(registerForm, loginForm));
+			//return badRequest(index.render());
 			//return badRequest();
 		} else {
 			System.out.println("authenticate - good request");
@@ -153,7 +154,7 @@ public class Application extends Controller {
 	
 	public Result openLogin() {
 		System.out.println("openLogin");
-		return ok(auth.render());
+		return ok(auth.render(form(Login.class)));
 	}
 
 	/**

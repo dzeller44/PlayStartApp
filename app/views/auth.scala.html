@@ -1,3 +1,8 @@
+@(loginForm: Form[Application.Login])
+
+@import helper._
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) }
+
 @main(null) {
 
 <section id="authentication">
@@ -5,6 +10,11 @@
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
 		method="post" action="">
+		if(loginForm.hasGlobalErrors) {
+			<p class="error">
+				<span class="label label-danger">@loginForm.globalError.message</span>
+			</p>
+		}
 		<div class="title">
 			<h2>Login</h2>
 		</div>
@@ -12,7 +22,7 @@
 			<label class="title"><span class="required">*</span>Email:</label>
 			<div class="item-cont">
 				<input class="large" type="text" name="email" required="required"
-					placeholder="Enter your user name..." /><span class="icon-place"></span>
+					placeholder="Enter your email..." /><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-password">
@@ -25,6 +35,7 @@
 		</div>
 		<div class="submit">
 			<input type="submit" value="Submit" />
+			<a href="/" class="buttonCancel">@Messages("goback")</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -32,7 +43,7 @@
 
 	<div class="loginBlock">
 		<a href="/signup"><div class="loginText">@Messages("account.need")</div></a>
-		<a href="/settings"><div class="loginText">@Messages("forgot.emailOrPassword")</div></a>
+		<a href="/reset/ask"><div class="loginText">@Messages("forgot.password")</div></a>
 	</div>
 
 </section>

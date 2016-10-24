@@ -117,6 +117,9 @@ public class Token extends Model {
      * @throws java.net.MalformedURLException if token is wrong.
      */
     public void sendMailResetPassword(User user, MailerClient mc) throws MalformedURLException {
+    	// Need to send the email?????
+    	String email = user.email;
+        //sendMail(user, TypeToken.password, email, mc);
         sendMail(user, TypeToken.password, null, mc);
     }
 

@@ -41,6 +41,7 @@
 		<div class="submit">
 		<!-- <input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" /> -->
 			<input type="submit" value="Submit" />
+			<a href="/" class="buttonCancel">@Messages("goback")</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -48,7 +49,7 @@
 
 	<div class="loginBlock">
 		<a href="/auth"><div class="loginText">@Messages("account.exists")</div></a>
-		<a href="/settings"><div class="loginText">@Messages("forgot.emailOrPassword")</div></a>
+		<a href="/reset/ask"><div class="loginText">@Messages("forgot.password")</div></a>
 	</div>
 
 </section>
