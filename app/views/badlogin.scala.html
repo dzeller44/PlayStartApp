@@ -1,6 +1,4 @@
-@(message: String)
-
-@main() {
+@(message: String) @main() {
 
 <section id="confirmEmail">
 	<!-- Start Formoid form-->
@@ -14,7 +12,7 @@
 			<label class="title"><span class="required"></span>@message</label>
 		</div>
 		<div class="submit">
-			<input type="submit" a href="@routes.Application.index"
+			<input type="submit" a href= @routes.Application.index"
 				value="Continue" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->

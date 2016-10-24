@@ -78,7 +78,8 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 	</form>
 
 	<div class="loginBlock">
-		<a href="/auth"><div class="loginText">Already have an account? Click here...</div></a>
+		<a href="/auth"><div class="loginText">"""),_display_(/*50.43*/Messages("account.exists")),format.raw/*50.69*/("""</div></a>
+		<a href="/settings"><div class="loginText">"""),_display_(/*51.47*/Messages("forgot.emailOrPassword")),format.raw/*51.81*/("""</div></a>
 	</div>
 
 </section>
@@ -103,11 +104,11 @@ Seq[Any](_display_(/*1.2*/main(null)/*1.12*/ {_display_(Seq[Any](format.raw/*1.1
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Mon Oct 24 07:45:06 MDT 2016
+                  DATE: Mon Oct 24 09:12:48 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: 296fb966d374893f286e35c8af084f020527854e
-                  MATRIX: 844->1|862->11|901->13|932->18
-                  LINES: 32->1|32->1|32->1|34->3
+                  HASH: 1829f6b0664227a85268a3b44dc2092282266a25
+                  MATRIX: 844->1|862->11|901->13|932->18|2829->1888|2876->1914|2960->1971|3015->2005
+                  LINES: 32->1|32->1|32->1|34->3|81->50|81->50|82->51|82->51
                   -- GENERATED --
               */
           
