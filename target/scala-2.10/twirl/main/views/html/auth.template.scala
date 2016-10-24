@@ -40,12 +40,14 @@ Seq[Any](format.raw/*1.38*/("""
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
 		method="post" action="">
-		if(loginForm.hasGlobalErrors) """),format.raw/*13.33*/("""{"""),format.raw/*13.34*/("""
-			"""),format.raw/*14.4*/("""<p class="error">
-				<span class="label label-danger">"""),_display_(/*15.39*/loginForm/*15.48*/.globalError.message),format.raw/*15.68*/("""</span>
+		<!--  
+		if(loginForm.hasGlobalErrors) """),format.raw/*14.33*/("""{"""),format.raw/*14.34*/("""
+			"""),format.raw/*15.4*/("""<p class="error">
+				<span class="label label-danger">"""),_display_(/*16.39*/loginForm/*16.48*/.globalError.message),format.raw/*16.68*/("""</span>
 			</p>
-		"""),format.raw/*17.3*/("""}"""),format.raw/*17.4*/("""
-		"""),format.raw/*18.3*/("""<div class="title">
+		"""),format.raw/*18.3*/("""}"""),format.raw/*18.4*/("""
+		"""),format.raw/*19.3*/("""-->
+		<div class="title">
 			<h2>Login</h2>
 		</div>
 		<div class="element-input">
@@ -65,20 +67,20 @@ Seq[Any](format.raw/*1.38*/("""
 		</div>
 		<div class="submit">
 			<input type="submit" value="Submit" />
-			<a href="/" class="buttonCancel">"""),_display_(/*38.38*/Messages("goback")),format.raw/*38.56*/("""</a>
+			<a href="/" class="buttonCancel">"""),_display_(/*40.38*/Messages("goback")),format.raw/*40.56*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
 	</form>
 
 	<div class="loginBlock">
-		<a href="/signup"><div class="loginText">"""),_display_(/*45.45*/Messages("account.need")),format.raw/*45.69*/("""</div></a>
-		<a href="/reset/ask"><div class="loginText">"""),_display_(/*46.48*/Messages("forgot.password")),format.raw/*46.75*/("""</div></a>
+		<a href="/signup"><div class="loginText">"""),_display_(/*47.45*/Messages("account.need")),format.raw/*47.69*/("""</div></a>
+		<a href="/reset/ask"><div class="loginText">"""),_display_(/*48.48*/Messages("forgot.password")),format.raw/*48.75*/("""</div></a>
 	</div>
 
 </section>
 
-""")))}),format.raw/*51.2*/("""
+""")))}),format.raw/*53.2*/("""
 """))
       }
     }
@@ -99,11 +101,11 @@ Seq[Any](format.raw/*1.38*/("""
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Mon Oct 24 12:55:32 MDT 2016
+                  DATE: Mon Oct 24 13:20:37 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: 1013a060f0147bb4400fd2282643900f5ae73f5b
-                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|1520->489|1549->490|1581->495|1665->552|1683->561|1724->581|1771->601|1799->602|1830->606|2636->1385|2675->1403|2874->1575|2919->1599|3005->1658|3053->1685|3121->1723
-                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|43->13|43->13|44->14|45->15|45->15|45->15|47->17|47->17|48->18|68->38|68->38|75->45|75->45|76->46|76->46|81->51
+                  HASH: 244479483d640f5e15c8be64380b49cf45d82dd7
+                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|1530->499|1559->500|1591->505|1675->562|1693->571|1734->591|1781->611|1809->612|1840->616|2653->1402|2692->1420|2891->1592|2936->1616|3022->1675|3070->1702|3138->1740
+                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|44->14|44->14|45->15|46->16|46->16|46->16|48->18|48->18|49->19|70->40|70->40|77->47|77->47|78->48|78->48|83->53
                   -- GENERATED --
               */
           

@@ -6,3 +6,13 @@ function profileServicesOtherShowHide(field) {
 		document.getElementById("otherService").style.display = "none";
 	}
 }
+
+function isLoggedOn() {
+	var email = '<%= Session["email"] %>';
+	if (email != null || email != "") {
+		return true;
+	}
+	else {
+		return false;
+	}
+}

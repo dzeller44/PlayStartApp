@@ -86,7 +86,7 @@ Seq[Any](format.raw/*1.52*/("""
 object ask extends ask_Scope0.ask
               /*
                   -- GENERATED --
-                  DATE: Mon Oct 24 12:08:35 MDT 2016
+                  DATE: Mon Oct 24 13:20:37 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/reset/ask.scala.html
                   HASH: 0ab3c6d3574348a8a026b9542ee06cda06794b4e
                   MATRIX: 788->1|940->75|972->99|1068->51|1096->70|1126->165|1155->169|1168->175|1207->177|1237->180|1592->508|1638->533|2035->903|2073->920|2143->963|2182->981|2329->1098
