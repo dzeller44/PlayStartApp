@@ -100,6 +100,10 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String inputPassword;
+		
+		// Custom fields...
+		@Constraints.Required
+		public String role;
 
 		/**
 		 * Validate the authentication.
@@ -117,6 +121,10 @@ public class Application extends Controller {
 
 			if (isBlank(inputPassword)) {
 				return "Password is required";
+			}
+			
+			if (isBlank(role)) {
+				return "Account Role is required";
 			}
 
 			return null;

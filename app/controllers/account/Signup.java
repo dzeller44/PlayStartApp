@@ -41,7 +41,7 @@ public class Signup extends Controller {
 	 *
 	 * @return create form
 	 */
-	public Result create(String role) {
+	public Result create() {
 		return ok(create.render(form(Application.Register.class)));
 		// return ok(create.render());
 	}
@@ -52,8 +52,8 @@ public class Signup extends Controller {
 	 * @return create form
 	 */
 	public Result createFormOnly() {
-		// return ok(create.render(form(Application.Register.class)));
-		return ok(create.render());
+		return ok(create.render(form(Application.Register.class)));
+		//return ok(create.render());
 	}
 
 	/**
@@ -65,8 +65,8 @@ public class Signup extends Controller {
 		Form<Application.Register> registerForm = form(Application.Register.class).bindFromRequest();
 
 		if (registerForm.hasErrors()) {
-			// return badRequest(create.render(registerForm));
-			return badRequest(create.render());
+			return badRequest(create.render(registerForm));
+			//return badRequest(create.render());
 		}
 
 		Application.Register register = registerForm.get();
@@ -82,6 +82,18 @@ public class Signup extends Controller {
 			user.fullname = register.fullname;
 			user.passwordHash = Hash.createPassword(register.inputPassword);
 			user.confirmationToken = UUID.randomUUID().toString();
+			// Custom fields...
+			String role = register.role;
+			switch (role) {
+			case "Business User" :
+				role = "user";
+			case "Emergency Manager" :
+				role = "manager";
+			default :
+				role = "none";
+			}
+			//System.out.println("Account Role: " + register.role);
+			user.role = register.role;
 
 			user.save();
 			sendMailAskForConfirmation(user);
@@ -94,8 +106,8 @@ public class Signup extends Controller {
 			Logger.error("Signup.save error", e);
 			flash("error", Messages.get("error.technical"));
 		}
-		// return badRequest(create.render(registerForm));
-		return badRequest(create.render());
+		return badRequest(create.render(registerForm));
+		//return badRequest(create.render());
 	}
 
 	/**
@@ -111,8 +123,8 @@ public class Signup extends Controller {
 		// Check unique email
 		if (User.findByEmail(email) != null) {
 			flash("error", Messages.get("error.email.already.exist"));
-			// return badRequest(create.render(registerForm));
-			return badRequest(create.render());
+			return badRequest(create.render(registerForm));
+			//return badRequest(create.render());
 		}
 
 		return null;

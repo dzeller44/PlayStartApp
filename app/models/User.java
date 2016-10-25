@@ -42,6 +42,11 @@ public class User extends Model {
 
     @Formats.NonEmpty
     public Boolean validated = false;
+    
+    // Custom Fields...
+    @Constraints.Required
+    @Formats.NonEmpty
+    public String role;
 
     // -- Queries (long id, user.class)
     public static Model.Finder<Long, User> find = new Model.Finder<Long, User>(Long.class, User.class);
