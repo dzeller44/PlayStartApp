@@ -65,9 +65,9 @@ Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_disp
 		<div class="element-radio">
 			<label class="title"><span class="required">*</span>Account Role:</label>
 			<div class="column column1">
-				<label><input type="radio" name="role" value="Business User"
+				<label><input type="radio" name="role" value="user"
 					required="required" /><span>Business User</span></label><label><input
-					type="radio" name="role" value="Emergency Manager"
+					type="radio" name="role" value="manager"
 					required="required" /><span>Emergency Manager</span></label>
 			</div>
 			<span class="clearfix"></span>
@@ -117,10 +117,10 @@ Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_disp
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 25 08:25:38 MDT 2016
+                  DATE: Tue Oct 25 09:12:30 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: 61c60c9ab6015b6984dbbd7f6815b6a039e6b427
-                  MATRIX: 782->1|917->41|945->43|963->53|1002->55|1030->57|3266->2266|3305->2284|3495->2447|3542->2473|3627->2531|3675->2558|3738->2591
+                  HASH: ea03d32f0ddb79959f90f67273f3fa1a09e3c495
+                  MATRIX: 782->1|917->41|945->43|963->53|1002->55|1030->57|3247->2247|3286->2265|3476->2428|3523->2454|3608->2512|3656->2539|3719->2572
                   LINES: 27->1|32->1|32->1|32->1|32->1|34->3|86->55|86->55|93->62|93->62|94->63|94->63|99->68
                   -- GENERATED --
               */

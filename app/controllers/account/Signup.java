@@ -83,6 +83,7 @@ public class Signup extends Controller {
 			user.passwordHash = Hash.createPassword(register.inputPassword);
 			user.confirmationToken = UUID.randomUUID().toString();
 			// Custom fields...
+			/*
 			String role = register.role;
 			switch (role) {
 			case "Business User" :
@@ -93,7 +94,9 @@ public class Signup extends Controller {
 				role = register.role;
 			}
 			//System.out.println("Account Role: " + register.role);
-			user.role = role;
+			register.role = role;
+			 */
+			user.role = register.role;
 
 			user.save();
 			sendMailAskForConfirmation(user);
