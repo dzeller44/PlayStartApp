@@ -44,6 +44,8 @@ Seq[Any](format.raw/*1.38*/("""
 		<div class="title">
 			<h2>Login</h2>
 		</div>
+				<input id="clickMe" type="button" value="clickme" onclick="isLoggedIn();" />
+		
 		<div class="element-input">
 			<label class="title"><span class="required">*</span>Email:</label>
 			<div class="item-cont">
@@ -61,20 +63,20 @@ Seq[Any](format.raw/*1.38*/("""
 		</div>
 		<div class="submit">
 			<input type="submit" value="Submit" />
-			<a href="/" class="buttonCancel">"""),_display_(/*34.38*/Messages("goback")),format.raw/*34.56*/("""</a>
+			<a href="/" class="buttonCancel">"""),_display_(/*36.38*/Messages("goback")),format.raw/*36.56*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
 	</form>
 
 	<div class="loginBlock">
-		<a href="/signup"><div class="loginText">"""),_display_(/*41.45*/Messages("account.need")),format.raw/*41.69*/("""</div></a>
-		<a href="/reset/ask"><div class="loginText">"""),_display_(/*42.48*/Messages("forgot.password")),format.raw/*42.75*/("""</div></a>
+		<a href="/signup"><div class="loginText">"""),_display_(/*43.45*/Messages("account.need")),format.raw/*43.69*/("""</div></a>
+		<a href="/reset/ask"><div class="loginText">"""),_display_(/*44.48*/Messages("forgot.password")),format.raw/*44.75*/("""</div></a>
 	</div>
 
 </section>
 
-""")))}),format.raw/*47.2*/("""
+""")))}),format.raw/*49.2*/("""
 """))
       }
     }
@@ -95,11 +97,11 @@ Seq[Any](format.raw/*1.38*/("""
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 25 08:25:37 MDT 2016
+                  DATE: Tue Oct 25 12:51:35 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: f707e6ace31a6397c0bf17a99573beed36441188
-                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|2270->1240|2309->1258|2508->1430|2553->1454|2639->1513|2687->1540|2755->1578
-                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|64->34|64->34|71->41|71->41|72->42|72->42|77->47
+                  HASH: 4d623d862e25827c7abdedafb1655c34b070c261
+                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|2356->1326|2395->1344|2594->1516|2639->1540|2725->1599|2773->1626|2841->1664
+                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|66->36|66->36|73->43|73->43|74->44|74->44|79->49
                   -- GENERATED --
               */
           

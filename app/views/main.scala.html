@@ -68,9 +68,9 @@
 						@isLoggedIn = isLoggedIn();
 					</script> 
     </head>
-    <body>
+<body onload="@isLoggedIn = isLoggedIn();">
 
-<!-- PRELOADER -->
+	<!-- PRELOADER -->
 	<img id="preloader" src="@routes.Assets.at("img/preloader.gif")" alt="" />
 	<!-- //PRELOADER -->
 	<div class="preloader_hide">
@@ -100,7 +100,7 @@
 								<ul>
 									<li class="scroll_btn"><a href="/">Home</a></li>
 									<li class="scroll_btn"><a href="/signup">Register</a></li>
-									@if(isLoggedIn == true) {
+									@if(isLoggedIn == "true") {
 										<li class="scroll_btn"><a href="/logout">Logout</a></li>
 									} else {
   										<li class="scroll_btn"><a href="/auth">Login</a></li>

@@ -7,12 +7,19 @@ function profileServicesOtherShowHide(field) {
 	}
 }
 
-function isLoggedOn() {
+function isLoggedIn() {
+	var returnValue = "";
 	var email = '<%= Session["email"] %>';
+	//var email = '<%= session.getAttribute("email") %>';
+	console.log("email = " + email);
+	window.alert("email = " + email);
 	if (email != null || email != "") {
-		return true;
+		returnValue = "true";
 	}
 	else {
-		return false;
+		returnValue = "false";
 	}
+	console.log("isLoggedOn() = " + returnValue);
+	window.alert("isLoggedOn() = " + returnValue);
+	return returnValue;
 }

@@ -52,7 +52,6 @@ Seq[Any](format.raw/*1.14*/("""
 
 </section>
 
-
 """)))}))
       }
     }
@@ -73,9 +72,9 @@ Seq[Any](format.raw/*1.14*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 25 08:25:38 MDT 2016
+                  DATE: Tue Oct 25 12:46:56 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/dashboard/index.scala.html
-                  HASH: 293b3569fedde410c62c45cfd0a9c3c39cbc92b0
+                  HASH: eb0da9d43e8dc74f54f0b3a00ac49e21a62ba212
                   MATRIX: 753->1|860->13|888->16|906->26|945->28|973->30
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5
                   -- GENERATED --

@@ -63,12 +63,18 @@ Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_disp
 			</div>
 		</div>
 		<div class="element-radio">
-			<label class="title"><span class="required">*</span>Account Role:</label>
+			<label class="title"><span class="required">*</span>Account
+				Role:</label>
 			<div class="column column1">
-				<label><input type="radio" name="role" value="user"
-					required="required" /><span>Business User</span></label><label><input
-					type="radio" name="role" value="manager"
-					required="required" /><span>Emergency Manager</span></label>
+				<label>
+					<input type="radio" name="role" value="user"
+					required="required" /><span>Business User</span>
+				</label>
+				<label>
+					<input
+					type="radio" name="role" value="manager" required="required" /><span>Emergency
+						Manager</span>
+				</label>
 			</div>
 			<span class="clearfix"></span>
 		</div>
@@ -83,20 +89,20 @@ Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_disp
 		<div class="submit">
 			<!-- <input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" /> -->
 			<input type="submit" value="Submit" /> <a href="/"
-				class="buttonCancel">"""),_display_(/*55.27*/Messages("goback")),format.raw/*55.45*/("""</a>
+				class="buttonCancel">"""),_display_(/*61.27*/Messages("goback")),format.raw/*61.45*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
 	</form>
 
 	<div class="loginBlock">
-		<a href="/auth"><div class="loginText">"""),_display_(/*62.43*/Messages("account.exists")),format.raw/*62.69*/("""</div></a>
-		<a href="/reset/ask"><div class="loginText">"""),_display_(/*63.48*/Messages("forgot.password")),format.raw/*63.75*/("""</div></a>
+		<a href="/auth"><div class="loginText">"""),_display_(/*68.43*/Messages("account.exists")),format.raw/*68.69*/("""</div></a>
+		<a href="/reset/ask"><div class="loginText">"""),_display_(/*69.48*/Messages("forgot.password")),format.raw/*69.75*/("""</div></a>
 	</div>
 
 </section>
 
-""")))}),format.raw/*68.2*/("""
+""")))}),format.raw/*74.2*/("""
 """))
       }
     }
@@ -117,11 +123,11 @@ Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_disp
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 25 09:12:30 MDT 2016
+                  DATE: Tue Oct 25 12:51:35 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: ea03d32f0ddb79959f90f67273f3fa1a09e3c495
-                  MATRIX: 782->1|917->41|945->43|963->53|1002->55|1030->57|3247->2247|3286->2265|3476->2428|3523->2454|3608->2512|3656->2539|3719->2572
-                  LINES: 27->1|32->1|32->1|32->1|32->1|34->3|86->55|86->55|93->62|93->62|94->63|94->63|99->68
+                  HASH: 6ec6d765a54b242f5468f6fb4c8af9233d92c250
+                  MATRIX: 782->1|917->41|945->43|963->53|1002->55|1030->57|3279->2279|3318->2297|3508->2460|3555->2486|3640->2544|3688->2571|3751->2604
+                  LINES: 27->1|32->1|32->1|32->1|32->1|34->3|92->61|92->61|99->68|99->68|100->69|100->69|105->74
                   -- GENERATED --
               */
           
