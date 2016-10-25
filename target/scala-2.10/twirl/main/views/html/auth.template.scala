@@ -95,7 +95,7 @@ Seq[Any](format.raw/*1.38*/("""
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Tue Oct 25 08:08:48 MDT 2016
+                  DATE: Tue Oct 25 08:25:37 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
                   HASH: f707e6ace31a6397c0bf17a99573beed36441188
                   MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|2270->1240|2309->1258|2508->1430|2553->1454|2639->1513|2687->1540|2755->1578

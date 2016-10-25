@@ -90,10 +90,10 @@ public class Signup extends Controller {
 			case "Emergency Manager" :
 				role = "manager";
 			default :
-				role = "none";
+				role = register.role;
 			}
 			//System.out.println("Account Role: " + register.role);
-			user.role = register.role;
+			user.role = role;
 
 			user.save();
 			sendMailAskForConfirmation(user);
