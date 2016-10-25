@@ -138,7 +138,7 @@ public class Application extends Controller {
 		Form<Login> loginForm = form(Login.class).bindFromRequest();
 		System.out.println("authenticate");
 		Form<Register> registerForm = form(Register.class);
-
+		
 		if (loginForm.hasErrors()) {
 			
 			System.out.println("authenticate - bad request");
