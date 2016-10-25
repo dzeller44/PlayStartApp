@@ -9,7 +9,8 @@ function profileServicesOtherShowHide(field) {
 
 function isLoggedIn() {
 	var returnValue = "";
-	var email = '<%= session.getAttribute("email") %>';
+	var email = '<%= Session["email"] %>';
+	//var email = '<%= session.getAttribute("email") %>';
 	console.log("email = " + email);
 	window.alert("email = " + email);
 	if (email != null || email != "") {
