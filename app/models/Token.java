@@ -28,21 +28,8 @@ import java.util.UUID;
 @Entity
 public class Token extends Model {
 
-    // Reset tokens will expire after a day.
-    private static final int EXPIRATION_DAYS = 1;
-
-
-    public enum TypeToken {
-        password("reset"), email("email");
-        private String urlPath;
-
-        TypeToken(String urlPath) {
-            this.urlPath = urlPath;
-        }
-
-    }
-
-
+	// -------------------------------------
+	
     @Id
     public String token;
 
@@ -60,7 +47,22 @@ public class Token extends Model {
     @Constraints.Required
     @Formats.NonEmpty
     public String email;
+    
+    // -------------------------------------
 
+    // Reset tokens will expire after a day.
+    private static final int EXPIRATION_DAYS = 1;
+
+    public enum TypeToken {
+        password("reset"), email("email");
+        private String urlPath;
+
+        TypeToken(String urlPath) {
+            this.urlPath = urlPath;
+        }
+
+    }
+    
     // -- Queries
     @SuppressWarnings("unchecked")
     public static Model.Finder<String, Token> find = new Finder(String.class, Token.class);
@@ -106,6 +108,7 @@ public class Token extends Model {
         token.userId = user.id;
         token.type = type;
         token.email = email;
+        token.dateCreation = new Date();
         token.save();
         return token;
     }
@@ -119,8 +122,8 @@ public class Token extends Model {
     public void sendMailResetPassword(User user, MailerClient mc) throws MalformedURLException {
     	// Need to send the email?????
     	String email = user.email;
-        //sendMail(user, TypeToken.password, email, mc);
-        sendMail(user, TypeToken.password, null, mc);
+        sendMail(user, TypeToken.password, email, mc);
+        //sendMail(user, TypeToken.password, null, mc);
     }
 
     /**
