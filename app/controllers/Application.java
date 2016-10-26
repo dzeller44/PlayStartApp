@@ -122,6 +122,14 @@ public class Application extends Controller {
 			if (isBlank(inputPassword)) {
 				return "Password is required";
 			}
+			else {
+				// Need to make sure we have:
+				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1 Number; 1 Special Character
+				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
+				if(!inputPassword.matches(passwordPattern)) {
+					return "Password must be 8 characters, contain 1 UPPERCASE character, 1 lowercase character, 1 number, and 1 special character.";
+				}
+			}
 			
 			if (isBlank(role)) {
 				return "Account Role is required";

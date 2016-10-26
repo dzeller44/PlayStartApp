@@ -7,6 +7,8 @@ package models.enums;
  * @author zellerd
  *
  */
-public class RoleType {
+public enum RoleType {
 
+	USER, MANAGER, ADMIN	
+	
 }
