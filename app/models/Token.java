@@ -15,6 +15,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.Column;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Calendar;
@@ -35,6 +36,7 @@ public class Token extends Model {
 
     @Constraints.Required
     @Formats.NonEmpty
+    @Column(name="user_id")
     public Long userId;
 
     @Constraints.Required
@@ -42,6 +44,7 @@ public class Token extends Model {
     public TypeToken type;
 
     @Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+    @Column(name="date_creation")
     public Date dateCreation;
 
     @Constraints.Required
