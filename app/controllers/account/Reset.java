@@ -46,8 +46,8 @@ public class Reset extends Controller {
 		
 		/**
 		 * Validate the reset.
-		 *
 		 * @return null if validation ok, string with details otherwise
+		 * Added by DZ 10/27/2016
 		 */
 		public String validate() {
 			if (isBlank(password)) {
@@ -61,7 +61,7 @@ public class Reset extends Controller {
 					return Messages.get("password.message");
 				}
 			}
-
+			
 			return null;
 		}
 
