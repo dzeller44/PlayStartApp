@@ -14,9 +14,7 @@ import play.mvc.Result;
 import views.html.account.reset.ask;
 import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
-
 import javax.inject.Inject;
-
 import views.html.account.reset.reset;
 import views.html.account.reset.runAsk;
 import views.html.account.reset.success;
