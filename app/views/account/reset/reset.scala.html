@@ -5,39 +5,39 @@
         FieldConstructor(twitterBootstrapInput.render)
     }
 
-    @scripts = {
-        <script src="@routes.Assets.at("javascripts/password.js")" type="text/javascript"></script>
-    }
+@main(null) {
 
-@main(null, scripts) {
+	<section id="resetPasswordChange">
+		<!-- Start Formoid form-->
+		<form class="formoid-solid-dark"
+			style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+			method="post" action="">
+			<div class="title">
+				<h2>@Messages("resetpassword.new.password")</h2>
+			</div>
+		<div class="element-password">
+			<label class="title"><span class="required">*</span>Password:</label>
+			<div class="item-cont">
+				<input class="large" type="password" name="password" value=""
+					required="required" placeholder="Enter your password..." /><span
+					class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-input">
+		    @if(resetForm.hasGlobalErrors) {
+        		<span class="errorMessageDisplay" style="color: #d9534f;">
+            		@resetForm.globalError.message
+        		</span>
+   			}
+		</div>
+			<div class="submit">
+				<input type="submit" value="@Messages("validate")" />
+				<a href="/" class="buttonCancel">@Messages("goback")</a>
+			</div>
+			<!-- This is needed for bottom shadow to appear... -->
+			<div></div>
+		</form>
 
-    <h3>@Messages("signup.reset.password")</h3>
-
-    @wflash()
-
-    <div class="col col-lg-8">
-        @Messages("resetpassword.new.password")
-
-        @form(controllers.account.routes.Reset.runReset(token)) {
-
-            <div class="form-group">
-                @inputPassword(
-                    resetForm("inputPassword"),
-                    'placeholder -> Messages("password"),
-                    '_label -> null,
-                    'class -> "form-control"
-                )
-                <h6>@Messages("signup.generate.password")</h6>
-                <input type="text" name="passwordGenerated" class="form-control">
-
-            </div>
-
-            <hr>
-
-            <input type="submit" class="btn btn-primary" value="@Messages("validate")">
-            <a href="@routes.Application.index" class="btn btn-default">@Messages("goback")</a>
-
-        }
-    </div>
+	</section>
 
 }

@@ -41,13 +41,7 @@ Seq[Any](format.raw/*1.38*/("""
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
 		method="post" action="">
 
-    """),_display_(/*14.6*/if(loginForm.hasGlobalErrors)/*14.35*/ {_display_(Seq[Any](format.raw/*14.37*/("""
-        """),format.raw/*15.9*/("""<p class="error">
-            <span class="label label-danger">"""),_display_(/*16.47*/loginForm/*16.56*/.globalError.message),format.raw/*16.76*/("""</span>
-        </p>
-    """)))}),format.raw/*18.6*/("""
-
-		"""),format.raw/*20.3*/("""<div class="title">
+		<div class="title">
 			<h2>Login</h2>
 		</div>
 		<div class="element-input">
@@ -65,22 +59,29 @@ Seq[Any](format.raw/*1.38*/("""
 					class="icon-place"></span>
 			</div>
 		</div>
+		<div class="element-input">
+		    """),_display_(/*33.8*/if(loginForm.hasGlobalErrors)/*33.37*/ {_display_(Seq[Any](format.raw/*33.39*/("""
+        		"""),format.raw/*34.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*35.16*/loginForm/*35.25*/.globalError.message),format.raw/*35.45*/("""
+        		"""),format.raw/*36.11*/("""</span>
+   			""")))}),format.raw/*37.8*/("""
+		"""),format.raw/*38.3*/("""</div>
 		<div class="submit">
 			<input type="submit" value="Submit" />
-			<a href="/" class="buttonCancel">"""),_display_(/*40.38*/Messages("goback")),format.raw/*40.56*/("""</a>
+			<a href="/" class="buttonCancel">"""),_display_(/*41.38*/Messages("goback")),format.raw/*41.56*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
 	</form>
 
 	<div class="loginBlock">
-		<a href="/signup"><div class="loginText">"""),_display_(/*47.45*/Messages("account.need")),format.raw/*47.69*/("""</div></a>
-		<a href="/reset/ask"><div class="loginText">"""),_display_(/*48.48*/Messages("forgot.password")),format.raw/*48.75*/("""</div></a>
+		<a href="/signup"><div class="loginText">"""),_display_(/*48.45*/Messages("account.need")),format.raw/*48.69*/("""</div></a>
+		<a href="/reset/ask"><div class="loginText">"""),_display_(/*49.48*/Messages("forgot.password")),format.raw/*49.75*/("""</div></a>
 	</div>
 
 </section>
 
-""")))}),format.raw/*53.2*/("""
+""")))}),format.raw/*54.2*/("""
 """))
       }
     }
@@ -101,11 +102,11 @@ Seq[Any](format.raw/*1.38*/("""
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Thu Oct 27 10:26:18 MDT 2016
+                  DATE: Thu Oct 27 11:35:50 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: be51f9ccea7367c3ea2776a46c16ab3944149ad2
-                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|1493->464|1531->493|1571->495|1608->505|1700->570|1718->579|1759->599|1817->627|1850->633|2656->1412|2695->1430|2894->1602|2939->1626|3025->1685|3073->1712|3141->1750
-                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|44->14|44->14|44->14|45->15|46->16|46->16|46->16|48->18|50->20|70->40|70->40|77->47|77->47|78->48|78->48|83->53
+                  HASH: c33648c5f4b2399e0eaf767d66a9ab487e617adf
+                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|2203->1174|2241->1203|2281->1205|2321->1217|2423->1292|2441->1301|2482->1321|2522->1333|2568->1349|2599->1353|2738->1465|2777->1483|2976->1655|3021->1679|3107->1738|3155->1765|3223->1803
+                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|63->33|63->33|63->33|64->34|65->35|65->35|65->35|66->36|67->37|68->38|71->41|71->41|78->48|78->48|79->49|79->49|84->54
                   -- GENERATED --
               */
           

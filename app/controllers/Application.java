@@ -127,7 +127,7 @@ public class Application extends Controller {
 				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1 Number; 1 Special Character
 				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
 				if(!inputPassword.matches(passwordPattern)) {
-					return "Password must be 8 characters, contain 1 UPPERCASE character, 1 lowercase character, 1 number, and 1 special character.";
+					return Messages.get("password.message");
 				}
 			}
 			
@@ -158,7 +158,8 @@ public class Application extends Controller {
 		if (loginForm.hasErrors()) {
 			
 			System.out.println("authenticate - bad request");
-			return badRequest(index.render(registerForm, loginForm));
+			//return badRequest(index.render(registerForm, loginForm));
+			return badRequest(auth.render(loginForm));
 			//return badRequest(index.render());
 			//return badRequest();
 		} else {

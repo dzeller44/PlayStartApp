@@ -47,28 +47,30 @@ signup.msg.created=You will receive a confirmation email soon. Check your email 
 signup.valid.email=Invalid Email
 signup.email.confirmed=Success - your email has been confirmed and your account is activated.
 
+password.message=Password must be 8 characters, contain 1 UPPERCASE character, 1 lowercase character, 1 number, and 1 special character.
+
 resetpassword=Reset Password
-resetpassword.mailsent=A mail has been sent, please check your mail.
+resetpassword.mailsent=An email has been sent to reset your password.  Please check your inbox.
 resetpassword.success=Your password has been reset.
-resetpassword.new.password=New password :
+resetpassword.new.password=Reset Your Password
 
 changemail.mailsent=A mail has been sent, please check your mail.
 
-mail.confirm.subject=Welcome to PlayStartApp - Ask for confirmation
-mail.confirm.message=Welcome to PlayStartApp. <br> Click on this link : {0} to confirm your email.
+mail.confirm.subject=Welcome to CO-Assist - Confirm your Account
+mail.confirm.message=Welcome to CO-Assist. <br> Click on this link : {0} to confirm your email.
 
-mail.welcome.subject=Welcome to PlayStartApp
-mail.welcome.message=Welcome to PlayStartApp. <br> Your account is validated. Enjoy !
+mail.welcome.subject=Welcome to CO-Assist
+mail.welcome.message=Welcome to CO-Assist. <br> Your account is validated. Enjoy !
 
-mail.reset.ask.subject=PlayStartApp - New password
+mail.reset.ask.subject=CO-Assist - New password
 # Cannot use You've unescaped here, as the single quote stops the {0}
 mail.reset.ask.message=You asked for your password to be reset.  <br> Click on this link : {0} to change your password.
 
-mail.change.ask.subject=PlayStartApp - Validate email
+mail.change.ask.subject=CO-Assist - Validate email
 mail.change.ask.message=You asked for your email to be changed.  <br> Click on this link : {0} to validate your email.
 
 mail.reset.fail.subject=Account Access Attempted
 mail.reset.fail.message=You (or someone else) entered this email address when trying to change the password.  However, this email address is not on our list of registered users, and so the attempted password reset has failed.
 
-mail.reset.confirm.subject=PlayStartApp - New password
+mail.reset.confirm.subject=CO-Assist - New password
 mail.reset.confirm.message=Hello, <br><br> Your password has been reset.

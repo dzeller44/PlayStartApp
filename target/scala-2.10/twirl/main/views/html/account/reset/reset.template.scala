@@ -28,49 +28,47 @@ class reset extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Forma
     _display_ {
       {
 import helper._
-def /*8.6*/scripts/*8.13*/:play.twirl.api.HtmlFormat.Appendable = {_display_(
-
-Seq[Any](format.raw/*8.17*/("""
-        """),format.raw/*9.9*/("""<script src=""""),_display_(/*9.23*/routes/*9.29*/.Assets.at("javascripts/password.js")),format.raw/*9.66*/("""" type="text/javascript"></script>
-    """)))};implicit def /*4.6*/implicitFieldConstructor/*4.30*/ = {{
+implicit def /*4.6*/implicitFieldConstructor/*4.30*/ = {{
         FieldConstructor(twitterBootstrapInput.render)
     }};
 Seq[Any](format.raw/*1.71*/("""
 
 """),format.raw/*4.1*/("""    """),format.raw/*6.6*/("""
 
-    """),format.raw/*10.6*/("""
+"""),_display_(/*8.2*/main(null)/*8.12*/ {_display_(Seq[Any](format.raw/*8.14*/("""
 
-"""),_display_(/*12.2*/main(null, scripts)/*12.21*/ {_display_(Seq[Any](format.raw/*12.23*/("""
+	"""),format.raw/*10.2*/("""<section id="resetPasswordChange">
+		<!-- Start Formoid form-->
+		<form class="formoid-solid-dark"
+			style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+			method="post" action="">
+			<div class="title">
+				<h2>"""),_display_(/*16.10*/Messages("resetpassword.new.password")),format.raw/*16.48*/("""</h2>
+			</div>
+		<div class="element-password">
+			<label class="title"><span class="required">*</span>Password:</label>
+			<div class="item-cont">
+				<input class="large" type="password" name="password" value=""
+					required="required" placeholder="Enter your password..." /><span
+					class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-input">
+		    """),_display_(/*27.8*/if(resetForm.hasGlobalErrors)/*27.37*/ {_display_(Seq[Any](format.raw/*27.39*/("""
+        		"""),format.raw/*28.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*29.16*/resetForm/*29.25*/.globalError.message),format.raw/*29.45*/("""
+        		"""),format.raw/*30.11*/("""</span>
+   			""")))}),format.raw/*31.8*/("""
+		"""),format.raw/*32.3*/("""</div>
+			<div class="submit">
+				<input type="submit" value=""""),_display_(/*34.34*/Messages("validate")),format.raw/*34.54*/("""" />
+				<a href="/" class="buttonCancel">"""),_display_(/*35.39*/Messages("goback")),format.raw/*35.57*/("""</a>
+			</div>
+			<!-- This is needed for bottom shadow to appear... -->
+			<div></div>
+		</form>
 
-    """),format.raw/*14.5*/("""<h3>"""),_display_(/*14.10*/Messages("signup.reset.password")),format.raw/*14.43*/("""</h3>
-
-    """),_display_(/*16.6*/wflash()),format.raw/*16.14*/("""
-
-    """),format.raw/*18.5*/("""<div class="col col-lg-8">
-        """),_display_(/*19.10*/Messages("resetpassword.new.password")),format.raw/*19.48*/("""
-
-        """),_display_(/*21.10*/form(controllers.account.routes.Reset.runReset(token))/*21.64*/ {_display_(Seq[Any](format.raw/*21.66*/("""
-
-            """),format.raw/*23.13*/("""<div class="form-group">
-                """),_display_(/*24.18*/inputPassword(
-                    resetForm("inputPassword"),
-                    'placeholder -> Messages("password"),
-                    '_label -> null,
-                    'class -> "form-control"
-                )),format.raw/*29.18*/("""
-                """),format.raw/*30.17*/("""<h6>"""),_display_(/*30.22*/Messages("signup.generate.password")),format.raw/*30.58*/("""</h6>
-                <input type="text" name="passwordGenerated" class="form-control">
-
-            </div>
-
-            <hr>
-
-            <input type="submit" class="btn btn-primary" value=""""),_display_(/*37.66*/Messages("validate")),format.raw/*37.86*/("""">
-            <a href=""""),_display_(/*38.23*/routes/*38.29*/.Application.index),format.raw/*38.47*/("""" class="btn btn-default">"""),_display_(/*38.74*/Messages("goback")),format.raw/*38.92*/("""</a>
-
-        """)))}),format.raw/*40.10*/("""
-    """),format.raw/*41.5*/("""</div>
+	</section>
 
 """)))}),format.raw/*43.2*/("""
 """))
@@ -93,11 +91,11 @@ Seq[Any](format.raw/*1.71*/("""
 object reset extends reset_Scope0.reset
               /*
                   -- GENERATED --
-                  DATE: Thu Oct 27 10:13:52 MDT 2016
+                  DATE: Thu Oct 27 12:11:22 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/reset/reset.scala.html
-                  HASH: 1b579ca6028500e5a822d0d19145fe8a88dc966f
-                  MATRIX: 801->1|963->191|978->198|1058->202|1093->211|1133->225|1147->231|1204->268|1275->94|1307->118|1403->70|1431->89|1461->184|1494->308|1523->311|1551->330|1591->332|1624->338|1656->343|1710->376|1748->388|1777->396|1810->402|1873->438|1932->476|1970->487|2033->541|2073->543|2115->557|2184->599|2425->819|2470->836|2502->841|2559->877|2778->1069|2819->1089|2871->1114|2886->1120|2925->1138|2979->1165|3018->1183|3064->1198|3096->1203|3135->1212
-                  LINES: 27->1|31->8|31->8|33->8|34->9|34->9|34->9|34->9|35->4|35->4|38->1|40->4|40->6|42->10|44->12|44->12|44->12|46->14|46->14|46->14|48->16|48->16|50->18|51->19|51->19|53->21|53->21|53->21|55->23|56->24|61->29|62->30|62->30|62->30|69->37|69->37|70->38|70->38|70->38|70->38|70->38|72->40|73->41|75->43
+                  HASH: dc4ed68409161f7ec403c352bf8d78bb5969fe77
+                  MATRIX: 801->1|972->94|1004->118|1100->70|1128->89|1158->184|1186->187|1204->197|1243->199|1273->202|1634->536|1693->574|2092->947|2130->976|2170->978|2209->989|2310->1063|2328->1072|2369->1092|2408->1103|2453->1118|2483->1121|2574->1185|2615->1205|2685->1248|2724->1266|2867->1379
+                  LINES: 27->1|31->4|31->4|34->1|36->4|36->6|38->8|38->8|38->8|40->10|46->16|46->16|57->27|57->27|57->27|58->28|59->29|59->29|59->29|60->30|61->31|62->32|64->34|64->34|65->35|65->35|73->43
                   -- GENERATED --
               */
           
