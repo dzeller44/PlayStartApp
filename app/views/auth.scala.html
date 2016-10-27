@@ -29,6 +29,13 @@
 					class="icon-place"></span>
 			</div>
 		</div>
+		<div class="element-input">
+		    @if(loginForm.hasGlobalErrors) {
+        		<span class="errorMessageDisplay" style="color: #d9534f;">
+            		@loginForm.globalError.message
+        		</span>
+   			}
+		</div>
 		<div class="submit">
 			<input type="submit" value="Submit" />
 			<a href="/" class="buttonCancel">@Messages("goback")</a>

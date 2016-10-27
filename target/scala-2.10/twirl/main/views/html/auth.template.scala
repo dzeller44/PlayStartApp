@@ -41,7 +41,13 @@ Seq[Any](format.raw/*1.38*/("""
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
 		method="post" action="">
 
-		<div class="title">
+    """),_display_(/*14.6*/if(loginForm.hasGlobalErrors)/*14.35*/ {_display_(Seq[Any](format.raw/*14.37*/("""
+        """),format.raw/*15.9*/("""<p class="error">
+            <span class="label label-danger">"""),_display_(/*16.47*/loginForm/*16.56*/.globalError.message),format.raw/*16.76*/("""</span>
+        </p>
+    """)))}),format.raw/*18.6*/("""
+
+		"""),format.raw/*20.3*/("""<div class="title">
 			<h2>Login</h2>
 		</div>
 		<div class="element-input">
@@ -61,20 +67,20 @@ Seq[Any](format.raw/*1.38*/("""
 		</div>
 		<div class="submit">
 			<input type="submit" value="Submit" />
-			<a href="/" class="buttonCancel">"""),_display_(/*34.38*/Messages("goback")),format.raw/*34.56*/("""</a>
+			<a href="/" class="buttonCancel">"""),_display_(/*40.38*/Messages("goback")),format.raw/*40.56*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
 	</form>
 
 	<div class="loginBlock">
-		<a href="/signup"><div class="loginText">"""),_display_(/*41.45*/Messages("account.need")),format.raw/*41.69*/("""</div></a>
-		<a href="/reset/ask"><div class="loginText">"""),_display_(/*42.48*/Messages("forgot.password")),format.raw/*42.75*/("""</div></a>
+		<a href="/signup"><div class="loginText">"""),_display_(/*47.45*/Messages("account.need")),format.raw/*47.69*/("""</div></a>
+		<a href="/reset/ask"><div class="loginText">"""),_display_(/*48.48*/Messages("forgot.password")),format.raw/*48.75*/("""</div></a>
 	</div>
 
 </section>
 
-""")))}),format.raw/*47.2*/("""
+""")))}),format.raw/*53.2*/("""
 """))
       }
     }
@@ -95,11 +101,11 @@ Seq[Any](format.raw/*1.38*/("""
 object auth extends auth_Scope0.auth
               /*
                   -- GENERATED --
-                  DATE: Thu Oct 27 10:02:00 MDT 2016
+                  DATE: Thu Oct 27 10:26:18 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/auth.scala.html
-                  HASH: f707e6ace31a6397c0bf17a99573beed36441188
-                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|2270->1240|2309->1258|2508->1430|2553->1454|2639->1513|2687->1540|2755->1578
-                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|64->34|64->34|71->41|71->41|72->42|72->42|77->47
+                  HASH: be51f9ccea7367c3ea2776a46c16ab3944149ad2
+                  MATRIX: 760->1|898->60|930->84|1014->37|1045->138|1075->143|1093->153|1132->155|1162->159|1493->464|1531->493|1571->495|1608->505|1700->570|1718->579|1759->599|1817->627|1850->633|2656->1412|2695->1430|2894->1602|2939->1626|3025->1685|3073->1712|3141->1750
+                  LINES: 27->1|31->4|31->4|32->1|34->4|36->6|36->6|36->6|38->8|44->14|44->14|44->14|45->15|46->16|46->16|46->16|48->18|50->20|70->40|70->40|77->47|77->47|78->48|78->48|83->53
                   -- GENERATED --
               */
           

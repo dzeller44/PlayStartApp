@@ -1,4 +1,6 @@
-@(signupForm: Form[Application.Register]) @main(null) {
+@(signupForm: Form[Application.Register])
+
+@main(null) {
 
 <section id="signup">
 	<!-- Start Formoid form-->
@@ -54,6 +56,13 @@
 						with the terms and conditions *</span></label>
 			</div>
 			<span class="clearfix"></span>
+		</div>
+		<div class="element-input">
+		    @if(signupForm.hasGlobalErrors) {
+        		<span class="errorMessageDisplay" style="color: #d9534f;">
+            		@signupForm.globalError.message
+        		</span>
+   			}
 		</div>
 		<div class="submit">
 			<!-- <input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" /> -->

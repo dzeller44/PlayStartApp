@@ -29,9 +29,11 @@ class create extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
       {
 
 
-Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_display_(Seq[Any](format.raw/*1.56*/("""
+Seq[Any](format.raw/*1.42*/("""
 
-"""),format.raw/*3.1*/("""<section id="signup">
+"""),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
+
+"""),format.raw/*5.1*/("""<section id="signup">
 	<!-- Start Formoid form-->
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
@@ -86,23 +88,30 @@ Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_disp
 			</div>
 			<span class="clearfix"></span>
 		</div>
+		<div class="element-input">
+		    """),_display_(/*61.8*/if(signupForm.hasGlobalErrors)/*61.38*/ {_display_(Seq[Any](format.raw/*61.40*/("""
+        		"""),format.raw/*62.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*63.16*/signupForm/*63.26*/.globalError.message),format.raw/*63.46*/("""
+        		"""),format.raw/*64.11*/("""</span>
+   			""")))}),format.raw/*65.8*/("""
+		"""),format.raw/*66.3*/("""</div>
 		<div class="submit">
 			<!-- <input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" /> -->
 			<input type="submit" value="Submit" /> <a href="/"
-				class="buttonCancel">"""),_display_(/*61.27*/Messages("goback")),format.raw/*61.45*/("""</a>
+				class="buttonCancel">"""),_display_(/*70.27*/Messages("goback")),format.raw/*70.45*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
 	</form>
 
 	<div class="loginBlock">
-		<a href="/auth"><div class="loginText">"""),_display_(/*68.43*/Messages("account.exists")),format.raw/*68.69*/("""</div></a>
-		<a href="/reset/ask"><div class="loginText">"""),_display_(/*69.48*/Messages("forgot.password")),format.raw/*69.75*/("""</div></a>
+		<a href="/auth"><div class="loginText">"""),_display_(/*77.43*/Messages("account.exists")),format.raw/*77.69*/("""</div></a>
+		<a href="/reset/ask"><div class="loginText">"""),_display_(/*78.48*/Messages("forgot.password")),format.raw/*78.75*/("""</div></a>
 	</div>
 
 </section>
 
-""")))}),format.raw/*74.2*/("""
+""")))}),format.raw/*83.2*/("""
 """))
       }
     }
@@ -123,11 +132,11 @@ Seq[Any](format.raw/*1.42*/(""" """),_display_(/*1.44*/main(null)/*1.54*/ {_disp
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Thu Oct 27 10:02:00 MDT 2016
+                  DATE: Thu Oct 27 10:53:58 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: 6ec6d765a54b242f5468f6fb4c8af9233d92c250
-                  MATRIX: 782->1|917->41|945->43|963->53|1002->55|1030->57|3279->2279|3318->2297|3508->2460|3555->2486|3640->2544|3688->2571|3751->2604
-                  LINES: 27->1|32->1|32->1|32->1|32->1|34->3|92->61|92->61|99->68|99->68|100->69|100->69|105->74
+                  HASH: c43774bc566b3d9f44432c0f4ad91cf36e7d3912
+                  MATRIX: 782->1|917->41|945->44|963->54|1002->56|1030->58|3110->2112|3149->2142|3189->2144|3228->2155|3329->2229|3348->2239|3389->2259|3428->2270|3473->2285|3503->2288|3742->2500|3781->2518|3971->2681|4018->2707|4103->2765|4151->2792|4214->2825
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|92->61|92->61|92->61|93->62|94->63|94->63|94->63|95->64|96->65|97->66|101->70|101->70|108->77|108->77|109->78|109->78|114->83
                   -- GENERATED --
               */
           
