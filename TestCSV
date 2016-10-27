@@ -3,15 +3,9 @@ package utils;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.avaje.ebean.Ebean;
-
-import controllers.routes;
-import models.Token;
+import com.opencsv.CSVWriter;
 import models.User;
-import play.mvc.Call;
-
-import com.opencsv.*;
 
 public class TestCSV {
 
