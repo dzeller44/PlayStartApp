@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Thu Oct 27 10:13:52 MDT 2016
+// @DATE:Mon Oct 31 10:00:01 MDT 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:39
+  // @LINE:47
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:39
+    // @LINE:47
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -63,6 +63,26 @@ package controllers.javascript {
     }
 
   
+    // @LINE:17
+    def managerHome: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.managerHome",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "em"})
+        }
+      """
+    )
+  
+    // @LINE:19
+    def managerUserMaintenance: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.managerUserMaintenance",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emuser"})
+        }
+      """
+    )
+  
     // @LINE:10
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.logout",
@@ -73,7 +93,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:13
     def openLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openLogin",
       """
@@ -83,12 +103,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:6
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.index",
+    // @LINE:21
+    def managerSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.managerSearch",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emsearch"})
         }
       """
     )
@@ -103,6 +123,16 @@ package controllers.javascript {
             return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
           }
         
+        }
+      """
+    )
+  
+    // @LINE:6
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + """"})
         }
       """
     )

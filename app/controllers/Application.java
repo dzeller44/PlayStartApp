@@ -11,6 +11,9 @@ import play.mvc.Result;
 import play.libs.Json;
 import views.html.index;
 import views.html.auth;
+import views.html.manager;
+import views.html.usermaint;
+import views.html.search;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
@@ -183,6 +186,21 @@ public class Application extends Controller {
 		session().clear();
 		flash("success", Messages.get("youve.been.logged.out"));
 		return GO_HOME;
+	}
+	
+	public Result managerHome() {
+		System.out.println("Manager Home");
+		return ok(manager.render(form(Login.class)));
+	}
+	
+	public Result managerUserMaintenance() {
+		System.out.println("Manager Home");
+		return ok(usermaint.render(form(Login.class)));
+	}
+	
+	public Result managerSearch() {
+		System.out.println("Manager Home");
+		return ok(search.render(form(Login.class)));
 	}
 
 }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Thu Oct 27 10:13:52 MDT 2016
+// @DATE:Mon Oct 31 10:00:01 MDT 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:39
+  // @LINE:47
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:39
+    // @LINE:47
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -50,22 +50,34 @@ package controllers {
     }
 
   
+    // @LINE:17
+    def managerHome(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "em")
+    }
+  
+    // @LINE:19
+    def managerUserMaintenance(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "emuser")
+    }
+  
     // @LINE:10
     def logout(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:12
+    // @LINE:13
     def openLogin(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "auth")
     }
   
-    // @LINE:6
-    def index(): Call = {
+    // @LINE:21
+    def managerSearch(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix)
+      Call("GET", _prefix + { _defaultPrefix } + "emsearch")
     }
   
     // @LINE:9
@@ -80,6 +92,12 @@ package controllers {
       
       }
     
+    }
+  
+    // @LINE:6
+    def index(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix)
     }
   
   }
