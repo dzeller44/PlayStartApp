@@ -11,11 +11,11 @@ import play.mvc.Result;
 import play.libs.Json;
 import views.html.index;
 import views.html.auth;
-import views.html.manager;
-import views.html.usermaint;
-import views.html.search;
-import views.html.getuser;
-import views.html.showuser;
+import views.html.manager.manager;
+import views.html.manager.usermaint;
+import views.html.manager.search;
+import views.html.manager.getuser;
+import views.html.manager.showuser;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
@@ -236,15 +236,16 @@ public class Application extends Controller {
 			System.out.println("Find User - errors");
 			return badRequest(getuser.render(findUserForm));
 		} else {
+			// Find user and display...
 			System.out.println("Find User - good request");
 			String email = findUserForm.get().email;
 			User user = User.findByEmail(email);
 			String name = user.fullname;
 			String role = user.role;
 			return ok(showuser.render(findUserForm, email, name, role));
+
 		}
 
 	}
-
 
 }

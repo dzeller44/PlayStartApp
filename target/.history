@@ -108,3 +108,11 @@ clean
 run
 clean
 run
+compile
+clean
+compile
+clean
+run
+clean
+compile
+run

@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@41705957[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@68e4c454[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-library;2.10.5[0m
@@ -6763,7 +6763,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control;0.13.8-M3!control.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.8!akka-actor_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.10;2.3.8!akka-testkit_2.10.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 3257ms :: artifacts dl 181ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2203ms :: artifacts dl 140ms[0m
 [0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT compile produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT runtime produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT test produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-test.xml[0m
@@ -6778,5 +6778,5 @@
 [0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT pom produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT scala-tool produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-scala-tool.xml[0m
 [0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT fork-run produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-fork-run.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (3257ms resolve - 181ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (2203ms resolve - 140ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
