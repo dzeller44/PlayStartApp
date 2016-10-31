@@ -1,6 +1,9 @@
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	GENERAL STYLING
 /*-----------------------------------------------------------------------------------*/
+
 ::selection {
 	background: #000;
 	color: #fff;
@@ -11,32 +14,32 @@
 	color: #fff;
 }
 
-footer ::selection {
+footer::selection {
 	background: #fff;
 	color: #000;
 }
 
-footer ::-moz-selection {
+footer::-moz-selection {
 	background: #fff;
 	color: #000;
 }
 
-.breadcrumbs_block ::selection {
+.breadcrumbs_block::selection {
 	background: #fff;
 	color: #000;
 }
 
-.breadcrumbs_block ::-moz-selection {
+.breadcrumbs_block::-moz-selection {
 	background: #fff;
 	color: #000;
 }
 
-.cleancode_block ::selection {
+.cleancode_block::selection {
 	background: #fff;
 	color: #000;
 }
 
-.cleancode_block ::-moz-selection {
+.cleancode_block::-moz-selection {
 	background: #fff;
 	color: #000;
 }
@@ -229,9 +232,13 @@ a:hover, a:focus {
 	z-index: 5;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	TYPOGRAPHY
 /*-----------------------------------------------------------------------------------*/
+
 hr {
 	border-color: #ededed;
 }
@@ -343,7 +350,9 @@ h6 {
 	background: #30a67c;
 }
 
+
 /* __________ blockquote __________ */
+
 blockquote {
 	position: relative;
 	margin: 0 0 13px;
@@ -364,10 +373,16 @@ blockquote:before {
 	color: #979797;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	SHORTCODES
 /*-----------------------------------------------------------------------------------*/
+
+
 /* __________ Buttons __________ */
+
 .btn {
 	margin: 0;
 	padding: 24px 27px 22px;
@@ -427,7 +442,9 @@ blockquote:before {
 	filter: none !important;
 }
 
+
 /* __________ breadcrumb __________ */
+
 .breadcrumbs_block {
 	padding: 81px 0;
 	background-image: url(../img/clean_code_bg.jpg);
@@ -449,16 +466,22 @@ blockquote:before {
 	color: #999;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	HEADER
 /*-----------------------------------------------------------------------------------*/
+
 header {
 	position: relative;
 	height: 80px;
 	background-color: #fff;
 }
 
+
 /* __________ Logo __________ */
+
 .logo {
 	float: left;
 }
@@ -495,7 +518,9 @@ header {
 	font-weight: 100;
 }
 
+
 /* __________ Menu __________ */
+
 .menu_block {
 	position: fixed;
 	z-index: 9999;
@@ -530,7 +555,9 @@ header {
 	color: #333;
 }
 
+
 /* Sub menu */
+
 .sub-menu ul {
 	display: none;
 	position: absolute;
@@ -588,9 +615,13 @@ header {
 	background: #161616;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	SEARCH FORM TOP
 /*-----------------------------------------------------------------------------------*/
+
 #search-form form {
 	position: relative;
 	height: 40px;
@@ -633,98 +664,37 @@ header {
 	padding: 11px 20px 11px 0;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	HOME
 /*-----------------------------------------------------------------------------------*/
+
 #home {
 	position: relative;
 }
 
-/*  Login form... */
-.loginBlock {
-	text-align: center;
-	margin: 0 auto;
-	width: 450px;
-	padding: 20px;
-}
-
-.loginText {
-	font-weight: 400;
-	font-size: 18px;	
-}
-
-.loginTextBold {
-	font-weight: 900;
-	font-size: 18px;	
-}
-
-.goBackCancelText {
-	text-align: center;
-	font-weight: 400;
-	font-size: 14px;	
-}
-
-/* Button & submit*/
-.buttonCancel {
-  background: #fff;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: inherit;
-  margin-bottom: 1px;
-  margin-right: 27px;
-  opacity: 1;
-  padding: 11px 41px;
-  right: 20px;
-  text-align: center;
-  vertical-align: middle;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: normal;
-
-  border: 2px solid #bdc3c7;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  border-radius:3px;
-  box-shadow: inset 0 -0.3em 0 rgba(0, 0, 0, 0.2);
-}
-
-.buttonCancel:visited {
-  cursor: default;
-  opacity: 0.65;
-}
-
-.buttonCancel:hover{
-  background-color: #F2F2F2;
-}
-.buttonCancel:active{
-  box-shadow: inset 0 -0.15em 0 rgba(0, 0, 0, 0.2);
-}
-
-/* Error Messages */
-.errorMessageDisplay {
-	color: #d9534f;
-	font-size: 18px;
-	font-weight: bold;
-	background-color: #FFFFFF;
-}
 
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	ABOUT
 /*-----------------------------------------------------------------------------------*/
+
 #about {
 	padding-top: 70px;
 }
 
+
 /* __________ Services __________ */
+
 .services_block {
 	padding: 7px 0 0;
 }
 
 .servicesInner {
-    margin: 0 auto; 
+	margin: 0 auto;
 }
 
 .services_item {
@@ -764,7 +734,9 @@ header {
 	color: #666;
 }
 
+
 /* __________ Main Block __________ */
+
 .mainBlock {
 	padding: 32px 0 24px;
 	background-image: url(../img/co/denver_skyline_fall_blur_10.png);
@@ -888,8 +860,7 @@ header {
 	background-color: transparent;
 }
 
-.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus
-	{
+.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus {
 	background-color: #fff;
 }
 
@@ -933,7 +904,9 @@ header {
 	-webkit-transform: translateY(-6px);
 }
 
+
 /* __________ Clean Code __________ */
+
 .cleancode_block {
 	padding: 96px 0 78px;
 	background-image: url(../img/clean_code_bg.jpg);
@@ -1057,8 +1030,7 @@ header {
 	background-color: transparent;
 }
 
-.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus
-	{
+.nav-tabs li.active a, .nav-tabs li.active a:hover, .nav-tabs li.active a:focus {
 	background-color: #fff;
 }
 
@@ -1102,7 +1074,9 @@ header {
 	-webkit-transform: translateY(-6px);
 }
 
+
 /* __________ Multi Purpose __________ */
+
 .purpose_block {
 	padding: 72px 0 0;
 }
@@ -1151,8 +1125,7 @@ header {
 	-webkit-transition: all 0.3s ease-in-out;
 }
 
-.purpose_block .btn-active:hover span, .purpose_block .btn-active:focus span
-	{
+.purpose_block .btn-active:hover span, .purpose_block .btn-active:focus span {
 	color: #1c1c1c;
 	-webkit-transform: translateY(-100%);
 	-moz-transform: translateY(-100%);
@@ -1163,9 +1136,13 @@ header {
 	margin-top: -116px;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	FEATURED WORKS
 /*-----------------------------------------------------------------------------------*/
+
 #projects {
 	padding-top: 47px;
 }
@@ -1263,7 +1240,9 @@ header {
 	background-image: url(../img/zoom_h.png);
 }
 
+
 /* __________ WORKS DETAILS __________ */
+
 #project_prev, #project_close, #project_next {
 	position: relative;
 	z-index: 1;
@@ -1345,7 +1324,9 @@ ul.project_info li span {
 	color: #333;
 }
 
+
 /* __________ Our Clients __________ */
+
 .our_clients {
 	padding: 71px 0 78px;
 }
@@ -1360,9 +1341,13 @@ ul.project_info li span {
 	opacity: 1;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	OUR TEAM
 /*-----------------------------------------------------------------------------------*/
+
 #team {
 	padding: 75px 0 100px;
 	background-image: url(../img/team_bg.jpg);
@@ -1461,9 +1446,13 @@ ul.project_info li span {
 	border-color: #fff;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	TESTIMONIALS
 /*-----------------------------------------------------------------------------------*/
+
 #news {
 	padding: 75px 0 50px;
 }
@@ -1491,9 +1480,13 @@ ul.project_info li span {
 	color: #333;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	RECENT POSTS
 /*-----------------------------------------------------------------------------------*/
+
 .post_item_img {
 	position: relative;
 }
@@ -1568,7 +1561,9 @@ ul.project_info li span {
 	background-image: url(../img/zoom_h.png);
 }
 
+
 /* __________ Recent Posts Small __________ */
+
 .recent_posts_small {
 	margin-bottom: 15px;
 }
@@ -1613,7 +1608,9 @@ ul.project_info li span {
 	color: #666;
 }
 
+
 /* __________ Recent Posts Sidebar __________ */
+
 .recent_posts_widget {
 	margin-bottom: 25px;
 }
@@ -1658,14 +1655,19 @@ ul.project_info li span {
 	color: #999;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	FOOTER
 /*-----------------------------------------------------------------------------------*/
+
 #myFooter {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 60px; /* Height of the footer */
+	height: 60px;
+	/* Height of the footer */
 	background: #6cf;
 }
 
@@ -1709,7 +1711,9 @@ footer titleText {
 	color: #FFFFFF;
 }
 
+
 /* __________ Footer About Block __________ */
+
 .foot_about_block p {
 	margin-bottom: 24px;
 	padding-right: 71px;
@@ -1717,9 +1721,13 @@ footer titleText {
 	font-size: 12px;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	MAP
 /*-----------------------------------------------------------------------------------*/
+
 #map {
 	position: fixed;
 	z-index: 3;
@@ -1773,9 +1781,13 @@ footer titleText {
 	color: #333;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	SOCIAL BUTTONS
 /*-----------------------------------------------------------------------------------*/
+
 .social li {
 	display: inline-block;
 	margin: 0 7px 10px 0;
@@ -1802,9 +1814,13 @@ footer titleText {
 	text-align: center;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	BLOG
 /*-----------------------------------------------------------------------------------*/
+
 .single_page #blog {
 	padding-top: 50px;
 }
@@ -1813,7 +1829,9 @@ footer titleText {
 	border-top: 2px solid #e9e9e9;
 }
 
+
 /* __________ Blog Post __________ */
+
 .blog_post_img {
 	overflow: hidden;
 	float: left;
@@ -1927,7 +1945,9 @@ footer titleText {
 	color: #666;
 }
 
+
 /* __________ Pagination __________ */
+
 .pagination {
 	display: block;
 	margin: 0 0 50px;
@@ -1966,7 +1986,9 @@ footer titleText {
 	background: none !important;
 }
 
+
 /* __________ Single Blog Post __________ */
+
 .single_blog_post_date {
 	margin: -2px 0 -4px;
 	line-height: 13px;
@@ -2019,7 +2041,9 @@ footer titleText {
 	font-size: 17px;
 }
 
+
 /* __________ Single Blog Post Tags __________ */
+
 .single_blog_post_tags li {
 	display: inline-block;
 	margin: 0 3px 5px 0;
@@ -2031,8 +2055,7 @@ footer titleText {
 	font-size: 16px;
 	border: 1px solid #e9e9e9;
 	transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-	-webkit-transition: color 0.3s ease-in-out, border-color 0.3s
-		ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .single_blog_post_tags li a:hover {
@@ -2040,7 +2063,9 @@ footer titleText {
 	border: 2px solid #333;
 }
 
+
 /* __________ Comments __________ */
+
 #comments .avatar {
 	overflow: hidden;
 	margin: 3px 30px 0 0;
@@ -2108,9 +2133,13 @@ footer titleText {
 	font-size: 12px;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	Portfolio Single
 /*-----------------------------------------------------------------------------------*/
+
 .single_page #portfolio {
 	padding-top: 50px;
 }
@@ -2119,7 +2148,9 @@ footer titleText {
 	border-top: 2px solid #e9e9e9;
 }
 
+
 /* __________ Single Portfolio Post __________ */
+
 .single_portfolio_post_title {
 	padding-bottom: 20px;
 	line-height: 40px;
@@ -2127,9 +2158,13 @@ footer titleText {
 	color: #333;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	SIDEBAR
 /*-----------------------------------------------------------------------------------*/
+
 .sidepanel {
 	margin-bottom: 25px;
 }
@@ -2139,7 +2174,9 @@ footer titleText {
 	margin: 25px 0;
 }
 
+
 /* __________ Widjet Meta __________ */
+
 .widget_meta li {
 	position: relative;
 	padding: 13px 10px 12px 30px;
@@ -2176,7 +2213,9 @@ footer titleText {
 	color: #333;
 }
 
+
 /* __________ Popular Tags __________ */
+
 .widget_tags li {
 	display: inline-block;
 	margin: 0 3px 5px 0;
@@ -2188,8 +2227,7 @@ footer titleText {
 	font-size: 16px;
 	border: 1px solid #e9e9e9;
 	transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-	-webkit-transition: color 0.3s ease-in-out, border-color 0.3s
-		ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .widget_tags li a:hover {
@@ -2197,13 +2235,17 @@ footer titleText {
 	border: 2px solid #333;
 }
 
+
 /* __________ Text Widget __________ */
+
 .widget_text p {
 	line-height: 26px;
 	font-size: 16px;
 }
 
+
 /* __________ Work Info __________ */
+
 .work_info {
 	padding-bottom: 25px;
 }
@@ -2218,7 +2260,9 @@ footer titleText {
 	color: #333;
 }
 
+
 /* __________ Shared __________ */
+
 .shared li {
 	display: inline-block;
 	margin: 0 7px 10px 0;
@@ -2235,8 +2279,7 @@ footer titleText {
 	font-size: 23px;
 	color: #ccc;
 	transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-	-webkit-transition: color 0.3s ease-in-out, border-color 0.3s
-		ease-in-out;
+	-webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .shared li a:hover {
@@ -2245,12 +2288,15 @@ footer titleText {
 	border: 2px solid #242424;
 }
 
+
 /*-----------------------------------------------------------------------------------*/
+
+
 /*	RESPONSIVE STYLES
 /*-----------------------------------------------------------------------------------*/
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-	.parallax, .cleancode_block, #team, .top_slider .slide1, .top_slider .slide2,
-		.top_slider .slide3 {
+	.parallax, .cleancode_block, #team, .top_slider .slide1, .top_slider .slide2, .top_slider .slide3 {
 		background-attachment: scroll !important;
 		background-position: 0 0;
 	}
@@ -2259,10 +2305,9 @@ footer titleText {
 	}
 }
 
-@media ( max-width : 1024px) {
-}
+@media ( max-width: 1024px) {}
 
-@media ( min-width : 992px) and (max-width: 1199px) {
+@media ( min-width: 992px) and (max-width: 1199px) {
 	.parallax, .cleancode_block, #team {
 		background-attachment: scroll !important;
 		background-size: 100% auto !important;
@@ -2272,13 +2317,11 @@ footer titleText {
 		font-size: 35px;
 		line-height: 35px;
 	}
-
 	/* __________ Menu __________ */
 	.navmenu ul li a {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-
 	/* __________ Index __________ */
 	.cleancode_block p.title {
 		font-size: 70px;
@@ -2352,7 +2395,6 @@ footer titleText {
 		height: 48px;
 		line-height: 46px;
 	}
-
 	/* __________ Blog __________ */
 	.blog_post_descr hr {
 		margin: 15px 0;
@@ -2373,7 +2415,6 @@ footer titleText {
 		font-size: 44px;
 		line-height: 50px;
 	}
-
 	/* __________ Sidebar __________ */
 	.widget_meta li a {
 		font-size: 17px;
@@ -2387,7 +2428,6 @@ footer titleText {
 		font-size: 16px;
 		line-height: 20px;
 	}
-
 	/* __________ All Styles __________ */
 	.breadcrumbs_block {
 		padding: 50px 0;
@@ -2397,21 +2437,19 @@ footer titleText {
 	}
 }
 
-@media ( min-width : 768px) and (max-width: 991px) {
+@media ( min-width: 768px) and (max-width: 991px) {
 	.logo a {
 		font-size: 22px;
 	}
 	#search-form input:focus {
 		width: 42px;
 	}
-
 	/* __________ Menu __________ */
 	.navmenu ul li a {
 		padding-left: 10px;
 		padding-right: 10px;
 		font-size: 12px;
 	}
-
 	/* __________ Index __________ */
 	.cleancode_block p.title {
 		font-size: 60px;
@@ -2519,7 +2557,6 @@ footer titleText {
 		font-size: 17px;
 		line-height: 24px;
 	}
-
 	/* __________ Blog __________ */
 	.blog_post_descr hr {
 		margin: 15px 0;
@@ -2540,7 +2577,6 @@ footer titleText {
 		font-size: 44px;
 		line-height: 50px;
 	}
-
 	/* __________ Sidebar __________ */
 	.widget_meta li a {
 		font-size: 17px;
@@ -2556,7 +2592,6 @@ footer titleText {
 		font-size: 16px;
 		line-height: 20px;
 	}
-
 	/* __________ All Styles __________ */
 	.breadcrumbs_block {
 		padding: 50px 0;
@@ -2569,7 +2604,6 @@ footer titleText {
 		font-size: 21px;
 		line-height: 24px;
 	}
-
 	/* __________ Footer __________ */
 	footer {
 		position: static;
@@ -2588,7 +2622,7 @@ footer titleText {
 	}
 }
 
-@media ( max-width : 767px) {
+@media ( max-width: 767px) {
 	.container {
 		padding-left: 15px;
 		padding-right: 15px;
@@ -2603,7 +2637,6 @@ footer titleText {
 	#search-form input:focus {
 		width: 42px;
 	}
-
 	/* __________ Menu __________ */
 	a.menu_toggler {
 		display: inline-block;
@@ -2668,7 +2701,6 @@ footer titleText {
 		top: 4px;
 		color: #666;
 	}
-
 	/* __________ Index __________ */
 	.cleancode_block p.title {
 		font-size: 40px;
@@ -2800,7 +2832,6 @@ footer titleText {
 		width: 450px;
 		margin: 0 auto;
 	}
-
 	/* __________ Blog __________ */
 	.blog_post_descr hr {
 		margin: 15px 0;
@@ -2842,15 +2873,13 @@ footer titleText {
 		font-size: 16px;
 		line-height: 38px;
 	}
-	.pagination li.active a, .pagination li a:focus, .pagination li a:hover
-		{
+	.pagination li.active a, .pagination li a:focus, .pagination li a:hover {
 		font-size: 18px;
 	}
 	.single_blog_post_title {
 		font-size: 44px;
 		line-height: 50px;
 	}
-
 	/* __________ Single Blog Post __________ */
 	.single_blog_post_date {
 		margin: 0;
@@ -2862,7 +2891,6 @@ footer titleText {
 	.comment_note {
 		padding: 0 0 20px;
 	}
-
 	/* __________ Sidebar __________ */
 	.widget_meta li a {
 		font-size: 17px;
@@ -2878,7 +2906,6 @@ footer titleText {
 		font-size: 16px;
 		line-height: 20px;
 	}
-
 	/* __________ All Styles __________ */
 	.breadcrumbs_block {
 		padding: 40px 0;
@@ -2891,7 +2918,6 @@ footer titleText {
 		font-size: 16px;
 		line-height: 20px;
 	}
-
 	/* __________ Footer __________ */
 	footer {
 		position: static;
@@ -2912,11 +2938,10 @@ footer titleText {
 	}
 }
 
-@media ( max-width : 479px) {
+@media ( max-width: 479px) {
 	#search-form {
 		display: none;
 	}
-
 	/* __________ Index __________ */
 	h2 {
 		font-size: 26px;
@@ -2952,7 +2977,6 @@ footer titleText {
 	#news .recent_posts {
 		width: 290px;
 	}
-
 	/* __________ Blog __________ */
 	.blog_post_img {
 		float: none;
@@ -2966,7 +2990,6 @@ footer titleText {
 	.blog_post_content {
 		padding-top: 0;
 	}
-
 	/* __________ Single Blog Post __________ */
 	.single_blog_post_title {
 		font-size: 17px;
@@ -2976,16 +2999,13 @@ footer titleText {
 		font-size: 13px;
 		line-height: 20px;
 	}
-
 	/* __________ Sidebar __________ */
 	.post_item_img_widget {
 		float: none;
 		margin-right: 0;
 	}
-
 	/* __________ Bootstrap Style __________ */
-	.col-ss-1, .col-ss-2, .col-ss-3, .col-ss-4, .col-ss-5, .col-ss-6,
-		.col-ss-7, .col-ss-8, .col-ss-9, .col-ss-10, .col-ss-11 {
+	.col-ss-1, .col-ss-2, .col-ss-3, .col-ss-4, .col-ss-5, .col-ss-6, .col-ss-7, .col-ss-8, .col-ss-9, .col-ss-10, .col-ss-11 {
 		float: left;
 	}
 	.col-ss-12 {
@@ -3024,4 +3044,130 @@ footer titleText {
 	.col-ss-1 {
 		width: 8.333333333333332%;
 	}
+}
+
+
+/*  Login form... */
+
+.loginBlock {
+	text-align: center;
+	margin: 0 auto;
+	width: 450px;
+	padding: 20px;
+}
+
+.loginText {
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.loginTextBold {
+	font-weight: 900;
+	font-size: 18px;
+}
+
+.goBackCancelText {
+	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+
+/* Cancel Button */
+
+.buttonCancel {
+	background: #fff;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: inherit;
+	margin-bottom: 1px;
+	margin-right: 27px;
+	opacity: 1;
+	padding: 11px 41px;
+	right: 20px;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: normal;
+	border: 2px solid #bdc3c7;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	border-radius: 3px;
+	box-shadow: inset 0 -0.3em 0 rgba(0, 0, 0, 0.2);
+}
+
+.buttonCancel:visited {
+	cursor: default;
+	opacity: 0.65;
+}
+
+.buttonCancel:hover {
+	background-color: #F2F2F2;
+}
+
+.buttonCancel:active {
+	box-shadow: inset 0 -0.15em 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Error Messages */
+
+.errorMessageDisplay {
+	color: #d9534f;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #FFFFFF;
+}
+
+.readOnlyField {
+	color: #DDDDDD;
+}
+
+
+/* Custom Button for <a href>s*/
+
+.buttonCustom {
+	outline: none;
+	font-size: 1.2em;
+	background-color: #34495E;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: inherit;
+	font-weight: 650;
+	margin-bottom: 1px;
+	margin-right: 27px;
+	opacity: 1;
+	padding: 11px 41px;
+	right: 20px;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: normal;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	border-radius: 3px;
+	box-shadow: inset 0 -0.3em 0 rgba(0, 0, 0, 0.2);
+}
+
+.buttonCustom:visited {
+	color: #ffffff;
+	cursor: default;
+	opacity: 0.65;
+}
+
+.buttonCustom:hover {
+	color: #ffffff;
+	background-color: #707F8E;
+}
+
+.buttonCustom:active {
+	color: #ffffff;
+	background-color: #283645;
+	box-shadow: inset 0 -0.15em 0 rgba(0, 0, 0, 0.2);
 }

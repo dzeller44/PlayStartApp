@@ -53,7 +53,7 @@ Seq[Any](format.raw/*1.42*/("""
 			<label class="title"><span class="required">*</span>Email:</label>
 			<div class="item-cont">
 				<input class="large" type="email" name="email" required="required"
-					placeholder="Choose a user name..." /><span class="icon-place"></span>
+					placeholder="Enter your email..." /><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-password">
@@ -132,10 +132,10 @@ Seq[Any](format.raw/*1.42*/("""
 object create extends create_Scope0.create
               /*
                   -- GENERATED --
-                  DATE: Mon Oct 31 09:36:06 MDT 2016
+                  DATE: Mon Oct 31 13:19:25 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/create.scala.html
-                  HASH: c43774bc566b3d9f44432c0f4ad91cf36e7d3912
-                  MATRIX: 782->1|917->41|945->44|963->54|1002->56|1030->58|3110->2112|3149->2142|3189->2144|3228->2155|3329->2229|3348->2239|3389->2259|3428->2270|3473->2285|3503->2288|3742->2500|3781->2518|3971->2681|4018->2707|4103->2765|4151->2792|4214->2825
+                  HASH: f4d4537a82189ce24ef66283d566ca1430169511
+                  MATRIX: 782->1|917->41|945->44|963->54|1002->56|1030->58|3108->2110|3147->2140|3187->2142|3226->2153|3327->2227|3346->2237|3387->2257|3426->2268|3471->2283|3501->2286|3740->2498|3779->2516|3969->2679|4016->2705|4101->2763|4149->2790|4212->2823
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|92->61|92->61|92->61|93->62|94->63|94->63|94->63|95->64|96->65|97->66|101->70|101->70|108->77|108->77|109->78|109->78|114->83
                   -- GENERATED --
               */

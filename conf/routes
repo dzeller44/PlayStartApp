@@ -20,6 +20,11 @@ GET    /emuser                  controllers.Application.managerUserMaintenance()
 
 GET    /emsearch                controllers.Application.managerSearch()
 
+GET    /emfinduser              controllers.Application.findUser()
+POST   /emfinduser              controllers.Application.getUserByEmail()
+
+GET    /updateuser              controllers.Application.findUser()
+
 GET    /settings                controllers.account.settings.Index.index()
 GET    /settings/password       controllers.account.settings.Password.index()
 POST   /settings/password       controllers.account.settings.Password.runPassword()

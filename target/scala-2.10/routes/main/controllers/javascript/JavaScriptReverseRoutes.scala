@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Mon Oct 31 10:00:01 MDT 2016
+// @DATE:Mon Oct 31 13:19:24 MDT 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:47
+  // @LINE:50
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:47
+    // @LINE:50
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -83,6 +83,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:24
+    def getUserByEmail: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.getUserByEmail",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "emfinduser"})
+        }
+      """
+    )
+  
     // @LINE:10
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.logout",
@@ -109,6 +119,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emsearch"})
+        }
+      """
+    )
+  
+    // @LINE:23
+    def findUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.findUser",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emfinduser"})
         }
       """
     )

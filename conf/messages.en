@@ -10,6 +10,7 @@ error.technical=Technical Error, please Retry
 validate=Validate
 reset=Reset
 cancel=Cancel
+submit=Submit
 
 account.not.validated.check.mail=Account not validated. Check your emails.
 account.successfully.validated=Account successfully validated
@@ -53,6 +54,8 @@ resetpassword=Reset Password
 resetpassword.mailsent=An email has been sent to reset your password.  Please check your inbox.
 resetpassword.success=Your password has been reset.
 resetpassword.new.password=Reset Your Password
+
+search.user.bademail=The user does not exist.
 
 changemail.mailsent=A mail has been sent, please check your mail.
 

@@ -14,6 +14,8 @@ import views.html.auth;
 import views.html.manager;
 import views.html.usermaint;
 import views.html.search;
+import views.html.getuser;
+import views.html.showuser;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
@@ -24,10 +26,8 @@ import static play.data.Form.form;
 public class Application extends Controller {
 
 	/*
-	public static Result signup2() {
-		return ok("success");
-	}
-*/
+	 * public static Result signup2() { return ok("success"); }
+	 */
 
 	public static Result GO_HOME = redirect(routes.Application.index());
 
@@ -52,7 +52,7 @@ public class Application extends Controller {
 		}
 
 		return ok(index.render(form(Register.class), form(Login.class)));
-		//return ok(index.render());
+		// return ok(index.render());
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class Application extends Controller {
 		public String email;
 		@Constraints.Required
 		public String password;
-		
+
 		String errMessage = "";
 
 		/**
@@ -103,7 +103,7 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String inputPassword;
-		
+
 		// Custom fields...
 		@Constraints.Required
 		public String role;
@@ -124,16 +124,16 @@ public class Application extends Controller {
 
 			if (isBlank(inputPassword)) {
 				return "Password is required";
-			}
-			else {
+			} else {
 				// Need to make sure we have:
-				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1 Number; 1 Special Character
+				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1
+				// Number; 1 Special Character
 				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
-				if(!inputPassword.matches(passwordPattern)) {
+				if (!inputPassword.matches(passwordPattern)) {
 					return Messages.get("password.message");
 				}
 			}
-			
+
 			if (isBlank(role)) {
 				return "Account Role is required";
 			}
@@ -153,25 +153,24 @@ public class Application extends Controller {
 	 */
 	public Result authenticate() {
 		String errorMessage = "";
-		
+
 		Form<Login> loginForm = form(Login.class).bindFromRequest();
 		System.out.println("authenticate");
 		Form<Register> registerForm = form(Register.class);
-		
+
 		if (loginForm.hasErrors()) {
-			
 			System.out.println("authenticate - bad request");
-			//return badRequest(index.render(registerForm, loginForm));
+			// return badRequest(index.render(registerForm, loginForm));
 			return badRequest(auth.render(loginForm));
-			//return badRequest(index.render());
-			//return badRequest();
+			// return badRequest(index.render());
+			// return badRequest();
 		} else {
 			System.out.println("authenticate - good request");
 			session("email", loginForm.get().email);
 			return GO_DASHBOARD;
 		}
 	}
-	
+
 	public Result openLogin() {
 		System.out.println("openLogin");
 		return ok(auth.render(form(Login.class)));
@@ -187,20 +186,65 @@ public class Application extends Controller {
 		flash("success", Messages.get("youve.been.logged.out"));
 		return GO_HOME;
 	}
-	
+
 	public Result managerHome() {
-		System.out.println("Manager Home");
 		return ok(manager.render(form(Login.class)));
 	}
-	
+
 	public Result managerUserMaintenance() {
-		System.out.println("Manager Home");
 		return ok(usermaint.render(form(Login.class)));
 	}
-	
+
 	public Result managerSearch() {
-		System.out.println("Manager Home");
 		return ok(search.render(form(Login.class)));
 	}
+
+	public Result findUser() {
+		return ok(getuser.render(form(FindUser.class)));
+	}
+
+	public static class FindUser {
+
+		@Constraints.Required
+		public String email;
+
+		public String validate() {
+			if (isBlank(email)) {
+				return "Email is required";
+			} else {
+				User user = User.findByEmail(email);
+				if (user != null) {
+					// Open user record...
+					return null;
+				} else {
+					// Display message...
+					return Messages.get("search.user.bademail");
+				}
+			}
+		}
+
+		private boolean isBlank(String input) {
+			return input == null || input.isEmpty() || input.trim().isEmpty();
+		}
+
+	}
+
+	public Result getUserByEmail() {
+		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+
+		if (findUserForm.hasErrors()) {
+			System.out.println("Find User - errors");
+			return badRequest(getuser.render(findUserForm));
+		} else {
+			System.out.println("Find User - good request");
+			String email = findUserForm.get().email;
+			User user = User.findByEmail(email);
+			String name = user.fullname;
+			String role = user.role;
+			return ok(showuser.render(findUserForm, email, name, role));
+		}
+
+	}
+
 
 }
