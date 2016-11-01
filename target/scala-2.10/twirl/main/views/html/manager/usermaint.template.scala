@@ -48,21 +48,21 @@ Seq[Any](format.raw/*1.38*/("""
 			<div class="row">
 				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/emuser">
+					<a class="services_item" href="/signup">
 						<p>
 							<img src=""""),_display_(/*22.19*/routes/*22.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*22.62*/(""""> <b>Add User</b>
 						</p> <span>Add new user...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/emuser">
+					<a class="services_item" href="/emfinduser">
 						<p>
 							<img src=""""),_display_(/*29.19*/routes/*29.25*/.Assets.at("/img/icon_Edit_User.png")),format.raw/*29.62*/(""""> <b>Edit User</b>
 						</p> <span>Locate and edit a user...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/emuser">
+					<a class="services_item" href="/emfinduser">
 						<p>
 							<img src=""""),_display_(/*36.19*/routes/*36.25*/.Assets.at("/img/icon_Delete_User.png")),format.raw/*36.64*/(""""> <b>Delete User</b>
 						</p> <span>Locate and delete a user...</span>
@@ -100,10 +100,10 @@ Seq[Any](format.raw/*1.38*/("""
 object usermaint extends usermaint_Scope0.usermaint
               /*
                   -- GENERATED --
-                  DATE: Mon Oct 31 14:02:58 MDT 2016
+                  DATE: Tue Nov 01 09:12:07 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/manager/usermaint.scala.html
-                  HASH: 9314b05cb4b223b3b841e267737b8d2661f14d31
-                  MATRIX: 778->1|909->37|937->40|955->50|994->52|1023->55|1452->457|1467->463|1525->500|1743->691|1758->697|1816->734|2045->936|2060->942|2120->981
+                  HASH: 1c8805fa4ead262d95e01ae2e876443a4bc73453
+                  MATRIX: 778->1|909->37|937->40|955->50|994->52|1023->55|1452->457|1467->463|1525->500|1747->695|1762->701|1820->738|2053->944|2068->950|2128->989
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|53->22|53->22|53->22|60->29|60->29|60->29|67->36|67->36|67->36
                   -- GENERATED --
               */
