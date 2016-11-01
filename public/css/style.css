@@ -3073,7 +3073,7 @@ footer titleText {
 }
 
 
-/* Cancel Button */
+/* Cancel/Go Back Button */
 
 .buttonCancel {
 	background: #fff;
@@ -3082,6 +3082,7 @@ footer titleText {
 	cursor: pointer;
 	display: inline-block;
 	font-family: inherit;
+	font-weight: 650;
 	margin-bottom: 1px;
 	margin-right: 27px;
 	opacity: 1;
