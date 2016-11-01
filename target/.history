@@ -122,3 +122,10 @@ clea
 cleanb
 clean
 run
+clean
+compile
+clean
+compile
+clean
+compile
+run

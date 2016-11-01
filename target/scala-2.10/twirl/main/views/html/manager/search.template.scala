@@ -83,7 +83,7 @@ Seq[Any](format.raw/*1.38*/("""
 object search extends search_Scope0.search
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 01 10:33:58 MDT 2016
+                  DATE: Tue Nov 01 12:30:14 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/manager/search.scala.html
                   HASH: 275bdbeaa4dd7fbdaad880d7f4ed5cce771d22fd
                   MATRIX: 772->1|903->37|931->40|949->50|988->52|1017->55
