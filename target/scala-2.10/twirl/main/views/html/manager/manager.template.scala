@@ -49,14 +49,14 @@ Seq[Any](format.raw/*1.38*/("""
 				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-1 margbot30"></div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/emuser">
+					<a class="services_item" href="/export">
 						<p>
-							<img src=""""),_display_(/*23.19*/routes/*23.25*/.Assets.at("/img/icon_User_Maint.png")),format.raw/*23.63*/(""""> <b>User Maintenance</b>
-						</p> <span>Add/Edit/Update User Records...</span>
+							<img src=""""),_display_(/*23.19*/routes/*23.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*23.64*/(""""> <b>Export Data</b>
+						</p> <span>Export Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/emsearch">
+					<a class="services_item" href="/search">
 						<p>
 							<img src=""""),_display_(/*30.19*/routes/*30.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*30.67*/(""""> <b>Search Records</b>
 						</p> <span>Search Business Profiles...</span>
@@ -95,10 +95,10 @@ Seq[Any](format.raw/*1.38*/("""
 object manager extends manager_Scope0.manager
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 01 12:30:14 MDT 2016
+                  DATE: Wed Nov 02 10:13:11 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/manager/manager.scala.html
-                  HASH: 5dae986b0d452e526f7ea4863b5b3adfc3bb87b6
-                  MATRIX: 774->1|905->37|933->40|951->50|990->52|1019->55|1487->496|1502->502|1561->540|1805->757|1820->763|1883->805
+                  HASH: aeb0a334735e74ad85f13ad68a17cb9d06cf6172
+                  MATRIX: 774->1|905->37|933->40|951->50|990->52|1019->55|1487->496|1502->502|1562->541|1785->737|1800->743|1863->785
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|54->23|54->23|54->23|61->30|61->30|61->30
                   -- GENERATED --
               */
