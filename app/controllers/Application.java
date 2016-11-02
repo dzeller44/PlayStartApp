@@ -11,7 +11,7 @@ import play.mvc.Result;
 import play.libs.Json;
 import views.html.index;
 import views.html.auth;
-import views.html.search;
+import views.html.searchusers;
 import views.html.export;
 import views.html.manager.manager;
 import views.html.admin.admin;
@@ -21,6 +21,8 @@ import views.html.admin.showuser;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
+
+import java.util.List;
 
 /**
  * Login and Logout. User: yesnault
@@ -202,7 +204,12 @@ public class Application extends Controller {
 	}
 
 	public Result adminSearch() {
-		return ok(search.render(form(Login.class)));
+		return ok(searchusers.render(form(Login.class)));
+	}
+	
+	public Result getAllUsers() {
+		List<User> users = User.find.all();
+		return ok(searchusers.render(form(Login.class)));
 	}
 	
 	public Result exportData() {
