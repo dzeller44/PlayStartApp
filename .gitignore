@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#PlayStartApp specific config files to ignore
+ebean.properties
+conf/application.conf
+.classpath
+
 # =========================
 # Operating System Files
 # =========================
