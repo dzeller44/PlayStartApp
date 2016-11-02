@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Tue Nov 01 12:30:13 MDT 2016
+// @DATE:Wed Nov 02 10:17:51 MDT 2016
 
 package controllers;
 

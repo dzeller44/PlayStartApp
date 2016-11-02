@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Tue Nov 01 12:30:13 MDT 2016
+// @DATE:Wed Nov 02 10:17:51 MDT 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:52
+  // @LINE:58
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:52
+    // @LINE:58
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -73,22 +73,32 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
-    def managerUserMaintenance: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.managerUserMaintenance",
+    // @LINE:20
+    def adminHome: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.adminHome",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emuser"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "admin"})
         }
       """
     )
   
     // @LINE:24
+    def adminSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.adminSearch",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search"})
+        }
+      """
+    )
+  
+    // @LINE:27
     def getUserByEmail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getUserByEmail",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "emfinduser"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "finduser"})
         }
       """
     )
@@ -103,6 +113,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:22
+    def userMaintenance: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.userMaintenance",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "adminuser"})
+        }
+      """
+    )
+  
     // @LINE:13
     def openLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openLogin",
@@ -113,24 +133,14 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
-    def managerSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.managerSearch",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emsearch"})
-        }
-      """
-    )
-  
-    // @LINE:23
+    // @LINE:26
     def findUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.findUser",
       """
         function() {
         
           if (true) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emfinduser"})
+            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "finduser"})
           }
         
         }
@@ -157,6 +167,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+    // @LINE:31
+    def exportData: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.exportData",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "export"})
         }
       """
     )

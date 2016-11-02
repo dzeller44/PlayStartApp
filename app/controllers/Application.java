@@ -11,11 +11,13 @@ import play.mvc.Result;
 import play.libs.Json;
 import views.html.index;
 import views.html.auth;
+import views.html.search;
+import views.html.export;
 import views.html.manager.manager;
-import views.html.manager.usermaint;
-import views.html.manager.search;
-import views.html.manager.getuser;
-import views.html.manager.showuser;
+import views.html.admin.admin;
+import views.html.admin.usermaint;
+import views.html.admin.getuser;
+import views.html.admin.showuser;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
@@ -191,12 +193,20 @@ public class Application extends Controller {
 		return ok(manager.render(form(Login.class)));
 	}
 
-	public Result managerUserMaintenance() {
+	public Result adminHome() {
+		return ok(admin.render(form(Login.class)));
+	}
+
+	public Result userMaintenance() {
 		return ok(usermaint.render(form(Login.class)));
 	}
 
-	public Result managerSearch() {
+	public Result adminSearch() {
 		return ok(search.render(form(Login.class)));
+	}
+	
+	public Result exportData() {
+		return ok(export.render(form(Login.class)));
 	}
 
 	public Result findUser() {

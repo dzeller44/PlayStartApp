@@ -16,15 +16,21 @@ POST   /auth                    controllers.Application.authenticate()
 # Emergency Manager pages...
 GET    /em                      controllers.Application.managerHome()
 
-GET    /emuser                  controllers.Application.managerUserMaintenance()
+# Admin pages...
+GET    /admin                   controllers.Application.adminHome()
 
-GET    /emsearch                controllers.Application.managerSearch()
+GET    /adminuser               controllers.Application.userMaintenance()
 
-GET    /emfinduser              controllers.Application.findUser()
-POST   /emfinduser              controllers.Application.getUserByEmail()
+GET    /search                  controllers.Application.adminSearch()
+
+GET    /finduser                controllers.Application.findUser()
+POST   /finduser                controllers.Application.getUserByEmail()
 
 GET    /updateuser              controllers.Application.findUser()
 
+GET    /export                  controllers.Application.exportData()
+
+# User settings...
 GET    /settings                controllers.account.settings.Index.index()
 GET    /settings/password       controllers.account.settings.Password.index()
 POST   /settings/password       controllers.account.settings.Password.runPassword()

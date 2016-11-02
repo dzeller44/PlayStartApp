@@ -129,3 +129,5 @@ compile
 clean
 compile
 run
+clean
+run
