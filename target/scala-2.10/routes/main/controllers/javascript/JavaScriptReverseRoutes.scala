@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 02 12:00:35 MDT 2016
+// @DATE:Wed Nov 02 12:10:00 MDT 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -83,16 +83,6 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:24
-    def adminSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.adminSearch",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search"})
-        }
-      """
-    )
-  
     // @LINE:27
     def getUserByEmail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getUserByEmail",
@@ -157,6 +147,16 @@ package controllers.javascript {
             return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
           }
         
+        }
+      """
+    )
+  
+    // @LINE:24
+    def getAllUsers: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.getAllUsers",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search"})
         }
       """
     )

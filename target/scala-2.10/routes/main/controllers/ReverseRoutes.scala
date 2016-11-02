@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 02 12:00:35 MDT 2016
+// @DATE:Wed Nov 02 12:10:00 MDT 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -62,12 +62,6 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "admin")
     }
   
-    // @LINE:24
-    def adminSearch(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "search")
-    }
-  
     // @LINE:27
     def getUserByEmail(): Call = {
       import ReverseRouteContext.empty
@@ -118,6 +112,12 @@ package controllers {
       
       }
     
+    }
+  
+    // @LINE:24
+    def getAllUsers(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "search")
     }
   
     // @LINE:6

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 02 12:00:35 MDT 2016
+// @DATE:Wed Nov 02 12:10:00 MDT 2016
 
 package router
 
@@ -76,7 +76,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """em""", """controllers.Application.managerHome()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin""", """controllers.Application.adminHome()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """adminuser""", """controllers.Application.userMaintenance()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.Application.adminSearch()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.Application.getAllUsers()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """finduser""", """controllers.Application.findUser()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """finduser""", """controllers.Application.getUserByEmail()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateuser""", """controllers.Application.findUser()"""),
@@ -256,15 +256,15 @@ class Routes(
   )
 
   // @LINE:24
-  private[this] lazy val controllers_Application_adminSearch9_route = Route("GET",
+  private[this] lazy val controllers_Application_getAllUsers9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search")))
   )
-  private[this] lazy val controllers_Application_adminSearch9_invoker = createInvoker(
-    Application_6.adminSearch(),
+  private[this] lazy val controllers_Application_getAllUsers9_invoker = createInvoker(
+    Application_6.getAllUsers(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
-      "adminSearch",
+      "getAllUsers",
       Nil,
       "GET",
       """""",
@@ -636,9 +636,9 @@ class Routes(
       }
   
     // @LINE:24
-    case controllers_Application_adminSearch9_route(params) =>
+    case controllers_Application_getAllUsers9_route(params) =>
       call { 
-        controllers_Application_adminSearch9_invoker.call(Application_6.adminSearch())
+        controllers_Application_getAllUsers9_invoker.call(Application_6.getAllUsers())
       }
   
     // @LINE:26
