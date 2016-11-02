@@ -5,7 +5,7 @@ import play.twirl.api._
 import play.twirl.api.TemplateMagic._
 
 
-     object search_Scope0 {
+     object searchusers_Scope0 {
 import models._
 import controllers._
 import play.api.i18n._
@@ -21,7 +21,7 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class search extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Form[Application.Login],play.twirl.api.HtmlFormat.Appendable] {
+class searchusers extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Form[Application.Login],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
   def apply/*1.2*/(loginForm: Form[Application.Login]):play.twirl.api.HtmlFormat.Appendable = {
@@ -31,10 +31,11 @@ class search extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Form
 
 Seq[Any](format.raw/*1.38*/("""
 
-"""),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
+
+"""),_display_(/*4.2*/main(null)/*4.12*/ {_display_(Seq[Any](format.raw/*4.14*/("""
 
 
-"""),format.raw/*6.1*/("""<!-- ABOUT -->
+"""),format.raw/*7.1*/("""<!-- ABOUT -->
 <section id="search">
 
 	<!-- SERVICES -->
@@ -49,8 +50,14 @@ Seq[Any](format.raw/*1.38*/("""
 				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-3 margbot30">
 					Search Records...
-					#"""),format.raw/*21.7*/("""{"""),format.raw/*21.8*/("""table users /"""),format.raw/*21.21*/("""}"""),format.raw/*21.22*/("""
-				"""),format.raw/*22.5*/("""</div>
+					#"""),format.raw/*22.7*/("""{"""),format.raw/*22.8*/("""table users /"""),format.raw/*22.21*/("""}"""),format.raw/*22.22*/("""
+
+"""),format.raw/*24.1*/("""<ul>
+
+</ul>
+
+
+				</div>
 
 			</div>
 		</div>
@@ -81,14 +88,14 @@ Seq[Any](format.raw/*1.38*/("""
 }
 
 /**/
-object search extends search_Scope0.search
+object searchusers extends searchusers_Scope0.searchusers
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 02 10:20:06 MDT 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/search.scala.html
-                  HASH: a01d191b15f91d2f6d86a68e468f17e14d5da233
-                  MATRIX: 764->1|895->37|923->40|941->50|980->52|1009->55|1384->403|1412->404|1453->417|1482->418|1514->423
-                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|52->21|53->22
+                  DATE: Wed Nov 02 12:04:14 MDT 2016
+                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/searchusers.scala.html
+                  HASH: 9950f8856213432dc937e3d970260229c193f93c
+                  MATRIX: 774->1|905->37|934->41|952->51|991->53|1020->56|1395->404|1423->405|1464->418|1493->419|1522->421
+                  LINES: 27->1|32->1|35->4|35->4|35->4|38->7|53->22|53->22|53->22|53->22|55->24
                   -- GENERATED --
               */
           
