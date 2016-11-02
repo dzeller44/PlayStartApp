@@ -21,7 +21,7 @@ GET    /admin                   controllers.Application.adminHome()
 
 GET    /adminuser               controllers.Application.userMaintenance()
 
-GET    /search                  controllers.Application.adminSearch()
+GET    /search                  controllers.Application.getAllUsers()
 
 GET    /finduser                controllers.Application.findUser()
 POST   /finduser                controllers.Application.getUserByEmail()

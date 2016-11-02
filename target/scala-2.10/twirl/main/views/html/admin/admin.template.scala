@@ -101,7 +101,7 @@ Seq[Any](format.raw/*1.38*/("""
 object admin extends admin_Scope0.admin
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 02 10:14:13 MDT 2016
+                  DATE: Wed Nov 02 12:00:35 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/admin.scala.html
                   HASH: 483f9288615be043bd7f56a00e2befb6cd6dd77b
                   MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1441->456|1456->462|1515->500|1757->715|1772->721|1832->760|2055->956|2070->962|2133->1004
