@@ -21,15 +21,15 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class searchusers extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Form[Application.Login],play.twirl.api.HtmlFormat.Appendable] {
+class searchusers extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Form[Application.Login],List[User],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(loginForm: Form[Application.Login]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(loginForm: Form[Application.Login], userList: List[User]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.38*/("""
+Seq[Any](format.raw/*1.60*/("""
 
 
 """),_display_(/*4.2*/main(null)/*4.12*/ {_display_(Seq[Any](format.raw/*4.14*/("""
@@ -76,9 +76,9 @@ Seq[Any](format.raw/*1.38*/("""
     }
   }
 
-  def render(loginForm:Form[Application.Login]): play.twirl.api.HtmlFormat.Appendable = apply(loginForm)
+  def render(loginForm:Form[Application.Login],userList:List[User]): play.twirl.api.HtmlFormat.Appendable = apply(loginForm,userList)
 
-  def f:((Form[Application.Login]) => play.twirl.api.HtmlFormat.Appendable) = (loginForm) => apply(loginForm)
+  def f:((Form[Application.Login],List[User]) => play.twirl.api.HtmlFormat.Appendable) = (loginForm,userList) => apply(loginForm,userList)
 
   def ref: this.type = this
 
@@ -91,10 +91,10 @@ Seq[Any](format.raw/*1.38*/("""
 object searchusers extends searchusers_Scope0.searchusers
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 02 12:04:14 MDT 2016
+                  DATE: Thu Nov 03 12:32:06 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/searchusers.scala.html
-                  HASH: 9950f8856213432dc937e3d970260229c193f93c
-                  MATRIX: 774->1|905->37|934->41|952->51|991->53|1020->56|1395->404|1423->405|1464->418|1493->419|1522->421
+                  HASH: d9c01bf924298a931a5b41f306d4c844770ea1b4
+                  MATRIX: 785->1|938->59|967->63|985->73|1024->75|1053->78|1428->426|1456->427|1497->440|1526->441|1555->443
                   LINES: 27->1|32->1|35->4|35->4|35->4|38->7|53->22|53->22|53->22|53->22|55->24
                   -- GENERATED --
               */

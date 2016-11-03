@@ -100,7 +100,7 @@ Seq[Any](format.raw/*1.38*/("""
 object usermaint extends usermaint_Scope0.usermaint
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 02 12:00:35 MDT 2016
+                  DATE: Thu Nov 03 09:49:57 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/usermaint.scala.html
                   HASH: 1c8805fa4ead262d95e01ae2e876443a4bc73453
                   MATRIX: 776->1|907->37|935->40|953->50|992->52|1021->55|1450->457|1465->463|1523->500|1745->695|1760->701|1818->738|2051->944|2066->950|2126->989

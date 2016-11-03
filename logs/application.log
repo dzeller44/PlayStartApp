@@ -8,3 +8,4 @@
 2016-11-02 12:10:16,041 [INFO] from application in application-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
 2016-11-02 12:10:16,052 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-9 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
 2016-11-02 12:10:16,937 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-9 - Application started (Dev)
+2016-11-02 12:11:33,631 [INFO] from application in pool-7-thread-4 - Shutting down connection pool.

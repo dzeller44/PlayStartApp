@@ -209,7 +209,7 @@ public class Application extends Controller {
 	
 	public Result getAllUsers() {
 		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class)));
+		return ok(searchusers.render(form(Login.class, users)));
 	}
 	
 	public Result exportData() {
