@@ -18,6 +18,8 @@ import views.html.admin.admin;
 import views.html.admin.usermaint;
 import views.html.admin.getuser;
 import views.html.admin.showuser;
+
+import com.avaje.ebean.Ebean;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
@@ -209,7 +211,11 @@ public class Application extends Controller {
 	
 	public Result getAllUsers() {
 		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class, users)));
+		//Form<Application.Login> loginForm = form(Login.class);
+		//return ok(searchusers.render(loginForm, users));
+		//List<User> users = Ebean.find(User.class).findList();
+		//return ok(searchusers.render(form(Login.class), users));
+		return ok(searchusers.render(users));
 	}
 	
 	public Result exportData() {

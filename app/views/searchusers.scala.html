@@ -1,4 +1,4 @@
-@(loginForm: Form[Application.Login], userList: List[User])
+@(userList: List[User])
 
 
 @main(null) {
@@ -22,7 +22,9 @@
 					#{table users /}
 
 <ul>
-
+@for(user <- userList) {
+  <li>@user.fullname</li>
+} 
 </ul>
 
 
