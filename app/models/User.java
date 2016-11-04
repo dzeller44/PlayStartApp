@@ -1,5 +1,6 @@
 package models;
 
+import models.enums.RoleType;
 import models.utils.AppException;
 import models.utils.Hash;
 import play.data.format.Formats;
@@ -46,7 +47,8 @@ public class User extends Model {
     // Custom Fields...
     @Constraints.Required
     @Formats.NonEmpty
-    public String role;
+    @Column(name = "role")
+    public RoleType role;
 
     // -- Queries (long id, user.class)
     public static Model.Finder<Long, User> find = new Model.Finder<Long, User>(Long.class, User.class);
@@ -123,5 +125,30 @@ public class User extends Model {
         user.save();
         return true;
     }
+    
+
+    /**
+     * 
+     * @return
+     */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public RoleType getRole() {
+		return role;
+	}
 
 }
