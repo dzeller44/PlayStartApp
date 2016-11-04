@@ -22,6 +22,7 @@ create table user (
   date_creation             datetime(6),
   validated                 tinyint(1) default 0,
   role                      integer,
+  approved                  varchar(255),
   constraint ck_user_role check (role in ('0','2','3','1')),
   constraint uq_user_email unique (email),
   constraint uq_user_fullname unique (fullname),

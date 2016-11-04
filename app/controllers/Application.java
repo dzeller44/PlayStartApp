@@ -115,6 +115,8 @@ public class Application extends Controller {
 		// Custom fields...
 		@Constraints.Required
 		public String role;
+		
+		public String approved;
 
 		/**
 		 * Validate the authentication.
