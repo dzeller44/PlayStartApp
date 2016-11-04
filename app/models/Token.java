@@ -34,12 +34,12 @@ public class Token extends Model {
     @Id
     public String token;
 
-   //@Constraints.Required
+   @Constraints.Required
     @Formats.NonEmpty
     @Column(name="user_id")
     public Long userId;
 
-    //@Constraints.Required
+    @Constraints.Required
     @Enumerated(EnumType.STRING)
     public TypeToken type;
 
@@ -47,7 +47,7 @@ public class Token extends Model {
     @Column(name="date_creation")
     public Date dateCreation;
 
-    //@Constraints.Required
+    @Constraints.Required
     @Formats.NonEmpty
     public String email;
     
