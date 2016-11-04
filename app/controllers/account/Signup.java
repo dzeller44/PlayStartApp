@@ -21,6 +21,7 @@ import javax.inject.Inject;
 import views.html.account.signup.confirm;
 import views.html.account.signup.create;
 import views.html.account.signup.created;
+import views.html.account.signup.approval;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -102,9 +103,18 @@ public class Signup extends Controller {
 				break;
 			}
 			user.save();
-			sendMailAskForConfirmation(user);
-
-			return ok(created.render());
+			
+			//if user.role is "manager" set approved to "N"
+			if (role.compareTo("manager") == 0){
+				//RoleType.MANAGER == 2
+				user.approved = "N";
+				user.save();
+				return ok(approval.render());
+			}
+			else {
+				sendMailAskForConfirmation(user);
+				return ok(created.render());
+			}
 		} catch (EmailException e) {
 			Logger.debug("Signup.save Cannot send email", e);
 			flash("error", Messages.get("error.sending.email"));
