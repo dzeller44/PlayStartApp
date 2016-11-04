@@ -23,6 +23,7 @@ import views.html.account.signup.created;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.UUID;
 
 import static play.data.Form.form;
@@ -82,6 +83,7 @@ public class Signup extends Controller {
 			user.fullname = register.fullname;
 			user.passwordHash = Hash.createPassword(register.inputPassword);
 			user.confirmationToken = UUID.randomUUID().toString();
+	        user.dateCreation = new Date();
 			// Custom fields...
 			/*
 			String role = register.role;
