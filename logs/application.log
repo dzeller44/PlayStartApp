@@ -1,11 +1,5 @@
-2016-11-02 12:09:23,062 [INFO] from play.core.server.NettyServer in pool-7-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-11-02 12:09:29,211 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-02 12:09:29,227 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-02 12:09:30,267 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-02 12:09:32,180 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-11-02 12:10:15,860 [INFO] from application in application-akka.actor.default-dispatcher-9 - Shutting down connection pool.
-2016-11-02 12:10:16,039 [WARN] from application in application-akka.actor.default-dispatcher-9 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-02 12:10:16,041 [INFO] from application in application-akka.actor.default-dispatcher-9 - Creating Pool for datasource 'default'
-2016-11-02 12:10:16,052 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-9 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-02 12:10:16,937 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-9 - Application started (Dev)
-2016-11-02 12:11:33,631 [INFO] from application in pool-7-thread-4 - Shutting down connection pool.
+2016-11-04 09:34:42,258 [INFO] from play.core.server.NettyServer in pool-21-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-11-04 09:34:51,973 [WARN] from application in ForkJoinPool-2-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-04 09:34:51,980 [INFO] from application in ForkJoinPool-2-worker-1 - Creating Pool for datasource 'default'
+2016-11-04 09:34:52,910 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-2-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-04 09:34:54,513 [INFO] from play.api.Play in ForkJoinPool-2-worker-1 - Application started (Dev)

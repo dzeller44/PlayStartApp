@@ -1,0 +1,79 @@
+title=CO-Assist
+
+confirm=Confirmation
+email=Email
+fullname=Full Name
+goback=Go Back
+logout=Logout
+password=Password
+error.technical=Technical Error, please Retry
+validate=Validate
+reset=Reset
+cancel=Cancel
+submit=Submit
+
+account.not.validated.check.mail=Account not validated. Check your emails.
+account.successfully.validated=Account successfully validated
+account.settings.email.successful=Email successfully validated ({0})
+invalid.user.or.password=Invalid user or password
+youve.been.logged.out=You've been logged out
+error.sending.email=Error sending email
+error.sending.confirm.email=Error while sending confirmation mail
+error.email.already.exist=Email already exist
+error.account.already.validated=Account already validated
+error.unknown.email=Unknown email
+error.confirm=Confirmation failed
+error.expiredresetlink=This password reset has expired.
+error.expiredmaillink=This mail change has expired.
+
+account.settings.password=Click OK to receive instructions by mail.
+account.settings.email=Enter your new email address. Click OK to receive instructions on this new mail.
+account.exists=Already have an account?
+account.need=Need to register for an account?
+
+signin.signin=Sign In
+signin.your.email=Your email address
+signin.your.password=Your password
+
+forgot.password=Forgot password?
+forgot.emailOrPassword=Forgot email or password?
+forgot.email=Forgot email?
+
+signup.signup=Sign Up
+signup.successfull=Sign Up - Successful !
+signup.new=New ?
+signup.reset.password=Reset your password
+signup.generate.password=Generate a password
+signup.msg.created=You will receive a confirmation email soon. Check your email to activate your account.
+signup.valid.email=Invalid Email
+signup.email.confirmed=Success - your email has been confirmed and your account is activated.
+
+password.message=Password must be 8 characters, contain 1 UPPERCASE character, 1 lowercase character, 1 number, and 1 special character.
+
+resetpassword=Reset Password
+resetpassword.mailsent=An email has been sent to reset your password.  Please check your inbox.
+resetpassword.success=Your password has been reset.
+resetpassword.new.password=Reset Your Password
+
+search.user.bademail=The user does not exist.
+
+changemail.mailsent=A mail has been sent, please check your mail.
+
+mail.confirm.subject=Welcome to CO-Assist - Confirm your Account
+mail.confirm.message=Welcome to CO-Assist. <br> Click on this link : {0} to confirm your email.
+
+mail.welcome.subject=Welcome to CO-Assist
+mail.welcome.message=Welcome to CO-Assist. <br> Your account is validated. Enjoy !
+
+mail.reset.ask.subject=CO-Assist - New password
+# Cannot use You've unescaped here, as the single quote stops the {0}
+mail.reset.ask.message=You asked for your password to be reset.  <br> Click on this link : {0} to change your password.
+
+mail.change.ask.subject=CO-Assist - Validate email
+mail.change.ask.message=You asked for your email to be changed.  <br> Click on this link : {0} to validate your email.
+
+mail.reset.fail.subject=Account Access Attempted
+mail.reset.fail.message=You (or someone else) entered this email address when trying to change the password.  However, this email address is not on our list of registered users, and so the attempted password reset has failed.
+
+mail.reset.confirm.subject=CO-Assist - New password
+mail.reset.confirm.message=Hello, <br><br> Your password has been reset.

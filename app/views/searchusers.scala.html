@@ -1,4 +1,4 @@
-@(userList: List[User])
+@(loginForm: Form[Application.Login], userList: java.util.List[User])
 
 
 @main(null) {
@@ -23,7 +23,7 @@
 
 <ul>
 @for(user <- userList) {
-  <li>@user.fullname</li>
+  <a href="/openuser"><li>@user.fullname</li></a>
 } 
 </ul>
 

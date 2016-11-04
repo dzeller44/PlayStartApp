@@ -18,6 +18,7 @@ import views.html.admin.admin;
 import views.html.admin.usermaint;
 import views.html.admin.getuser;
 import views.html.admin.showuser;
+import views.html.admin.openuser;
 
 import com.avaje.ebean.Ebean;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -206,16 +207,14 @@ public class Application extends Controller {
 	}
 
 	public Result adminSearch() {
-		return ok(searchusers.render(form(Login.class)));
+		// NEED TO CORRECT THIS -- NEED NEW ROUTE/VIEW
+		List<User> users = User.find.all();
+		return ok(searchusers.render(form(Login.class), users));
 	}
 	
 	public Result getAllUsers() {
 		List<User> users = User.find.all();
-		//Form<Application.Login> loginForm = form(Login.class);
-		//return ok(searchusers.render(loginForm, users));
-		//List<User> users = Ebean.find(User.class).findList();
-		//return ok(searchusers.render(form(Login.class), users));
-		return ok(searchusers.render(users));
+		return ok(searchusers.render(form(Login.class), users));
 	}
 	
 	public Result exportData() {
@@ -224,6 +223,10 @@ public class Application extends Controller {
 
 	public Result findUser() {
 		return ok(getuser.render(form(FindUser.class)));
+	}
+	
+	public Result openUser() {
+		return ok(openuser.render());
 	}
 
 	public static class FindUser {
