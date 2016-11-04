@@ -95,7 +95,7 @@ Seq[Any](format.raw/*1.38*/("""
 object manager extends manager_Scope0.manager
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 09:52:40 MDT 2016
+                  DATE: Fri Nov 04 11:20:28 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/manager/manager.scala.html
                   HASH: aeb0a334735e74ad85f13ad68a17cb9d06cf6172
                   MATRIX: 774->1|905->37|933->40|951->50|990->52|1019->55|1487->496|1502->502|1562->541|1785->737|1800->743|1863->785

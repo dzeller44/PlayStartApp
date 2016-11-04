@@ -2,7 +2,6 @@ package controllers.account;
 
 import controllers.Application;
 import models.User;
-import models.enums.RoleType;
 import models.utils.AppException;
 import models.utils.Hash;
 import models.utils.Mail;
@@ -86,6 +85,7 @@ public class Signup extends Controller {
 			user.confirmationToken = UUID.randomUUID().toString();
 	        user.dateCreation = new Date();
 			// Custom fields...
+	        /*
 			String role = register.role;
 			switch (role) {
 			case "user" :
@@ -97,8 +97,9 @@ public class Signup extends Controller {
 			default :
 				user.role = RoleType.UNDEFINED;
 			}
+			*/
 			//System.out.println("Account Role: " + register.role);
-
+	        user.role = register.role;
 			user.save();
 			sendMailAskForConfirmation(user);
 

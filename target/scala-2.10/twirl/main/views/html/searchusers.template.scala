@@ -49,14 +49,12 @@ Seq[Any](format.raw/*1.70*/("""
 			<div class="row">
 				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-3 margbot30">
-					Search Records...
-					#"""),format.raw/*22.7*/("""{"""),format.raw/*22.8*/("""table users /"""),format.raw/*22.21*/("""}"""),format.raw/*22.22*/("""
 
-"""),format.raw/*24.1*/("""<ul>
-"""),_display_(/*25.2*/for(user <- userList) yield /*25.23*/ {_display_(Seq[Any](format.raw/*25.25*/("""
-  """),format.raw/*26.3*/("""<a href="/openuser"><li>"""),_display_(/*26.28*/user/*26.32*/.fullname),format.raw/*26.41*/("""</li></a>
-""")))}),format.raw/*27.2*/(""" 
-"""),format.raw/*28.1*/("""</ul>
+<ul>
+"""),_display_(/*23.2*/for(user <- userList) yield /*23.23*/ {_display_(Seq[Any](format.raw/*23.25*/("""
+  """),format.raw/*24.3*/("""<a href="/openuser"><li>"""),_display_(/*24.28*/user/*24.32*/.fullname),format.raw/*24.41*/("""</li></a>
+""")))}),format.raw/*25.2*/(""" 
+"""),format.raw/*26.1*/("""</ul>
 
 
 				</div>
@@ -93,11 +91,11 @@ Seq[Any](format.raw/*1.70*/("""
 object searchusers extends searchusers_Scope0.searchusers
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 09:52:40 MDT 2016
+                  DATE: Fri Nov 04 11:20:27 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/searchusers.scala.html
-                  HASH: bd0ffacf3c0f81a82e0568b36a41b66d762ab76e
-                  MATRIX: 795->1|958->69|987->73|1005->83|1044->85|1073->88|1448->436|1476->437|1517->450|1546->451|1575->453|1607->459|1644->480|1684->482|1714->485|1766->510|1779->514|1809->523|1850->534|1879->536
-                  LINES: 27->1|32->1|35->4|35->4|35->4|38->7|53->22|53->22|53->22|53->22|55->24|56->25|56->25|56->25|57->26|57->26|57->26|57->26|58->27|59->28
+                  HASH: 4ca37556dd112a104c828f6f0ed6ddcbb6f35d17
+                  MATRIX: 795->1|958->69|987->73|1005->83|1044->85|1073->88|1425->414|1462->435|1502->437|1532->440|1584->465|1597->469|1627->478|1668->489|1697->491
+                  LINES: 27->1|32->1|35->4|35->4|35->4|38->7|54->23|54->23|54->23|55->24|55->24|55->24|55->24|56->25|57->26
                   -- GENERATED --
               */
           

@@ -73,7 +73,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object confirm extends confirm_Scope0.confirm
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 09:52:40 MDT 2016
+                  DATE: Fri Nov 04 11:20:28 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/confirm.scala.html
                   HASH: 2dd9a5c103b9b72ec62c37ebbeb950c078b6d0b8
                   MATRIX: 837->1|850->7|889->9|917->11|1364->431|1410->456|1442->461|1471->464|1526->498|1783->725
