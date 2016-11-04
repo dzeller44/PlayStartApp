@@ -1,6 +1,7 @@
 package controllers;
 
 import models.User;
+import models.enums.RoleType;
 import models.utils.AppException;
 import play.Logger;
 import play.data.Form;
@@ -267,8 +268,10 @@ public class Application extends Controller {
 			String email = findUserForm.get().email;
 			User user = User.findByEmail(email);
 			String name = user.fullname;
-			String role = user.role;
-			return ok(showuser.render(findUserForm, email, name, role));
+			//String role = user.role;
+			RoleType role = user.role;
+			String roleToDisplay = role.toString();
+			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
 
 		}
 

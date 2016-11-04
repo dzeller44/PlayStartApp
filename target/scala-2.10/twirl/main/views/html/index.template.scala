@@ -38,8 +38,7 @@ Seq[Any](format.raw/*1.78*/("""
 <section id="about">
 
 	<!-- SERVICES -->
-	<div class="services_block padbot40" data-appear-top-offset="-200"
-		data-animated="fadeInUp">
+	<div class="services_block padbot40" data-appear-top-offset="-200">
 
 		<!-- CONTAINER -->
 		<div class="container">
@@ -50,14 +49,14 @@ Seq[Any](format.raw/*1.78*/("""
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/auth">
 						<p>
-							<img src=""""),_display_(/*22.19*/routes/*22.25*/.Assets.at("/img/icon_provider.png")),format.raw/*22.61*/(""""> <b>Business User</b>
+							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_provider.png")),format.raw/*21.61*/(""""> <b>Business User</b>
 						</p> <span>If you are a provider of services...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/auth">
 						<p>
-							<img src=""""),_display_(/*29.19*/routes/*29.25*/.Assets.at("/img/icon_emergency_mgr2.png")),format.raw/*29.67*/(""""> <b>Emergency
+							<img src=""""),_display_(/*28.19*/routes/*28.25*/.Assets.at("/img/icon_emergency_mgr2.png")),format.raw/*28.67*/(""""> <b>Emergency
 								Manager</b>
 						</p> <span>If you are looking for services...</span>
 					</a>
@@ -65,7 +64,7 @@ Seq[Any](format.raw/*1.78*/("""
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/auth">
 						<p>
-							<img src=""""),_display_(/*37.19*/routes/*37.25*/.Assets.at("/img/icon_admin.png")),format.raw/*37.58*/(""""> <b>Administrator</b>
+							<img src=""""),_display_(/*36.19*/routes/*36.25*/.Assets.at("/img/icon_admin.png")),format.raw/*36.58*/(""""> <b>Administrator</b>
 						</p> <span>Admin Only...</span>
 					</a>
 				</div>
@@ -101,11 +100,11 @@ Seq[Any](format.raw/*1.78*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 11:20:27 MDT 2016
+                  DATE: Fri Nov 04 13:38:15 MDT 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/index.scala.html
-                  HASH: 77f6e569c1c19cd317b47844e8436788e76ddf4d
-                  MATRIX: 789->1|960->77|988->80|1006->90|1045->92|1074->95|1491->485|1506->491|1563->527|1805->742|1820->748|1883->790|2135->1015|2150->1021|2204->1054
-                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|53->22|53->22|53->22|60->29|60->29|60->29|68->37|68->37|68->37
+                  HASH: 877d88d5f737b3157b9cacbe37670457cd937731
+                  MATRIX: 789->1|960->77|988->80|1006->90|1045->92|1074->95|1464->458|1479->464|1536->500|1778->715|1793->721|1856->763|2108->988|2123->994|2177->1027
+                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|67->36|67->36|67->36
                   -- GENERATED --
               */
           
