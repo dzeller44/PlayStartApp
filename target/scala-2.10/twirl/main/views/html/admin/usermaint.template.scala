@@ -46,26 +46,32 @@ Seq[Any](format.raw/*1.38*/("""
 
 			<!-- ROW -->
 			<div class="row">
-				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/signup">
 						<p>
-							<img src=""""),_display_(/*22.19*/routes/*22.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*22.62*/(""""> <b>Add User</b>
+							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*21.62*/(""""> <b>Add User</b>
 						</p> <span>Add new user...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/finduser">
 						<p>
-							<img src=""""),_display_(/*29.19*/routes/*29.25*/.Assets.at("/img/icon_Edit_User.png")),format.raw/*29.62*/(""""> <b>Edit User</b>
+							<img src=""""),_display_(/*28.19*/routes/*28.25*/.Assets.at("/img/icon_Edit_User.png")),format.raw/*28.62*/(""""> <b>Edit User</b>
 						</p> <span>Locate and edit a user...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/finduser">
 						<p>
-							<img src=""""),_display_(/*36.19*/routes/*36.25*/.Assets.at("/img/icon_Delete_User.png")),format.raw/*36.64*/(""""> <b>Delete User</b>
+							<img src=""""),_display_(/*35.19*/routes/*35.25*/.Assets.at("/img/icon_Delete_User.png")),format.raw/*35.64*/(""""> <b>Delete User</b>
 						</p> <span>Locate and delete a user...</span>
+					</a>
+				</div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="/search">
+						<p>
+						<img src=""""),_display_(/*42.18*/routes/*42.24*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*42.66*/(""""> <b>Search Records</b>
+						</p> <span>Search User Records...</span>
 					</a>
 				</div>
 			</div>
@@ -100,11 +106,11 @@ Seq[Any](format.raw/*1.38*/("""
 object usermaint extends usermaint_Scope0.usermaint
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 13:38:16 MDT 2016
+                  DATE: Mon Nov 07 11:00:36 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/usermaint.scala.html
-                  HASH: 09218c12c7842fcae6cc8218318454482609c3e8
-                  MATRIX: 776->1|907->37|935->40|953->50|992->52|1021->55|1450->457|1465->463|1523->500|1743->693|1758->699|1816->736|2047->940|2062->946|2122->985
-                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|53->22|53->22|53->22|60->29|60->29|60->29|67->36|67->36|67->36
+                  HASH: cc8125eeb67d3b6ac9a8620e2d268e415c633e84
+                  MATRIX: 776->1|907->37|935->40|953->50|992->52|1021->55|1407->414|1422->420|1480->457|1700->650|1715->656|1773->693|2004->897|2019->903|2079->942|2311->1147|2326->1153|2389->1195
+                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|66->35|66->35|66->35|73->42|73->42|73->42
                   -- GENERATED --
               */
           

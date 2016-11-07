@@ -57,7 +57,7 @@ public class Token extends Model {
     private static final int EXPIRATION_DAYS = 1;
 
     public enum TypeToken {
-        password("reset"), email("email");
+        password("reset"), email("email"), admin("admin");
         private String urlPath;
 
         TypeToken(String urlPath) {
@@ -128,6 +128,17 @@ public class Token extends Model {
         sendMail(user, TypeToken.password, email, mc);
         //sendMail(user, TypeToken.password, null, mc);
     }
+    
+    /**
+     * Send the Email to the new Admin confirm ask new password.
+     *
+     * @param user the current user
+     * @throws java.net.MalformedURLException if token is wrong.
+     */
+    public void sendNewAdminMail(User user, MailerClient mc) throws MalformedURLException {
+    	String email = user.email;
+        sendMail(user, TypeToken.admin, email, mc);
+    }
 
     /**
      * Send the Email to confirm ask new password.
@@ -170,6 +181,11 @@ public class Token extends Model {
             case email:
                 subject = Messages.get("mail.change.ask.subject");
                 message = Messages.get("mail.change.ask.message", url.toString());
+                toMail = token.email; // == email parameter
+                break;
+            case admin:
+                subject = Messages.get("admin.newaccount.subject");
+                message = Messages.get("admin.newaccount.message", url.toString());
                 toMail = token.email; // == email parameter
                 break;
         }

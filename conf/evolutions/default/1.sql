@@ -9,7 +9,7 @@ create table token (
   type                      varchar(8),
   date_creation             datetime(6),
   email                     varchar(255),
-  constraint ck_token_type check (type in ('password','email')),
+  constraint ck_token_type check (type in ('password','email','admin')),
   constraint pk_token primary key (token))
 ;
 

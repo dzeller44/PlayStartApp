@@ -79,16 +79,25 @@ Seq[Any](format.raw/*1.99*/("""
 				</div>
 			</div>
 		</div>
+		
+		<div class="element-checkbox">
+			<div class="column column1">
+				<label><input type="checkbox" name="approve[]"
+					value="approve" /><span>Approve Emergency Manager Account</span></label>
+			</div>
+			<span class="clearfix"></span>
+		</div>
+		
 		<div class="element-input">
-		    """),_display_(/*52.8*/if(findUserForm.hasGlobalErrors)/*52.40*/ {_display_(Seq[Any](format.raw/*52.42*/("""
-        		"""),format.raw/*53.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-            		"""),_display_(/*54.16*/findUserForm/*54.28*/.globalError.message),format.raw/*54.48*/("""
-        		"""),format.raw/*55.11*/("""</span>
-   			""")))}),format.raw/*56.8*/("""
-		"""),format.raw/*57.3*/("""</div>
+		    """),_display_(/*61.8*/if(findUserForm.hasGlobalErrors)/*61.40*/ {_display_(Seq[Any](format.raw/*61.42*/("""
+        		"""),format.raw/*62.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*63.16*/findUserForm/*63.28*/.globalError.message),format.raw/*63.48*/("""
+        		"""),format.raw/*64.11*/("""</span>
+   			""")))}),format.raw/*65.8*/("""
+		"""),format.raw/*66.3*/("""</div>
 		<div class="submit">
-			<a href="/updateuser" class="buttonCustom" style="color: #FFFFFF;">"""),_display_(/*59.72*/Messages("submit")),format.raw/*59.90*/("""</a>
-			<a href="/" class="buttonCancel">"""),_display_(/*60.38*/Messages("goback")),format.raw/*60.56*/("""</a>
+			<a href="/updateuser" class="buttonCustom" style="color: #FFFFFF;">"""),_display_(/*68.72*/Messages("submit")),format.raw/*68.90*/("""</a>
+			<a href="/" class="buttonCancel">"""),_display_(/*69.38*/Messages("goback")),format.raw/*69.56*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -96,7 +105,7 @@ Seq[Any](format.raw/*1.99*/("""
 
 </section>
 
-""")))}),format.raw/*68.2*/("""
+""")))}),format.raw/*77.2*/("""
 """))
       }
     }
@@ -117,11 +126,11 @@ Seq[Any](format.raw/*1.99*/("""
 object showuser extends showuser_Scope0.showuser
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 13:38:16 MDT 2016
+                  DATE: Mon Nov 07 11:00:36 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/showuser.scala.html
-                  HASH: ab5b2ec435f9b5fce70eb41f919cd607abd02cc9
-                  MATRIX: 798->1|990->98|1018->101|1036->111|1075->113|1103->115|1690->675|1719->683|1752->689|2056->966|2087->975|2120->981|2442->1276|2471->1284|2500->1285|2554->1313|2585->1335|2625->1337|2660->1345|2860->1515|2894->1522|2927->1527|2956->1528|2991->1536|3187->1705|3215->1706|3249->1713|3411->1849|3452->1881|3492->1883|3531->1894|3632->1968|3653->1980|3694->2000|3733->2011|3778->2026|3808->2029|3936->2130|3975->2148|4044->2190|4083->2208|4221->2316
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|48->17|48->17|49->18|55->24|55->24|56->25|65->34|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|83->52|83->52|83->52|84->53|85->54|85->54|85->54|86->55|87->56|88->57|90->59|90->59|91->60|91->60|99->68
+                  HASH: 29e896291b56659ff9d85828ca0ac9d6f48c474b
+                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1706->691|1735->699|1769->706|2079->989|2110->998|2144->1005|2475->1309|2504->1317|2533->1318|2588->1347|2619->1369|2659->1371|2695->1380|2898->1553|2933->1561|2966->1566|2995->1567|3031->1576|3230->1748|3258->1749|3293->1757|3724->2162|3765->2194|3805->2196|3845->2208|3947->2283|3968->2295|4009->2315|4049->2327|4095->2343|4126->2347|4256->2450|4295->2468|4365->2511|4404->2529|4550->2645
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|48->17|48->17|49->18|55->24|55->24|56->25|65->34|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|92->61|92->61|92->61|93->62|94->63|94->63|94->63|95->64|96->65|97->66|99->68|99->68|100->69|100->69|108->77
                   -- GENERATED --
               */
           

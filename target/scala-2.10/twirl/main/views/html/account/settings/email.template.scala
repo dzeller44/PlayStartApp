@@ -74,7 +74,7 @@ Seq[Any](format.raw/*1.73*/("""
 object email extends email_Scope0.email
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 13:38:16 MDT 2016
+                  DATE: Mon Nov 07 11:00:36 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/settings/email.scala.html
                   HASH: 1e715b40aeebca48c81810872cfc4068688a0187
                   MATRIX: 809->1|990->72|1018->91|1045->93|1057->98|1099->132|1138->134|1170->141|1224->175|1256->182|1284->190|1317->197|1384->255|1424->257|1461->267|1508->287|1692->450|1728->459|1868->572|1909->592|1962->615

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Fri Nov 04 13:38:15 MDT 2016
+// @DATE:Mon Nov 07 12:16:13 MST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:60
+  // @LINE:67
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:60
+    // @LINE:67
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -50,28 +50,34 @@ package controllers {
     }
 
   
-    // @LINE:17
+    // @LINE:20
     def managerHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "em")
     }
   
-    // @LINE:33
+    // @LINE:36
     def openUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "openuser")
     }
   
-    // @LINE:20
+    // @LINE:23
     def adminHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "admin")
     }
   
-    // @LINE:27
+    // @LINE:30
     def getUserByEmail(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "finduser")
+    }
+  
+    // @LINE:17
+    def userHome(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "user")
     }
   
     // @LINE:10
@@ -80,7 +86,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:22
+    // @LINE:25
     def userMaintenance(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "adminuser")
@@ -92,12 +98,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "auth")
     }
   
-    // @LINE:26
+    // @LINE:29
     def findUser(): Call = {
     
       () match {
       
-        // @LINE:26
+        // @LINE:29
         case ()  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "finduser")
@@ -120,7 +126,7 @@ package controllers {
     
     }
   
-    // @LINE:24
+    // @LINE:27
     def getAllUsers(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "search")
@@ -132,7 +138,7 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:31
+    // @LINE:34
     def exportData(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "export")
