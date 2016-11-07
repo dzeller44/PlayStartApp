@@ -435,5 +435,26 @@ public class Application extends Controller {
 		}
 
 	}
+	
+	public Result getUserByUrl(String email) {
+		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+
+		if (findUserForm.hasErrors()) {
+			System.out.println("Find User - errors");
+			return badRequest(getuser.render(findUserForm));
+		} else {
+			// Find user and display...
+			System.out.println("Find User - good request");
+			User user = User.findByEmail(email);
+			String name = user.fullname;
+			//String role = user.role;
+			RoleType role = user.role;
+			String roleToDisplay = role.toString();
+			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
+
+		}
+
+	}
+	
 
 }
