@@ -15,9 +15,9 @@
 			<tbody>
 				@for(user <- userList) {
 					<tr>
-						<td><a href="/openuser">@user.fullname</a></td>
-						<td><a href="/openuser">@user.email</a></td>
-						<td><a href="/openuser">@user.role</a></td>
+						<td><a href="/finduserurl?email=@user.email">@user.fullname</a></td>
+						<td><a href="/finduserurl?email=@user.email">@user.email</a></td>
+						<td><a href="/finduserurl?email=@user.email">@user.role</a></td>
 					</tr>
 				} 
 			</tbody>
