@@ -12,7 +12,7 @@ import play.mvc.Result;
 import play.libs.Json;
 import views.html.index;
 import views.html.auth;
-import views.html.searchusers;
+import views.html.admin.searchusers;
 import views.html.export;
 import views.html.manager.manager;
 import views.html.admin.admin;
@@ -129,7 +129,7 @@ public class Application extends Controller {
 			}
 
 			if (isBlank(fullname)) {
-				return "Full name is required";
+				return "User name is required";
 			}
 
 			if (isBlank(inputPassword)) {
@@ -146,6 +146,37 @@ public class Application extends Controller {
 
 			if (isBlank(role)) {
 				return "Account Role is required";
+			}
+
+			return null;
+		}
+
+		private boolean isBlank(String input) {
+			return input == null || input.isEmpty() || input.trim().isEmpty();
+		}
+	}
+	
+	public static class AdminRegister {
+
+		@Constraints.Required
+		public String email;
+
+		@Constraints.Required
+		public String fullname;
+
+		public String inputPassword;
+
+		public String role;
+		
+		public String approved;
+		
+		public String validate() {
+			if (isBlank(email)) {
+				return "Email is required";
+			}
+
+			if (isBlank(fullname)) {
+				return "User name is required";
 			}
 
 			return null;

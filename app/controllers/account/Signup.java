@@ -1,6 +1,7 @@
 package controllers.account;
 
 import controllers.Application;
+import models.Token;
 import models.User;
 import models.enums.RoleType;
 import models.utils.AppException;
@@ -22,6 +23,8 @@ import views.html.account.signup.confirm;
 import views.html.account.signup.create;
 import views.html.account.signup.created;
 import views.html.account.signup.approval;
+import views.html.admin.createadmin;
+import views.html.admin.createdadmin;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -46,6 +49,15 @@ public class Signup extends Controller {
 	 */
 	public Result create() {
 		return ok(create.render(form(Application.Register.class)));
+	}
+
+	/**
+	 * Display the create admin form.
+	 *
+	 * @return create admin form
+	 */
+	public Result createAdmin() {
+		return ok(createadmin.render(form(Application.AdminRegister.class)));
 		// return ok(create.render());
 	}
 
@@ -56,7 +68,7 @@ public class Signup extends Controller {
 	 */
 	public Result createFormOnly() {
 		return ok(create.render(form(Application.Register.class)));
-		//return ok(create.render());
+		// return ok(create.render());
 	}
 
 	/**
@@ -69,7 +81,7 @@ public class Signup extends Controller {
 
 		if (registerForm.hasErrors()) {
 			return badRequest(create.render(registerForm));
-			//return badRequest(create.render());
+			// return badRequest(create.render());
 		}
 
 		Application.Register register = registerForm.get();
@@ -85,33 +97,32 @@ public class Signup extends Controller {
 			user.fullname = register.fullname;
 			user.passwordHash = Hash.createPassword(register.inputPassword);
 			user.confirmationToken = UUID.randomUUID().toString();
-	        user.dateCreation = new Date();
+			user.dateCreation = new Date();
 			// Custom fields...
 			String role = register.role;
 			switch (role) {
-			case "user" :
+			case "user":
 				user.role = RoleType.USER;
 				break;
-			case "manager" :
+			case "manager":
 				user.role = RoleType.MANAGER;
 				break;
-			case "admin" :
+			case "admin":
 				user.role = RoleType.ADMIN;
 				break;
-			default :
+			default:
 				user.role = RoleType.UNDEFINED;
 				break;
 			}
 			user.save();
-			
-			//if user.role is "manager" set approved to "N"
-			if (role.compareTo("manager") == 0){
-				//RoleType.MANAGER == 2
+
+			// if user.role is "manager" set approved to "N"
+			if (role.compareTo("manager") == 0) {
+				// RoleType.MANAGER == 2
 				user.approved = "N";
 				user.save();
 				return ok(approval.render());
-			}
-			else {
+			} else {
 				sendMailAskForConfirmation(user);
 				return ok(created.render());
 			}
@@ -123,7 +134,45 @@ public class Signup extends Controller {
 			flash("error", Messages.get("error.technical"));
 		}
 		return badRequest(create.render(registerForm));
-		//return badRequest(create.render());
+		// return badRequest(create.render());
+	}
+
+	public Result saveAdmin() throws EmailException {
+		Form<Application.AdminRegister> registerAdminForm = form(Application.AdminRegister.class).bindFromRequest();
+
+		if (registerAdminForm.hasErrors()) {
+			return badRequest(createadmin.render(registerAdminForm));
+		}
+
+		Application.AdminRegister admin = registerAdminForm.get();
+		Result resultError = checkAdminBeforeSave(registerAdminForm, admin.email);
+		if (resultError != null) {
+			return resultError;
+		}
+
+		try {
+			User user = new User();
+			user.email = admin.email;
+			user.fullname = admin.fullname;
+			String checkPassword = Messages.get("admin.default.password");
+			user.passwordHash = Hash.createPassword(checkPassword);
+			// user.confirmationToken = UUID.randomUUID().toString();
+			// user.confirmationToken = null;
+			// user.validated = true;
+			user.dateCreation = new Date();
+			user.role = RoleType.ADMIN;
+			user.save();
+
+			// Send reset password email?
+			Token t = new Token();
+			t.sendNewAdminMail(user, mailerClient);
+			return ok(createdadmin.render());
+
+		} catch (Exception e) {
+			Logger.error("Signup.saveAdmin error", e);
+			flash("error", Messages.get("error.technical"));
+		}
+		return badRequest(createadmin.render(registerAdminForm));
 	}
 
 	/**
@@ -140,7 +189,26 @@ public class Signup extends Controller {
 		if (User.findByEmail(email) != null) {
 			flash("error", Messages.get("error.email.already.exist"));
 			return badRequest(create.render(registerForm));
-			//return badRequest(create.render());
+			// return badRequest(create.render());
+		}
+
+		return null;
+	}
+
+	/**
+	 * Check if the email already exists.
+	 *
+	 * @param registerForm
+	 *            User Form submitted
+	 * @param email
+	 *            email address
+	 * @return Index if there was a problem, null otherwise
+	 */
+	private Result checkAdminBeforeSave(Form<Application.AdminRegister> registerForm, String email) {
+		// Check unique email
+		if (User.findByEmail(email) != null) {
+			flash("error", Messages.get("error.email.already.exist"));
+			return badRequest(createadmin.render(registerForm));
 		}
 
 		return null;

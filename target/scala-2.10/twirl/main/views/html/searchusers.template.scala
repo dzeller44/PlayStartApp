@@ -31,46 +31,30 @@ class searchusers extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable
 
 Seq[Any](format.raw/*1.70*/("""
 
+"""),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 
-"""),_display_(/*4.2*/main(null)/*4.12*/ {_display_(Seq[Any](format.raw/*4.14*/("""
-
-
-"""),format.raw/*7.1*/("""<!-- ABOUT -->
-<section id="search">
-
-	<!-- SERVICES -->
-	<div class="services_block padbot40" data-appear-top-offset="-200"
-		data-animated="fadeInUp">
-
-		<!-- CONTAINER -->
-		<div class="container">
-
-			<!-- ROW -->
-			<div class="row">
-				<div class="col-sm-2 margbot30"></div>
-				<div class="col-sm-3 margbot30">
-
-<ul>
-"""),_display_(/*23.2*/for(user <- userList) yield /*23.23*/ {_display_(Seq[Any](format.raw/*23.25*/("""
-  """),format.raw/*24.3*/("""<a href="/openuser"><li>"""),_display_(/*24.28*/user/*24.32*/.fullname),format.raw/*24.41*/("""</li></a>
-""")))}),format.raw/*25.2*/(""" 
-"""),format.raw/*26.1*/("""</ul>
-
-
-				</div>
-
-			</div>
-		</div>
-		<!-- //ROW -->
-	</div>
-	<!-- //CONTAINER -->
-	</div>
-	<!-- //SERVICES -->
-
-
-</section>
-<!-- //ABOUT -->
-
+	"""),format.raw/*5.2*/("""<section id="search">
+		<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>User Name</th>
+					<th>Email</th>
+					<th>Role</th>
+				</tr>
+			</thead>
+			<tbody>
+				"""),_display_(/*16.6*/for(user <- userList) yield /*16.27*/ {_display_(Seq[Any](format.raw/*16.29*/("""
+					"""),format.raw/*17.6*/("""<tr>
+						<td><a href="/openuser">"""),_display_(/*18.32*/user/*18.36*/.fullname),format.raw/*18.45*/("""</a></td>
+						<td><a href="/openuser">"""),_display_(/*19.32*/user/*19.36*/.email),format.raw/*19.42*/("""</a></td>
+						<td><a href="/openuser">"""),_display_(/*20.32*/user/*20.36*/.role),format.raw/*20.41*/("""</a></td>
+					</tr>
+				""")))}),format.raw/*22.6*/(""" 
+			"""),format.raw/*23.4*/("""</tbody>
+		</table>
+		</div		
+	</section>
 """)))}))
       }
     }
@@ -91,11 +75,11 @@ Seq[Any](format.raw/*1.70*/("""
 object searchusers extends searchusers_Scope0.searchusers
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 13:38:16 MDT 2016
+                  DATE: Mon Nov 07 11:00:36 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/searchusers.scala.html
-                  HASH: 4ca37556dd112a104c828f6f0ed6ddcbb6f35d17
-                  MATRIX: 795->1|958->69|987->73|1005->83|1044->85|1073->88|1425->414|1462->435|1502->437|1532->440|1584->465|1597->469|1627->478|1668->489|1697->491
-                  LINES: 27->1|32->1|35->4|35->4|35->4|38->7|54->23|54->23|54->23|55->24|55->24|55->24|55->24|56->25|57->26
+                  HASH: 85ba1b38267092eab08f2dac06ffa4d718dd8dcf
+                  MATRIX: 795->1|958->69|986->72|1004->82|1043->84|1072->87|1310->299|1347->320|1387->322|1420->328|1483->364|1496->368|1526->377|1594->418|1607->422|1634->428|1702->469|1715->473|1741->478|1797->504|1829->509
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|47->16|47->16|47->16|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|53->22|54->23
                   -- GENERATED --
               */
           

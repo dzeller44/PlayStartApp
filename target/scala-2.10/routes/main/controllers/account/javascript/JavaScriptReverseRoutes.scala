@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Fri Nov 04 13:38:15 MDT 2016
+// @DATE:Mon Nov 07 11:00:35 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -11,11 +11,11 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:43
+// @LINE:35
 package controllers.account.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:43
+  // @LINE:35
   class ReverseSignup(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,27 +23,17 @@ package controllers.account.javascript {
     }
 
   
-    // @LINE:47
-    def confirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.account.Signup.confirm",
-      """
-        function(confirmToken) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "confirm/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("confirmToken", encodeURIComponent(confirmToken))})
-        }
-      """
-    )
-  
-    // @LINE:44
-    def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.account.Signup.save",
+    // @LINE:36
+    def saveAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.account.Signup.saveAdmin",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addadmin"})
         }
       """
     )
   
-    // @LINE:43
+    // @LINE:47
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Signup.create",
       """
@@ -53,9 +43,39 @@ package controllers.account.javascript {
       """
     )
   
+    // @LINE:35
+    def createAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.account.Signup.createAdmin",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addadmin"})
+        }
+      """
+    )
+  
+    // @LINE:51
+    def confirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.account.Signup.confirm",
+      """
+        function(confirmToken) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "confirm/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("confirmToken", encodeURIComponent(confirmToken))})
+        }
+      """
+    )
+  
+    // @LINE:48
+    def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.account.Signup.save",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:50
+  // @LINE:54
   class ReverseReset(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -63,7 +83,7 @@ package controllers.account.javascript {
     }
 
   
-    // @LINE:55
+    // @LINE:59
     def runReset: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.runReset",
       """
@@ -73,7 +93,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:50
+    // @LINE:54
     def ask: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.ask",
       """
@@ -83,7 +103,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:54
+    // @LINE:58
     def reset: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.reset",
       """
@@ -93,7 +113,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:51
+    // @LINE:55
     def runAsk: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.runAsk",
       """

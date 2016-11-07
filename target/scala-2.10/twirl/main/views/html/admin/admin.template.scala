@@ -46,25 +46,31 @@ Seq[Any](format.raw/*1.38*/("""
 
 			<!-- ROW -->
 			<div class="row">
-				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/adminuser">
 						<p>
-							<img src=""""),_display_(/*22.19*/routes/*22.25*/.Assets.at("/img/icon_User_Maint.png")),format.raw/*22.63*/(""""> <b>User Maintenance</b>
+							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_User_Maint.png")),format.raw/*21.63*/(""""> <b>User Maintenance</b>
 						</p> <span>Add/Edit/Update User Records...</span>
+					</a>
+				</div>
+				<div class="col-sm-3 margbot30">
+					<a class="services_item" href="/addadmin">
+						<p>
+							<img src=""""),_display_(/*28.19*/routes/*28.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*28.62*/(""""> <b>Add Admin</b>
+						</p> <span>Add new Admin...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/export">
 						<p>
-							<img src=""""),_display_(/*29.19*/routes/*29.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*29.64*/(""""> <b>Export Data</b>
+							<img src=""""),_display_(/*35.19*/routes/*35.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*35.64*/(""""> <b>Export Data</b>
 						</p> <span>Export Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/search">
 						<p>
-							<img src=""""),_display_(/*36.19*/routes/*36.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*36.67*/(""""> <b>Search Records</b>
+							<img src=""""),_display_(/*42.19*/routes/*42.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*42.67*/(""""> <b>Search Records</b>
 						</p> <span>Search Business Profiles...</span>
 					</a>
 				</div>
@@ -101,11 +107,11 @@ Seq[Any](format.raw/*1.38*/("""
 object admin extends admin_Scope0.admin
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 04 13:38:16 MDT 2016
+                  DATE: Mon Nov 07 11:00:36 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/admin.scala.html
-                  HASH: 483f9288615be043bd7f56a00e2befb6cd6dd77b
-                  MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1441->456|1456->462|1515->500|1757->715|1772->721|1832->760|2055->956|2070->962|2133->1004
-                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|53->22|53->22|53->22|60->29|60->29|60->29|67->36|67->36|67->36
+                  HASH: c248382dcd6f4983d191c264460bf16ac92db5a6
+                  MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1398->413|1413->419|1472->457|1716->674|1731->680|1789->717|2009->910|2024->916|2084->955|2307->1151|2322->1157|2385->1199
+                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|66->35|66->35|66->35|73->42|73->42|73->42
                   -- GENERATED --
               */
           

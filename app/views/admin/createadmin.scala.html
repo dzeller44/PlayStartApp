@@ -1,0 +1,44 @@
+@(registerAdminForm: Form[Application.AdminRegister])
+
+@main(null) {
+
+<section id="signupAdmin">
+	<form class="formoid-solid-dark"
+		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+		method="post" action="">
+		<div class="title">
+			<h2>New Admin</h2>
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required">*</span>User
+				Name:</label>
+			<div class="item-cont">
+				<input class="large" type="text" name="fullname" required="required"
+					placeholder="Choose a user name..." /><span class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required">*</span>Email:</label>
+			<div class="item-cont">
+				<input class="large" type="email" name="email" required="required"
+					placeholder="Enter your email..." /><span class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-input">
+		    @if(registerAdminForm.hasGlobalErrors) {
+        		<span class="errorMessageDisplay" style="color: #d9534f;">
+            		@registerAdminForm.globalError.message
+        		</span>
+   			}
+		</div>
+		<div class="submit">
+			<input type="submit" value="Submit" /> <a href="/admin"
+				class="buttonCancel">@Messages("goback")</a>
+		</div>
+		<!-- This is needed for bottom shadow to appear... -->
+		<div></div>
+	</form>
+
+</section>
+
+}

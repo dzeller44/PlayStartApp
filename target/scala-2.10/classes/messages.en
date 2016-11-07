@@ -45,6 +45,7 @@ signup.new=New ?
 signup.reset.password=Reset your password
 signup.generate.password=Generate a password
 signup.msg.created=You will receive a confirmation email soon. Check your email to activate your account.
+signup.msg.approval=Your account requires administrator approval. You will receive a confirmation email once approved.
 signup.valid.email=Invalid Email
 signup.email.confirmed=Success - your email has been confirmed and your account is activated.
 
@@ -55,6 +56,11 @@ resetpassword=Reset Password
 resetpassword.mailsent=An email has been sent to reset your password.  Please check your inbox.
 resetpassword.success=Your password has been reset.
 resetpassword.new.password=Reset Your Password
+
+admin.default.password=P@ssword!4
+admin.newaccount.subject=CO-Assist - New Admin Validate email
+admin.newaccount.message=You have been added as an Admin to CO-Assist.  Please change your password.  <br> Click on this link : {0} to change your password.
+admin.newaccount.msg.created=The new Admin has been created successfully.  An email has been sent to the email that was entered.
 
 search.user.bademail=The user does not exist.
 

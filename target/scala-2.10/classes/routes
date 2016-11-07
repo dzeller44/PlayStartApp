@@ -32,6 +32,10 @@ GET    /export                  controllers.Application.exportData()
 
 GET    /openuser                controllers.Application.openUser()
 
+GET    /addadmin                controllers.account.Signup.createAdmin()
+POST   /addadmin                controllers.account.Signup.saveAdmin()
+
+
 # User settings...
 GET    /settings                controllers.account.settings.Index.index()
 GET    /settings/password       controllers.account.settings.Password.index()

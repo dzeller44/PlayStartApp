@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Fri Nov 04 13:38:15 MDT 2016
+// @DATE:Mon Nov 07 11:00:35 MST 2016
 
 package router
 
@@ -20,17 +20,17 @@ class Routes(
   Application_6: controllers.Application,
   // @LINE:7
   Dashboard_2: controllers.Dashboard,
-  // @LINE:36
-  Index_7: controllers.account.settings.Index,
-  // @LINE:37
-  Password_1: controllers.account.settings.Password,
-  // @LINE:39
-  Email_3: controllers.account.settings.Email,
-  // @LINE:43
+  // @LINE:35
   Signup_5: controllers.account.Signup,
-  // @LINE:50
+  // @LINE:40
+  Index_7: controllers.account.settings.Index,
+  // @LINE:41
+  Password_1: controllers.account.settings.Password,
+  // @LINE:43
+  Email_3: controllers.account.settings.Email,
+  // @LINE:54
   Reset_0: controllers.account.Reset,
-  // @LINE:60
+  // @LINE:64
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -41,25 +41,25 @@ class Routes(
     Application_6: controllers.Application,
     // @LINE:7
     Dashboard_2: controllers.Dashboard,
-    // @LINE:36
-    Index_7: controllers.account.settings.Index,
-    // @LINE:37
-    Password_1: controllers.account.settings.Password,
-    // @LINE:39
-    Email_3: controllers.account.settings.Email,
-    // @LINE:43
+    // @LINE:35
     Signup_5: controllers.account.Signup,
-    // @LINE:50
+    // @LINE:40
+    Index_7: controllers.account.settings.Index,
+    // @LINE:41
+    Password_1: controllers.account.settings.Password,
+    // @LINE:43
+    Email_3: controllers.account.settings.Email,
+    // @LINE:54
     Reset_0: controllers.account.Reset,
-    // @LINE:60
+    // @LINE:64
     Assets_4: controllers.Assets
-  ) = this(errorHandler, Application_6, Dashboard_2, Index_7, Password_1, Email_3, Signup_5, Reset_0, Assets_4, "/")
+  ) = this(errorHandler, Application_6, Dashboard_2, Signup_5, Index_7, Password_1, Email_3, Reset_0, Assets_4, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Application_6, Dashboard_2, Index_7, Password_1, Email_3, Signup_5, Reset_0, Assets_4, prefix)
+    new Routes(errorHandler, Application_6, Dashboard_2, Signup_5, Index_7, Password_1, Email_3, Reset_0, Assets_4, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -82,6 +82,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateuser""", """controllers.Application.findUser()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """export""", """controllers.Application.exportData()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """openuser""", """controllers.Application.openUser()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addadmin""", """controllers.account.Signup.createAdmin()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addadmin""", """controllers.account.Signup.saveAdmin()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """settings""", """controllers.account.settings.Index.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """settings/password""", """controllers.account.settings.Password.index()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """settings/password""", """controllers.account.settings.Password.runPassword()"""),
@@ -358,11 +360,45 @@ class Routes(
     )
   )
 
+  // @LINE:35
+  private[this] lazy val controllers_account_Signup_createAdmin15_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addadmin")))
+  )
+  private[this] lazy val controllers_account_Signup_createAdmin15_invoker = createInvoker(
+    Signup_5.createAdmin(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.account.Signup",
+      "createAdmin",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """addadmin"""
+    )
+  )
+
   // @LINE:36
-  private[this] lazy val controllers_account_settings_Index_index15_route = Route("GET",
+  private[this] lazy val controllers_account_Signup_saveAdmin16_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addadmin")))
+  )
+  private[this] lazy val controllers_account_Signup_saveAdmin16_invoker = createInvoker(
+    Signup_5.saveAdmin(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.account.Signup",
+      "saveAdmin",
+      Nil,
+      "POST",
+      """""",
+      this.prefix + """addadmin"""
+    )
+  )
+
+  // @LINE:40
+  private[this] lazy val controllers_account_settings_Index_index17_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("settings")))
   )
-  private[this] lazy val controllers_account_settings_Index_index15_invoker = createInvoker(
+  private[this] lazy val controllers_account_settings_Index_index17_invoker = createInvoker(
     Index_7.index(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -375,11 +411,11 @@ class Routes(
     )
   )
 
-  // @LINE:37
-  private[this] lazy val controllers_account_settings_Password_index16_route = Route("GET",
+  // @LINE:41
+  private[this] lazy val controllers_account_settings_Password_index18_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("settings/password")))
   )
-  private[this] lazy val controllers_account_settings_Password_index16_invoker = createInvoker(
+  private[this] lazy val controllers_account_settings_Password_index18_invoker = createInvoker(
     Password_1.index(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -392,11 +428,11 @@ class Routes(
     )
   )
 
-  // @LINE:38
-  private[this] lazy val controllers_account_settings_Password_runPassword17_route = Route("POST",
+  // @LINE:42
+  private[this] lazy val controllers_account_settings_Password_runPassword19_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("settings/password")))
   )
-  private[this] lazy val controllers_account_settings_Password_runPassword17_invoker = createInvoker(
+  private[this] lazy val controllers_account_settings_Password_runPassword19_invoker = createInvoker(
     Password_1.runPassword(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -409,11 +445,11 @@ class Routes(
     )
   )
 
-  // @LINE:39
-  private[this] lazy val controllers_account_settings_Email_index18_route = Route("GET",
+  // @LINE:43
+  private[this] lazy val controllers_account_settings_Email_index20_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("settings/email")))
   )
-  private[this] lazy val controllers_account_settings_Email_index18_invoker = createInvoker(
+  private[this] lazy val controllers_account_settings_Email_index20_invoker = createInvoker(
     Email_3.index(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -426,11 +462,11 @@ class Routes(
     )
   )
 
-  // @LINE:40
-  private[this] lazy val controllers_account_settings_Email_runEmail19_route = Route("POST",
+  // @LINE:44
+  private[this] lazy val controllers_account_settings_Email_runEmail21_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("settings/email")))
   )
-  private[this] lazy val controllers_account_settings_Email_runEmail19_invoker = createInvoker(
+  private[this] lazy val controllers_account_settings_Email_runEmail21_invoker = createInvoker(
     Email_3.runEmail(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -443,11 +479,11 @@ class Routes(
     )
   )
 
-  // @LINE:43
-  private[this] lazy val controllers_account_Signup_create20_route = Route("GET",
+  // @LINE:47
+  private[this] lazy val controllers_account_Signup_create22_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
-  private[this] lazy val controllers_account_Signup_create20_invoker = createInvoker(
+  private[this] lazy val controllers_account_Signup_create22_invoker = createInvoker(
     Signup_5.create(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -460,11 +496,11 @@ class Routes(
     )
   )
 
-  // @LINE:44
-  private[this] lazy val controllers_account_Signup_save21_route = Route("POST",
+  // @LINE:48
+  private[this] lazy val controllers_account_Signup_save23_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
-  private[this] lazy val controllers_account_Signup_save21_invoker = createInvoker(
+  private[this] lazy val controllers_account_Signup_save23_invoker = createInvoker(
     Signup_5.save(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -477,11 +513,11 @@ class Routes(
     )
   )
 
-  // @LINE:47
-  private[this] lazy val controllers_account_Signup_confirm22_route = Route("GET",
+  // @LINE:51
+  private[this] lazy val controllers_account_Signup_confirm24_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("confirm/"), DynamicPart("confirmToken", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_account_Signup_confirm22_invoker = createInvoker(
+  private[this] lazy val controllers_account_Signup_confirm24_invoker = createInvoker(
     Signup_5.confirm(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -494,11 +530,11 @@ class Routes(
     )
   )
 
-  // @LINE:50
-  private[this] lazy val controllers_account_Reset_ask23_route = Route("GET",
+  // @LINE:54
+  private[this] lazy val controllers_account_Reset_ask25_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("reset/ask")))
   )
-  private[this] lazy val controllers_account_Reset_ask23_invoker = createInvoker(
+  private[this] lazy val controllers_account_Reset_ask25_invoker = createInvoker(
     Reset_0.ask(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -511,11 +547,11 @@ class Routes(
     )
   )
 
-  // @LINE:51
-  private[this] lazy val controllers_account_Reset_runAsk24_route = Route("POST",
+  // @LINE:55
+  private[this] lazy val controllers_account_Reset_runAsk26_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("reset/ask")))
   )
-  private[this] lazy val controllers_account_Reset_runAsk24_invoker = createInvoker(
+  private[this] lazy val controllers_account_Reset_runAsk26_invoker = createInvoker(
     Reset_0.runAsk(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -528,11 +564,11 @@ class Routes(
     )
   )
 
-  // @LINE:54
-  private[this] lazy val controllers_account_Reset_reset25_route = Route("GET",
+  // @LINE:58
+  private[this] lazy val controllers_account_Reset_reset27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("reset/"), DynamicPart("token", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_account_Reset_reset25_invoker = createInvoker(
+  private[this] lazy val controllers_account_Reset_reset27_invoker = createInvoker(
     Reset_0.reset(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -545,11 +581,11 @@ class Routes(
     )
   )
 
-  // @LINE:55
-  private[this] lazy val controllers_account_Reset_runReset26_route = Route("POST",
+  // @LINE:59
+  private[this] lazy val controllers_account_Reset_runReset28_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("reset/"), DynamicPart("token", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_account_Reset_runReset26_invoker = createInvoker(
+  private[this] lazy val controllers_account_Reset_runReset28_invoker = createInvoker(
     Reset_0.runReset(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -562,11 +598,11 @@ class Routes(
     )
   )
 
-  // @LINE:57
-  private[this] lazy val controllers_account_settings_Email_validateEmail27_route = Route("GET",
+  // @LINE:61
+  private[this] lazy val controllers_account_settings_Email_validateEmail29_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("email/"), DynamicPart("token", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_account_settings_Email_validateEmail27_invoker = createInvoker(
+  private[this] lazy val controllers_account_settings_Email_validateEmail29_invoker = createInvoker(
     Email_3.validateEmail(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -579,11 +615,11 @@ class Routes(
     )
   )
 
-  // @LINE:60
-  private[this] lazy val controllers_Assets_at28_route = Route("GET",
+  // @LINE:64
+  private[this] lazy val controllers_Assets_at30_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at28_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at30_invoker = createInvoker(
     Assets_4.at(fakeValue[String], fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -689,88 +725,100 @@ class Routes(
         controllers_Application_openUser14_invoker.call(Application_6.openUser())
       }
   
+    // @LINE:35
+    case controllers_account_Signup_createAdmin15_route(params) =>
+      call { 
+        controllers_account_Signup_createAdmin15_invoker.call(Signup_5.createAdmin())
+      }
+  
     // @LINE:36
-    case controllers_account_settings_Index_index15_route(params) =>
+    case controllers_account_Signup_saveAdmin16_route(params) =>
       call { 
-        controllers_account_settings_Index_index15_invoker.call(Index_7.index())
-      }
-  
-    // @LINE:37
-    case controllers_account_settings_Password_index16_route(params) =>
-      call { 
-        controllers_account_settings_Password_index16_invoker.call(Password_1.index())
-      }
-  
-    // @LINE:38
-    case controllers_account_settings_Password_runPassword17_route(params) =>
-      call { 
-        controllers_account_settings_Password_runPassword17_invoker.call(Password_1.runPassword())
-      }
-  
-    // @LINE:39
-    case controllers_account_settings_Email_index18_route(params) =>
-      call { 
-        controllers_account_settings_Email_index18_invoker.call(Email_3.index())
+        controllers_account_Signup_saveAdmin16_invoker.call(Signup_5.saveAdmin())
       }
   
     // @LINE:40
-    case controllers_account_settings_Email_runEmail19_route(params) =>
+    case controllers_account_settings_Index_index17_route(params) =>
       call { 
-        controllers_account_settings_Email_runEmail19_invoker.call(Email_3.runEmail())
+        controllers_account_settings_Index_index17_invoker.call(Index_7.index())
+      }
+  
+    // @LINE:41
+    case controllers_account_settings_Password_index18_route(params) =>
+      call { 
+        controllers_account_settings_Password_index18_invoker.call(Password_1.index())
+      }
+  
+    // @LINE:42
+    case controllers_account_settings_Password_runPassword19_route(params) =>
+      call { 
+        controllers_account_settings_Password_runPassword19_invoker.call(Password_1.runPassword())
       }
   
     // @LINE:43
-    case controllers_account_Signup_create20_route(params) =>
+    case controllers_account_settings_Email_index20_route(params) =>
       call { 
-        controllers_account_Signup_create20_invoker.call(Signup_5.create())
+        controllers_account_settings_Email_index20_invoker.call(Email_3.index())
       }
   
     // @LINE:44
-    case controllers_account_Signup_save21_route(params) =>
+    case controllers_account_settings_Email_runEmail21_route(params) =>
       call { 
-        controllers_account_Signup_save21_invoker.call(Signup_5.save())
+        controllers_account_settings_Email_runEmail21_invoker.call(Email_3.runEmail())
       }
   
     // @LINE:47
-    case controllers_account_Signup_confirm22_route(params) =>
-      call(params.fromPath[String]("confirmToken", None)) { (confirmToken) =>
-        controllers_account_Signup_confirm22_invoker.call(Signup_5.confirm(confirmToken))
+    case controllers_account_Signup_create22_route(params) =>
+      call { 
+        controllers_account_Signup_create22_invoker.call(Signup_5.create())
       }
   
-    // @LINE:50
-    case controllers_account_Reset_ask23_route(params) =>
+    // @LINE:48
+    case controllers_account_Signup_save23_route(params) =>
       call { 
-        controllers_account_Reset_ask23_invoker.call(Reset_0.ask())
+        controllers_account_Signup_save23_invoker.call(Signup_5.save())
       }
   
     // @LINE:51
-    case controllers_account_Reset_runAsk24_route(params) =>
-      call { 
-        controllers_account_Reset_runAsk24_invoker.call(Reset_0.runAsk())
+    case controllers_account_Signup_confirm24_route(params) =>
+      call(params.fromPath[String]("confirmToken", None)) { (confirmToken) =>
+        controllers_account_Signup_confirm24_invoker.call(Signup_5.confirm(confirmToken))
       }
   
     // @LINE:54
-    case controllers_account_Reset_reset25_route(params) =>
-      call(params.fromPath[String]("token", None)) { (token) =>
-        controllers_account_Reset_reset25_invoker.call(Reset_0.reset(token))
+    case controllers_account_Reset_ask25_route(params) =>
+      call { 
+        controllers_account_Reset_ask25_invoker.call(Reset_0.ask())
       }
   
     // @LINE:55
-    case controllers_account_Reset_runReset26_route(params) =>
-      call(params.fromPath[String]("token", None)) { (token) =>
-        controllers_account_Reset_runReset26_invoker.call(Reset_0.runReset(token))
+    case controllers_account_Reset_runAsk26_route(params) =>
+      call { 
+        controllers_account_Reset_runAsk26_invoker.call(Reset_0.runAsk())
       }
   
-    // @LINE:57
-    case controllers_account_settings_Email_validateEmail27_route(params) =>
+    // @LINE:58
+    case controllers_account_Reset_reset27_route(params) =>
       call(params.fromPath[String]("token", None)) { (token) =>
-        controllers_account_settings_Email_validateEmail27_invoker.call(Email_3.validateEmail(token))
+        controllers_account_Reset_reset27_invoker.call(Reset_0.reset(token))
       }
   
-    // @LINE:60
-    case controllers_Assets_at28_route(params) =>
+    // @LINE:59
+    case controllers_account_Reset_runReset28_route(params) =>
+      call(params.fromPath[String]("token", None)) { (token) =>
+        controllers_account_Reset_runReset28_invoker.call(Reset_0.runReset(token))
+      }
+  
+    // @LINE:61
+    case controllers_account_settings_Email_validateEmail29_route(params) =>
+      call(params.fromPath[String]("token", None)) { (token) =>
+        controllers_account_settings_Email_validateEmail29_invoker.call(Email_3.validateEmail(token))
+      }
+  
+    // @LINE:64
+    case controllers_Assets_at30_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at28_invoker.call(Assets_4.at(path, file))
+        controllers_Assets_at30_invoker.call(Assets_4.at(path, file))
       }
   }
 }
