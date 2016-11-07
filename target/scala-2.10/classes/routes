@@ -13,6 +13,9 @@ GET    /logout                  controllers.Application.logout()
 GET    /auth                    controllers.Application.openLogin()
 POST   /auth                    controllers.Application.authenticate()
 
+# User pages...
+GET    /user                    controllers.Application.userHome()
+
 # Emergency Manager pages...
 GET    /em                      controllers.Application.managerHome()
 

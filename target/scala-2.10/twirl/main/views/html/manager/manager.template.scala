@@ -33,9 +33,7 @@ Seq[Any](format.raw/*1.38*/("""
 
 """),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 
-
-"""),format.raw/*6.1*/("""<!-- ABOUT -->
-<section id="managerMain">
+"""),format.raw/*5.1*/("""<section id="managerMain">
 
 	<!-- SERVICES -->
 	<div class="services_block padbot40" data-appear-top-offset="-200"
@@ -51,14 +49,14 @@ Seq[Any](format.raw/*1.38*/("""
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/export">
 						<p>
-							<img src=""""),_display_(/*23.19*/routes/*23.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*23.64*/(""""> <b>Export Data</b>
+							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*21.64*/(""""> <b>Export Data</b>
 						</p> <span>Export Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/search">
 						<p>
-							<img src=""""),_display_(/*30.19*/routes/*30.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*30.67*/(""""> <b>Search Records</b>
+							<img src=""""),_display_(/*28.19*/routes/*28.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*28.67*/(""""> <b>Search Records</b>
 						</p> <span>Search Business Profiles...</span>
 					</a>
 				</div>
@@ -71,9 +69,7 @@ Seq[Any](format.raw/*1.38*/("""
 	</div>
 	<!-- //SERVICES -->
 
-
 </section>
-<!-- //ABOUT -->
 
 """)))}))
       }
@@ -95,11 +91,11 @@ Seq[Any](format.raw/*1.38*/("""
 object manager extends manager_Scope0.manager
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 07 11:00:36 MST 2016
+                  DATE: Mon Nov 07 12:13:58 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/manager/manager.scala.html
-                  HASH: aeb0a334735e74ad85f13ad68a17cb9d06cf6172
-                  MATRIX: 774->1|905->37|933->40|951->50|990->52|1019->55|1487->496|1502->502|1562->541|1785->737|1800->743|1863->785
-                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|54->23|54->23|54->23|61->30|61->30|61->30
+                  HASH: 2304a574d8e8bdf91a603885d74f4c4fe6fe4334
+                  MATRIX: 774->1|905->37|933->40|951->50|990->52|1018->54|1471->480|1486->486|1546->525|1769->721|1784->727|1847->769
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|52->21|52->21|52->21|59->28|59->28|59->28
                   -- GENERATED --
               */
           
