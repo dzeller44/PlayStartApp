@@ -44,14 +44,14 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-1 margbot30"></div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/export">
+					<a class="services_item" href="/addprofile">
 						<p>
 							<img src=""""),_display_(/*18.19*/routes/*18.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*18.64*/(""""> <b>Add Business Profile</b>
 						</p> <span>Export Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/search">
+					<a class="services_item" href="/editprofile">
 						<p>
 							<img src=""""),_display_(/*25.19*/routes/*25.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*25.67*/(""""> <b>Edit Business Profile</b>
 						</p> <span>Search Business Profiles...</span>
@@ -89,10 +89,10 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object user extends user_Scope0.user
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 07 12:13:58 MST 2016
+                  DATE: Tue Nov 08 15:03:53 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/user/user.scala.html
-                  HASH: 41fdffbb968fa649edc0fec7c35a61b2d314d14d
-                  MATRIX: 830->1|843->7|882->9|910->11|1333->407|1348->413|1408->452|1640->657|1655->663|1718->705
+                  HASH: 07dffd501ff8c5ae70ba545190978d03f235877c
+                  MATRIX: 830->1|843->7|882->9|910->11|1337->411|1352->417|1412->456|1649->666|1664->672|1727->714
                   LINES: 32->1|32->1|32->1|34->3|49->18|49->18|49->18|56->25|56->25|56->25
                   -- GENERATED --
               */

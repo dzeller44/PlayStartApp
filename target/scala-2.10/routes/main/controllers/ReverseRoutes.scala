@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Mon Nov 07 12:16:13 MST 2016
+// @DATE:Tue Nov 08 15:03:52 MST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:67
+  // @LINE:70
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:67
+    // @LINE:70
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -50,25 +50,31 @@ package controllers {
     }
 
   
-    // @LINE:20
+    // @LINE:23
     def managerHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "em")
     }
   
-    // @LINE:36
+    // @LINE:35
+    def updateUser(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "updateuser")
+    }
+  
+    // @LINE:39
     def openUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "openuser")
     }
   
-    // @LINE:23
+    // @LINE:26
     def adminHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "admin")
     }
   
-    // @LINE:30
+    // @LINE:33
     def getUserByEmail(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "finduser")
@@ -86,10 +92,22 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:25
+    // @LINE:28
     def userMaintenance(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "adminuser")
+    }
+  
+    // @LINE:19
+    def addProfile(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "addprofile")
+    }
+  
+    // @LINE:20
+    def saveProfile(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "addprofile")
     }
   
     // @LINE:13
@@ -98,18 +116,10 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "auth")
     }
   
-    // @LINE:29
+    // @LINE:32
     def findUser(): Call = {
-    
-      () match {
-      
-        // @LINE:29
-        case ()  =>
-          import ReverseRouteContext.empty
-          Call("GET", _prefix + { _defaultPrefix } + "finduser")
-      
-      }
-    
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "finduser")
     }
   
     // @LINE:9
@@ -126,7 +136,7 @@ package controllers {
     
     }
   
-    // @LINE:27
+    // @LINE:30
     def getAllUsers(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "search")
@@ -138,7 +148,7 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:34
+    // @LINE:37
     def exportData(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "export")

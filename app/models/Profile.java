@@ -68,7 +68,7 @@ public class Profile extends Model {
 
 	@Constraints.Required
 	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
-	public String dateCreation;
+	public Date dateCreation;
 
 
     // -- Queries (long id, profile.class)
