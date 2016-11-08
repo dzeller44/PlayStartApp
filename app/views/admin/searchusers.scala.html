@@ -2,6 +2,35 @@
 
 @main(null) {
 
+		<p><strong>&nbsp;&nbsp;&nbsp;Emergency Managers needing approval:</strong></p>
+
+		<section id="search">
+		<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>User Name</th>
+					<th>Email</th>
+					<th>Role</th>
+					<th>Approved?</th>
+				</tr>
+			</thead>
+			<tbody>
+				@for(user <- userList
+				if user.approved == "N"){
+				<tr>
+				<td><a href="/finduserurl?email=@user.email">@user.fullname</a></td>
+				<td><a href="/finduserurl?email=@user.email">@user.email</a></td>
+				<td><a href="/finduserurl?email=@user.email">@user.role</a></td>
+				<td><a href="/finduserurl?email=@user.email">@user.approved</a></td>
+				}
+			</tbody>
+		</table>
+		</div		
+	</section>
+
+	<p><strong>&nbsp;&nbsp;&nbsp;All users:</strong></p>
+
 	<section id="search">
 		<div class="table-responsive">
 		<table class="table table-hover">
