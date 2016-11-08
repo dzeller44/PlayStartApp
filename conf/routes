@@ -38,6 +38,8 @@ GET    /openuser                controllers.Application.openUser()
 GET    /addadmin                controllers.account.Signup.createAdmin()
 POST   /addadmin                controllers.account.Signup.saveAdmin()
 
+GET		/finduserurl			controllers.Application.getUserByUrl(email: String)
+
 
 # User settings...
 GET    /settings                controllers.account.settings.Index.index()

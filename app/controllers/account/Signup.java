@@ -121,6 +121,12 @@ public class Signup extends Controller {
 				// RoleType.MANAGER == 2
 				user.approved = "N";
 				user.save();
+				
+				//Replace with admin email, either shared inbox or database lookup
+				String admin = new String("admin@test.com");
+				
+				sendMailAdminConfirm(admin, user.email);
+				
 				return ok(approval.render());
 			} else {
 				sendMailAskForConfirmation(user);
@@ -232,6 +238,20 @@ public class Signup extends Controller {
 		String message = Messages.get("mail.confirm.message", url.toString());
 
 		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.email);
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);
+	}
+	
+	private void sendMailAdminConfirm(String admin, String email) throws EmailException, MalformedURLException {
+		String subject = Messages.get("mail.admin.subject");
+
+		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		urlString += "/finduserurl?email=" + email;
+		URL url = new URL(urlString); // validate the URL, will throw an
+										// exception if bad.
+		String message = Messages.get("mail.admin.message", url.toString());
+
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, admin);
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
 	}
