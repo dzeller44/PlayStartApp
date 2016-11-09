@@ -64,12 +64,17 @@ admin.newaccount.msg.created=The new Admin has been created successfully.  An em
 
 profile.newcreated=The new Business Profile has been created successfully.
 
+user.account.updated=The User Account has been updated.
+
 search.user.bademail=The user does not exist.
 
 changemail.mailsent=A mail has been sent, please check your mail.
 
 mail.confirm.subject=Welcome to CO-Assist - Confirm your Account
 mail.confirm.message=Welcome to CO-Assist. <br> Click on this link : {0} to confirm your email.
+mail.admin.subject=CO-Assist - New Emergency Manager account needs approval
+mail.admin.message=CO-Assist. <br> Click on this link : {0} to approve this Emergency Manager account.
+
 
 mail.welcome.subject=Welcome to CO-Assist
 mail.welcome.message=Welcome to CO-Assist. <br> Your account is validated. Enjoy !

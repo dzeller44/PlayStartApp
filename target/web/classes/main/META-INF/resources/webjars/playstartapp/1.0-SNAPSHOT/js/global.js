@@ -23,3 +23,9 @@ function isLoggedIn() {
 	window.alert("isLoggedOn() = " + returnValue);
 	return returnValue;
 }
+
+function submitForm(formName) {
+	
+	document.forms['" + formName + "'].submit();
+	
+}

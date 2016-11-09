@@ -4,9 +4,9 @@
 
 <section id="signup">
 	<!-- Start Formoid form-->
-	<form class="formoid-solid-dark"
+	<form id="showuser" class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post" action="">
+		method="post" action="@routes.Application.updateUser()">
 		<div class="title">
 			<h2>User Maintenance</h2>
 		</div>
@@ -52,7 +52,7 @@
 		<div class="element-checkbox">
 			<div class="column column1">
 				<label><input type="checkbox" name="approved"
-					value="approve" /><span>Approve Emergency Manager Account</span></label>
+					value="approved" /><span>Approve Emergency Manager Account</span></label>
 			</div>
 			<span class="clearfix"></span>
 		</div>
@@ -65,8 +65,9 @@
    			}
 		</div>
 		<div class="submit">
-			<a href="/updateuser" class="buttonCustom" style="color: #FFFFFF;">@Messages("submit")</a>
-			<a href="/" class="buttonCancel">@Messages("goback")</a>
+			<!--<a href="javascript:document.forms['showuser'].submit();" class="buttonCustom" style="color: #FFFFFF;">@Messages("submit")</a> -->
+			<input type="submit" value=@Messages("submit") />
+			<a href="/admin" class="buttonCancel">@Messages("goback")</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>

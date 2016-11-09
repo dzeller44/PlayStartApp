@@ -64,6 +64,8 @@ admin.newaccount.msg.created=The new Admin has been created successfully.  An em
 
 profile.newcreated=The new Business Profile has been created successfully.
 
+user.account.updated=The User Account has been updated.
+
 search.user.bademail=The user does not exist.
 
 changemail.mailsent=A mail has been sent, please check your mail.

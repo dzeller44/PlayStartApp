@@ -39,11 +39,10 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 			<h2>User Account Updated</h2>
 		</div>
 		<div class="element-input">
-			<label class="title"><span class="required"></span>"""),_display_(/*11.56*/Messages("signup.signup")),format.raw/*11.81*/("""
-				"""),format.raw/*12.5*/("""- """),_display_(/*12.8*/Messages("signup.email.confirmed")),format.raw/*12.42*/("""</label>
+			<label class="title"><span class="required"></span>"""),_display_(/*11.56*/Messages("user.account.updated")),format.raw/*11.88*/("""</label>
 		</div>
 		<div class="submit">
-			<input type="submit" onclick="window.location.href='/'"
+			<input type="submit" onclick="window.location.href='/admin'"
 				value="Continue" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
@@ -52,7 +51,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 
 </section>
 
-""")))}),format.raw/*24.2*/("""
+""")))}),format.raw/*23.2*/("""
 """))
       }
     }
@@ -73,11 +72,11 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object saveduser extends saveduser_Scope0.saveduser
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 08 15:03:53 MST 2016
+                  DATE: Wed Nov 09 11:07:33 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/saveduser.scala.html
-                  HASH: 2dd9a5c103b9b72ec62c37ebbeb950c078b6d0b8
-                  MATRIX: 841->1|854->7|893->9|921->11|1368->431|1414->456|1446->461|1475->464|1530->498|1787->725
-                  LINES: 32->1|32->1|32->1|34->3|42->11|42->11|43->12|43->12|43->12|55->24
+                  HASH: 74aa41680a70649ed12cc4e9f26508958259dced
+                  MATRIX: 841->1|854->7|893->9|923->13|1378->441|1431->473|1705->717
+                  LINES: 32->1|32->1|32->1|34->3|42->11|42->11|54->23
                   -- GENERATED --
               */
           

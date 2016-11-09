@@ -27,3 +27,13 @@ run
 clean
 compile
 run
+clean
+reload
+clean
+compile
+clean
+compile
+clean
+compile
+clean
+run
