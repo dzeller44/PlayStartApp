@@ -1,5 +1,8 @@
 @(findUserForm: Form[Application.FindUser], userEmail: String, userName: String, userRole: String)
 
+
+
+
 @main(null) {
 
 <section id="signup">
@@ -68,6 +71,9 @@
 			<!--<a href="javascript:document.forms['showuser'].submit();" class="buttonCustom" style="color: #FFFFFF;">@Messages("submit")</a> -->
 			<input type="submit" value=@Messages("submit") />
 			<a href="/admin" class="buttonCancel">@Messages("goback")</a>
+		</div>
+		<div class="submit">
+			<a href="javascript:deleteUser('@userEmail')" class="buttonDelete">Delete</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>

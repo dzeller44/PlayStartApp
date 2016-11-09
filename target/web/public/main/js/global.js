@@ -24,8 +24,12 @@ function isLoggedIn() {
 	return returnValue;
 }
 
-function submitForm(formName) {
-	
-	document.forms['" + formName + "'].submit();
-	
+function deleteUser(email) {
+
+	//var email = document.getElementById("email").value;
+
+	//alert("In delete user - email = " + email);
+
+	window.location.href = '/deleteuser/' + email;
+
 }

@@ -37,3 +37,10 @@ clean
 compile
 clean
 run
+clean
+run
+clean
+compile
+run
+clean
+run

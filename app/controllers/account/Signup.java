@@ -98,6 +98,7 @@ public class Signup extends Controller {
 			user.passwordHash = Hash.createPassword(register.inputPassword);
 			user.confirmationToken = UUID.randomUUID().toString();
 			user.dateCreation = new Date();
+			user.active = "Y";
 			// Custom fields...
 			String role = register.role;
 			switch (role) {
@@ -166,6 +167,7 @@ public class Signup extends Controller {
 			// user.confirmationToken = null;
 			// user.validated = true;
 			user.dateCreation = new Date();
+			user.active = "Y";
 			user.role = RoleType.ADMIN;
 			user.save();
 

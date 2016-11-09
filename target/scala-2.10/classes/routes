@@ -43,6 +43,9 @@ POST   /addadmin                controllers.account.Signup.saveAdmin()
 
 GET    /finduserurl             controllers.Application.getUserByUrl(email: String)
 
+GET    /deleteuser/:email       controllers.Application.deleteUserConfirm(email: String)
+POST   /deleteuser/:email       controllers.Application.deleteUser(email: String)
+
 
 # User settings...
 GET    /settings                controllers.account.settings.Index.index()

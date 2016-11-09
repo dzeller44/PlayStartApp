@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 09 11:07:33 MST 2016
+// @DATE:Wed Nov 09 15:09:05 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:72
+  // @LINE:75
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:72
+    // @LINE:75
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -183,12 +183,32 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:46
+    def deleteUserConfirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.deleteUserConfirm",
+      """
+        function(email) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteuser/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("email", encodeURIComponent(email))})
+        }
+      """
+    )
+  
     // @LINE:32
     def findUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.findUser",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "finduser"})
+        }
+      """
+    )
+  
+    // @LINE:47
+    def deleteUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.deleteUser",
+      """
+        function(email) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteuser/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("email", encodeURIComponent(email))})
         }
       """
     )

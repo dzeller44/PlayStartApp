@@ -25,6 +25,8 @@ import views.html.admin.showuser;
 import views.html.admin.displayuser;
 import views.html.admin.openuser;
 import views.html.admin.saveduser;
+import views.html.admin.deleteconfirm;
+import views.html.admin.deleteduser;
 import views.html.user.user;
 
 import com.avaje.ebean.Ebean;
@@ -669,6 +671,29 @@ public class Application extends Controller {
 
 		}
 
+	}
+	
+	public Result deleteUserConfirm(String email) {
+		return ok(deleteconfirm.render(email));	
+	}
+	
+	public Result deleteUser(String email) {
+		// Locate the user record and delete...
+		User user = User.findByEmail(email);
+		if (user != null) {
+			// Open user record...
+
+		} else {
+			// Display message...
+
+		}
+		
+		// Delete the user????
+		user.active = "N";
+		user.save();
+
+		return ok(deleteduser.render());	
+		
 	}
 
 }

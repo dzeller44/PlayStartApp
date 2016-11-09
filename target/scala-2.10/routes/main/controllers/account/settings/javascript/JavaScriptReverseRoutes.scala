@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 09 11:07:33 MST 2016
+// @DATE:Wed Nov 09 15:09:05 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -11,11 +11,11 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:48
+// @LINE:51
 package controllers.account.settings.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:51
+  // @LINE:54
   class ReverseEmail(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.account.settings.javascript {
     }
 
   
-    // @LINE:69
+    // @LINE:72
     def validateEmail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.settings.Email.validateEmail",
       """
@@ -33,7 +33,7 @@ package controllers.account.settings.javascript {
       """
     )
   
-    // @LINE:52
+    // @LINE:55
     def runEmail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.settings.Email.runEmail",
       """
@@ -43,7 +43,7 @@ package controllers.account.settings.javascript {
       """
     )
   
-    // @LINE:51
+    // @LINE:54
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.settings.Email.index",
       """
@@ -55,7 +55,7 @@ package controllers.account.settings.javascript {
   
   }
 
-  // @LINE:49
+  // @LINE:52
   class ReversePassword(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -63,7 +63,7 @@ package controllers.account.settings.javascript {
     }
 
   
-    // @LINE:49
+    // @LINE:52
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.settings.Password.index",
       """
@@ -73,7 +73,7 @@ package controllers.account.settings.javascript {
       """
     )
   
-    // @LINE:50
+    // @LINE:53
     def runPassword: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.settings.Password.runPassword",
       """
@@ -85,7 +85,7 @@ package controllers.account.settings.javascript {
   
   }
 
-  // @LINE:48
+  // @LINE:51
   class ReverseIndex(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -93,7 +93,7 @@ package controllers.account.settings.javascript {
     }
 
   
-    // @LINE:48
+    // @LINE:51
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.settings.Index.index",
       """
