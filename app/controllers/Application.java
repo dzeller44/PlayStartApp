@@ -2,8 +2,10 @@ package controllers;
 
 import models.User;
 import models.Profile;
+import models.RemovedUser;
 import models.enums.RoleType;
 import models.utils.AppException;
+import models.utils.Hash;
 import play.Logger;
 import play.data.Form;
 import play.data.validation.Constraints;
@@ -36,6 +38,7 @@ import static play.data.Form.form;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Login and Logout. User: yesnault
@@ -457,9 +460,9 @@ public class Application extends Controller {
 		name = findUserForm.get().fullname;
 		approved = findUserForm.get().approved;
 		role = findUserForm.get().role;
-		
+
 		Logger.debug("");
-		
+
 		if (findUserForm.hasErrors()) {
 			System.out.println("Update User - errors");
 			return badRequest(showuser.render(findUserForm, "", "", ""));
@@ -682,21 +685,38 @@ public class Application extends Controller {
 	public Result deleteUser(String email) {
 		// Locate the user record and delete...
 		User user = User.findByEmail(email);
+		
 		if (user != null) {
 			// Open user record...
-
+			Logger.debug("Application.deleteUser: Found User based on " + email);
 		} else {
 			// Display message...
-
+			Logger.debug("Application.deleteUser: No User found based on " + email);
 		}
 
-		// Create record in deletedusers table
+		// Create record in removedusers table
 		// Capture user and date/time
 		// Remove from user table...
+		RemovedUser removedUser = new RemovedUser();
+
+		// Copy the record over...
+		removedUser.email = user.email;
+		removedUser.fullname = user.fullname;
+		removedUser.passwordHash = user.passwordHash;
+		removedUser.confirmationToken = user.confirmationToken;
+		removedUser.dateCreation = user.dateCreation;
+		removedUser.active = user.active;
+		removedUser.role = user.role;
+		removedUser.approved = user.approved;
+		removedUser.validated = user.validated;
+		removedUser.userkey = user.userkey;
+		// Set custom fields...
+		removedUser.dateRemoved = new Date();
+		removedUser.removedBy = "current user";
+		removedUser.save();
 		
-		// Delete the user????
-		user.active = "N";
-		user.save();
+		// Delete the user...
+		user.delete();
 
 		return ok(deleteduser.render());
 

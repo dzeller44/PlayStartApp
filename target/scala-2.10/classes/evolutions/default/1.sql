@@ -22,7 +22,28 @@ create table profile (
   services                  varchar(255),
   services_other            varchar(255),
   date_creation             datetime(6),
+  userkey                   varchar(255),
   constraint pk_profile primary key (id))
+;
+
+create table removed_user (
+  id                        bigint auto_increment not null,
+  email                     varchar(255),
+  fullname                  varchar(255),
+  confirmation_token        varchar(255),
+  password_hash             varchar(255),
+  date_creation             datetime(6),
+  validated                 tinyint(1) default 0,
+  role                      integer,
+  approved                  varchar(255),
+  active                    varchar(255),
+  userkey                   varchar(255),
+  removed_by                varchar(255),
+  date_removed              datetime(6),
+  constraint ck_removed_user_role check (role in ('0','2','3','1')),
+  constraint uq_removed_user_email unique (email),
+  constraint uq_removed_user_fullname unique (fullname),
+  constraint pk_removed_user primary key (id))
 ;
 
 create table token (
@@ -46,6 +67,7 @@ create table user (
   role                      integer,
   approved                  varchar(255),
   active                    varchar(255),
+  userkey                   varchar(255),
   constraint ck_user_role check (role in ('0','2','3','1')),
   constraint uq_user_email unique (email),
   constraint uq_user_fullname unique (fullname),
@@ -60,6 +82,8 @@ create table user (
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table profile;
+
+drop table removed_user;
 
 drop table token;
 

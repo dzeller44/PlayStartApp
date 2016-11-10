@@ -6,19 +6,18 @@ import models.utils.Hash;
 import play.data.format.Formats;
 import play.data.validation.Constraints;
 import com.avaje.ebean.Model;
-import play.Logger;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
-import java.util.UUID;
 
 /**
  * User: yesnault
  * Date: 20/01/12
  */
 @Entity
-public class User extends Model {
+public class RemovedUser extends Model {
 
     @Id
     public Long id;
@@ -55,12 +54,15 @@ public class User extends Model {
     
     public String active;
     
-    @Constraints.Required
-    @Formats.NonEmpty
     public String userkey;
+    
+    public String removedBy;
+    
+    @Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+    public Date dateRemoved;
 
     // -- Queries (long id, user.class)
-    public static Model.Finder<Long, User> find = new Model.Finder<Long, User>(Long.class, User.class);
+    public static Model.Finder<Long, RemovedUser> find = new Model.Finder<Long, RemovedUser>(Long.class, RemovedUser.class);
 
     /**
      * Retrieve a user from an email.
@@ -68,7 +70,7 @@ public class User extends Model {
      * @param email email to search
      * @return a user
      */
-    public static User findByEmail(String email) {
+    public static RemovedUser findByEmail(String email) {
         return find.where().eq("email", email).findUnique();
     }
 
@@ -78,7 +80,7 @@ public class User extends Model {
      * @param fullname Full name
      * @return a user
      */
-    public static User findByFullname(String fullname) {
+    public static RemovedUser findByFullname(String fullname) {
         return find.where().eq("fullname", fullname).findUnique();
     }
 
@@ -88,7 +90,7 @@ public class User extends Model {
      * @param token the confirmation token to use.
      * @return a user if the confirmation token is found, null otherwise.
      */
-    public static User findByConfirmationToken(String token) {
+    public static RemovedUser findByConfirmationToken(String token) {
         return find.where().eq("confirmationToken", token).findUnique();
     }
 
@@ -100,10 +102,10 @@ public class User extends Model {
      * @return User if authenticated, null otherwise
      * @throws AppException App Exception
      */
-    public static User authenticate(String email, String clearPassword) throws AppException {
+    public static RemovedUser authenticate(String email, String clearPassword) throws AppException {
 
         // get the user with email only to keep the salt password
-        User user = find.where().eq("email", email).findUnique();
+        RemovedUser user = find.where().eq("email", email).findUnique();
         if (user != null) {
             // get the hash password from the salt + clear password
             if (Hash.checkPassword(clearPassword, user.passwordHash)) {
@@ -124,7 +126,7 @@ public class User extends Model {
      * @return true if confirmed, false otherwise.
      * @throws AppException App Exception
      */
-    public static boolean confirm(User user) throws AppException {
+    public static boolean confirm(RemovedUser user) throws AppException {
         if (user == null) {
             return false;
         }
@@ -134,35 +136,5 @@ public class User extends Model {
         user.save();
         return true;
     }
-    
-    public String createUserKey() {
-    	String userKey = UUID.randomUUID().toString().replaceAll("-", "");
-    	
-    	// Make sure it is unique...
-    	Boolean isUnique = false;
-    	while (!isUnique) {
-        	User user = User.findByUserKey(userKey);
-    		if (user != null) {
-    			// Found user, not unique...
-    			Logger.debug("User.createUserKey: User Key " + userKey + " is not unique, creating a new one...");
-    		} else {
-    			// User Key is unique...
-    			Logger.debug("User.createUserKey: User Key " + userKey + " is unique.");
-    			isUnique = true;
-    		}
-    	}
-    	    	
-    	return userKey;
-    }
    
-    /**
-     * Retrieves a user by unique user key.
-     *
-     * @param unique user key.
-     * @return a user if the unique user key is found, null otherwise.
-     */
-    public static User findByUserKey(String userKey) {
-        return find.where().eq("userkey", userKey).findUnique();
-    }
-    
 }
