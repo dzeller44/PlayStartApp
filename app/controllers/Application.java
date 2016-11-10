@@ -1,6 +1,7 @@
 package controllers;
 
 import models.User;
+import models.Profile;
 import models.enums.RoleType;
 import models.utils.AppException;
 import play.Logger;
@@ -12,6 +13,8 @@ import play.mvc.Result;
 import play.libs.Json;
 import views.html.index;
 import views.html.auth;
+import views.html.profile.profile;
+import views.html.profile.profilecreated;
 import views.html.admin.searchusers;
 import views.html.export;
 import views.html.manager.manager;
@@ -20,6 +23,7 @@ import views.html.admin.usermaint;
 import views.html.admin.getuser;
 import views.html.admin.showuser;
 import views.html.admin.openuser;
+import views.html.admin.saveduser;
 import views.html.user.user;
 
 import com.avaje.ebean.Ebean;
@@ -27,6 +31,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -116,7 +121,7 @@ public class Application extends Controller {
 		// Custom fields...
 		@Constraints.Required
 		public String role;
-		
+
 		public String approved;
 
 		/**
@@ -156,7 +161,7 @@ public class Application extends Controller {
 			return input == null || input.isEmpty() || input.trim().isEmpty();
 		}
 	}
-	
+
 	public static class AdminRegister {
 
 		@Constraints.Required
@@ -168,9 +173,9 @@ public class Application extends Controller {
 		public String inputPassword;
 
 		public String role;
-		
+
 		public String approved;
-		
+
 		public String validate() {
 			if (isBlank(email)) {
 				return "Email is required";
@@ -187,60 +192,66 @@ public class Application extends Controller {
 			return input == null || input.isEmpty() || input.trim().isEmpty();
 		}
 	}
-	
+
 	public static class ProfileRegister {
 
 		@Constraints.Required
 		public String name;
-		
+
 		@Constraints.Required
 		public String address;
-		
+
+		public String address1;
+
 		@Constraints.Required
 		public String city;
-		
+
 		@Constraints.Required
 		public String state;
-		
+
 		@Constraints.Required
 		public String zip;
-		
+
 		@Constraints.Required
 		public String country;
-		
+
 		@Constraints.Required
 		public String primaryNameFirst;
-		
+
 		@Constraints.Required
 		public String primaryNameLast;
-		
+
 		@Constraints.Required
 		public String primaryPhone;
-		
+
 		@Constraints.Required
 		public String primaryEmail;
-		
+
 		@Constraints.Required
 		public String secondaryNameFirst;
-		
+
 		@Constraints.Required
 		public String secondaryNameLast;
-		
+
 		@Constraints.Required
 		public String secondaryPhone;
-		
+
 		@Constraints.Required
 		public String secondaryEmail;
-		
+
 		@Constraints.Required
 		public String services;
-		
+
+		public String servicesOther;
+
+		public Date dateCreation;
+
 		/**
 		 * Validate the authentication.
 		 *
 		 * @return null if validation ok, string with details otherwise
 		 */
-		public String validate() {			
+		public String validate() {
 			if (isBlank(name)) {
 				return "Business Name is required";
 			}
@@ -248,35 +259,35 @@ public class Application extends Controller {
 			if (isBlank(address)) {
 				return "Business Address 1 is required";
 			}
-			
+
 			if (isBlank(city)) {
 				return "Business Address City is required";
 			}
-			
+
 			if (isBlank(state)) {
 				return "Business Address State is required";
 			}
-			
+
 			if (isBlank(zip)) {
 				return "Business Address Zip is required";
 			}
-			
+
 			if (isBlank(country)) {
 				return "Business Address Country is required";
 			}
-			
+
 			if (isBlank(primaryNameFirst)) {
 				return "Primary Contact First Name is required";
 			}
-			
+
 			if (isBlank(primaryNameLast)) {
 				return "Primary Contact Last Name is required";
 			}
-			
+
 			if (isBlank(primaryPhone)) {
 				return "Primary Contact Phone is required";
 			}
-			
+
 			if (isBlank(primaryEmail)) {
 				return "Primary Contact Email is required";
 			}
@@ -284,19 +295,19 @@ public class Application extends Controller {
 			if (isBlank(secondaryNameFirst)) {
 				return "Secondary Contact First Name is required";
 			}
-			
+
 			if (isBlank(secondaryNameLast)) {
 				return "Secondary Contact Last Name is required";
 			}
-			
+
 			if (isBlank(secondaryPhone)) {
 				return "Secondary Contact Phone is required";
 			}
-			
+
 			if (isBlank(secondaryEmail)) {
 				return "Secondary Contact Email is required";
 			}
-			
+
 			if (isBlank(services)) {
 				return "Services is required";
 			}
@@ -357,39 +368,16 @@ public class Application extends Controller {
 	public Result adminHome() {
 		return ok(admin.render(form(Login.class)));
 	}
-	
+
 	public Result userHome() {
 		return ok(user.render());
 	}
 
-	public Result userMaintenance() {
-		return ok(usermaint.render(form(Login.class)));
+	public Result addProfile() {
+		return ok(profile.render(form(ProfileRegister.class)));
 	}
 
-	public Result adminSearch() {
-		// NEED TO CORRECT THIS -- NEED NEW ROUTE/VIEW
-		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class), users));
-	}
-	
-	public Result getAllUsers() {
-		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class), users));
-	}
-	
-	public Result exportData() {
-		return ok(export.render(form(Login.class)));
-	}
-
-	public Result findUser() {
-		return ok(getuser.render(form(FindUser.class)));
-	}
-	
-	public Result openUser() {
-		return ok(openuser.render());
-	}
-
-	public static class FindUser {
+	public static class SaveProfile {
 
 		@Constraints.Required
 		public String email;
@@ -415,6 +403,140 @@ public class Application extends Controller {
 
 	}
 
+	public Result saveProfile() {
+		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+
+		if (profileEntry.hasErrors()) {
+			System.out.println("Save Profile - errors");
+			return badRequest(profile.render(profileEntry));
+		}
+		// Save the profile...
+		ProfileRegister profileForm = profileEntry.get();
+		System.out.println("Save Profile - good request");
+		Profile profile = new Profile();
+		profile.name = profileForm.name;
+		profile.address = profileForm.address;
+		profile.address1 = profileForm.address1;
+		profile.city = profileForm.city;
+		profile.state = profileForm.state;
+		profile.zip = profileForm.zip;
+		profile.primaryNameFirst = profileForm.primaryNameFirst;
+		profile.primaryNameLast = profileForm.primaryNameLast;
+		profile.primaryPhone = profileForm.primaryPhone;
+		profile.primaryEmail = profileForm.primaryEmail;
+		profile.secondaryNameFirst = profileForm.secondaryNameFirst;
+		profile.secondaryNameLast = profileForm.secondaryNameLast;
+		profile.secondaryPhone = profileForm.secondaryPhone;
+		profile.secondaryEmail = profileForm.secondaryEmail;
+		profile.services = profileForm.services;
+		profile.servicesOther = profileForm.servicesOther;
+		profile.dateCreation = new Date();
+		//String uniqueID = UUID.randomUUID().toString();
+		profile.save();
+
+		return ok(profilecreated.render());
+	}
+
+	public Result userMaintenance() {
+		return ok(usermaint.render(form(Login.class)));
+	}
+
+	public Result updateUser() {
+		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+
+		if (findUserForm.hasErrors()) {
+			System.out.println("Update User - errors");
+			return badRequest(showuser.render(findUserForm, "", "", ""));
+		}
+
+		// Find user and save changes...
+		System.out.println("Update User - good request");
+		// Get values from the form...
+		String email = findUserForm.get().email;
+		String name = findUserForm.get().fullname;
+		String approved = findUserForm.get().approved;
+		String role = findUserForm.get().role;
+
+		// Let's get the correct user...
+		User user = User.findByEmail(email);
+		user.fullname = name;
+		switch (role) {
+		case "user":
+			user.role = RoleType.USER;
+			break;
+		case "manager":
+			user.role = RoleType.MANAGER;
+			break;
+		case "admin":
+			user.role = RoleType.ADMIN;
+			break;
+		default:
+			user.role = RoleType.UNDEFINED;
+			break;
+		}
+		if (approved.equals("approved")) {
+			user.approved = "Y";
+		} else {
+			user.approved = "N";
+		}
+		// Save the user...
+		user.save();
+
+		return ok(saveduser.render());
+
+	}
+
+	public Result adminSearch() {
+		// NEED TO CORRECT THIS -- NEED NEW ROUTE/VIEW
+		List<User> users = User.find.all();
+		return ok(searchusers.render(form(Login.class), users));
+	}
+
+	public Result getAllUsers() {
+		List<User> users = User.find.all();
+		return ok(searchusers.render(form(Login.class), users));
+	}
+
+	public Result exportData() {
+		return ok(export.render(form(Login.class)));
+	}
+
+	public Result findUser() {
+		return ok(getuser.render(form(FindUser.class)));
+	}
+
+	public Result openUser() {
+		return ok(openuser.render());
+	}
+
+	public static class FindUser {
+
+		public String email;
+
+		public String fullname;
+
+		public String role;
+
+		public String approved;
+
+		public String validate() {
+
+			User user = User.findByEmail(email);
+			if (user != null) {
+				// Open user record...
+				return null;
+			} else {
+				// Display message...
+				return Messages.get("search.user.bademail");
+			}
+		}
+
+		private boolean isBlank(String input) {
+			return input == null || input.isEmpty() || input.trim().isEmpty();
+		}
+
+	}
+
 	public Result getUserByEmail() {
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
 
@@ -427,7 +549,7 @@ public class Application extends Controller {
 			String email = findUserForm.get().email;
 			User user = User.findByEmail(email);
 			String name = user.fullname;
-			//String role = user.role;
+			// String role = user.role;
 			RoleType role = user.role;
 			String roleToDisplay = role.toString();
 			return ok(showuser.render(findUserForm, email, name, roleToDisplay));

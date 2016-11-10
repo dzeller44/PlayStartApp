@@ -45,15 +45,15 @@ Seq[Any](format.raw/*1.99*/("""
 			<label class="title"><span class="required">*</span>User
 				Name:</label>
 			<div class="item-cont">
-				<input class="large" type="text" name="fullname" required="required" value="""),_display_(/*17.81*/userName),format.raw/*17.89*/("""
-					"""),format.raw/*18.6*/("""placeholder="Choose a user name..." /><span class="icon-place"></span>
+				<input class="large" type="text" name="fullname" required="required" 
+					placeholder="Choose a user name..." value="""),_display_(/*18.49*/userName),format.raw/*18.57*/(""" """),format.raw/*18.58*/("""/><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-input">
 			<label class="title">Email:</label>
 			<div class="item-cont">
-				<input class="large" type="email" name="email" readonly style="color: #dddddd;" value="""),_display_(/*24.92*/userEmail),format.raw/*24.101*/("""
-					"""),format.raw/*25.6*/("""placeholder="Enter your email..." /><span class="icon-place"></span>
+				<input class="large" type="email" name="email" readonly style="color: #dddddd;" 
+					placeholder="Enter your email..." value="""),_display_(/*25.47*/userEmail),format.raw/*25.56*/(""" """),format.raw/*25.57*/("""/><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-select">
@@ -82,7 +82,7 @@ Seq[Any](format.raw/*1.99*/("""
 		
 		<div class="element-checkbox">
 			<div class="column column1">
-				<label><input type="checkbox" name="approve[]"
+				<label><input type="checkbox" name="approved"
 					value="approve" /><span>Approve Emergency Manager Account</span></label>
 			</div>
 			<span class="clearfix"></span>
@@ -126,11 +126,11 @@ Seq[Any](format.raw/*1.99*/("""
 object showuser extends showuser_Scope0.showuser
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 07 11:00:36 MST 2016
+                  DATE: Tue Nov 08 15:03:53 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/showuser.scala.html
-                  HASH: 29e896291b56659ff9d85828ca0ac9d6f48c474b
-                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1706->691|1735->699|1769->706|2079->989|2110->998|2144->1005|2475->1309|2504->1317|2533->1318|2588->1347|2619->1369|2659->1371|2695->1380|2898->1553|2933->1561|2966->1566|2995->1567|3031->1576|3230->1748|3258->1749|3293->1757|3724->2162|3765->2194|3805->2196|3845->2208|3947->2283|3968->2295|4009->2315|4049->2327|4095->2343|4126->2347|4256->2450|4295->2468|4365->2511|4404->2529|4550->2645
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|48->17|48->17|49->18|55->24|55->24|56->25|65->34|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|92->61|92->61|92->61|93->62|94->63|94->63|94->63|95->64|96->65|97->66|99->68|99->68|100->69|100->69|108->77
+                  HASH: 93796f4cc36384ba9ecc88ca6251602a6ece9dd3
+                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1749->734|1778->742|1807->743|2122->1031|2152->1040|2181->1041|2478->1311|2507->1319|2536->1320|2591->1349|2622->1371|2662->1373|2698->1382|2901->1555|2936->1563|2969->1568|2998->1569|3034->1578|3233->1750|3261->1751|3296->1759|3726->2163|3767->2195|3807->2197|3847->2209|3949->2284|3970->2296|4011->2316|4051->2328|4097->2344|4128->2348|4258->2451|4297->2469|4367->2512|4406->2530|4552->2646
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|49->18|49->18|49->18|56->25|56->25|56->25|65->34|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|92->61|92->61|92->61|93->62|94->63|94->63|94->63|95->64|96->65|97->66|99->68|99->68|100->69|100->69|108->77
                   -- GENERATED --
               */
           

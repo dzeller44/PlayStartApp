@@ -16,6 +16,9 @@ POST   /auth                    controllers.Application.authenticate()
 # User pages...
 GET    /user                    controllers.Application.userHome()
 
+GET    /addprofile              controllers.Application.addProfile()
+POST   /addprofile              controllers.Application.saveProfile()
+
 # Emergency Manager pages...
 GET    /em                      controllers.Application.managerHome()
 
@@ -29,7 +32,7 @@ GET    /search                  controllers.Application.getAllUsers()
 GET    /finduser                controllers.Application.findUser()
 POST   /finduser                controllers.Application.getUserByEmail()
 
-GET    /updateuser              controllers.Application.findUser()
+GET    /updateuser              controllers.Application.updateUser()
 
 GET    /export                  controllers.Application.exportData()
 
