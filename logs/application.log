@@ -73,3 +73,10 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 2016-11-10 12:28:54,018 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-14 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
 2016-11-10 12:28:56,297 [WARN] from com.avaje.ebeaninternal.server.core.DefaultServer in application-akka.actor.default-dispatcher-14 - JMX beans for Ebean server [default] already registered. Will try unregister/registerEbean:server=default5,key=AutoFetch
 2016-11-10 12:28:56,595 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-14 - Application started (Dev)
+2016-11-10 12:36:25,543 [INFO] from application in application-akka.actor.default-dispatcher-7 - Shutting down connection pool.
+2016-11-10 12:36:25,662 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-10 12:36:25,666 [INFO] from application in application-akka.actor.default-dispatcher-7 - Creating Pool for datasource 'default'
+2016-11-10 12:36:25,684 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-7 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-10 12:36:28,800 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-7 - Application started (Dev)
+2016-11-10 12:38:03,113 [WARN] from play in application-akka.actor.default-dispatcher-2 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-10 12:39:09,721 [INFO] from application in pool-32-thread-3 - Shutting down connection pool.

@@ -167,6 +167,7 @@ public class Token extends Model {
         String subject = null;
         String message = null;
         String toMail = null;
+        String newURL = null;
 
         // Should use reverse routing here.
         String urlString = urlString = "http://" + externalServer + "/" + type.urlPath + "/" + token.token;
@@ -185,7 +186,10 @@ public class Token extends Model {
                 break;
             case admin:
                 subject = Messages.get("admin.newaccount.subject");
-                message = Messages.get("admin.newaccount.message", url.toString());
+                // Need to update the URL...
+                // Replace "admin" with "reset"...
+                newURL = url.toString().replace("/admin/", "/reset/");
+                message = Messages.get("admin.newaccount.message", newURL);
                 toMail = token.email; // == email parameter
                 break;
         }
