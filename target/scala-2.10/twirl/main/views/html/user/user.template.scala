@@ -89,7 +89,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object user extends user_Scope0.user
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 09 15:09:06 MST 2016
+                  DATE: Thu Nov 10 10:02:27 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/user/user.scala.html
                   HASH: 1ce83989be864615c22a1fceedd336cd176e035f
                   MATRIX: 830->1|843->7|882->9|910->11|1337->411|1352->417|1412->456|1649->666|1664->672|1725->712

@@ -449,15 +449,17 @@ public class Application extends Controller {
 		String name;
 		String approved;
 		String role;
-		User user;	
-		
+		User user;
+
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
-		
+
 		email = findUserForm.get().email;
 		name = findUserForm.get().fullname;
 		approved = findUserForm.get().approved;
 		role = findUserForm.get().role;
-
+		
+		Logger.debug("");
+		
 		if (findUserForm.hasErrors()) {
 			System.out.println("Update User - errors");
 			return badRequest(showuser.render(findUserForm, "", "", ""));
@@ -471,7 +473,8 @@ public class Application extends Controller {
 		approved = findUserForm.get().approved;
 		role = findUserForm.get().role;
 
-		// I know we have the user, but let's make sure we get the correct user...
+		// I know we have the user, but let's make sure we get the correct
+		// user...
 		user = User.findByEmail(email);
 		user.fullname = name;
 		switch (role) {
@@ -494,11 +497,10 @@ public class Application extends Controller {
 			} else {
 				user.approved = "N";
 			}
-		}
-		else {
+		} else {
 			user.approved = "N";
 		}
-		
+
 		// Save the user...
 		user.save();
 
@@ -672,11 +674,11 @@ public class Application extends Controller {
 		}
 
 	}
-	
+
 	public Result deleteUserConfirm(String email) {
-		return ok(deleteconfirm.render(email));	
+		return ok(deleteconfirm.render(email));
 	}
-	
+
 	public Result deleteUser(String email) {
 		// Locate the user record and delete...
 		User user = User.findByEmail(email);
@@ -687,13 +689,17 @@ public class Application extends Controller {
 			// Display message...
 
 		}
+
+		// Create record in deletedusers table
+		// Capture user and date/time
+		// Remove from user table...
 		
 		// Delete the user????
 		user.active = "N";
 		user.save();
 
-		return ok(deleteduser.render());	
-		
+		return ok(deleteduser.render());
+
 	}
 
 }
