@@ -61,8 +61,11 @@ admin.default.password=P@ssword!4
 admin.newaccount.subject=CO-Assist - New Admin Validate email
 admin.newaccount.message=You have been added as an Admin to CO-Assist.  Please change your password.  <br> Click on this link : {0} to change your password.
 admin.newaccount.msg.created=The new Admin has been created successfully.  An email has been sent to the email that was entered.
+admin.delete.account=The User Account has been successfully deleted.
 
 profile.newcreated=The new Business Profile has been created successfully.
+
+user.account.updated=The User Account has been updated.
 
 search.user.bademail=The user does not exist.
 

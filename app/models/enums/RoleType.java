@@ -50,4 +50,25 @@ public enum RoleType {
 	public String toString() {
 		return String.valueOf(value);
 	}
+	
+	public String getRoleTextName(RoleType role) {
+		String roleName;
+		
+		switch (role.toString()) {
+		case "1":
+			roleName = "user";
+			break;
+		case "2":
+			roleName = "manager";
+			break;
+		case "3":
+			roleName = "admin";
+			break;
+		default:
+			roleName = "undefined";
+			break;
+		}
+		
+		return roleName;
+	}
 }

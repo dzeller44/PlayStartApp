@@ -46,14 +46,14 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/addprofile">
 						<p>
-							<img src=""""),_display_(/*18.19*/routes/*18.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*18.64*/(""""> <b>Add Business Profile</b>
+							<img src=""""),_display_(/*18.19*/routes/*18.25*/.Assets.at("/img/icon_Add_Profile.png")),format.raw/*18.64*/(""""> <b>Add Business Profile</b>
 						</p> <span>Export Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/editprofile">
 						<p>
-							<img src=""""),_display_(/*25.19*/routes/*25.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*25.67*/(""""> <b>Edit Business Profile</b>
+							<img src=""""),_display_(/*25.19*/routes/*25.25*/.Assets.at("/img/icon_Edit_Profile.png")),format.raw/*25.65*/(""""> <b>Edit Business Profile</b>
 						</p> <span>Search Business Profiles...</span>
 					</a>
 				</div>
@@ -89,10 +89,10 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object user extends user_Scope0.user
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 08 15:03:53 MST 2016
+                  DATE: Wed Nov 09 15:09:06 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/user/user.scala.html
-                  HASH: 07dffd501ff8c5ae70ba545190978d03f235877c
-                  MATRIX: 830->1|843->7|882->9|910->11|1337->411|1352->417|1412->456|1649->666|1664->672|1727->714
+                  HASH: 1ce83989be864615c22a1fceedd336cd176e035f
+                  MATRIX: 830->1|843->7|882->9|910->11|1337->411|1352->417|1412->456|1649->666|1664->672|1725->712
                   LINES: 32->1|32->1|32->1|34->3|49->18|49->18|49->18|56->25|56->25|56->25
                   -- GENERATED --
               */

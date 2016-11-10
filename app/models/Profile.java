@@ -15,6 +15,7 @@ import java.util.Date;
  * @author zellerd
  *
  */
+@Entity
 public class Profile extends Model {
 
 	@Id

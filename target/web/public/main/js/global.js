@@ -23,3 +23,13 @@ function isLoggedIn() {
 	window.alert("isLoggedOn() = " + returnValue);
 	return returnValue;
 }
+
+function deleteUser(email) {
+
+	//var email = document.getElementById("email").value;
+
+	//alert("In delete user - email = " + email);
+
+	window.location.href = '/deleteuser/' + email;
+
+}

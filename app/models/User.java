@@ -51,6 +51,8 @@ public class User extends Model {
     public RoleType role;
     
     public String approved;
+    
+    public String active;
 
     // -- Queries (long id, user.class)
     public static Model.Finder<Long, User> find = new Model.Finder<Long, User>(Long.class, User.class);

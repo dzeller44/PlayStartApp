@@ -32,7 +32,7 @@ GET    /search                  controllers.Application.getAllUsers()
 GET    /finduser                controllers.Application.findUser()
 POST   /finduser                controllers.Application.getUserByEmail()
 
-GET    /updateuser              controllers.Application.updateUser()
+POST   /updateuser              controllers.Application.updateUser()
 
 GET    /export                  controllers.Application.exportData()
 
@@ -41,7 +41,10 @@ GET    /openuser                controllers.Application.openUser()
 GET    /addadmin                controllers.account.Signup.createAdmin()
 POST   /addadmin                controllers.account.Signup.saveAdmin()
 
-GET		/finduserurl			controllers.Application.getUserByUrl(email: String)
+GET    /finduserurl             controllers.Application.getUserByUrl(email: String)
+
+GET    /deleteuser/:email       controllers.Application.deleteUserConfirm(email: String)
+POST   /deleteuser/:email       controllers.Application.deleteUser(email: String)
 
 
 # User settings...

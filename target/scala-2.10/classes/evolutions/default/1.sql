@@ -3,6 +3,28 @@
 
 # --- !Ups
 
+create table profile (
+  id                        bigint auto_increment not null,
+  name                      varchar(255),
+  address                   varchar(255),
+  address1                  varchar(255),
+  city                      varchar(255),
+  state                     varchar(255),
+  zip                       varchar(255),
+  primary_name_first        varchar(255),
+  primary_name_last         varchar(255),
+  primary_phone             varchar(255),
+  primary_email             varchar(255),
+  secondary_name_first      varchar(255),
+  secondary_name_last       varchar(255),
+  secondary_phone           varchar(255),
+  secondary_email           varchar(255),
+  services                  varchar(255),
+  services_other            varchar(255),
+  date_creation             datetime(6),
+  constraint pk_profile primary key (id))
+;
+
 create table token (
   token                     varchar(255) not null,
   user_id                   bigint,
@@ -23,6 +45,7 @@ create table user (
   validated                 tinyint(1) default 0,
   role                      integer,
   approved                  varchar(255),
+  active                    varchar(255),
   constraint ck_user_role check (role in ('0','2','3','1')),
   constraint uq_user_email unique (email),
   constraint uq_user_fullname unique (fullname),
@@ -35,6 +58,8 @@ create table user (
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
+
+drop table profile;
 
 drop table token;
 

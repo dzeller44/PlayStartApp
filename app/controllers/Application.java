@@ -22,8 +22,11 @@ import views.html.admin.admin;
 import views.html.admin.usermaint;
 import views.html.admin.getuser;
 import views.html.admin.showuser;
+import views.html.admin.displayuser;
 import views.html.admin.openuser;
 import views.html.admin.saveduser;
+import views.html.admin.deleteconfirm;
+import views.html.admin.deleteduser;
 import views.html.user.user;
 
 import com.avaje.ebean.Ebean;
@@ -431,7 +434,7 @@ public class Application extends Controller {
 		profile.services = profileForm.services;
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
-		//String uniqueID = UUID.randomUUID().toString();
+		// String uniqueID = UUID.randomUUID().toString();
 		profile.save();
 
 		return ok(profilecreated.render());
@@ -442,7 +445,18 @@ public class Application extends Controller {
 	}
 
 	public Result updateUser() {
+		String email;
+		String name;
+		String approved;
+		String role;
+		User user;	
+		
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+		
+		email = findUserForm.get().email;
+		name = findUserForm.get().fullname;
+		approved = findUserForm.get().approved;
+		role = findUserForm.get().role;
 
 		if (findUserForm.hasErrors()) {
 			System.out.println("Update User - errors");
@@ -452,13 +466,13 @@ public class Application extends Controller {
 		// Find user and save changes...
 		System.out.println("Update User - good request");
 		// Get values from the form...
-		String email = findUserForm.get().email;
-		String name = findUserForm.get().fullname;
-		String approved = findUserForm.get().approved;
-		String role = findUserForm.get().role;
+		email = findUserForm.get().email;
+		name = findUserForm.get().fullname;
+		approved = findUserForm.get().approved;
+		role = findUserForm.get().role;
 
-		// Let's get the correct user...
-		User user = User.findByEmail(email);
+		// I know we have the user, but let's make sure we get the correct user...
+		user = User.findByEmail(email);
 		user.fullname = name;
 		switch (role) {
 		case "user":
@@ -474,11 +488,17 @@ public class Application extends Controller {
 			user.role = RoleType.UNDEFINED;
 			break;
 		}
-		if (approved.equals("approved")) {
-			user.approved = "Y";
-		} else {
+		if (approved != null) {
+			if (approved.equals("approved")) {
+				user.approved = "Y";
+			} else {
+				user.approved = "N";
+			}
+		}
+		else {
 			user.approved = "N";
 		}
+		
 		// Save the user...
 		user.save();
 
@@ -549,15 +569,90 @@ public class Application extends Controller {
 			String email = findUserForm.get().email;
 			User user = User.findByEmail(email);
 			String name = user.fullname;
-			// String role = user.role;
 			RoleType role = user.role;
-			String roleToDisplay = role.toString();
+			String roleToDisplay = role.getRoleTextName(role);
 			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
-
 		}
 
 	}
-	
+
+	public Result displayUser(String actionType) {
+		return ok(getuser.render(form(FindUser.class)));
+	}
+
+	public Result processUserRequest(String actionType) {
+		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+
+		String email;
+		String name;
+		String approved;
+		String roleString;
+		User user;
+		RoleType role;
+
+		switch (actionType) {
+		case "find":
+			if (findUserForm.hasErrors()) {
+				System.out.println("Find User - errors");
+				return badRequest(getuser.render(findUserForm));
+			}
+			// Find user and display...
+			System.out.println("Find User - good request");
+			email = findUserForm.get().email;
+			user = User.findByEmail(email);
+			name = user.fullname;
+			role = user.role;
+			roleString = role.toString();
+			return ok(showuser.render(findUserForm, email, name, roleString));
+		// break;
+		case "save":
+			if (findUserForm.hasErrors()) {
+				System.out.println("Update User - errors");
+				return badRequest(showuser.render(findUserForm, "", "", ""));
+			}
+
+			// Find user and save changes...
+			System.out.println("Update User - good request");
+			// Get values from the form...
+			email = findUserForm.get().email;
+			name = findUserForm.get().fullname;
+			approved = findUserForm.get().approved;
+			roleString = findUserForm.get().role;
+
+			// Let's get the correct user...
+			user = User.findByEmail(email);
+			user.fullname = name;
+			switch (roleString) {
+			case "user":
+				user.role = RoleType.USER;
+				break;
+			case "manager":
+				user.role = RoleType.MANAGER;
+				break;
+			case "admin":
+				user.role = RoleType.ADMIN;
+				break;
+			default:
+				user.role = RoleType.UNDEFINED;
+				break;
+			}
+			if (approved.equals("approved")) {
+				user.approved = "Y";
+			} else {
+				user.approved = "N";
+			}
+			// Save the user...
+			user.save();
+
+			return ok(saveduser.render());
+		// break;
+		default:
+			return badRequest(getuser.render(findUserForm));
+		// break;
+		}
+
+	}
+
 	public Result getUserByUrl(String email) {
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
 
@@ -569,7 +664,7 @@ public class Application extends Controller {
 			System.out.println("Find User - good request");
 			User user = User.findByEmail(email);
 			String name = user.fullname;
-			//String role = user.role;
+			// String role = user.role;
 			RoleType role = user.role;
 			String roleToDisplay = role.toString();
 			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
@@ -578,5 +673,27 @@ public class Application extends Controller {
 
 	}
 	
+	public Result deleteUserConfirm(String email) {
+		return ok(deleteconfirm.render(email));	
+	}
+	
+	public Result deleteUser(String email) {
+		// Locate the user record and delete...
+		User user = User.findByEmail(email);
+		if (user != null) {
+			// Open user record...
+
+		} else {
+			// Display message...
+
+		}
+		
+		// Delete the user????
+		user.active = "N";
+		user.save();
+
+		return ok(deleteduser.render());	
+		
+	}
 
 }
