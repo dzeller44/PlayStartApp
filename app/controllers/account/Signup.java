@@ -97,6 +97,7 @@ public class Signup extends Controller {
 			user.fullname = register.fullname;
 			user.passwordHash = Hash.createPassword(register.inputPassword);
 			user.confirmationToken = UUID.randomUUID().toString();
+			user.userkey = user.createUserKey();
 			user.dateCreation = new Date();
 			user.active = "Y";
 			// Custom fields...
@@ -163,6 +164,7 @@ public class Signup extends Controller {
 			user.fullname = admin.fullname;
 			String checkPassword = Messages.get("admin.default.password");
 			user.passwordHash = Hash.createPassword(checkPassword);
+			user.userkey = user.createUserKey();
 			// user.confirmationToken = UUID.randomUUID().toString();
 			// user.confirmationToken = null;
 			// user.validated = true;

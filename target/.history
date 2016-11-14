@@ -44,3 +44,11 @@ compile
 run
 clean
 run
+reload
+clean
+compile
+run
+reload
+clean
+compile
+run

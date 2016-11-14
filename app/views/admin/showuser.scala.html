@@ -1,8 +1,5 @@
 @(findUserForm: Form[Application.FindUser], userEmail: String, userName: String, userRole: String)
 
-
-
-
 @main(null) {
 
 <section id="signup">
@@ -68,7 +65,6 @@
    			}
 		</div>
 		<div class="submit">
-			<!--<a href="javascript:document.forms['showuser'].submit();" class="buttonCustom" style="color: #FFFFFF;">@Messages("submit")</a> -->
 			<input type="submit" value=@Messages("submit") />
 			<a href="/admin" class="buttonCancel">@Messages("goback")</a>
 		</div>

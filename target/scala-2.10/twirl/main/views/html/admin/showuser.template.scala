@@ -31,16 +31,13 @@ class showuser extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Fo
 
 Seq[Any](format.raw/*1.99*/("""
 
+"""),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 
-
-
-"""),_display_(/*6.2*/main(null)/*6.12*/ {_display_(Seq[Any](format.raw/*6.14*/("""
-
-"""),format.raw/*8.1*/("""<section id="signup">
+"""),format.raw/*5.1*/("""<section id="signup">
 	<!-- Start Formoid form-->
 	<form id="showuser" class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post" action=""""),_display_(/*12.26*/routes/*12.32*/.Application.updateUser()),format.raw/*12.57*/("""">
+		method="post" action=""""),_display_(/*9.26*/routes/*9.32*/.Application.updateUser()),format.raw/*9.57*/("""">
 		<div class="title">
 			<h2>User Maintenance</h2>
 		</div>
@@ -49,14 +46,14 @@ Seq[Any](format.raw/*1.99*/("""
 				Name:</label>
 			<div class="item-cont">
 				<input class="large" type="text" name="fullname" required="required" 
-					placeholder="Choose a user name..." value="""),_display_(/*21.49*/userName),format.raw/*21.57*/(""" """),format.raw/*21.58*/("""/><span class="icon-place"></span>
+					placeholder="Choose a user name..." value="""),_display_(/*18.49*/userName),format.raw/*18.57*/(""" """),format.raw/*18.58*/("""/><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-input">
 			<label class="title">Email:</label>
 			<div class="item-cont">
 				<input class="large" type="email" name="email" readonly style="color: #dddddd;" 
-					placeholder="Enter your email..." value="""),_display_(/*28.47*/userEmail),format.raw/*28.56*/(""" """),format.raw/*28.57*/("""/><span class="icon-place"></span>
+					placeholder="Enter your email..." value="""),_display_(/*25.47*/userEmail),format.raw/*25.56*/(""" """),format.raw/*25.57*/("""/><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-select">
@@ -65,18 +62,18 @@ Seq[Any](format.raw/*1.99*/("""
 			<div class="item-cont">
 				<div class="large">
 					<span>
-						<select name="role" value="""),_display_(/*37.34*/userRole),format.raw/*37.42*/(""" """),format.raw/*37.43*/("""required="required">
-						"""),_display_(/*38.8*/if(userRole == "user")/*38.30*/ {_display_(Seq[Any](format.raw/*38.32*/("""
-							"""),format.raw/*39.8*/("""<option value="none">Select Role...</option>
+						<select name="role" value="""),_display_(/*34.34*/userRole),format.raw/*34.42*/(""" """),format.raw/*34.43*/("""required="required">
+						"""),_display_(/*35.8*/if(userRole == "user")/*35.30*/ {_display_(Seq[Any](format.raw/*35.32*/("""
+							"""),format.raw/*36.8*/("""<option value="none">Select Role...</option>
 							<option value="user" selected>Business User</option>
 							<option value="manager">Emergency Manager</option>
-						""")))}),format.raw/*42.8*/("""
-						"""),format.raw/*43.7*/("""else """),format.raw/*43.12*/("""{"""),format.raw/*43.13*/("""
-							"""),format.raw/*44.8*/("""<option value="none">Select Role...</option>
+						""")))}),format.raw/*39.8*/("""
+						"""),format.raw/*40.7*/("""else """),format.raw/*40.12*/("""{"""),format.raw/*40.13*/("""
+							"""),format.raw/*41.8*/("""<option value="none">Select Role...</option>
 							<option value="user">Business User</option>
 							<option value="manager" selected>Emergency Manager</option>
-						"""),format.raw/*47.7*/("""}"""),format.raw/*47.8*/("""
-						"""),format.raw/*48.7*/("""</select>
+						"""),format.raw/*44.7*/("""}"""),format.raw/*44.8*/("""
+						"""),format.raw/*45.7*/("""</select>
 						<i></i><span class="icon-place"></span>
 					</span>
 				</div>
@@ -92,19 +89,18 @@ Seq[Any](format.raw/*1.99*/("""
 		</div>
 		
 		<div class="element-input">
-		    """),_display_(/*64.8*/if(findUserForm.hasGlobalErrors)/*64.40*/ {_display_(Seq[Any](format.raw/*64.42*/("""
-        		"""),format.raw/*65.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-            		"""),_display_(/*66.16*/findUserForm/*66.28*/.globalError.message),format.raw/*66.48*/("""
-        		"""),format.raw/*67.11*/("""</span>
-   			""")))}),format.raw/*68.8*/("""
-		"""),format.raw/*69.3*/("""</div>
+		    """),_display_(/*61.8*/if(findUserForm.hasGlobalErrors)/*61.40*/ {_display_(Seq[Any](format.raw/*61.42*/("""
+        		"""),format.raw/*62.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*63.16*/findUserForm/*63.28*/.globalError.message),format.raw/*63.48*/("""
+        		"""),format.raw/*64.11*/("""</span>
+   			""")))}),format.raw/*65.8*/("""
+		"""),format.raw/*66.3*/("""</div>
 		<div class="submit">
-			<!--<a href="javascript:document.forms['showuser'].submit();" class="buttonCustom" style="color: #FFFFFF;">"""),_display_(/*71.112*/Messages("submit")),format.raw/*71.130*/("""</a> -->
-			<input type="submit" value="""),_display_(/*72.32*/Messages("submit")),format.raw/*72.50*/(""" """),format.raw/*72.51*/("""/>
-			<a href="/admin" class="buttonCancel">"""),_display_(/*73.43*/Messages("goback")),format.raw/*73.61*/("""</a>
+			<input type="submit" value="""),_display_(/*68.32*/Messages("submit")),format.raw/*68.50*/(""" """),format.raw/*68.51*/("""/>
+			<a href="/admin" class="buttonCancel">"""),_display_(/*69.43*/Messages("goback")),format.raw/*69.61*/("""</a>
 		</div>
 		<div class="submit">
-			<a href="javascript:deleteUser('"""),_display_(/*76.37*/userEmail),format.raw/*76.46*/("""')" class="buttonDelete">Delete</a>
+			<a href="javascript:deleteUser('"""),_display_(/*72.37*/userEmail),format.raw/*72.46*/("""')" class="buttonDelete">Delete</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -112,7 +108,7 @@ Seq[Any](format.raw/*1.99*/("""
 
 </section>
 
-""")))}),format.raw/*84.2*/("""
+""")))}),format.raw/*80.2*/("""
 """))
       }
     }
@@ -133,11 +129,11 @@ Seq[Any](format.raw/*1.99*/("""
 object showuser extends showuser_Scope0.showuser
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 09 15:12:52 MST 2016
+                  DATE: Thu Nov 10 10:12:34 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/showuser.scala.html
-                  HASH: 9708ccc0d876302d4797e6c66cfb82d65e614cb9
-                  MATRIX: 798->1|990->98|1026->109|1044->119|1083->121|1113->125|1441->426|1456->432|1502->457|1858->786|1887->794|1916->795|2231->1083|2261->1092|2290->1093|2587->1363|2616->1371|2645->1372|2700->1401|2731->1423|2771->1425|2807->1434|3010->1607|3045->1615|3078->1620|3107->1621|3143->1630|3342->1802|3370->1803|3405->1811|3836->2216|3877->2248|3917->2250|3957->2262|4059->2337|4080->2349|4121->2369|4161->2381|4207->2397|4238->2401|4409->2544|4449->2562|4517->2603|4556->2621|4585->2622|4658->2668|4697->2686|4800->2762|4830->2771|5007->2918
-                  LINES: 27->1|32->1|37->6|37->6|37->6|39->8|43->12|43->12|43->12|52->21|52->21|52->21|59->28|59->28|59->28|68->37|68->37|68->37|69->38|69->38|69->38|70->39|73->42|74->43|74->43|74->43|75->44|78->47|78->47|79->48|95->64|95->64|95->64|96->65|97->66|97->66|97->66|98->67|99->68|100->69|102->71|102->71|103->72|103->72|103->72|104->73|104->73|107->76|107->76|115->84
+                  HASH: 1f4364c3c50dcf3275b926777d8447a4b0e40086
+                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1434->420|1448->426|1493->451|1849->780|1878->788|1907->789|2222->1077|2252->1086|2281->1087|2578->1357|2607->1365|2636->1366|2691->1395|2722->1417|2762->1419|2798->1428|3001->1601|3036->1609|3069->1614|3098->1615|3134->1624|3333->1796|3361->1797|3396->1805|3827->2210|3868->2242|3908->2244|3948->2256|4050->2331|4071->2343|4112->2363|4152->2375|4198->2391|4229->2395|4319->2458|4358->2476|4387->2477|4460->2523|4499->2541|4602->2617|4632->2626|4809->2773
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|49->18|49->18|49->18|56->25|56->25|56->25|65->34|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|92->61|92->61|92->61|93->62|94->63|94->63|94->63|95->64|96->65|97->66|99->68|99->68|99->68|100->69|100->69|103->72|103->72|111->80
                   -- GENERATED --
               */
           
