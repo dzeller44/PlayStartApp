@@ -437,7 +437,7 @@ public class Application extends Controller {
 		profile.services = profileForm.services;
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
-		// String uniqueID = UUID.randomUUID().toString();
+		profile.profilekey = profile.createProfileKey();
 		profile.save();
 
 		return ok(profilecreated.render());
@@ -455,7 +455,8 @@ public class Application extends Controller {
 		User user;
 
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
-
+		
+		// Get values from the form...
 		email = findUserForm.get().email;
 		name = findUserForm.get().fullname;
 		approved = findUserForm.get().approved;
@@ -470,11 +471,7 @@ public class Application extends Controller {
 
 		// Find user and save changes...
 		System.out.println("Update User - good request");
-		// Get values from the form...
-		email = findUserForm.get().email;
-		name = findUserForm.get().fullname;
-		approved = findUserForm.get().approved;
-		role = findUserForm.get().role;
+		
 
 		// I know we have the user, but let's make sure we get the correct
 		// user...
@@ -700,7 +697,7 @@ public class Application extends Controller {
 		RemovedUser removedUser = new RemovedUser();
 
 		// Copy the record over...
-		removedUser.email = user.email;
+		removedUser.email = user.getEmail();;
 		removedUser.fullname = user.fullname;
 		removedUser.passwordHash = user.passwordHash;
 		removedUser.confirmationToken = user.confirmationToken;

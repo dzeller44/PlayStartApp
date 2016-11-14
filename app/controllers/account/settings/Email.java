@@ -50,7 +50,7 @@ public class Email extends Controller {
     public Result index() {
         User user = User.findByEmail(request().username());
         Form<AskForm> askForm = form(AskForm.class);
-        askForm = askForm.fill(new AskForm(user.email));
+        askForm = askForm.fill(new AskForm(user.getEmail()));
         return ok(email.render(User.findByEmail(request().username()), askForm));
     }
 
@@ -106,12 +106,12 @@ public class Email extends Controller {
             return badRequest(emailValidate.render(user));
         }
 
-        user.email = resetToken.email;
+        user.setEmail(resetToken.email);
         user.save();
 
         session("email", resetToken.email);
 
-        flash("success", Messages.get("account.settings.email.successful", user.email));
+        flash("success", Messages.get("account.settings.email.successful", user.getEmail()));
 
         return ok(emailValidate.render(user));
     }

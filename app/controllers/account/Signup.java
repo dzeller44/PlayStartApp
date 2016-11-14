@@ -93,7 +93,7 @@ public class Signup extends Controller {
 
 		try {
 			User user = new User();
-			user.email = register.email;
+			user.setEmail(register.email);
 			user.fullname = register.fullname;
 			user.passwordHash = Hash.createPassword(register.inputPassword);
 			user.confirmationToken = UUID.randomUUID().toString();
@@ -127,7 +127,7 @@ public class Signup extends Controller {
 				//Replace with admin email, either shared inbox or database lookup
 				String admin = new String("admin@test.com");
 				
-				sendMailAdminConfirm(admin, user.email);
+				sendMailAdminConfirm(admin, user.getEmail());
 				
 				return ok(approval.render());
 			} else {
@@ -160,7 +160,7 @@ public class Signup extends Controller {
 
 		try {
 			User user = new User();
-			user.email = admin.email;
+			user.setEmail(admin.email);
 			user.fullname = admin.fullname;
 			String checkPassword = Messages.get("admin.default.password");
 			user.passwordHash = Hash.createPassword(checkPassword);
@@ -241,7 +241,7 @@ public class Signup extends Controller {
 										// exception if bad.
 		String message = Messages.get("mail.confirm.message", url.toString());
 
-		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.email);
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
 	}
@@ -310,7 +310,7 @@ public class Signup extends Controller {
 	private void sendMailConfirmation(User user) throws EmailException {
 		String subject = Messages.get("mail.welcome.subject");
 		String message = Messages.get("mail.welcome.message");
-		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.email);
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
 	}

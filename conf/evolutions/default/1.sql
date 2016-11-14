@@ -22,6 +22,7 @@ create table profile (
   services                  varchar(255),
   services_other            varchar(255),
   date_creation             datetime(6),
+  profilekey                varchar(255),
   userkey                   varchar(255),
   constraint pk_profile primary key (id))
 ;
@@ -44,6 +45,15 @@ create table removed_user (
   constraint uq_removed_user_email unique (email),
   constraint uq_removed_user_fullname unique (fullname),
   constraint pk_removed_user primary key (id))
+;
+
+create table session (
+  id                        integer auto_increment not null,
+  hash                      varchar(255),
+  user_id                   integer,
+  expiration_date           datetime(6),
+  data                      varchar(255),
+  constraint pk_session primary key (id))
 ;
 
 create table token (
@@ -84,6 +94,8 @@ SET FOREIGN_KEY_CHECKS=0;
 drop table profile;
 
 drop table removed_user;
+
+drop table session;
 
 drop table token;
 

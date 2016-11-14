@@ -19,10 +19,10 @@
 				@for(user <- userList
 				if user.approved == "N"){
 				<tr>
-				<td><a href="/finduserurl?email=@user.email">@user.fullname</a></td>
-				<td><a href="/finduserurl?email=@user.email">@user.email</a></td>
-				<td><a href="/finduserurl?email=@user.email">@user.role</a></td>
-				<td><a href="/finduserurl?email=@user.email">@user.approved</a></td>
+				<td><a href="/finduserurl?email=@user.getEmail()">@user.fullname</a></td>
+				<td><a href="/finduserurl?email=@user.getEmail()">@user.getEmail()</a></td>
+				<td><a href="/finduserurl?email=@user.getEmail()">@user.role</a></td>
+				<td><a href="/finduserurl?email=@user.getEmail()">@user.approved</a></td>
 				}
 			</tbody>
 		</table>
@@ -44,9 +44,9 @@
 			<tbody>
 				@for(user <- userList) {
 					<tr>
-						<td><a href="/finduserurl?email=@user.email">@user.fullname</a></td>
-						<td><a href="/finduserurl?email=@user.email">@user.email</a></td>
-						<td><a href="/finduserurl?email=@user.email">@user.role</a></td>
+						<td><a href="/finduserurl?email=@user.getEmail()">@user.fullname</a></td>
+						<td><a href="/finduserurl?email=@user.getEmail()">@user.getEmail()</a></td>
+						<td><a href="/finduserurl?email=@user.getEmail()">@user.role</a></td>
 					</tr>
 				} 
 			</tbody>

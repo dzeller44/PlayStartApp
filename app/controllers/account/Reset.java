@@ -227,7 +227,7 @@ public class Reset extends Controller {
 	private void sendPasswordChanged(User user) throws EmailException {
 		String subject = Messages.get("mail.reset.confirm.subject");
 		String message = Messages.get("mail.reset.confirm.message");
-		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.email);
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
 	}
