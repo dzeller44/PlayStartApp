@@ -56,7 +56,7 @@ Seq[Any](format.raw/*1.14*/("""
 object emailValidate extends emailValidate_Scope0.emailValidate
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 14 11:44:32 MST 2016
+                  DATE: Mon Nov 14 14:24:52 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/settings/emailValidate.scala.html
                   HASH: 084cdd80a9c59027f365ab55afd6c5bf869dc1e3
                   MATRIX: 776->1|898->13|926->32|953->34|965->39|1007->73|1046->75|1078->82|1106->90

@@ -20,9 +20,9 @@ public class Service extends Model {
 	@Constraints.Required
 	public String name;
 
-	public String abbr;
+	public String shortname;
 
-	public String desc;	
+	public String comment;	
 
     // -- Queries (long id, profile.class)
     public static Model.Finder<Long, Service> find = new Model.Finder<Long, Service>(Long.class, Service.class);

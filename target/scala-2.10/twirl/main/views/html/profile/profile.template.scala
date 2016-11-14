@@ -187,7 +187,7 @@ Seq[Any](format.raw/*1.50*/("""
 object profile extends profile_Scope0.profile
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 14 14:03:15 MST 2016
+                  DATE: Mon Nov 14 14:24:53 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/profile.scala.html
                   HASH: b03652590f23310d8ac248b805efbfa0e4a229ed
                   MATRIX: 784->1|927->49|957->54|975->64|1014->66|1042->68|3569->2567|3598->2568|3628->2570|3657->2571|4901->3787|4930->3788|4960->3790|4989->3791|7534->6309|7575->6340|7616->6342|7649->6347|7740->6411|7761->6422|7803->6442|7836->6447|7880->6460|7912->6464|8057->6581|8097->6599

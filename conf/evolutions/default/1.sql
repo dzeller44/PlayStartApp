@@ -47,6 +47,14 @@ create table removed_user (
   constraint pk_removed_user primary key (id))
 ;
 
+create table service (
+  id                        bigint auto_increment not null,
+  name                      varchar(255),
+  shortname                 varchar(255),
+  comment                   varchar(255),
+  constraint pk_service primary key (id))
+;
+
 create table session (
   id                        integer auto_increment not null,
   hash                      varchar(255),
@@ -94,6 +102,8 @@ SET FOREIGN_KEY_CHECKS=0;
 drop table profile;
 
 drop table removed_user;
+
+drop table service;
 
 drop table session;
 
