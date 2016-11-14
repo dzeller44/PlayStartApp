@@ -3,6 +3,7 @@ package controllers;
 import models.User;
 import models.Profile;
 import models.RemovedUser;
+import models.Service;
 import models.enums.RoleType;
 import models.utils.AppException;
 import models.utils.Hash;
@@ -36,6 +37,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -380,8 +382,38 @@ public class Application extends Controller {
 	}
 
 	public Result addProfile() {
+		List<Service> services = Service.find.all();
+		//return ok(profile.render(form(ProfileRegister.class), allServices));
 		return ok(profile.render(form(ProfileRegister.class)));
+		/*
+		 * 					@for(service <- servicesList) {
+    <input type='checkbox' name='servicesThis' value=@service>@service <br>
+}
+		 */
 	}
+	
+	public static List<String> servicesList() {
+		
+		List<String> services = new ArrayList<String>();
+		services.add("Water Bottled");
+		services.add("Water Bulk");
+		services.add("Sanitation/Toilet/Sink");
+		services.add("Dumpsters");
+		services.add("Showers");
+		services.add("Generators");
+		services.add("Pumps");
+		services.add("Heavy Equipment");
+		services.add("Fuel");
+		services.add("Sandbags");
+		services.add("Temporary Facilities");
+		services.add("Professional Services");
+		services.add("Other: (Please List)");
+		
+		return services;
+		
+	}
+
+
 
 	public static class SaveProfile {
 
@@ -437,7 +469,7 @@ public class Application extends Controller {
 		profile.services = profileForm.services;
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
-		// String uniqueID = UUID.randomUUID().toString();
+		profile.profilekey = profile.createProfileKey();
 		profile.save();
 
 		return ok(profilecreated.render());
@@ -455,7 +487,8 @@ public class Application extends Controller {
 		User user;
 
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
-
+		
+		// Get values from the form...
 		email = findUserForm.get().email;
 		name = findUserForm.get().fullname;
 		approved = findUserForm.get().approved;
@@ -470,11 +503,7 @@ public class Application extends Controller {
 
 		// Find user and save changes...
 		System.out.println("Update User - good request");
-		// Get values from the form...
-		email = findUserForm.get().email;
-		name = findUserForm.get().fullname;
-		approved = findUserForm.get().approved;
-		role = findUserForm.get().role;
+		
 
 		// I know we have the user, but let's make sure we get the correct
 		// user...
@@ -700,7 +729,7 @@ public class Application extends Controller {
 		RemovedUser removedUser = new RemovedUser();
 
 		// Copy the record over...
-		removedUser.email = user.email;
+		removedUser.email = user.getEmail();;
 		removedUser.fullname = user.fullname;
 		removedUser.passwordHash = user.passwordHash;
 		removedUser.confirmationToken = user.confirmationToken;

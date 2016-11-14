@@ -108,7 +108,7 @@ public class Token extends Model {
     private Token getNewToken(User user, TypeToken type, String email) {
         Token token = new Token();
         token.token = UUID.randomUUID().toString();
-        token.userId = user.id;
+        token.userId = user.getId();
         token.type = type;
         token.email = email;
         token.dateCreation = new Date();
@@ -124,7 +124,7 @@ public class Token extends Model {
      */
     public void sendMailResetPassword(User user, MailerClient mc) throws MalformedURLException {
     	// Need to send the email?????
-    	String email = user.email;
+    	String email = user.getEmail();
         sendMail(user, TypeToken.password, email, mc);
         //sendMail(user, TypeToken.password, null, mc);
     }
@@ -136,7 +136,7 @@ public class Token extends Model {
      * @throws java.net.MalformedURLException if token is wrong.
      */
     public void sendNewAdminMail(User user, MailerClient mc) throws MalformedURLException {
-    	String email = user.email;
+    	String email = user.getEmail();
         sendMail(user, TypeToken.admin, email, mc);
     }
 
@@ -177,7 +177,7 @@ public class Token extends Model {
             case password:
                 subject = Messages.get("mail.reset.ask.subject");
                 message = Messages.get("mail.reset.ask.message", url.toString());
-                toMail = user.email;
+                toMail = user.getEmail();
                 break;
             case email:
                 subject = Messages.get("mail.change.ask.subject");
