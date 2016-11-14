@@ -3,6 +3,7 @@ package controllers;
 import models.User;
 import models.Profile;
 import models.RemovedUser;
+import models.Service;
 import models.enums.RoleType;
 import models.utils.AppException;
 import models.utils.Hash;
@@ -381,7 +382,7 @@ public class Application extends Controller {
 	}
 
 	public Result addProfile() {
-		List<String> allServices = servicesList();
+		List<Service> services = Service.find.all();
 		//return ok(profile.render(form(ProfileRegister.class), allServices));
 		return ok(profile.render(form(ProfileRegister.class)));
 		/*

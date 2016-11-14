@@ -1,20 +1,16 @@
 package models;
 
-import models.utils.AppException;
-import models.utils.Hash;
-import play.Logger;
-import play.data.format.Formats;
-import play.data.validation.Constraints;
-import com.avaje.ebean.Model;
+import java.util.Date;
+import java.util.UUID;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import com.avaje.ebean.Model;
+
+import play.Logger;
+import play.data.format.Formats;
+import play.data.validation.Constraints;
 
 /**
  * @author zellerd
