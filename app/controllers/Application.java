@@ -36,6 +36,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -380,8 +381,38 @@ public class Application extends Controller {
 	}
 
 	public Result addProfile() {
+		List<String> allServices = servicesList();
+		//return ok(profile.render(form(ProfileRegister.class), allServices));
 		return ok(profile.render(form(ProfileRegister.class)));
+		/*
+		 * 					@for(service <- servicesList) {
+    <input type='checkbox' name='servicesThis' value=@service>@service <br>
+}
+		 */
 	}
+	
+	public static List<String> servicesList() {
+		
+		List<String> services = new ArrayList<String>();
+		services.add("Water Bottled");
+		services.add("Water Bulk");
+		services.add("Sanitation/Toilet/Sink");
+		services.add("Dumpsters");
+		services.add("Showers");
+		services.add("Generators");
+		services.add("Pumps");
+		services.add("Heavy Equipment");
+		services.add("Fuel");
+		services.add("Sandbags");
+		services.add("Temporary Facilities");
+		services.add("Professional Services");
+		services.add("Other: (Please List)");
+		
+		return services;
+		
+	}
+
+
 
 	public static class SaveProfile {
 
