@@ -21,15 +21,15 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Form[Application.ProfileRegister],play.twirl.api.HtmlFormat.Appendable] {
+class profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Form[Application.ProfileRegister],java.util.List[Service],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(profileForm: Form[Application.ProfileRegister]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.50*/("""
+Seq[Any](format.raw/*1.89*/("""
 
 """),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 """),format.raw/*4.1*/("""<section id="profileMain">
@@ -142,7 +142,16 @@ Seq[Any](format.raw/*1.50*/("""
 					><span>Professional Services</span></label> <label><input
 					type="checkbox" name="services" value="other"
 					><span>Other (Please List)</span></label>
-			</div>
+					
+								"""),_display_(/*115.10*/for(service <- servicesList) yield /*115.38*/ {_display_(Seq[Any](format.raw/*115.40*/("""
+    			"""),format.raw/*116.8*/("""<input type='checkbox' name='servicesThis' value="""),_display_(/*116.58*/service/*116.65*/.name),format.raw/*116.70*/(""">"""),_display_(/*116.72*/service/*116.79*/.shortname),format.raw/*116.89*/(""" """),format.raw/*116.90*/("""<br>
+			""")))}),format.raw/*117.5*/("""
+			"""),format.raw/*118.4*/("""</div>
+			
+			
+
+			
+			
 			<div id="otherService" class="element-input">
 				<label class="title"><span class="required">*</span>Other:</label>
 				<div class="item-cont">
@@ -153,15 +162,15 @@ Seq[Any](format.raw/*1.50*/("""
 			<span class="clearfix"></span>
 		</div>
 		<div class="element-input">
-			"""),_display_(/*125.5*/if(profileForm.hasGlobalErrors)/*125.36*/ {_display_(Seq[Any](format.raw/*125.38*/("""
-			"""),format.raw/*126.4*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-			"""),_display_(/*127.5*/profileForm/*127.16*/.globalError.message),format.raw/*127.36*/("""
-			"""),format.raw/*128.4*/("""</span>
-			""")))}),format.raw/*129.5*/("""
-		"""),format.raw/*130.3*/("""</div>
+			"""),_display_(/*134.5*/if(profileForm.hasGlobalErrors)/*134.36*/ {_display_(Seq[Any](format.raw/*134.38*/("""
+			"""),format.raw/*135.4*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+			"""),_display_(/*136.5*/profileForm/*136.16*/.globalError.message),format.raw/*136.36*/("""
+			"""),format.raw/*137.4*/("""</span>
+			""")))}),format.raw/*138.5*/("""
+		"""),format.raw/*139.3*/("""</div>
 		<div class="submit">
 			<input type="submit" value="Submit" /> <a href="/user"
-				class="buttonCancel">"""),_display_(/*133.27*/Messages("goback")),format.raw/*133.45*/("""</a>
+				class="buttonCancel">"""),_display_(/*142.27*/Messages("goback")),format.raw/*142.45*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -172,9 +181,9 @@ Seq[Any](format.raw/*1.50*/("""
     }
   }
 
-  def render(profileForm:Form[Application.ProfileRegister]): play.twirl.api.HtmlFormat.Appendable = apply(profileForm)
+  def render(profileForm:Form[Application.ProfileRegister],servicesList:java.util.List[Service]): play.twirl.api.HtmlFormat.Appendable = apply(profileForm,servicesList)
 
-  def f:((Form[Application.ProfileRegister]) => play.twirl.api.HtmlFormat.Appendable) = (profileForm) => apply(profileForm)
+  def f:((Form[Application.ProfileRegister],java.util.List[Service]) => play.twirl.api.HtmlFormat.Appendable) = (profileForm,servicesList) => apply(profileForm,servicesList)
 
   def ref: this.type = this
 
@@ -187,11 +196,11 @@ Seq[Any](format.raw/*1.50*/("""
 object profile extends profile_Scope0.profile
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 14 14:24:53 MST 2016
+                  DATE: Tue Nov 15 11:20:07 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/profile.scala.html
-                  HASH: b03652590f23310d8ac248b805efbfa0e4a229ed
-                  MATRIX: 784->1|927->49|957->54|975->64|1014->66|1042->68|3569->2567|3598->2568|3628->2570|3657->2571|4901->3787|4930->3788|4960->3790|4989->3791|7534->6309|7575->6340|7616->6342|7649->6347|7740->6411|7761->6422|7803->6442|7836->6447|7880->6460|7912->6464|8057->6581|8097->6599
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|74->43|74->43|74->43|74->43|102->71|102->71|102->71|102->71|156->125|156->125|156->125|157->126|158->127|158->127|158->127|159->128|160->129|161->130|164->133|164->133
+                  HASH: a819efdcb2cbd85cb1092a0c1b5c628c91eccb93
+                  MATRIX: 808->1|990->88|1020->93|1038->103|1077->105|1105->107|3632->2606|3661->2607|3691->2609|3720->2610|4964->3826|4993->3827|5023->3829|5052->3830|7224->5974|7269->6002|7310->6004|7347->6013|7425->6063|7442->6070|7469->6075|7499->6077|7516->6084|7548->6094|7578->6095|7619->6105|7652->6110|8088->6519|8129->6550|8170->6552|8203->6557|8294->6621|8315->6632|8357->6652|8390->6657|8434->6670|8466->6674|8611->6791|8651->6809
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|74->43|74->43|74->43|74->43|102->71|102->71|102->71|102->71|146->115|146->115|146->115|147->116|147->116|147->116|147->116|147->116|147->116|147->116|147->116|148->117|149->118|165->134|165->134|165->134|166->135|167->136|167->136|167->136|168->137|169->138|170->139|173->142|173->142
                   -- GENERATED --
               */
           

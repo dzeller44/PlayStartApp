@@ -1,4 +1,4 @@
-@(profileForm: Form[Application.ProfileRegister])
+@(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service])
 
 @main(null) {
 <section id="profileMain">
@@ -111,7 +111,16 @@
 					><span>Professional Services</span></label> <label><input
 					type="checkbox" name="services" value="other"
 					><span>Other (Please List)</span></label>
+					
+								@for(service <- servicesList) {
+    			<input type='checkbox' name='servicesThis' value=@service.name>@service.shortname <br>
+			}
 			</div>
+			
+			
+
+			
+			
 			<div id="otherService" class="element-input">
 				<label class="title"><span class="required">*</span>Other:</label>
 				<div class="item-cont">
