@@ -69,7 +69,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object profilecreated extends profilecreated_Scope0.profilecreated
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 14 11:44:34 MST 2016
+                  DATE: Tue Nov 15 11:20:07 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/profilecreated.scala.html
                   HASH: 36cbbcab3caf69a84089610da866ab931e21fc26
                   MATRIX: 853->1|866->7|905->9|936->14|1374->425|1425->455

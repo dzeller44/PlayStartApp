@@ -209,5 +209,10 @@ public class User extends Model {
 	public void setRole(RoleType role) {
 		this.role = role;
 	}
+	
+	public String getRoleName(RoleType role) {
+		String roleToDisplay = role.getRoleTextName(role);
+		return roleToDisplay;
+	}
 
 }

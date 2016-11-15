@@ -47,34 +47,71 @@ import java.util.UUID;
  */
 public class Application extends Controller {
 
+	public static Result GO_DASHBOARD = redirect(routes.Dashboard.index());
+
+	public static Result GO_HOME = redirect(routes.Application.index());
+	
 	/*
 	 * public static Result signup2() { return ok("success"); }
 	 */
 
-	public static Result GO_HOME = redirect(routes.Application.index());
+	public static class AdminRegister {
 
-	public static Result GO_DASHBOARD = redirect(routes.Dashboard.index());
+		public String approved;
 
-	/**
-	 * Display the login page or dashboard if connected
-	 *
-	 * @return login page or dashboard
-	 */
-	public Result index() {
-		// Check that the email matches a confirmed user before we redirect
-		String email = ctx().session().get("email");
-		if (email != null) {
+		@Constraints.Required
+		public String email;
+
+		@Constraints.Required
+		public String fullname;
+
+		public String inputPassword;
+
+		public String role;
+
+		private boolean isBlank(String input) {
+			return input == null || input.isEmpty() || input.trim().isEmpty();
+		}
+
+		public String validate() {
+			if (isBlank(email)) {
+				return "Email is required";
+			}
+
+			if (isBlank(fullname)) {
+				return "User name is required";
+			}
+
+			return null;
+		}
+	}
+
+	public static class FindUser {
+
+		public String approved;
+
+		public String email;
+
+		public String fullname;
+
+		public String role;
+
+		private boolean isBlank(String input) {
+			return input == null || input.isEmpty() || input.trim().isEmpty();
+		}
+
+		public String validate() {
+
 			User user = User.findByEmail(email);
-			if (user != null && user.validated) {
-				return GO_DASHBOARD;
+			if (user != null) {
+				// Open user record...
+				return null;
 			} else {
-				Logger.debug("Clearing invalid session credentials");
-				session().clear();
+				// Display message...
+				return Messages.get("search.user.bademail");
 			}
 		}
 
-		return ok(index.render(form(Register.class), form(Login.class)));
-		// return ok(index.render());
 	}
 
 	/**
@@ -84,10 +121,10 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String email;
+		String errMessage = "";
+
 		@Constraints.Required
 		public String password;
-
-		String errMessage = "";
 
 		/**
 		 * Validate the authentication.
@@ -115,96 +152,7 @@ public class Application extends Controller {
 
 	}
 
-	public static class Register {
-
-		@Constraints.Required
-		public String email;
-
-		@Constraints.Required
-		public String fullname;
-
-		@Constraints.Required
-		public String inputPassword;
-
-		// Custom fields...
-		@Constraints.Required
-		public String role;
-
-		public String approved;
-
-		/**
-		 * Validate the authentication.
-		 *
-		 * @return null if validation ok, string with details otherwise
-		 */
-		public String validate() {
-			if (isBlank(email)) {
-				return "Email is required";
-			}
-
-			if (isBlank(fullname)) {
-				return "User name is required";
-			}
-
-			if (isBlank(inputPassword)) {
-				return "Password is required";
-			} else {
-				// Need to make sure we have:
-				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1
-				// Number; 1 Special Character
-				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$!%^&+=])(?=\\S+$).{8,}";
-				if (!inputPassword.matches(passwordPattern)) {
-					return Messages.get("password.message");
-				}
-			}
-
-			if (isBlank(role)) {
-				return "Account Role is required";
-			}
-
-			return null;
-		}
-
-		private boolean isBlank(String input) {
-			return input == null || input.isEmpty() || input.trim().isEmpty();
-		}
-	}
-
-	public static class AdminRegister {
-
-		@Constraints.Required
-		public String email;
-
-		@Constraints.Required
-		public String fullname;
-
-		public String inputPassword;
-
-		public String role;
-
-		public String approved;
-
-		public String validate() {
-			if (isBlank(email)) {
-				return "Email is required";
-			}
-
-			if (isBlank(fullname)) {
-				return "User name is required";
-			}
-
-			return null;
-		}
-
-		private boolean isBlank(String input) {
-			return input == null || input.isEmpty() || input.trim().isEmpty();
-		}
-	}
-
 	public static class ProfileRegister {
-
-		@Constraints.Required
-		public String name;
 
 		@Constraints.Required
 		public String address;
@@ -215,13 +163,15 @@ public class Application extends Controller {
 		public String city;
 
 		@Constraints.Required
-		public String state;
-
-		@Constraints.Required
-		public String zip;
-
-		@Constraints.Required
 		public String country;
+
+		public Date dateCreation;
+
+		@Constraints.Required
+		public String name;
+
+		@Constraints.Required
+		public String primaryEmail;
 
 		@Constraints.Required
 		public String primaryNameFirst;
@@ -233,7 +183,7 @@ public class Application extends Controller {
 		public String primaryPhone;
 
 		@Constraints.Required
-		public String primaryEmail;
+		public String secondaryEmail;
 
 		@Constraints.Required
 		public String secondaryNameFirst;
@@ -245,14 +195,19 @@ public class Application extends Controller {
 		public String secondaryPhone;
 
 		@Constraints.Required
-		public String secondaryEmail;
-
-		@Constraints.Required
 		public String services;
 
 		public String servicesOther;
 
-		public Date dateCreation;
+		@Constraints.Required
+		public String state;
+
+		@Constraints.Required
+		public String zip;
+
+		private boolean isBlank(String input) {
+			return input == null || input.isEmpty() || input.trim().isEmpty();
+		}
 
 		/**
 		 * Validate the authentication.
@@ -322,10 +277,108 @@ public class Application extends Controller {
 
 			return null;
 		}
+	}
+
+	public static class Register {
+
+		public String approved;
+
+		@Constraints.Required
+		public String email;
+
+		@Constraints.Required
+		public String fullname;
+
+		@Constraints.Required
+		public String inputPassword;
+
+		// Custom fields...
+		@Constraints.Required
+		public String role;
 
 		private boolean isBlank(String input) {
 			return input == null || input.isEmpty() || input.trim().isEmpty();
 		}
+
+		/**
+		 * Validate the authentication.
+		 *
+		 * @return null if validation ok, string with details otherwise
+		 */
+		public String validate() {
+			if (isBlank(email)) {
+				return "Email is required";
+			}
+
+			if (isBlank(fullname)) {
+				return "User name is required";
+			}
+
+			if (isBlank(inputPassword)) {
+				return "Password is required";
+			} else {
+				// Need to make sure we have:
+				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1
+				// Number; 1 Special Character
+				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$!%^&+=])(?=\\S+$).{8,}";
+				if (!inputPassword.matches(passwordPattern)) {
+					return Messages.get("password.message");
+				}
+			}
+
+			if (isBlank(role)) {
+				return "Account Role is required";
+			}
+
+			return null;
+		}
+	}
+
+	public static class SaveProfile {
+
+		@Constraints.Required
+		public String email;
+
+		private boolean isBlank(String input) {
+			return input == null || input.isEmpty() || input.trim().isEmpty();
+		}
+
+		public String validate() {
+			if (isBlank(email)) {
+				return "Email is required";
+			} else {
+				User user = User.findByEmail(email);
+				if (user != null) {
+					// Open user record...
+					return null;
+				} else {
+					// Display message...
+					return Messages.get("search.user.bademail");
+				}
+			}
+		}
+
+	}
+
+	public Result addProfile() {
+		List<Service> services = Service.find.all();
+		return ok(profile.render(form(ProfileRegister.class), services));
+		//return ok(profile.render(form(ProfileRegister.class)));
+		/*
+		 * 					@for(service <- servicesList) {
+    <input type='checkbox' name='servicesThis' value=@service>@service <br>
+}
+		 */
+	}
+
+	public Result adminHome() {
+		return ok(admin.render(form(Login.class)));
+	}
+
+	public Result adminSearch() {
+		// NEED TO CORRECT THIS -- NEED NEW ROUTE/VIEW
+		List<User> users = User.find.all();
+		return ok(searchusers.render(form(Login.class), users));
 	}
 
 	/**
@@ -353,202 +406,52 @@ public class Application extends Controller {
 		}
 	}
 
-	public Result openLogin() {
-		System.out.println("openLogin");
-		return ok(auth.render(form(Login.class)));
+	public Result deleteUser(String email) {
+		// Locate the user record and delete...
+		User user = User.findByEmail(email);
+		
+		if (user != null) {
+			// Open user record...
+			Logger.debug("Application.deleteUser: Found User based on " + email);
+		} else {
+			// Display message...
+			Logger.debug("Application.deleteUser: No User found based on " + email);
+		}
+
+		// Create record in removedusers table
+		// Capture user and date/time
+		// Remove from user table...
+		RemovedUser removedUser = new RemovedUser();
+
+		// Copy the record over...
+		removedUser.email = user.getEmail();;
+		removedUser.fullname = user.fullname;
+		removedUser.passwordHash = user.passwordHash;
+		removedUser.confirmationToken = user.confirmationToken;
+		removedUser.dateCreation = user.dateCreation;
+		removedUser.active = user.active;
+		removedUser.role = user.role;
+		removedUser.approved = user.approved;
+		removedUser.validated = user.validated;
+		removedUser.userkey = user.userkey;
+		// Set custom fields...
+		removedUser.dateRemoved = new Date();
+		removedUser.removedBy = "current user";
+		removedUser.save();
+		
+		// Delete the user...
+		user.delete();
+
+		return ok(deleteduser.render());
+
 	}
 
-	/**
-	 * Logout and clean the session.
-	 *
-	 * @return Index page
-	 */
-	public Result logout() {
-		session().clear();
-		flash("success", Messages.get("youve.been.logged.out"));
-		return GO_HOME;
-	}
-
-	public Result managerHome() {
-		return ok(manager.render(form(Login.class)));
-	}
-
-	public Result adminHome() {
-		return ok(admin.render(form(Login.class)));
-	}
-
-	public Result userHome() {
-		return ok(user.render());
-	}
-
-	public Result addProfile() {
-		List<Service> services = Service.find.all();
-		//return ok(profile.render(form(ProfileRegister.class), allServices));
-		return ok(profile.render(form(ProfileRegister.class)));
-		/*
-		 * 					@for(service <- servicesList) {
-    <input type='checkbox' name='servicesThis' value=@service>@service <br>
-}
-		 */
+	public Result deleteUserConfirm(String email) {
+		return ok(deleteconfirm.render(email));
 	}
 	
-	public static List<String> servicesList() {
-		
-		List<String> services = new ArrayList<String>();
-		services.add("Water Bottled");
-		services.add("Water Bulk");
-		services.add("Sanitation/Toilet/Sink");
-		services.add("Dumpsters");
-		services.add("Showers");
-		services.add("Generators");
-		services.add("Pumps");
-		services.add("Heavy Equipment");
-		services.add("Fuel");
-		services.add("Sandbags");
-		services.add("Temporary Facilities");
-		services.add("Professional Services");
-		services.add("Other: (Please List)");
-		
-		return services;
-		
-	}
-
-
-
-	public static class SaveProfile {
-
-		@Constraints.Required
-		public String email;
-
-		public String validate() {
-			if (isBlank(email)) {
-				return "Email is required";
-			} else {
-				User user = User.findByEmail(email);
-				if (user != null) {
-					// Open user record...
-					return null;
-				} else {
-					// Display message...
-					return Messages.get("search.user.bademail");
-				}
-			}
-		}
-
-		private boolean isBlank(String input) {
-			return input == null || input.isEmpty() || input.trim().isEmpty();
-		}
-
-	}
-
-	public Result saveProfile() {
-		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
-
-		if (profileEntry.hasErrors()) {
-			System.out.println("Save Profile - errors");
-			return badRequest(profile.render(profileEntry));
-		}
-		// Save the profile...
-		ProfileRegister profileForm = profileEntry.get();
-		System.out.println("Save Profile - good request");
-		Profile profile = new Profile();
-		profile.name = profileForm.name;
-		profile.address = profileForm.address;
-		profile.address1 = profileForm.address1;
-		profile.city = profileForm.city;
-		profile.state = profileForm.state;
-		profile.zip = profileForm.zip;
-		profile.primaryNameFirst = profileForm.primaryNameFirst;
-		profile.primaryNameLast = profileForm.primaryNameLast;
-		profile.primaryPhone = profileForm.primaryPhone;
-		profile.primaryEmail = profileForm.primaryEmail;
-		profile.secondaryNameFirst = profileForm.secondaryNameFirst;
-		profile.secondaryNameLast = profileForm.secondaryNameLast;
-		profile.secondaryPhone = profileForm.secondaryPhone;
-		profile.secondaryEmail = profileForm.secondaryEmail;
-		profile.services = profileForm.services;
-		profile.servicesOther = profileForm.servicesOther;
-		profile.dateCreation = new Date();
-		profile.profilekey = profile.createProfileKey();
-		profile.save();
-
-		return ok(profilecreated.render());
-	}
-
-	public Result userMaintenance() {
-		return ok(usermaint.render(form(Login.class)));
-	}
-
-	public Result updateUser() {
-		String email;
-		String name;
-		String approved;
-		String role;
-		User user;
-
-		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
-		
-		// Get values from the form...
-		email = findUserForm.get().email;
-		name = findUserForm.get().fullname;
-		approved = findUserForm.get().approved;
-		role = findUserForm.get().role;
-
-		Logger.debug("");
-
-		if (findUserForm.hasErrors()) {
-			System.out.println("Update User - errors");
-			return badRequest(showuser.render(findUserForm, "", "", ""));
-		}
-
-		// Find user and save changes...
-		System.out.println("Update User - good request");
-		
-
-		// I know we have the user, but let's make sure we get the correct
-		// user...
-		user = User.findByEmail(email);
-		user.fullname = name;
-		switch (role) {
-		case "user":
-			user.role = RoleType.USER;
-			break;
-		case "manager":
-			user.role = RoleType.MANAGER;
-			break;
-		case "admin":
-			user.role = RoleType.ADMIN;
-			break;
-		default:
-			user.role = RoleType.UNDEFINED;
-			break;
-		}
-		if (approved != null) {
-			if (approved.equals("approved")) {
-				user.approved = "Y";
-			} else {
-				user.approved = "N";
-			}
-		} else {
-			user.approved = "N";
-		}
-
-		// Save the user...
-		user.save();
-
-		return ok(saveduser.render());
-
-	}
-
-	public Result adminSearch() {
-		// NEED TO CORRECT THIS -- NEED NEW ROUTE/VIEW
-		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class), users));
-	}
-
-	public Result getAllUsers() {
-		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class), users));
+	public Result displayUser(String actionType) {
+		return ok(getuser.render(form(FindUser.class)));
 	}
 
 	public Result exportData() {
@@ -559,36 +462,9 @@ public class Application extends Controller {
 		return ok(getuser.render(form(FindUser.class)));
 	}
 
-	public Result openUser() {
-		return ok(openuser.render());
-	}
-
-	public static class FindUser {
-
-		public String email;
-
-		public String fullname;
-
-		public String role;
-
-		public String approved;
-
-		public String validate() {
-
-			User user = User.findByEmail(email);
-			if (user != null) {
-				// Open user record...
-				return null;
-			} else {
-				// Display message...
-				return Messages.get("search.user.bademail");
-			}
-		}
-
-		private boolean isBlank(String input) {
-			return input == null || input.isEmpty() || input.trim().isEmpty();
-		}
-
+	public Result getAllUsers() {
+		List<User> users = User.find.all();
+		return ok(searchusers.render(form(Login.class), users));
 	}
 
 	public Result getUserByEmail() {
@@ -610,8 +486,70 @@ public class Application extends Controller {
 
 	}
 
-	public Result displayUser(String actionType) {
-		return ok(getuser.render(form(FindUser.class)));
+	public Result getUserByUrl(String email) {
+		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+
+		if (findUserForm.hasErrors()) {
+			System.out.println("Find User - errors");
+			return badRequest(getuser.render(findUserForm));
+		} else {
+			// Find user and display...
+			System.out.println("Find User - good request");
+			User user = User.findByEmail(email);
+			String name = user.fullname;
+			// String role = user.role;
+			RoleType role = user.role;
+			String roleToDisplay = role.toString();
+			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
+
+		}
+
+	}
+
+	/**
+	 * Display the login page or dashboard if connected
+	 *
+	 * @return login page or dashboard
+	 */
+	public Result index() {
+		// Check that the email matches a confirmed user before we redirect
+		String email = ctx().session().get("email");
+		if (email != null) {
+			User user = User.findByEmail(email);
+			if (user != null && user.validated) {
+				return GO_DASHBOARD;
+			} else {
+				Logger.debug("Clearing invalid session credentials");
+				session().clear();
+			}
+		}
+
+		return ok(index.render(form(Register.class), form(Login.class)));
+		// return ok(index.render());
+	}
+
+	/**
+	 * Logout and clean the session.
+	 *
+	 * @return Index page
+	 */
+	public Result logout() {
+		session().clear();
+		flash("success", Messages.get("youve.been.logged.out"));
+		return GO_HOME;
+	}
+
+	public Result managerHome() {
+		return ok(manager.render(form(Login.class)));
+	}
+
+	public Result openLogin() {
+		System.out.println("openLogin");
+		return ok(auth.render(form(Login.class)));
+	}
+
+	public Result openUser() {
+		return ok(openuser.render());
 	}
 
 	public Result processUserRequest(String actionType) {
@@ -687,68 +625,108 @@ public class Application extends Controller {
 
 	}
 
-	public Result getUserByUrl(String email) {
+	public Result saveProfile() {
+		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+
+		if (profileEntry.hasErrors()) {
+			List<Service> services = Service.find.all();
+			System.out.println("Save Profile - errors");
+			return badRequest(profile.render(profileEntry, services));
+		}
+		// Save the profile...
+		ProfileRegister profileForm = profileEntry.get();
+		System.out.println("Save Profile - good request");
+		Profile profile = new Profile();
+		profile.name = profileForm.name;
+		profile.address = profileForm.address;
+		profile.address1 = profileForm.address1;
+		profile.city = profileForm.city;
+		profile.state = profileForm.state;
+		profile.zip = profileForm.zip;
+		profile.primaryNameFirst = profileForm.primaryNameFirst;
+		profile.primaryNameLast = profileForm.primaryNameLast;
+		profile.primaryPhone = profileForm.primaryPhone;
+		profile.primaryEmail = profileForm.primaryEmail;
+		profile.secondaryNameFirst = profileForm.secondaryNameFirst;
+		profile.secondaryNameLast = profileForm.secondaryNameLast;
+		profile.secondaryPhone = profileForm.secondaryPhone;
+		profile.secondaryEmail = profileForm.secondaryEmail;
+		profile.services = profileForm.services;
+		profile.servicesOther = profileForm.servicesOther;
+		profile.dateCreation = new Date();
+		profile.profilekey = profile.createProfileKey();
+		profile.save();
+
+		return ok(profilecreated.render());
+	}
+
+	public Result updateUser() {
+		String email;
+		String name;
+		String approved;
+		String role;
+		User user;
+
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+		
+		// Get values from the form...
+		email = findUserForm.get().email;
+		name = findUserForm.get().fullname;
+		approved = findUserForm.get().approved;
+		role = findUserForm.get().role;
+
+		Logger.debug("");
 
 		if (findUserForm.hasErrors()) {
-			System.out.println("Find User - errors");
-			return badRequest(getuser.render(findUserForm));
-		} else {
-			// Find user and display...
-			System.out.println("Find User - good request");
-			User user = User.findByEmail(email);
-			String name = user.fullname;
-			// String role = user.role;
-			RoleType role = user.role;
-			String roleToDisplay = role.toString();
-			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
-
+			System.out.println("Update User - errors");
+			return badRequest(showuser.render(findUserForm, "", "", ""));
 		}
+
+		// Find user and save changes...
+		System.out.println("Update User - good request");
+		
+
+		// I know we have the user, but let's make sure we get the correct
+		// user...
+		user = User.findByEmail(email);
+		user.fullname = name;
+		switch (role) {
+		case "user":
+			user.role = RoleType.USER;
+			break;
+		case "manager":
+			user.role = RoleType.MANAGER;
+			break;
+		case "admin":
+			user.role = RoleType.ADMIN;
+			break;
+		default:
+			user.role = RoleType.UNDEFINED;
+			break;
+		}
+		if (approved != null) {
+			if (approved.equals("approved")) {
+				user.approved = "Y";
+			} else {
+				user.approved = "N";
+			}
+		} else {
+			user.approved = "N";
+		}
+
+		// Save the user...
+		user.save();
+
+		return ok(saveduser.render());
 
 	}
 
-	public Result deleteUserConfirm(String email) {
-		return ok(deleteconfirm.render(email));
+	public Result userHome() {
+		return ok(user.render());
 	}
 
-	public Result deleteUser(String email) {
-		// Locate the user record and delete...
-		User user = User.findByEmail(email);
-		
-		if (user != null) {
-			// Open user record...
-			Logger.debug("Application.deleteUser: Found User based on " + email);
-		} else {
-			// Display message...
-			Logger.debug("Application.deleteUser: No User found based on " + email);
-		}
-
-		// Create record in removedusers table
-		// Capture user and date/time
-		// Remove from user table...
-		RemovedUser removedUser = new RemovedUser();
-
-		// Copy the record over...
-		removedUser.email = user.getEmail();;
-		removedUser.fullname = user.fullname;
-		removedUser.passwordHash = user.passwordHash;
-		removedUser.confirmationToken = user.confirmationToken;
-		removedUser.dateCreation = user.dateCreation;
-		removedUser.active = user.active;
-		removedUser.role = user.role;
-		removedUser.approved = user.approved;
-		removedUser.validated = user.validated;
-		removedUser.userkey = user.userkey;
-		// Set custom fields...
-		removedUser.dateRemoved = new Date();
-		removedUser.removedBy = "current user";
-		removedUser.save();
-		
-		// Delete the user...
-		user.delete();
-
-		return ok(deleteduser.render());
-
+	public Result userMaintenance() {
+		return ok(usermaint.render(form(Login.class)));
 	}
 
 }

@@ -35,11 +35,10 @@ Seq[Any](format.raw/*1.38*/("""
 
 
 """),format.raw/*6.1*/("""<!-- ABOUT -->
-<section id="managerMain">
+<section id="adminMain">
 
 	<!-- SERVICES -->
-	<div class="services_block padbot40" data-appear-top-offset="-200"
-		data-animated="fadeInUp">
+	<div class="services_block padbot40" data-appear-top-offset="-200">
 
 		<!-- CONTAINER -->
 		<div class="container">
@@ -49,28 +48,28 @@ Seq[Any](format.raw/*1.38*/("""
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/adminuser">
 						<p>
-							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_User_Maint.png")),format.raw/*21.63*/(""""> <b>User Maintenance</b>
+							<img src=""""),_display_(/*20.19*/routes/*20.25*/.Assets.at("/img/icon_User_Maint.png")),format.raw/*20.63*/(""""> <b>User Maintenance</b>
 						</p> <span>Add/Edit/Update User Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/addadmin">
 						<p>
-							<img src=""""),_display_(/*28.19*/routes/*28.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*28.62*/(""""> <b>Add Admin</b>
+							<img src=""""),_display_(/*27.19*/routes/*27.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*27.62*/(""""> <b>Add Admin</b>
 						</p> <span>Add new Admin...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/export">
 						<p>
-							<img src=""""),_display_(/*35.19*/routes/*35.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*35.64*/(""""> <b>Export Data</b>
+							<img src=""""),_display_(/*34.19*/routes/*34.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*34.64*/(""""> <b>Export Data</b>
 						</p> <span>Export Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/search">
 						<p>
-							<img src=""""),_display_(/*42.19*/routes/*42.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*42.67*/(""""> <b>Search Records</b>
+							<img src=""""),_display_(/*41.19*/routes/*41.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*41.67*/(""""> <b>Search Records</b>
 						</p> <span>Search Business Profiles...</span>
 					</a>
 				</div>
@@ -107,11 +106,11 @@ Seq[Any](format.raw/*1.38*/("""
 object admin extends admin_Scope0.admin
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 14 11:44:33 MST 2016
+                  DATE: Tue Nov 15 11:20:07 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/admin.scala.html
-                  HASH: c248382dcd6f4983d191c264460bf16ac92db5a6
-                  MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1398->413|1413->419|1472->457|1716->674|1731->680|1789->717|2009->910|2024->916|2084->955|2307->1151|2322->1157|2385->1199
-                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|66->35|66->35|66->35|73->42|73->42|73->42
+                  HASH: a4459a2bc3a8e0c4ef98eeda8b5811f7d87cd744
+                  MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1369->384|1384->390|1443->428|1687->645|1702->651|1760->688|1980->881|1995->887|2055->926|2278->1122|2293->1128|2356->1170
+                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|51->20|51->20|51->20|58->27|58->27|58->27|65->34|65->34|65->34|72->41|72->41|72->41
                   -- GENERATED --
               */
           
