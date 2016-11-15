@@ -29,6 +29,14 @@ GET    /adminuser               controllers.Application.userMaintenance()
 
 GET    /search                  controllers.Application.getAllUsers()
 
+GET    /searchprofiles          controllers.Application.getAllProfiles()
+
+GET    /openprofile/:name       controllers.Application.openProfile(name: String)
+POST   /openprofile/:name       controllers.Application.updateProfileAdmin(name: String)
+
+GET    /deleteprofile/:name     controllers.Application.deleteProfileConfirm(name: String)
+POST   /deleteprofile/:name     controllers.Application.deleteProfile(name: String)
+
 GET    /finduser                controllers.Application.findUser()
 POST   /finduser                controllers.Application.getUserByEmail()
 

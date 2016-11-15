@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Tue Nov 15 11:20:07 MST 2016
+// @DATE:Tue Nov 15 13:54:05 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:75
+  // @LINE:83
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:75
+    // @LINE:83
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -73,7 +73,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:35
+    // @LINE:43
     def updateUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.updateUser",
       """
@@ -83,12 +83,22 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:39
+    // @LINE:47
     def openUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openUser",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "openuser"})
+        }
+      """
+    )
+  
+    // @LINE:32
+    def getAllProfiles: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.getAllProfiles",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "searchprofiles"})
         }
       """
     )
@@ -103,7 +113,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:44
+    // @LINE:34
+    def openProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.openProfile",
+      """
+        function(name) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "openprofile/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name))})
+        }
+      """
+    )
+  
+    // @LINE:52
     def getUserByUrl: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getUserByUrl",
       """
@@ -113,7 +133,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:33
+    // @LINE:41
     def getUserByEmail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getUserByEmail",
       """
@@ -129,6 +149,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "user"})
+        }
+      """
+    )
+  
+    // @LINE:37
+    def deleteProfileConfirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.deleteProfileConfirm",
+      """
+        function(name) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteprofile/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name))})
         }
       """
     )
@@ -173,6 +203,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:35
+    def updateProfileAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.updateProfileAdmin",
+      """
+        function(name) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "openprofile/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name))})
+        }
+      """
+    )
+  
     // @LINE:13
     def openLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openLogin",
@@ -183,7 +223,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:46
+    // @LINE:38
+    def deleteProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.deleteProfile",
+      """
+        function(name) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteprofile/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("name", encodeURIComponent(name))})
+        }
+      """
+    )
+  
+    // @LINE:54
     def deleteUserConfirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.deleteUserConfirm",
       """
@@ -193,7 +243,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:32
+    // @LINE:40
     def findUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.findUser",
       """
@@ -203,7 +253,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:47
+    // @LINE:55
     def deleteUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.deleteUser",
       """
@@ -247,7 +297,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:37
+    // @LINE:45
     def exportData: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.exportData",
       """

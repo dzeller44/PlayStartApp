@@ -67,13 +67,12 @@ Seq[Any](format.raw/*1.38*/("""
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/search">
+					<a class="services_item" href="/searchprofiles">
 						<p>
-							<img src=""""),_display_(/*41.19*/routes/*41.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*41.67*/(""""> <b>Search Records</b>
+							<img src=""""),_display_(/*41.19*/routes/*41.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*41.67*/(""""> <b>Search Profiles</b>
 						</p> <span>Search Business Profiles...</span>
 					</a>
 				</div>
-
 			</div>
 		</div>
 		<!-- //ROW -->
@@ -106,10 +105,10 @@ Seq[Any](format.raw/*1.38*/("""
 object admin extends admin_Scope0.admin
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 15 11:20:07 MST 2016
+                  DATE: Tue Nov 15 13:39:46 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/admin.scala.html
-                  HASH: a4459a2bc3a8e0c4ef98eeda8b5811f7d87cd744
-                  MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1369->384|1384->390|1443->428|1687->645|1702->651|1760->688|1980->881|1995->887|2055->926|2278->1122|2293->1128|2356->1170
+                  HASH: 2023a98b9c6cce38fb9428256abc42c5c7edfc7a
+                  MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1369->384|1384->390|1443->428|1687->645|1702->651|1760->688|1980->881|1995->887|2055->926|2286->1130|2301->1136|2364->1178
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|51->20|51->20|51->20|58->27|58->27|58->27|65->34|65->34|65->34|72->41|72->41|72->41
                   -- GENERATED --
               */

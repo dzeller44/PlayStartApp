@@ -2,6 +2,7 @@ package controllers;
 
 import models.User;
 import models.Profile;
+import models.RemovedProfile;
 import models.RemovedUser;
 import models.Service;
 import models.enums.RoleType;
@@ -19,17 +20,22 @@ import views.html.auth;
 import views.html.profile.profile;
 import views.html.profile.profilecreated;
 import views.html.admin.searchusers;
+import views.html.admin.searchprofiles;
 import views.html.export;
 import views.html.manager.manager;
 import views.html.admin.admin;
 import views.html.admin.usermaint;
 import views.html.admin.getuser;
 import views.html.admin.showuser;
+import views.html.admin.showprofile;
 import views.html.admin.displayuser;
 import views.html.admin.openuser;
 import views.html.admin.saveduser;
 import views.html.admin.deleteconfirm;
 import views.html.admin.deleteduser;
+import views.html.admin.deleteprofconfirm;
+import views.html.admin.deletedprofile;
+import views.html.admin.profilesaved;
 import views.html.user.user;
 
 import com.avaje.ebean.Ebean;
@@ -50,7 +56,7 @@ public class Application extends Controller {
 	public static Result GO_DASHBOARD = redirect(routes.Dashboard.index());
 
 	public static Result GO_HOME = redirect(routes.Application.index());
-	
+
 	/*
 	 * public static Result signup2() { return ok("success"); }
 	 */
@@ -363,11 +369,10 @@ public class Application extends Controller {
 	public Result addProfile() {
 		List<Service> services = Service.find.all();
 		return ok(profile.render(form(ProfileRegister.class), services));
-		//return ok(profile.render(form(ProfileRegister.class)));
+		// return ok(profile.render(form(ProfileRegister.class)));
 		/*
-		 * 					@for(service <- servicesList) {
-    <input type='checkbox' name='servicesThis' value=@service>@service <br>
-}
+		 * @for(service <- servicesList) { <input type='checkbox'
+		 * name='servicesThis' value=@service>@service <br> }
 		 */
 	}
 
@@ -409,7 +414,7 @@ public class Application extends Controller {
 	public Result deleteUser(String email) {
 		// Locate the user record and delete...
 		User user = User.findByEmail(email);
-		
+
 		if (user != null) {
 			// Open user record...
 			Logger.debug("Application.deleteUser: Found User based on " + email);
@@ -424,7 +429,7 @@ public class Application extends Controller {
 		RemovedUser removedUser = new RemovedUser();
 
 		// Copy the record over...
-		removedUser.email = user.getEmail();;
+		removedUser.email = user.getEmail();
 		removedUser.fullname = user.fullname;
 		removedUser.passwordHash = user.passwordHash;
 		removedUser.confirmationToken = user.confirmationToken;
@@ -434,11 +439,14 @@ public class Application extends Controller {
 		removedUser.approved = user.approved;
 		removedUser.validated = user.validated;
 		removedUser.userkey = user.userkey;
+		removedUser.updatedBy = user.updatedBy;
+		removedUser.dateUpdated = user.dateUpdated;
+		
 		// Set custom fields...
 		removedUser.dateRemoved = new Date();
 		removedUser.removedBy = "current user";
 		removedUser.save();
-		
+
 		// Delete the user...
 		user.delete();
 
@@ -448,6 +456,61 @@ public class Application extends Controller {
 
 	public Result deleteUserConfirm(String email) {
 		return ok(deleteconfirm.render(email));
+	}
+
+	public Result deleteProfileConfirm(String name) {
+		return ok(deleteprofconfirm.render(name));
+	}
+	
+	public Result deleteProfile(String name) {
+		// Locate the profile record and delete...
+		Profile profile = Profile.findByName(name);
+
+		if (profile != null) {
+			// Open profile record...
+			Logger.debug("Application.deleteProfile: Found Profile based on " + name);
+		} else {
+			// Display message...
+			Logger.debug("Application.deleteProfile: No Profile found based on " + name);
+		}
+
+		// Create record in removed profiles table
+		// Capture profile and date/time
+		// Remove from profile table...
+		RemovedProfile removedProfile = new RemovedProfile();
+
+		// Copy the record over...
+		removedProfile.name = profile.name;
+		removedProfile.address = profile.address;
+		removedProfile.address1 = profile.address1;
+		removedProfile.city = profile.city;
+		removedProfile.state = profile.state;
+		removedProfile.zip = profile.zip;
+		removedProfile.primaryNameFirst = profile.primaryNameFirst;
+		removedProfile.primaryNameLast = profile.primaryNameLast;
+		removedProfile.primaryPhone = profile.primaryPhone;
+		removedProfile.primaryEmail = profile.primaryEmail;
+		removedProfile.secondaryNameFirst = profile.secondaryNameFirst;
+		removedProfile.secondaryNameLast = profile.secondaryNameLast;
+		removedProfile.secondaryPhone = profile.secondaryPhone;
+		removedProfile.secondaryEmail = profile.secondaryEmail;
+		removedProfile.services = profile.services;
+		removedProfile.servicesOther = profile.servicesOther;
+		removedProfile.dateCreation = profile.dateCreation;
+		removedProfile.profilekey = profile.profilekey;
+		removedProfile.updatedBy = profile.updatedBy;
+		removedProfile.dateUpdated = profile.dateUpdated;
+		
+		// Set custom fields...
+		removedProfile.dateRemoved = new Date();
+		removedProfile.removedBy = "current profile";
+		removedProfile.save();
+
+		// Delete the profile...
+		profile.delete();
+
+		return ok(deletedprofile.render());
+
 	}
 	
 	public Result displayUser(String actionType) {
@@ -465,6 +528,19 @@ public class Application extends Controller {
 	public Result getAllUsers() {
 		List<User> users = User.find.all();
 		return ok(searchusers.render(form(Login.class), users));
+	}
+
+	public Result getAllProfiles() {
+		List<Profile> profiles = Profile.find.all();
+		return ok(searchprofiles.render(profiles));
+	}
+
+	public Result openProfile(String name) {
+		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+		List<Service> services = Service.find.all();
+		// Find profile and display...
+		Profile profile = Profile.findByName(name);
+		return ok(showprofile.render(profileEntry, services, profile));
 	}
 
 	public Result getUserByEmail() {
@@ -659,6 +735,41 @@ public class Application extends Controller {
 
 		return ok(profilecreated.render());
 	}
+	
+	public Result updateProfileAdmin(String name) {
+		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+
+		if (profileEntry.hasErrors()) {
+			List<Service> services = Service.find.all();
+			System.out.println("Save Profile - errors");
+			return badRequest(profile.render(profileEntry, services));
+		}
+		// Save the profile...
+		ProfileRegister profileForm = profileEntry.get();
+		System.out.println("Save Profile - good request");
+		Profile profile = Profile.findByName(name);
+		profile.name = profileForm.name;
+		profile.address = profileForm.address;
+		profile.address1 = profileForm.address1;
+		profile.city = profileForm.city;
+		profile.state = profileForm.state;
+		profile.zip = profileForm.zip;
+		profile.primaryNameFirst = profileForm.primaryNameFirst;
+		profile.primaryNameLast = profileForm.primaryNameLast;
+		profile.primaryPhone = profileForm.primaryPhone;
+		profile.primaryEmail = profileForm.primaryEmail;
+		profile.secondaryNameFirst = profileForm.secondaryNameFirst;
+		profile.secondaryNameLast = profileForm.secondaryNameLast;
+		profile.secondaryPhone = profileForm.secondaryPhone;
+		profile.secondaryEmail = profileForm.secondaryEmail;
+		profile.services = profileForm.services;
+		profile.servicesOther = profileForm.servicesOther;
+		profile.updatedBy = "current user";
+		profile.dateUpdated = new Date();
+		profile.save();
+
+		return ok(profilesaved.render());
+	}
 
 	public Result updateUser() {
 		String email;
@@ -668,7 +779,7 @@ public class Application extends Controller {
 		User user;
 
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
-		
+
 		// Get values from the form...
 		email = findUserForm.get().email;
 		name = findUserForm.get().fullname;
@@ -684,7 +795,6 @@ public class Application extends Controller {
 
 		// Find user and save changes...
 		System.out.println("Update User - good request");
-		
 
 		// I know we have the user, but let's make sure we get the correct
 		// user...
@@ -715,6 +825,8 @@ public class Application extends Controller {
 		}
 
 		// Save the user...
+		user.updatedBy = "current user";
+		user.dateUpdated = new Date();
 		user.save();
 
 		return ok(saveduser.render());

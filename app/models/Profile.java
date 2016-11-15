@@ -77,6 +77,10 @@ public class Profile extends Model {
 	
 	public String userkey;
 
+	public String updatedBy;
+	
+	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	public Date dateUpdated;
 
     // -- Queries (long id, profile.class)
     public static Model.Finder<Long, Profile> find = new Model.Finder<Long, Profile>(Long.class, Profile.class);

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Tue Nov 15 11:20:07 MST 2016
+// @DATE:Tue Nov 15 13:54:05 MST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -10,41 +10,41 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:41
+// @LINE:49
 package controllers.account {
 
-  // @LINE:41
+  // @LINE:49
   class ReverseSignup(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:42
+    // @LINE:50
     def saveAdmin(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "addadmin")
     }
   
-    // @LINE:58
+    // @LINE:66
     def create(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "signup")
     }
   
-    // @LINE:41
+    // @LINE:49
     def createAdmin(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "addadmin")
     }
   
-    // @LINE:62
+    // @LINE:70
     def confirm(confirmToken:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "confirm/" + implicitly[PathBindable[String]].unbind("confirmToken", dynamicString(confirmToken)))
     }
   
-    // @LINE:59
+    // @LINE:67
     def save(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "signup")
@@ -52,32 +52,32 @@ package controllers.account {
   
   }
 
-  // @LINE:65
+  // @LINE:73
   class ReverseReset(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:70
+    // @LINE:78
     def runReset(token:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "reset/" + implicitly[PathBindable[String]].unbind("token", dynamicString(token)))
     }
   
-    // @LINE:65
+    // @LINE:73
     def ask(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "reset/ask")
     }
   
-    // @LINE:69
+    // @LINE:77
     def reset(token:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "reset/" + implicitly[PathBindable[String]].unbind("token", dynamicString(token)))
     }
   
-    // @LINE:66
+    // @LINE:74
     def runAsk(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "reset/ask")

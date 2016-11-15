@@ -56,6 +56,11 @@ public class RemovedUser extends Model {
     
     public String userkey;
     
+	public String updatedBy;
+	
+	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	public Date dateUpdated;
+    
     public String removedBy;
     
     @Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")

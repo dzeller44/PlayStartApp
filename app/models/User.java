@@ -57,6 +57,11 @@ public class User extends Model {
 	@Constraints.Required
 	@Formats.NonEmpty
 	public String userkey;
+	
+	public String updatedBy;
+	
+	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	public Date dateUpdated;
 
 	// -- Queries (long id, user.class)
 	public static Model.Finder<Long, User> find = new Model.Finder<Long, User>(Long.class, User.class);

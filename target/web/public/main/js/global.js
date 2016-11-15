@@ -25,11 +25,13 @@ function isLoggedIn() {
 }
 
 function deleteUser(email) {
-
 	//var email = document.getElementById("email").value;
 
 	//alert("In delete user - email = " + email);
 
 	window.location.href = '/deleteuser/' + email;
+}
 
+function deleteProfile(name) {
+	window.location.href = '/deleteprofile/' + name;
 }
