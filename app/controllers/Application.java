@@ -36,13 +36,16 @@ import views.html.admin.deleteduser;
 import views.html.admin.deleteprofconfirm;
 import views.html.admin.deletedprofile;
 import views.html.admin.profilesaved;
+import views.html.admin.exportready;
 import views.html.user.user;
 
 import com.avaje.ebean.Ebean;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.opencsv.CSVWriter;
 
 import static play.data.Form.form;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -441,7 +444,7 @@ public class Application extends Controller {
 		removedUser.userkey = user.userkey;
 		removedUser.updatedBy = user.updatedBy;
 		removedUser.dateUpdated = user.dateUpdated;
-		
+
 		// Set custom fields...
 		removedUser.dateRemoved = new Date();
 		removedUser.removedBy = "current user";
@@ -461,7 +464,7 @@ public class Application extends Controller {
 	public Result deleteProfileConfirm(String name) {
 		return ok(deleteprofconfirm.render(name));
 	}
-	
+
 	public Result deleteProfile(String name) {
 		// Locate the profile record and delete...
 		Profile profile = Profile.findByName(name);
@@ -500,7 +503,7 @@ public class Application extends Controller {
 		removedProfile.profilekey = profile.profilekey;
 		removedProfile.updatedBy = profile.updatedBy;
 		removedProfile.dateUpdated = profile.dateUpdated;
-		
+
 		// Set custom fields...
 		removedProfile.dateRemoved = new Date();
 		removedProfile.removedBy = "current profile";
@@ -512,13 +515,42 @@ public class Application extends Controller {
 		return ok(deletedprofile.render());
 
 	}
-	
+
 	public Result displayUser(String actionType) {
 		return ok(getuser.render(form(FindUser.class)));
 	}
 
-	public Result exportData() {
-		return ok(export.render(form(Login.class)));
+	public Result exportUsers(String whatData) {
+		List<User> users = null;
+
+		try {
+			switch (whatData) {
+			case "EMNeedApproval":
+				users = User.findUnapprovedEM();
+				break;
+			default:
+				users = User.find.all();
+				break;
+			}
+
+			String usersCSV = "C:\\WebDev\\users.csv";
+			System.out.println("Writing -----users.csv----------------");
+			CSVWriter usersWriter = new CSVWriter(new FileWriter(usersCSV));
+			List<String[]> usersArr = new ArrayList<String[]>();
+			usersArr.add(new String[] { "ID", "Email", "Full Name" });
+
+			for (User user : users) {
+				usersArr.add(new String[] { new Long(user.getId()).toString(), user.getEmail(), user.fullname });
+			}
+
+			usersWriter.writeAll(usersArr);
+			usersWriter.close();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		
+		return ok(exportready.render());
+
 	}
 
 	public Result findUser() {
@@ -735,7 +767,7 @@ public class Application extends Controller {
 
 		return ok(profilecreated.render());
 	}
-	
+
 	public Result updateProfileAdmin(String name) {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 

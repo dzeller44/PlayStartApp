@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -175,6 +176,10 @@ public class User extends Model {
 	 */
 	public static User findByUserKey(String userKey) {
 		return find.where().eq("userkey", userKey).findUnique();
+	}
+	
+	public static List<User> findUnapprovedEM() {
+		return find.where().eq("approved", "N").findList();
 	}
 
 	public Long getId() {

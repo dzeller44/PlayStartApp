@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Tue Nov 15 13:54:05 MST 2016
+// @DATE:Tue Nov 15 14:53:01 MST 2016
 
 package router
 
@@ -88,7 +88,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """finduser""", """controllers.Application.findUser()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """finduser""", """controllers.Application.getUserByEmail()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateuser""", """controllers.Application.updateUser()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """export""", """controllers.Application.exportData()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """exportusers/$data<[^/]+>""", """controllers.Application.exportUsers(data:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """openuser""", """controllers.Application.openUser()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addadmin""", """controllers.account.Signup.createAdmin()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addadmin""", """controllers.account.Signup.saveAdmin()"""),
@@ -474,19 +474,19 @@ class Routes(
   )
 
   // @LINE:45
-  private[this] lazy val controllers_Application_exportData21_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("export")))
+  private[this] lazy val controllers_Application_exportUsers21_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("exportusers/"), DynamicPart("data", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Application_exportData21_invoker = createInvoker(
-    Application_6.exportData(),
+  private[this] lazy val controllers_Application_exportUsers21_invoker = createInvoker(
+    Application_6.exportUsers(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
-      "exportData",
-      Nil,
+      "exportUsers",
+      Seq(classOf[String]),
       "GET",
       """""",
-      this.prefix + """export"""
+      this.prefix + """exportusers/$data<[^/]+>"""
     )
   )
 
@@ -960,9 +960,9 @@ class Routes(
       }
   
     // @LINE:45
-    case controllers_Application_exportData21_route(params) =>
-      call { 
-        controllers_Application_exportData21_invoker.call(Application_6.exportData())
+    case controllers_Application_exportUsers21_route(params) =>
+      call(params.fromPath[String]("data", None)) { (data) =>
+        controllers_Application_exportUsers21_invoker.call(Application_6.exportUsers(data))
       }
   
     // @LINE:47

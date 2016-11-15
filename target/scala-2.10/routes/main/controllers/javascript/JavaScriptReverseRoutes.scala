@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Tue Nov 15 13:54:05 MST 2016
+// @DATE:Tue Nov 15 14:53:01 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -298,11 +298,11 @@ package controllers.javascript {
     )
   
     // @LINE:45
-    def exportData: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.exportData",
+    def exportUsers: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.exportUsers",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "export"})
+        function(data) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "exportusers/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("data", encodeURIComponent(data))})
         }
       """
     )

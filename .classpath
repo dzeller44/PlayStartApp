@@ -123,5 +123,6 @@
 	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/twirl"/>
 	<classpathentry kind="lib" path="C:/WebDev/eclipse/libs/annotations-7.0.3.jar"/>
 	<classpathentry kind="lib" path="C:/WebDev/eclipse/libs/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/lib/opencsv-3.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -42,7 +42,7 @@ POST   /finduser                controllers.Application.getUserByEmail()
 
 POST   /updateuser              controllers.Application.updateUser()
 
-GET    /export                  controllers.Application.exportData()
+GET    /exportusers/:data       controllers.Application.exportUsers(data: String)
 
 GET    /openuser                controllers.Application.openUser()
 
