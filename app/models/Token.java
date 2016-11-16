@@ -188,7 +188,7 @@ public class Token extends Model {
                 subject = Messages.get("admin.newaccount.subject");
                 // Need to update the URL...
                 // Replace "admin" with "reset"...
-                newURL = url.toString().replace("/admin/", "/reset/");
+                newURL = url.toString().replace("/admin/", "/resetadmin/");
                 message = Messages.get("admin.newaccount.message", newURL);
                 toMail = token.email; // == email parameter
                 break;

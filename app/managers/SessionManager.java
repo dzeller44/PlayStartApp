@@ -142,8 +142,8 @@ session.expire = 8
     * @param sessionData
     * @param userId
     */
-   public static void putSessionData(Http.Session sessionRequest, SessionData sessionData, Long userId) {
-       if (userId <= 0) return;
+   public static void putSessionData(Http.Session sessionRequest, SessionData sessionData, String userId, String email) {
+       if (userId == null || userId.equals("")) return;
        String sessionId = getSessionId(sessionRequest);
        if (!checkSession(sessionId)) return;
 
@@ -162,7 +162,8 @@ session.expire = 8
            session.setExpirationDate(new Date());
            session.setHash(sessionId);
            session.setData(gson.toJson(sessionData, SessionData.class));
-           session.setUserId(userId.intValue());
+           session.setUserId(userId);
+           session.setEmail(email);
            session.save();
        } else {
     	   

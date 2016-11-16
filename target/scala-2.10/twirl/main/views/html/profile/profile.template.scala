@@ -116,42 +116,10 @@ Seq[Any](format.raw/*1.89*/("""
 		<div class="element-checkbox">
 			<label class="title">Services Provided:<span class="required">*</span></label>
 			<div class="column column1">
-				<label><input type="checkbox"
-					onclick="profileServicesOtherShowHide(this);" name="services"
-					value="waterbottled" ><span>Water
-				Bottled</span></label> <label><input type="checkbox" name="services"
-					value="waterbulk" ><span>Water
-				Bulk</span></label> <label><input type="checkbox" name="services"
-					value="sanitation" ><span>Sanitation/Toilet/Sink</span></label>
-				<label><input type="checkbox" name="services"
-					value="dumpster"><span>Dumpsters</span></label>
-				<label><input type="checkbox" name="services"
-					value="shower" ><span>Showers</span></label> <label><input
-					type="checkbox" name="services" value="generator" ><span>Generators</span></label> <label><input
-					type="checkbox" name="services" value="pump"
-					><span>Pumps</span></label> <label><input
-					type="checkbox" name="services" value="heavyequip"
-					><span>Heavy Equipment</span></label> <label><input
-					type="checkbox" name="services" value="fuel"
-					><span>Fuel</span></label> <label><input
-					type="checkbox" name="services" value="sandbags"
-					><span>Sandbags</span></label> <label><input
-					type="checkbox" name="services" value="tempfacility"
-					><span>Temporary Facilities</span></label> <label><input
-					type="checkbox" name="services" value="profserv"
-					><span>Professional Services</span></label> <label><input
-					type="checkbox" name="services" value="other"
-					><span>Other (Please List)</span></label>
-					
-								"""),_display_(/*115.10*/for(service <- servicesList) yield /*115.38*/ {_display_(Seq[Any](format.raw/*115.40*/("""
-    			"""),format.raw/*116.8*/("""<input type='checkbox' name='servicesThis' value="""),_display_(/*116.58*/service/*116.65*/.name),format.raw/*116.70*/(""">"""),_display_(/*116.72*/service/*116.79*/.shortname),format.raw/*116.89*/(""" """),format.raw/*116.90*/("""<br>
-			""")))}),format.raw/*117.5*/("""
-			"""),format.raw/*118.4*/("""</div>
-			
-			
-
-			
-			
+				"""),_display_(/*88.6*/for(service <- servicesList) yield /*88.34*/ {_display_(Seq[Any](format.raw/*88.36*/("""
+				    """),format.raw/*89.9*/("""<label><input type="checkbox" onclick="profileServicesOtherShowHide(this);" name="selectServices" value="""),_display_(/*89.114*/service/*89.121*/.name),format.raw/*89.126*/("""><span>"""),_display_(/*89.134*/service/*89.141*/.name),format.raw/*89.146*/("""</span></label>
+				""")))}),format.raw/*90.6*/("""
+			"""),format.raw/*91.4*/("""</div>
 			<div id="otherService" class="element-input">
 				<label class="title"><span class="required">*</span>Other:</label>
 				<div class="item-cont">
@@ -162,15 +130,18 @@ Seq[Any](format.raw/*1.89*/("""
 			<span class="clearfix"></span>
 		</div>
 		<div class="element-input">
-			"""),_display_(/*134.5*/if(profileForm.hasGlobalErrors)/*134.36*/ {_display_(Seq[Any](format.raw/*134.38*/("""
-			"""),format.raw/*135.4*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-			"""),_display_(/*136.5*/profileForm/*136.16*/.globalError.message),format.raw/*136.36*/("""
-			"""),format.raw/*137.4*/("""</span>
-			""")))}),format.raw/*138.5*/("""
-		"""),format.raw/*139.3*/("""</div>
+			"""),_display_(/*102.5*/if(profileForm.hasGlobalErrors)/*102.36*/ {_display_(Seq[Any](format.raw/*102.38*/("""
+			"""),format.raw/*103.4*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+			"""),_display_(/*104.5*/profileForm/*104.16*/.globalError.message),format.raw/*104.36*/("""
+			"""),format.raw/*105.4*/("""</span>
+			""")))}),format.raw/*106.5*/("""
+		"""),format.raw/*107.3*/("""</div>
 		<div class="submit">
 			<input type="submit" value="Submit" /> <a href="/user"
-				class="buttonCancel">"""),_display_(/*142.27*/Messages("goback")),format.raw/*142.45*/("""</a>
+				class="buttonCancel">"""),_display_(/*110.27*/Messages("goback")),format.raw/*110.45*/("""</a>
+		</div>
+		<div class="submit">
+			<a href="javascript:joinServices()" class="buttonDelete" style="color: #FFFFFF;">TRY This</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -196,11 +167,11 @@ Seq[Any](format.raw/*1.89*/("""
 object profile extends profile_Scope0.profile
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 15 13:39:46 MST 2016
+                  DATE: Wed Nov 16 15:30:24 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/profile.scala.html
-                  HASH: a819efdcb2cbd85cb1092a0c1b5c628c91eccb93
-                  MATRIX: 808->1|990->88|1020->93|1038->103|1077->105|1105->107|3632->2606|3661->2607|3691->2609|3720->2610|4964->3826|4993->3827|5023->3829|5052->3830|7224->5974|7269->6002|7310->6004|7347->6013|7425->6063|7442->6070|7469->6075|7499->6077|7516->6084|7548->6094|7578->6095|7619->6105|7652->6110|8088->6519|8129->6550|8170->6552|8203->6557|8294->6621|8315->6632|8357->6652|8390->6657|8434->6670|8466->6674|8611->6791|8651->6809
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|74->43|74->43|74->43|74->43|102->71|102->71|102->71|102->71|146->115|146->115|146->115|147->116|147->116|147->116|147->116|147->116|147->116|147->116|147->116|148->117|149->118|165->134|165->134|165->134|166->135|167->136|167->136|167->136|168->137|169->138|170->139|173->142|173->142
+                  HASH: d0f47c2450bf18299631325167b276461ac8ca43
+                  MATRIX: 808->1|990->88|1020->93|1038->103|1077->105|1105->107|3632->2606|3661->2607|3691->2609|3720->2610|4964->3826|4993->3827|5023->3829|5052->3830|5733->4485|5777->4513|5817->4515|5854->4525|5987->4630|6004->4637|6031->4642|6067->4650|6084->4657|6111->4662|6163->4684|6195->4689|6609->5076|6650->5107|6691->5109|6724->5114|6815->5178|6836->5189|6878->5209|6911->5214|6955->5227|6987->5231|7132->5348|7172->5366
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|74->43|74->43|74->43|74->43|102->71|102->71|102->71|102->71|119->88|119->88|119->88|120->89|120->89|120->89|120->89|120->89|120->89|120->89|121->90|122->91|133->102|133->102|133->102|134->103|135->104|135->104|135->104|136->105|137->106|138->107|141->110|141->110
                   -- GENERATED --
               */
           

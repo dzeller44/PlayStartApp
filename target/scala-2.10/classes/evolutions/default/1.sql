@@ -90,7 +90,8 @@ create table service (
 create table session (
   id                        integer auto_increment not null,
   hash                      varchar(255),
-  user_id                   integer,
+  user_id                   varchar(255),
+  email                     varchar(255),
   expiration_date           datetime(6),
   data                      varchar(255),
   constraint pk_session primary key (id))

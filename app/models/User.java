@@ -224,5 +224,14 @@ public class User extends Model {
 		String roleToDisplay = role.getRoleTextName(role);
 		return roleToDisplay;
 	}
+	
+	public String getFullname() {
+		return fullname;
+	}
+
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
+	}
+
 
 }

@@ -93,7 +93,7 @@ Seq[Any](format.raw/*1.54*/("""
 object createadmin extends createadmin_Scope0.createadmin
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 15 13:39:46 MST 2016
+                  DATE: Wed Nov 16 14:44:04 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/createadmin.scala.html
                   HASH: 881fbd657683069a27f4d7e5c1d6c4d00b4c6eb4
                   MATRIX: 788->1|935->53|963->56|981->66|1020->68|1048->70|2020->1016|2066->1053|2106->1055|2145->1066|2246->1140|2272->1157|2313->1177|2352->1188|2397->1203|2427->1206|2569->1321|2608->1339|2746->1447

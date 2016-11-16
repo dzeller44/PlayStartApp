@@ -17,7 +17,9 @@ POST   /auth                    controllers.Application.authenticate()
 GET    /user                    controllers.Application.userHome()
 
 GET    /addprofile              controllers.Application.addProfile()
-POST   /addprofile              controllers.Application.saveProfile()
+POST   /addprofile              controllers.Application.saveProfile(services: String)
+
+GET    /saveprofile             controllers.Application.saveProfile(services: String)
 
 # Emergency Manager pages...
 GET    /em                      controllers.Application.managerHome()
@@ -53,6 +55,9 @@ GET    /finduserurl             controllers.Application.getUserByUrl(email: Stri
 
 GET    /deleteuser/:email       controllers.Application.deleteUserConfirm(email: String)
 POST   /deleteuser/:email       controllers.Application.deleteUser(email: String)
+
+GET    /resetadmin/:token       controllers.account.Reset.resetAdmin(token:String)
+POST   /resetadmin/:token       controllers.account.Reset.runResetAdmin(token:String)
 
 
 # User settings...

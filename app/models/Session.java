@@ -21,7 +21,10 @@ public class Session  extends Model {
     private String hash;
 
     @Column(name="user_id")
-    private Integer userId;
+    private String userId;
+    
+    @Column(name="email")
+    private String email;
 
     @Column(name="expiration_date")
     private Date expirationDate = new Date();
@@ -46,11 +49,11 @@ public class Session  extends Model {
         this.hash = hash;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -69,5 +72,13 @@ public class Session  extends Model {
     public void setData(String data) {
         this.data = Crypto.encryptData(data);
     }
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 }

@@ -32,13 +32,18 @@ public class AccessMiddleware extends Controller {
 	protected static boolean isAuthenticated(@Nullable SessionData sessionData) {
 		if (sessionData == null)
 			return false;
-
-		User user = Ebean.find(models.User.class).where().eq("id", sessionData.getUserId()).findUnique();
-		Integer userId = 0;
+		
+		// Use email as key...
+		User user = Ebean.find(models.User.class).where().eq("email", sessionData.getEmail()).findUnique();
+		String userId = "";
 		if (user != null) {
-			userId = user.getId().intValue();
+			userId = user.getFullname();
+			return true;
 		}
-		return userId != 0;
+		else {
+			return false;
+		}
+		
 	}
 
 	/**
@@ -58,10 +63,30 @@ public class AccessMiddleware extends Controller {
 	 */
 	public static RoleType getSessionRole() {
 		SessionData sessionData = SessionManager.getSessionData(session());
-		User user = Ebean.find(models.User.class).where().eq("id", sessionData.getUserId()).findUnique();
+		User user = Ebean.find(models.User.class).where().eq("email", sessionData.getEmail()).findUnique();
 		if (user == null)
 			return null;
 		return user.getRole();
+	}
+	
+	/**
+	 * Return String user id
+	 * 
+	 * @return string value
+	 */
+	public static String getSessionID() {
+		SessionData sessionData = SessionManager.getSessionData(session());
+		return sessionData.getUserId();
+	}
+	
+	/**
+	 * Return String email
+	 * 
+	 * @return string value
+	 */
+	public static String getSessionEmail() {
+		SessionData sessionData = SessionManager.getSessionData(session());
+		return sessionData.getEmail();
 	}
 
 	/**
@@ -74,7 +99,7 @@ public class AccessMiddleware extends Controller {
 		SessionData sessionData = SessionData.createFromUser(user);
 		Http.Session session = session();
 
-		SessionManager.putSessionData(session, sessionData, user.getId());
+		SessionManager.putSessionData(session, sessionData, user.getFullname(), user.getEmail());
 
 		return sessionData;
 	}

@@ -85,42 +85,10 @@
 		<div class="element-checkbox">
 			<label class="title">Services Provided:<span class="required">*</span></label>
 			<div class="column column1">
-				<label><input type="checkbox"
-					onclick="profileServicesOtherShowHide(this);" name="services"
-					value="waterbottled" ><span>Water
-				Bottled</span></label> <label><input type="checkbox" name="services"
-					value="waterbulk" ><span>Water
-				Bulk</span></label> <label><input type="checkbox" name="services"
-					value="sanitation" ><span>Sanitation/Toilet/Sink</span></label>
-				<label><input type="checkbox" name="services"
-					value="dumpster"><span>Dumpsters</span></label>
-				<label><input type="checkbox" name="services"
-					value="shower" ><span>Showers</span></label> <label><input
-					type="checkbox" name="services" value="generator" ><span>Generators</span></label> <label><input
-					type="checkbox" name="services" value="pump"
-					><span>Pumps</span></label> <label><input
-					type="checkbox" name="services" value="heavyequip"
-					><span>Heavy Equipment</span></label> <label><input
-					type="checkbox" name="services" value="fuel"
-					><span>Fuel</span></label> <label><input
-					type="checkbox" name="services" value="sandbags"
-					><span>Sandbags</span></label> <label><input
-					type="checkbox" name="services" value="tempfacility"
-					><span>Temporary Facilities</span></label> <label><input
-					type="checkbox" name="services" value="profserv"
-					><span>Professional Services</span></label> <label><input
-					type="checkbox" name="services" value="other"
-					><span>Other (Please List)</span></label>
-					
-								@for(service <- servicesList) {
-    			<input type='checkbox' name='servicesThis' value=@service.name>@service.shortname <br>
-			}
+				@for(service <- servicesList) {
+				    <label><input type="checkbox" onclick="profileServicesOtherShowHide(this);" name="selectServices" value=@service.name><span>@service.name</span></label>
+				}
 			</div>
-			
-			
-
-			
-			
 			<div id="otherService" class="element-input">
 				<label class="title"><span class="required">*</span>Other:</label>
 				<div class="item-cont">
@@ -140,6 +108,9 @@
 		<div class="submit">
 			<input type="submit" value="Submit" /> <a href="/user"
 				class="buttonCancel">@Messages("goback")</a>
+		</div>
+		<div class="submit">
+			<a href="javascript:joinServices()" class="buttonDelete" style="color: #FFFFFF;">TRY This</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>

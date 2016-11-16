@@ -13,13 +13,13 @@ import models.User;
 public class SessionData {
 
 	private String email;
-	private Long userId;
+	private String userId;
 
 	/**
 	 * 
 	 * @return
 	 */
-	public Long getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
@@ -47,8 +47,8 @@ public class SessionData {
 	public static SessionData createFromUser(User user) {
         //store user session
         SessionData sessionData = new SessionData();
-
-        sessionData.setUserId(user.getId());
+        
+        sessionData.setUserId(user.getFullname());
         sessionData.setEmail(user.getEmail());
 //        sessionData.setUserRole(user.getRole());
 		
@@ -57,7 +57,7 @@ public class SessionData {
 	}
 
 
-	private void setUserId(Long id) {
+	private void setUserId(String id) {
 		userId = id;
 	}
 

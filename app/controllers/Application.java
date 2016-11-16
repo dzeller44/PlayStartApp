@@ -43,6 +43,9 @@ import com.avaje.ebean.Ebean;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.opencsv.CSVWriter;
 
+import controllers.helpers.AccessMiddleware;
+import managers.SessionData;
+
 import static play.data.Form.form;
 
 import java.io.FileWriter;
@@ -57,8 +60,10 @@ import java.util.UUID;
 public class Application extends Controller {
 
 	public static Result GO_DASHBOARD = redirect(routes.Dashboard.index());
-
 	public static Result GO_HOME = redirect(routes.Application.index());
+	public static Result GO_USER = redirect(routes.Application.userHome());
+	public static Result GO_ADMIN = redirect(routes.Application.adminHome());
+	public static Result GO_MANAGER = redirect(routes.Application.managerHome());
 
 	/*
 	 * public static Result signup2() { return ok("success"); }
@@ -145,6 +150,7 @@ public class Application extends Controller {
 			User user = null;
 			try {
 				user = User.authenticate(email, password);
+				SessionData createUserSession = AccessMiddleware.createUserSession(user);
 			} catch (AppException e) {
 				errMessage = Messages.get("error.technical");
 				return errMessage;
@@ -410,7 +416,25 @@ public class Application extends Controller {
 		} else {
 			System.out.println("authenticate - good request");
 			session("email", loginForm.get().email);
-			return GO_DASHBOARD;
+			
+			boolean isAuth = AccessMiddleware.isAuthenticated();		
+			RoleType role = AccessMiddleware.getSessionRole();
+			
+			switch (role.toString()) {
+			case "1":
+				return GO_USER;
+
+			case "2":
+				return GO_MANAGER;
+
+			case "3":
+				return GO_ADMIN;
+
+			default:
+				return GO_HOME;
+
+			}
+
 		}
 	}
 
@@ -447,7 +471,7 @@ public class Application extends Controller {
 
 		// Set custom fields...
 		removedUser.dateRemoved = new Date();
-		removedUser.removedBy = "current user";
+		removedUser.removedBy = AccessMiddleware.getSessionEmail();
 		removedUser.save();
 
 		// Delete the user...
@@ -506,7 +530,7 @@ public class Application extends Controller {
 
 		// Set custom fields...
 		removedProfile.dateRemoved = new Date();
-		removedProfile.removedBy = "current profile";
+		removedProfile.removedBy = AccessMiddleware.getSessionEmail();
 		removedProfile.save();
 
 		// Delete the profile...
@@ -733,7 +757,7 @@ public class Application extends Controller {
 
 	}
 
-	public Result saveProfile() {
+	public Result saveProfile(String selectedServices) {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 
 		if (profileEntry.hasErrors()) {
@@ -759,7 +783,8 @@ public class Application extends Controller {
 		profile.secondaryNameLast = profileForm.secondaryNameLast;
 		profile.secondaryPhone = profileForm.secondaryPhone;
 		profile.secondaryEmail = profileForm.secondaryEmail;
-		profile.services = profileForm.services;
+		//profile.services = profileForm.services;
+		profile.services = selectedServices;
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
 		profile.profilekey = profile.createProfileKey();
@@ -796,7 +821,7 @@ public class Application extends Controller {
 		profile.secondaryEmail = profileForm.secondaryEmail;
 		profile.services = profileForm.services;
 		profile.servicesOther = profileForm.servicesOther;
-		profile.updatedBy = "current user";
+		profile.updatedBy = AccessMiddleware.getSessionEmail();
 		profile.dateUpdated = new Date();
 		profile.save();
 
@@ -857,7 +882,7 @@ public class Application extends Controller {
 		}
 
 		// Save the user...
-		user.updatedBy = "current user";
+		user.updatedBy = AccessMiddleware.getSessionEmail();
 		user.dateUpdated = new Date();
 		user.save();
 

@@ -42,3 +42,12 @@ clean
 compile
 clean
 run
+clean
+compile
+run
+clean
+compile
+run
+clean
+compile
+run
