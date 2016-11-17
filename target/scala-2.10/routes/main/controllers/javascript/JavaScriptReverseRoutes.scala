@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 16 15:20:51 MST 2016
+// @DATE:Thu Nov 17 14:47:37 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -193,6 +193,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:20
+    def saveProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.saveProfile",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addprofile"})
+        }
+      """
+    )
+  
     // @LINE:37
     def updateProfileAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.updateProfileAdmin",
@@ -243,16 +253,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
-    def saveProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.saveProfile",
+    // @LINE:22
+    def getProfilesByUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.getProfilesByUser",
       """
-        function(services) {
-        
-          if (true) {
-            return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addprofile" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("services", services)])})
-          }
-        
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "getprofiles"})
         }
       """
     )

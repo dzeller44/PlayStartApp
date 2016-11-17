@@ -32,6 +32,9 @@ public class Session  extends Model {
     @Column(name="data")
     @Constraints.MinLength(10)
     private String data;
+    
+    @Column(name="userkey")
+    private String userkey;
 
     public Integer getId() {
         return id;
@@ -79,6 +82,14 @@ public class Session  extends Model {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getUserkey() {
+		return userkey;
+	}
+
+	public void setUserkey(String userkey) {
+		this.userkey = userkey;
 	}
 
 }

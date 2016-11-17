@@ -14,6 +14,7 @@ public class SessionData {
 
 	private String email;
 	private String userId;
+	private String userkey;
 
 	/**
 	 * 
@@ -50,6 +51,7 @@ public class SessionData {
         
         sessionData.setUserId(user.getFullname());
         sessionData.setEmail(user.getEmail());
+        sessionData.setUserkey(user.getUserkey());
 //        sessionData.setUserRole(user.getRole());
 		
 		
@@ -64,6 +66,14 @@ public class SessionData {
 
 	public static SessionData getNew() {
 		return new SessionData();
+	}
+
+	public String getUserkey() {
+		return userkey;
+	}
+
+	public void setUserkey(String userkey) {
+		this.userkey = userkey;
 	}
 
 }

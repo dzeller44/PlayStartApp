@@ -1,6 +1,15 @@
 @(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service], profile: Profile)
 
 @main(null) {
+		<script type="text/javascript">
+		$(document).ready(function(){		 
+			$('input[name=selectServices]').on('change', function() {
+				$('#services').val($('input[name=selectServices]:checked').map(function() {
+					return this.value;
+				}).get());
+			});
+		});
+	</script>
 <section id="profileMain">
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
@@ -85,33 +94,13 @@
 		<div class="element-checkbox">
 			<label class="title">Services Provided:<span class="required">*</span></label>
 			<div class="column column1">
-				<label><input type="checkbox"
-					onclick="profileServicesOtherShowHide(this);" name="services"
-					value="waterbottled" ><span>Water
-				Bottled</span></label> <label><input type="checkbox" name="services"
-					value="waterbulk" ><span>Water
-				Bulk</span></label> <label><input type="checkbox" name="services"
-					value="sanitation" ><span>Sanitation/Toilet/Sink</span></label>
-				<label><input type="checkbox" name="services"
-					value="dumpster"><span>Dumpsters</span></label>
-				<label><input type="checkbox" name="services"
-					value="shower" ><span>Showers</span></label> <label><input
-					type="checkbox" name="services" value="generator" ><span>Generators</span></label> <label><input
-					type="checkbox" name="services" value="pump"
-					><span>Pumps</span></label> <label><input
-					type="checkbox" name="services" value="heavyequip"
-					><span>Heavy Equipment</span></label> <label><input
-					type="checkbox" name="services" value="fuel"
-					><span>Fuel</span></label> <label><input
-					type="checkbox" name="services" value="sandbags"
-					><span>Sandbags</span></label> <label><input
-					type="checkbox" name="services" value="tempfacility"
-					><span>Temporary Facilities</span></label> <label><input
-					type="checkbox" name="services" value="profserv"
-					><span>Professional Services</span></label> <label><input
-					type="checkbox" name="services" value="other"
-					><span>Other (Please List)</span></label>
+				@for(service <- servicesList) {
+				    <label><input type="checkbox" class="selectServices" name="selectServices" id="selectServices" value=@service.name><span>@service.name</span></label>
+				}
 			</div>
+			
+			<input type="hidden" name="services" id="services">
+
 			<div id="otherService" class="element-input">
 				<label class="title"><span class="required">*</span>Other:</label>
 				<div class="item-cont">

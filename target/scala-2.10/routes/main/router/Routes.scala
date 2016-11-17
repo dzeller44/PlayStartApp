@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 16 15:20:51 MST 2016
+// @DATE:Thu Nov 17 14:47:37 MST 2016
 
 package router
 
@@ -75,8 +75,8 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """auth""", """controllers.Application.authenticate()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """user""", """controllers.Application.userHome()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addprofile""", """controllers.Application.addProfile()"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addprofile""", """controllers.Application.saveProfile(services:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """saveprofile""", """controllers.Application.saveProfile(services:String)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addprofile""", """controllers.Application.saveProfile()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """getprofiles""", """controllers.Application.getProfilesByUser()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """em""", """controllers.Application.managerHome()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """admin""", """controllers.Application.adminHome()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """adminuser""", """controllers.Application.userMaintenance()"""),
@@ -260,12 +260,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addprofile")))
   )
   private[this] lazy val controllers_Application_saveProfile8_invoker = createInvoker(
-    Application_6.saveProfile(fakeValue[String]),
+    Application_6.saveProfile(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
       "saveProfile",
-      Seq(classOf[String]),
+      Nil,
       "POST",
       """""",
       this.prefix + """addprofile"""
@@ -273,19 +273,19 @@ class Routes(
   )
 
   // @LINE:22
-  private[this] lazy val controllers_Application_saveProfile9_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("saveprofile")))
+  private[this] lazy val controllers_Application_getProfilesByUser9_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("getprofiles")))
   )
-  private[this] lazy val controllers_Application_saveProfile9_invoker = createInvoker(
-    Application_6.saveProfile(fakeValue[String]),
+  private[this] lazy val controllers_Application_getProfilesByUser9_invoker = createInvoker(
+    Application_6.getProfilesByUser(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
-      "saveProfile",
-      Seq(classOf[String]),
+      "getProfilesByUser",
+      Nil,
       "GET",
       """""",
-      this.prefix + """saveprofile"""
+      this.prefix + """getprofiles"""
     )
   )
 
@@ -937,14 +937,14 @@ class Routes(
   
     // @LINE:20
     case controllers_Application_saveProfile8_route(params) =>
-      call(params.fromQuery[String]("services", None)) { (services) =>
-        controllers_Application_saveProfile8_invoker.call(Application_6.saveProfile(services))
+      call { 
+        controllers_Application_saveProfile8_invoker.call(Application_6.saveProfile())
       }
   
     // @LINE:22
-    case controllers_Application_saveProfile9_route(params) =>
-      call(params.fromQuery[String]("services", None)) { (services) =>
-        controllers_Application_saveProfile9_invoker.call(Application_6.saveProfile(services))
+    case controllers_Application_getProfilesByUser9_route(params) =>
+      call { 
+        controllers_Application_getProfilesByUser9_invoker.call(Application_6.getProfilesByUser())
       }
   
     // @LINE:25

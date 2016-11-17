@@ -17,9 +17,9 @@ POST   /auth                    controllers.Application.authenticate()
 GET    /user                    controllers.Application.userHome()
 
 GET    /addprofile              controllers.Application.addProfile()
-POST   /addprofile              controllers.Application.saveProfile(services: String)
+POST   /addprofile              controllers.Application.saveProfile()
 
-GET    /saveprofile             controllers.Application.saveProfile(services: String)
+GET    /getprofiles             controllers.Application.getProfilesByUser()
 
 # Emergency Manager pages...
 GET    /em                      controllers.Application.managerHome()

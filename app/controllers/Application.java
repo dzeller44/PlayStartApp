@@ -19,6 +19,7 @@ import views.html.index;
 import views.html.auth;
 import views.html.profile.profile;
 import views.html.profile.profilecreated;
+import views.html.profile.displayprofiles;
 import views.html.admin.searchusers;
 import views.html.admin.searchprofiles;
 import views.html.export;
@@ -50,6 +51,7 @@ import static play.data.Form.form;
 
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -416,10 +418,10 @@ public class Application extends Controller {
 		} else {
 			System.out.println("authenticate - good request");
 			session("email", loginForm.get().email);
-			
-			boolean isAuth = AccessMiddleware.isAuthenticated();		
+
+			boolean isAuth = AccessMiddleware.isAuthenticated();
 			RoleType role = AccessMiddleware.getSessionRole();
-			
+
 			switch (role.toString()) {
 			case "1":
 				return GO_USER;
@@ -527,6 +529,7 @@ public class Application extends Controller {
 		removedProfile.profilekey = profile.profilekey;
 		removedProfile.updatedBy = profile.updatedBy;
 		removedProfile.dateUpdated = profile.dateUpdated;
+		removedProfile.userkey = profile.userkey;
 
 		// Set custom fields...
 		removedProfile.dateRemoved = new Date();
@@ -572,7 +575,7 @@ public class Application extends Controller {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		
+
 		return ok(exportready.render());
 
 	}
@@ -590,12 +593,23 @@ public class Application extends Controller {
 		List<Profile> profiles = Profile.find.all();
 		return ok(searchprofiles.render(profiles));
 	}
+	
+	public Result getProfilesByUser() {
+		// Grab the current user's userkey...
+		String userkey = AccessMiddleware.getSessionUserKey();
+		List<Profile> profiles = Profile.findAllByUserKey(userkey);
+		return ok(displayprofiles.render(profiles));
+	}
 
 	public Result openProfile(String name) {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 		List<Service> services = Service.find.all();
 		// Find profile and display...
 		Profile profile = Profile.findByName(name);
+		// Grab the current services...
+		String currentServices = profile.services;
+		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));	
+		//return ok(showprofile.render(profileEntry, services, profile, selectedServices));
 		return ok(showprofile.render(profileEntry, services, profile));
 	}
 
@@ -649,7 +663,23 @@ public class Application extends Controller {
 		if (email != null) {
 			User user = User.findByEmail(email);
 			if (user != null && user.validated) {
-				return GO_DASHBOARD;
+				boolean isAuth = AccessMiddleware.isAuthenticated();
+				RoleType role = AccessMiddleware.getSessionRole();
+
+				switch (role.toString()) {
+				case "1":
+					return GO_USER;
+
+				case "2":
+					return GO_MANAGER;
+
+				case "3":
+					return GO_ADMIN;
+
+				default:
+					return GO_HOME;
+
+				}
 			} else {
 				Logger.debug("Clearing invalid session credentials");
 				session().clear();
@@ -757,7 +787,7 @@ public class Application extends Controller {
 
 	}
 
-	public Result saveProfile(String selectedServices) {
+	public Result saveProfile() {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 
 		if (profileEntry.hasErrors()) {
@@ -783,11 +813,12 @@ public class Application extends Controller {
 		profile.secondaryNameLast = profileForm.secondaryNameLast;
 		profile.secondaryPhone = profileForm.secondaryPhone;
 		profile.secondaryEmail = profileForm.secondaryEmail;
-		//profile.services = profileForm.services;
-		profile.services = selectedServices;
+		profile.services = profileForm.services;
+		//profile.services = selectedServices;
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
 		profile.profilekey = profile.createProfileKey();
+		profile.userkey = AccessMiddleware.getSessionUserKey();
 		profile.save();
 
 		return ok(profilecreated.render());

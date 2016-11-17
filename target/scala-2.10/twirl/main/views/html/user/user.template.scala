@@ -51,7 +51,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/editprofile">
+					<a class="services_item" href="/getprofiles">
 						<p>
 							<img src=""""),_display_(/*25.19*/routes/*25.25*/.Assets.at("/img/icon_Edit_Profile.png")),format.raw/*25.65*/(""""> <b>Edit Business Profile</b>
 						</p> <span>Edit your Business Profile(s)...</span>
@@ -89,9 +89,9 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object user extends user_Scope0.user
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 16 14:44:05 MST 2016
+                  DATE: Thu Nov 17 14:47:39 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/user/user.scala.html
-                  HASH: 675e48e8fbc6538d70365b5a65dec335c8769a9c
+                  HASH: 1cea82e5536d5dee53441171f5a0bb0dbd67f475
                   MATRIX: 830->1|843->7|882->9|910->11|1337->411|1352->417|1412->456|1661->678|1676->684|1737->724
                   LINES: 32->1|32->1|32->1|34->3|49->18|49->18|49->18|56->25|56->25|56->25
                   -- GENERATED --

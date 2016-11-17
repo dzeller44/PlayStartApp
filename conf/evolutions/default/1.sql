@@ -94,6 +94,7 @@ create table session (
   email                     varchar(255),
   expiration_date           datetime(6),
   data                      varchar(255),
+  userkey                   varchar(255),
   constraint pk_session primary key (id))
 ;
 

@@ -1,6 +1,15 @@
 @(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service])
 
 @main(null) {
+	<script type="text/javascript">
+		$(document).ready(function(){		 
+			$('input[name=selectServices]').on('change', function() {
+				$('#services').val($('input[name=selectServices]:checked').map(function() {
+					return this.value;
+				}).get());
+			});
+		});
+	</script>
 <section id="profileMain">
 	<form class="formoid-solid-dark"
 		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
@@ -83,12 +92,15 @@
 			</div>
 		</div>
 		<div class="element-checkbox">
-			<label class="title">Services Provided:<span class="required">*</span></label>
+			<label class="title"><span class="required">*</span>Services Provided:</label>
 			<div class="column column1">
 				@for(service <- servicesList) {
-				    <label><input type="checkbox" onclick="profileServicesOtherShowHide(this);" name="selectServices" value=@service.name><span>@service.name</span></label>
+				    <label><input type="checkbox" class="selectServices" name="selectServices" id="selectServices" value=@service.name><span>@service.name</span></label>
 				}
 			</div>
+			
+			<input type="hidden" name="services" id="services">
+
 			<div id="otherService" class="element-input">
 				<label class="title"><span class="required">*</span>Other:</label>
 				<div class="item-cont">
@@ -100,17 +112,12 @@
 		</div>
 		<div class="element-input">
 			@if(profileForm.hasGlobalErrors) {
-			<span class="errorMessageDisplay" style="color: #d9534f;">
-			@profileForm.globalError.message
-			</span>
+				<span class="errorMessageDisplay" style="color: #d9534f;">@profileForm.globalError.message</span>
 			}
 		</div>
 		<div class="submit">
 			<input type="submit" value="Submit" /> <a href="/user"
 				class="buttonCancel">@Messages("goback")</a>
-		</div>
-		<div class="submit">
-			<a href="javascript:joinServices()" class="buttonDelete" style="color: #FFFFFF;">TRY This</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>

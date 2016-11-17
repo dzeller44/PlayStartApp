@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 16 15:20:51 MST 2016
+// @DATE:Thu Nov 17 14:47:37 MST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -128,6 +128,12 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "addprofile")
     }
   
+    // @LINE:20
+    def saveProfile(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "addprofile")
+    }
+  
     // @LINE:37
     def updateProfileAdmin(name:String): Call = {
       import ReverseRouteContext.empty
@@ -158,18 +164,10 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "finduser")
     }
   
-    // @LINE:20
-    def saveProfile(services:String): Call = {
-    
-      (services: @unchecked) match {
-      
-        // @LINE:20
-        case (services)  =>
-          import ReverseRouteContext.empty
-          Call("POST", _prefix + { _defaultPrefix } + "addprofile" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("services", services)))))
-      
-      }
-    
+    // @LINE:22
+    def getProfilesByUser(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "getprofiles")
     }
   
     // @LINE:57

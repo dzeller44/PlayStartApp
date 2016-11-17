@@ -233,5 +233,13 @@ public class User extends Model {
 		this.fullname = fullname;
 	}
 
+	public String getUserkey() {
+		return userkey;
+	}
+
+	public void setUserkey(String userkey) {
+		this.userkey = userkey;
+	}
+
 
 }

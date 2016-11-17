@@ -88,6 +88,17 @@ public class AccessMiddleware extends Controller {
 		SessionData sessionData = SessionManager.getSessionData(session());
 		return sessionData.getEmail();
 	}
+	
+	/**
+	 * Return String user key
+	 * 
+	 * @return string value
+	 */
+	public static String getSessionUserKey() {
+		SessionData sessionData = SessionManager.getSessionData(session());
+		return sessionData.getUserkey();
+	}
+
 
 	/**
 	 * 
@@ -99,7 +110,7 @@ public class AccessMiddleware extends Controller {
 		SessionData sessionData = SessionData.createFromUser(user);
 		Http.Session session = session();
 
-		SessionManager.putSessionData(session, sessionData, user.getFullname(), user.getEmail());
+		SessionManager.putSessionData(session, sessionData, user.getFullname(), user.getEmail(), user.getUserkey());
 
 		return sessionData;
 	}

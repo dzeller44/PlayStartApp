@@ -1,6 +1,7 @@
 package models;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Entity;
@@ -116,14 +117,23 @@ public class Profile extends Model {
 	}
 
 	/**
-	 * Retrieves a user by unique user key.
+	 * Retrieves a profile by unique profile key.
 	 *
-	 * @param unique
-	 *            user key.
-	 * @return a user if the unique user key is found, null otherwise.
+	 * @param unique profile key.
+	 * @return a profile if the unique profile key is found, null otherwise.
 	 */
 	public static Profile findByProfileKey(String profileKey) {
 		return find.where().eq("profilekey", profileKey).findUnique();
+	}
+	
+	/**
+	 * Retrieves a profile by unique user key.
+	 *
+	 * @param unique user key.
+	 * @return a profile if the unique user key is found, null otherwise.
+	 */
+	public static List<Profile> findAllByUserKey(String userkey) {
+		return find.where().eq("userkey", userkey).findList();
 	}
 	
 }

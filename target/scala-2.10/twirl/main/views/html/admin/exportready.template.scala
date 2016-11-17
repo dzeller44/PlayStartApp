@@ -69,7 +69,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object exportready extends exportready_Scope0.exportready
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 16 14:44:04 MST 2016
+                  DATE: Thu Nov 17 14:47:38 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/exportready.scala.html
                   HASH: 8c071d8bc7fda55bc19b6b28d6ebcdf8141fa41e
                   MATRIX: 845->1|858->7|897->9|928->14

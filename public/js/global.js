@@ -1,6 +1,6 @@
 function profileServicesOtherShowHide(field) {
-	if (field.value == "other") {
-		alert("check");
+	//console.log("field.value = " + field.value.toUpperCase());
+	if (field.value.toUpperCase() == "OTHER") {
 		document.getElementById("otherService").style.display = "block";
 	} else {
 		document.getElementById("otherService").style.display = "none";
@@ -40,15 +40,20 @@ function openSave() {
 }
 
 function joinServices() {
-	var checkboxes = document.getElementsByName("selectServices");
-	var vals = [];
-	for (var i = 0, n = checkboxes.length; i < n; i++) {
-		if (checkboxes[i].checked) {
-			vals.push(checkboxes[i].value);
+	var checkboxField = document.getElementsByName("selectServices");
+	var checkedValues = [];
+	for (var i = 0, n = checkboxField.length; i < n; i++) {
+		if (checkboxField[i].checked) {
+			checkedValues.push(checkboxField[i].value);
 		}
 	}
-	var str = vals.join(",");
-	console.log(str);
-	window.location.href = "/saveprofile?services=" + str;
+	var finalValues = checkedValues.join(",");
+	//var servicesField = document.createElement("services");
+	//servicesField.setAttribute("type", "hidden");
+	console.log("finalValues = " + finalValues);
+	document.getElementById("services").value = finalValues;
+	window.location.href = "/saveprofile?services=" + finalValues;
 
 }
+
+
