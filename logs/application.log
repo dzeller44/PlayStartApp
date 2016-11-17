@@ -1,95 +1,72 @@
-2016-11-17 13:44:12,851 [INFO] from play.core.server.NettyServer in pool-6-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-11-17 13:44:22,880 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-17 13:44:22,897 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-17 13:44:23,747 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-17 13:44:25,055 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-11-17 13:44:44,016 [ERROR] from akka.dispatch.TaskInvocation in application-akka.actor.default-dispatcher-12 - Sending the email to the following server failed : localhost:25
-org.apache.commons.mail.EmailException: Sending the email to the following server failed : localhost:25
-	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1410) ~[commons-email-1.3.3.jar:1.3.3]
-	at org.apache.commons.mail.Email.send(Email.java:1437) ~[commons-email-1.3.3.jar:1.3.3]
-	at play.api.libs.mailer.CommonsMailer$$anon$2.send(MailerPlugin.scala:102) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.SMTPMailer.send(MailerPlugin.scala:127) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.CommonsMailer.send(MailerPlugin.scala:109) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.MailerClient$class.send(MailerPlugin.scala:44) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.CommonsMailer.send(MailerPlugin.scala:83) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at models.utils.Mail$EnvelopJob.run(Mail.java:104) ~[classes/:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) ~[akka-actor_2.10-2.3.13.jar:na]
+2016-11-17 15:13:01,730 [INFO] from play.core.server.NettyServer in pool-8-thread-3 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-11-17 15:13:08,096 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-17 15:13:08,109 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-11-17 15:13:08,885 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-17 15:13:09,999 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-11-17 15:13:10,436 [ERROR] from application in application-akka.actor.default-dispatcher-2 - 
+
+! @7251ogddo - Internal server error, for (GET) [/] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:151) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:148) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.executeScheduled(Execution.scala:109) [play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:71) [play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.10-2.3.13.jar:na]
 	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.10-2.3.13.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: javax.mail.MessagingException: Could not connect to SMTP host: localhost, port: 25
-	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1972) ~[mail-1.4.5.jar:1.4.5]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:642) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Service.connect(Service.java:295) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Service.connect(Service.java:176) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Service.connect(Service.java:125) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Transport.send0(Transport.java:194) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Transport.send(Transport.java:124) ~[mail-1.4.5.jar:1.4.5]
-	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1400) ~[commons-email-1.3.3.jar:1.3.3]
-	... 13 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_101]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_101]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_101]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_101]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_101]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_101]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_101]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_101]
-	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:317) ~[mail-1.4.5.jar:1.4.5]
-	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:233) ~[mail-1.4.5.jar:1.4.5]
-	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1938) ~[mail-1.4.5.jar:1.4.5]
-	... 20 common frames omitted
-2016-11-17 13:45:28,511 [WARN] from play in application-akka.actor.default-dispatcher-7 - You are using status code '200' with flashing, which should only be used with a redirect status!
-2016-11-17 13:45:30,543 [ERROR] from akka.dispatch.TaskInvocation in application-akka.actor.default-dispatcher-20 - Sending the email to the following server failed : localhost:25
-org.apache.commons.mail.EmailException: Sending the email to the following server failed : localhost:25
-	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1410) ~[commons-email-1.3.3.jar:1.3.3]
-	at org.apache.commons.mail.Email.send(Email.java:1437) ~[commons-email-1.3.3.jar:1.3.3]
-	at play.api.libs.mailer.CommonsMailer$$anon$2.send(MailerPlugin.scala:102) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.SMTPMailer.send(MailerPlugin.scala:127) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.CommonsMailer.send(MailerPlugin.scala:109) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.MailerClient$class.send(MailerPlugin.scala:44) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at play.api.libs.mailer.CommonsMailer.send(MailerPlugin.scala:83) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
-	at models.utils.Mail$EnvelopJob.run(Mail.java:104) ~[classes/:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) ~[akka-actor_2.10-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.10-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: javax.mail.MessagingException: Could not connect to SMTP host: localhost, port: 25
-	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1972) ~[mail-1.4.5.jar:1.4.5]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:642) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Service.connect(Service.java:295) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Service.connect(Service.java:176) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Service.connect(Service.java:125) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Transport.send0(Transport.java:194) ~[mail-1.4.5.jar:1.4.5]
-	at javax.mail.Transport.send(Transport.java:124) ~[mail-1.4.5.jar:1.4.5]
-	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1400) ~[commons-email-1.3.3.jar:1.3.3]
-	... 13 common frames omitted
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_101]
-	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_101]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_101]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_101]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_101]
-	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_101]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_101]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_101]
-	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:317) ~[mail-1.4.5.jar:1.4.5]
-	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:233) ~[mail-1.4.5.jar:1.4.5]
-	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1938) ~[mail-1.4.5.jar:1.4.5]
-	... 20 common frames omitted
-2016-11-17 13:46:55,533 [INFO] from application in application-akka.actor.default-dispatcher-30 - Shutting down connection pool.
-2016-11-17 13:46:55,691 [WARN] from application in application-akka.actor.default-dispatcher-30 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-17 13:46:55,692 [INFO] from application in application-akka.actor.default-dispatcher-30 - Creating Pool for datasource 'default'
-2016-11-17 13:46:55,701 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-30 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-17 13:46:56,188 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-30 - Application started (Dev)
-2016-11-17 13:52:30,572 [INFO] from application in application-akka.actor.default-dispatcher-20 - Shutting down connection pool.
-2016-11-17 13:52:31,973 [WARN] from application in application-akka.actor.default-dispatcher-20 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-17 13:52:31,975 [INFO] from application in application-akka.actor.default-dispatcher-20 - Creating Pool for datasource 'default'
-2016-11-17 13:52:31,997 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-20 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-17 13:52:36,804 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-20 - Application started (Dev)
-2016-11-17 14:11:50,523 [INFO] from application in pool-6-thread-4 - Shutting down connection pool.
+Caused by: java.lang.NullPointerException: null
+	at controllers.Application.index(Application.java:673) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:893) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:893) ~[classes/:na]
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.http.DefaultHttpRequestHandler$1.call(DefaultHttpRequestHandler.java:20) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:485) ~[scala-library.jar:na]
+	at play.core.j.JavaAction.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:536) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:536) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	... 6 common frames omitted

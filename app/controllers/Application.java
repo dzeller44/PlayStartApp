@@ -56,6 +56,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import models.utils.Mail;
+import play.Configuration;
+import play.libs.mailer.Email;
+import play.libs.mailer.MailerClient;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.inject.Inject;
+import org.apache.commons.mail.EmailException;
+
 /**
  * Login and Logout. User: yesnault
  */
@@ -71,6 +80,8 @@ public class Application extends Controller {
 
 	public static Result GO_USER = redirect(routes.Application.userHome());
 
+	@Inject
+	MailerClient mailerClient;
 	
 	public static class AdminRegister {
 
@@ -102,6 +113,7 @@ public class Application extends Controller {
 			return null;
 		}
 	}
+
 	public static class FindUser {
 
 		public String approved;
@@ -129,6 +141,7 @@ public class Application extends Controller {
 		}
 
 	}
+
 	/**
 	 * Login class used by Login Form.
 	 */
@@ -167,6 +180,7 @@ public class Application extends Controller {
 		}
 
 	}
+
 	public static class ProfileRegister {
 
 		@Constraints.Required
@@ -293,6 +307,7 @@ public class Application extends Controller {
 			return null;
 		}
 	}
+
 	public static class Register {
 
 		public String approved;
@@ -594,7 +609,7 @@ public class Application extends Controller {
 		List<User> users = User.find.all();
 		return ok(searchusers.render(form(Login.class), users));
 	}
-	
+
 	public Result getProfilesByUser() {
 		// Grab the current user's userkey...
 		String userkey = AccessMiddleware.getSessionUserKey();
@@ -706,8 +721,9 @@ public class Application extends Controller {
 		Profile profile = Profile.findByName(name);
 		// Grab the current services...
 		String currentServices = profile.services;
-		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));	
-		//return ok(showprofile.render(profileEntry, services, profile, selectedServices));
+		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
+		// return ok(showprofile.render(profileEntry, services, profile,
+		// selectedServices));
 		return ok(showprofile.render(profileEntry, services, profile));
 	}
 
@@ -815,7 +831,7 @@ public class Application extends Controller {
 		profile.secondaryPhone = profileForm.secondaryPhone;
 		profile.secondaryEmail = profileForm.secondaryEmail;
 		profile.services = profileForm.services;
-		//profile.services = selectedServices;
+		// profile.services = selectedServices;
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
 		profile.profilekey = profile.createProfileKey();
@@ -905,12 +921,27 @@ public class Application extends Controller {
 		}
 		if (approved != null) {
 			if (approved.equals("approved")) {
-				user.approved = "Y";
+				if (approved.equals("Y")) {
+					user.approved = "Y";
+					try {
+						sendMailManagerConfirmation(user);
+					} catch (Exception e) {
+						Logger.error("Can't send confirm email to approved emergency manager", e);
+						flash("error", Messages.get("error.technical"));
+					}
+				} else {
+					user.approved = "N";
+					try {
+						sendMailEMDenied(user);
+					} catch (Exception e) {
+						Logger.error("Can't send deny email to denied emergency manager", e);
+						flash("error", Messages.get("error.technical"));
+					}
+				}
 			} else {
 				user.approved = "N";
 			}
-		} else {
-			user.approved = "N";
+
 		}
 
 		// Save the user...
@@ -928,6 +959,35 @@ public class Application extends Controller {
 
 	public Result userMaintenance() {
 		return ok(usermaint.render(form(Login.class)));
+	}
+
+	private void sendMailManagerConfirmation(User user) throws EmailException, MalformedURLException {
+		String subject = Messages.get("mail.managerconfirm.subject");
+
+		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		urlString += "/confirm/" + user.confirmationToken;
+		URL url = new URL(urlString); // validate the URL, will throw an
+										// exception if bad.
+		String message = Messages.get("mail.managerconfirm.message", url.toString());
+
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);
+	}
+
+	public void sendMailEMDenied(User user) throws EmailException, MalformedURLException {
+		String subject = Messages.get("mail.deny.subject");
+
+		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		urlString += "/confirm/" + user.confirmationToken;
+		URL url = new URL(urlString); // validate the URL, will throw an
+										// exception if bad.
+		String message = Messages.get("mail.deny.message", url.toString());
+
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);
+
 	}
 
 }

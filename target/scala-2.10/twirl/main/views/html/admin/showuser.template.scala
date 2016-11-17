@@ -79,28 +79,33 @@ Seq[Any](format.raw/*1.99*/("""
 				</div>
 			</div>
 		</div>
-		
-		<div class="element-checkbox">
-			<div class="column column1">
-				<label><input type="checkbox" name="approved"
-					value="approved" /><span>Approve Emergency Manager Account</span></label>
-			</div>
-			<span class="clearfix"></span>
-		</div>
-		
+		<div class="element-radio">
+ 			<label class="title"><strong>Approve/Deny Emergency Manager</strong></label>
+  			<div class="column column1">
+ 				<label>
+ 					<input type="radio" name="approved" value="Y" /><span>Approve</span>
+ 				</label>
+ 				<label>
+ 					<input
+ 					type="radio" name="approved" value="N" /><span>Deny</span>
+ 				</label>
+ 			</div>
+  			<span class="clearfix"></span>
+  		</div>
+  				
 		<div class="element-input">
-		    """),_display_(/*61.8*/if(findUserForm.hasGlobalErrors)/*61.40*/ {_display_(Seq[Any](format.raw/*61.42*/("""
-        		"""),format.raw/*62.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-            		"""),_display_(/*63.16*/findUserForm/*63.28*/.globalError.message),format.raw/*63.48*/("""
-        		"""),format.raw/*64.11*/("""</span>
-   			""")))}),format.raw/*65.8*/("""
-		"""),format.raw/*66.3*/("""</div>
+		    """),_display_(/*66.8*/if(findUserForm.hasGlobalErrors)/*66.40*/ {_display_(Seq[Any](format.raw/*66.42*/("""
+        		"""),format.raw/*67.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*68.16*/findUserForm/*68.28*/.globalError.message),format.raw/*68.48*/("""
+        		"""),format.raw/*69.11*/("""</span>
+   			""")))}),format.raw/*70.8*/("""
+		"""),format.raw/*71.3*/("""</div>
 		<div class="submit">
-			<input type="submit" value="""),_display_(/*68.32*/Messages("submit")),format.raw/*68.50*/(""" """),format.raw/*68.51*/("""/>
-			<a href="/admin" class="buttonCancel">"""),_display_(/*69.43*/Messages("goback")),format.raw/*69.61*/("""</a>
+			<input type="submit" value="""),_display_(/*73.32*/Messages("submit")),format.raw/*73.50*/(""" """),format.raw/*73.51*/("""/>
+			<a href="/admin" class="buttonCancel">"""),_display_(/*74.43*/Messages("goback")),format.raw/*74.61*/("""</a>
 		</div>
 		<div class="submit">
-			<a href="javascript:deleteUser('"""),_display_(/*72.37*/userEmail),format.raw/*72.46*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
+			<a href="javascript:deleteUser('"""),_display_(/*77.37*/userEmail),format.raw/*77.46*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -108,7 +113,7 @@ Seq[Any](format.raw/*1.99*/("""
 
 </section>
 
-""")))}),format.raw/*80.2*/("""
+""")))}),format.raw/*85.2*/("""
 """))
       }
     }
@@ -129,11 +134,11 @@ Seq[Any](format.raw/*1.99*/("""
 object showuser extends showuser_Scope0.showuser
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 17 14:47:39 MST 2016
+                  DATE: Thu Nov 17 15:11:30 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/showuser.scala.html
-                  HASH: c9793d6fb070438e78a4dad20ceda61d7eb03724
-                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1434->420|1448->426|1493->451|1849->780|1878->788|1907->789|2222->1077|2252->1086|2281->1087|2578->1357|2607->1365|2636->1366|2691->1395|2722->1417|2762->1419|2798->1428|3001->1601|3036->1609|3069->1614|3098->1615|3134->1624|3333->1796|3361->1797|3396->1805|3827->2210|3868->2242|3908->2244|3948->2256|4050->2331|4071->2343|4112->2363|4152->2375|4198->2391|4229->2395|4319->2458|4358->2476|4387->2477|4460->2523|4499->2541|4602->2617|4632->2626|4833->2797
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|49->18|49->18|49->18|56->25|56->25|56->25|65->34|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|92->61|92->61|92->61|93->62|94->63|94->63|94->63|95->64|96->65|97->66|99->68|99->68|99->68|100->69|100->69|103->72|103->72|111->80
+                  HASH: 33d8436f2f6bbf52c43cc248dcd74c38cfd36c7d
+                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1434->420|1448->426|1493->451|1849->780|1878->788|1907->789|2222->1077|2252->1086|2281->1087|2578->1357|2607->1365|2636->1366|2691->1395|2722->1417|2762->1419|2798->1428|3001->1601|3036->1609|3069->1614|3098->1615|3134->1624|3333->1796|3361->1797|3396->1805|3996->2379|4037->2411|4077->2413|4117->2425|4219->2500|4240->2512|4281->2532|4321->2544|4367->2560|4398->2564|4488->2627|4527->2645|4556->2646|4629->2692|4668->2710|4771->2786|4801->2795|5002->2966
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|49->18|49->18|49->18|56->25|56->25|56->25|65->34|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|97->66|97->66|97->66|98->67|99->68|99->68|99->68|100->69|101->70|102->71|104->73|104->73|104->73|105->74|105->74|108->77|108->77|116->85
                   -- GENERATED --
               */
           

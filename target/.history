@@ -78,3 +78,6 @@ compile
 CLEAN
 clean
 compile
+clean
+compile
+run
