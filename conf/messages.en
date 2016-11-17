@@ -73,9 +73,15 @@ changemail.mailsent=A mail has been sent, please check your mail.
 
 mail.confirm.subject=Welcome to CO-Assist - Confirm your Account
 mail.confirm.message=Welcome to CO-Assist. <br> Click on this link : {0} to confirm your email.
-mail.admin.subject=CO-Assist - New Emergency Manager account needs approval
-mail.admin.message=CO-Assist. <br> Click on this link : {0} to approve this Emergency Manager account.
 
+mail.admin.subject=CO-Assist - New Emergency Manager account needs approval
+mail.admin.message=CO-Assist <br> Click on this link : {0} to approve this Emergency Manager account.
+
+mail.managerconfirm.subject=Welcome to CO-Assist - Confirm your Account
+mail.managerconfirm.message=Welcome to CO-Assist. <br>Your Emergency Manager account has been approved. Click on this link : {0} to confirm your email.
+
+mail.deny.subject=CO-Assist - Emergency Manager account needs denied
+mail.deny.message=CO-Assist <br> Your Emergency Manager account had been denied for questions please contact CO-Assist admin.
 
 mail.welcome.subject=Welcome to CO-Assist
 mail.welcome.message=Welcome to CO-Assist. <br> Your account is validated. Enjoy !

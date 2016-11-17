@@ -49,14 +49,22 @@
 			</div>
 		</div>
 		
-		<div class="element-checkbox">
+		<div class="element-radio">
+			<label class="title"><strong>Approve/Deny Emergence Manager</strong></label>
 			<div class="column column1">
-				<label><input type="checkbox" name="approved"
-					value="approved" /><span>Approve Emergency Manager Account</span></label>
+				<label>
+					<input type="radio" name="approved" value="Y"
+					/><span>Approve</span>
+				</label>
+				<label>
+					<input
+					type="radio" name="approved" value="N" /><span>Deny</span>
+				</label>
 			</div>
 			<span class="clearfix"></span>
 		</div>
 		
+
 		<div class="element-input">
 		    @if(findUserForm.hasGlobalErrors) {
         		<span class="errorMessageDisplay" style="color: #d9534f;">

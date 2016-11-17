@@ -1,5 +1,7 @@
 package controllers;
 
+import controllers.account.Signup;
+
 import models.User;
 import models.Profile;
 import models.RemovedUser;
@@ -7,6 +9,8 @@ import models.Service;
 import models.enums.RoleType;
 import models.utils.AppException;
 import models.utils.Hash;
+import models.utils.Mail;
+import play.Configuration;
 import play.Logger;
 import play.data.Form;
 import play.data.validation.Constraints;
@@ -14,6 +18,8 @@ import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.libs.Json;
+import play.libs.mailer.Email;
+import play.libs.mailer.MailerClient;
 import views.html.index;
 import views.html.auth;
 import views.html.profile.profile;
@@ -37,10 +43,16 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static play.data.Form.form;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+
+import javax.inject.Inject;
+
+import org.apache.commons.mail.EmailException;
 
 /**
  * Login and Logout. User: yesnault
@@ -50,6 +62,10 @@ public class Application extends Controller {
 	public static Result GO_DASHBOARD = redirect(routes.Dashboard.index());
 
 	public static Result GO_HOME = redirect(routes.Application.index());
+	
+	@Inject
+	MailerClient mailerClient;
+	
 	
 	/*
 	 * public static Result signup2() { return ok("success"); }
@@ -705,15 +721,25 @@ public class Application extends Controller {
 			break;
 		}
 		if (approved != null) {
-			if (approved.equals("approved")) {
+			if (approved.equals("Y")) {
 				user.approved = "Y";
+				try{
+					sendMailManagerConfirmation(user);
+				}catch (Exception e) {
+					Logger.error("Can't send confirm email to approved emergency manager", e);
+					flash("error", Messages.get("error.technical"));
+				}
 			} else {
 				user.approved = "N";
+				try{
+					sendMailEMDenied(user);
+				}catch (Exception e) {
+					Logger.error("Can't send deny email to denied emergency manager", e);
+					flash("error", Messages.get("error.technical"));
+				}
 			}
-		} else {
-			user.approved = "N";
-		}
-
+		} 
+		
 		// Save the user...
 		user.save();
 
@@ -728,5 +754,42 @@ public class Application extends Controller {
 	public Result userMaintenance() {
 		return ok(usermaint.render(form(Login.class)));
 	}
+	
+	private void sendMailManagerConfirmation(User user) throws EmailException, MalformedURLException {
+		String subject = Messages.get("mail.managerconfirm.subject");
+
+		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		urlString += "/confirm/" + user.confirmationToken;
+		URL url = new URL(urlString); // validate the URL, will throw an
+										// exception if bad.
+		String message = Messages.get("mail.managerconfirm.message", url.toString());
+
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);
+	}
+	
+	
+	public void sendMailEMDenied(User user) throws EmailException, MalformedURLException {
+		String subject = Messages.get("mail.deny.subject");
+
+		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		urlString += "/confirm/" + user.confirmationToken;
+		URL url = new URL(urlString); // validate the URL, will throw an
+										// exception if bad.
+		String message = Messages.get("mail.deny.message", url.toString());
+
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);
+
+	}
+	
+	
+	
+	
+	
+	
+	
 
 }

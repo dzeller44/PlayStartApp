@@ -259,6 +259,8 @@ public class Signup extends Controller {
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
 	}
+	
+
 
 	/**
 	 * Valid an account with the url in the confirm mail.
