@@ -61,16 +61,17 @@ import java.util.UUID;
  */
 public class Application extends Controller {
 
-	public static Result GO_DASHBOARD = redirect(routes.Dashboard.index());
-	public static Result GO_HOME = redirect(routes.Application.index());
-	public static Result GO_USER = redirect(routes.Application.userHome());
 	public static Result GO_ADMIN = redirect(routes.Application.adminHome());
+
+	public static Result GO_DASHBOARD = redirect(routes.Dashboard.index());
+
+	public static Result GO_HOME = redirect(routes.Application.index());
+
 	public static Result GO_MANAGER = redirect(routes.Application.managerHome());
 
-	/*
-	 * public static Result signup2() { return ok("success"); }
-	 */
+	public static Result GO_USER = redirect(routes.Application.userHome());
 
+	
 	public static class AdminRegister {
 
 		public String approved;
@@ -101,7 +102,6 @@ public class Application extends Controller {
 			return null;
 		}
 	}
-
 	public static class FindUser {
 
 		public String approved;
@@ -129,7 +129,6 @@ public class Application extends Controller {
 		}
 
 	}
-
 	/**
 	 * Login class used by Login Form.
 	 */
@@ -168,7 +167,6 @@ public class Application extends Controller {
 		}
 
 	}
-
 	public static class ProfileRegister {
 
 		@Constraints.Required
@@ -295,7 +293,6 @@ public class Application extends Controller {
 			return null;
 		}
 	}
-
 	public static class Register {
 
 		public String approved;
@@ -350,6 +347,10 @@ public class Application extends Controller {
 			return null;
 		}
 	}
+
+	/*
+	 * public static Result signup2() { return ok("success"); }
+	 */
 
 	public static class SaveProfile {
 
@@ -440,57 +441,6 @@ public class Application extends Controller {
 		}
 	}
 
-	public Result deleteUser(String email) {
-		// Locate the user record and delete...
-		User user = User.findByEmail(email);
-
-		if (user != null) {
-			// Open user record...
-			Logger.debug("Application.deleteUser: Found User based on " + email);
-		} else {
-			// Display message...
-			Logger.debug("Application.deleteUser: No User found based on " + email);
-		}
-
-		// Create record in removedusers table
-		// Capture user and date/time
-		// Remove from user table...
-		RemovedUser removedUser = new RemovedUser();
-
-		// Copy the record over...
-		removedUser.email = user.getEmail();
-		removedUser.fullname = user.fullname;
-		removedUser.passwordHash = user.passwordHash;
-		removedUser.confirmationToken = user.confirmationToken;
-		removedUser.dateCreation = user.dateCreation;
-		removedUser.active = user.active;
-		removedUser.role = user.role;
-		removedUser.approved = user.approved;
-		removedUser.validated = user.validated;
-		removedUser.userkey = user.userkey;
-		removedUser.updatedBy = user.updatedBy;
-		removedUser.dateUpdated = user.dateUpdated;
-
-		// Set custom fields...
-		removedUser.dateRemoved = new Date();
-		removedUser.removedBy = AccessMiddleware.getSessionEmail();
-		removedUser.save();
-
-		// Delete the user...
-		user.delete();
-
-		return ok(deleteduser.render());
-
-	}
-
-	public Result deleteUserConfirm(String email) {
-		return ok(deleteconfirm.render(email));
-	}
-
-	public Result deleteProfileConfirm(String name) {
-		return ok(deleteprofconfirm.render(name));
-	}
-
 	public Result deleteProfile(String name) {
 		// Locate the profile record and delete...
 		Profile profile = Profile.findByName(name);
@@ -543,6 +493,57 @@ public class Application extends Controller {
 
 	}
 
+	public Result deleteProfileConfirm(String name) {
+		return ok(deleteprofconfirm.render(name));
+	}
+
+	public Result deleteUser(String email) {
+		// Locate the user record and delete...
+		User user = User.findByEmail(email);
+
+		if (user != null) {
+			// Open user record...
+			Logger.debug("Application.deleteUser: Found User based on " + email);
+		} else {
+			// Display message...
+			Logger.debug("Application.deleteUser: No User found based on " + email);
+		}
+
+		// Create record in removedusers table
+		// Capture user and date/time
+		// Remove from user table...
+		RemovedUser removedUser = new RemovedUser();
+
+		// Copy the record over...
+		removedUser.email = user.getEmail();
+		removedUser.fullname = user.fullname;
+		removedUser.passwordHash = user.passwordHash;
+		removedUser.confirmationToken = user.confirmationToken;
+		removedUser.dateCreation = user.dateCreation;
+		removedUser.active = user.active;
+		removedUser.role = user.role;
+		removedUser.approved = user.approved;
+		removedUser.validated = user.validated;
+		removedUser.userkey = user.userkey;
+		removedUser.updatedBy = user.updatedBy;
+		removedUser.dateUpdated = user.dateUpdated;
+
+		// Set custom fields...
+		removedUser.dateRemoved = new Date();
+		removedUser.removedBy = AccessMiddleware.getSessionEmail();
+		removedUser.save();
+
+		// Delete the user...
+		user.delete();
+
+		return ok(deleteduser.render());
+
+	}
+
+	public Result deleteUserConfirm(String email) {
+		return ok(deleteconfirm.render(email));
+	}
+
 	public Result displayUser(String actionType) {
 		return ok(getuser.render(form(FindUser.class)));
 	}
@@ -584,14 +585,14 @@ public class Application extends Controller {
 		return ok(getuser.render(form(FindUser.class)));
 	}
 
-	public Result getAllUsers() {
-		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class), users));
-	}
-
 	public Result getAllProfiles() {
 		List<Profile> profiles = Profile.find.all();
 		return ok(searchprofiles.render(profiles));
+	}
+
+	public Result getAllUsers() {
+		List<User> users = User.find.all();
+		return ok(searchusers.render(form(Login.class), users));
 	}
 	
 	public Result getProfilesByUser() {
@@ -599,18 +600,6 @@ public class Application extends Controller {
 		String userkey = AccessMiddleware.getSessionUserKey();
 		List<Profile> profiles = Profile.findAllByUserKey(userkey);
 		return ok(displayprofiles.render(profiles));
-	}
-
-	public Result openProfile(String name) {
-		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
-		List<Service> services = Service.find.all();
-		// Find profile and display...
-		Profile profile = Profile.findByName(name);
-		// Grab the current services...
-		String currentServices = profile.services;
-		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));	
-		//return ok(showprofile.render(profileEntry, services, profile, selectedServices));
-		return ok(showprofile.render(profileEntry, services, profile));
 	}
 
 	public Result getUserByEmail() {
@@ -708,6 +697,18 @@ public class Application extends Controller {
 	public Result openLogin() {
 		System.out.println("openLogin");
 		return ok(auth.render(form(Login.class)));
+	}
+
+	public Result openProfile(String name) {
+		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+		List<Service> services = Service.find.all();
+		// Find profile and display...
+		Profile profile = Profile.findByName(name);
+		// Grab the current services...
+		String currentServices = profile.services;
+		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));	
+		//return ok(showprofile.render(profileEntry, services, profile, selectedServices));
+		return ok(showprofile.render(profileEntry, services, profile));
 	}
 
 	public Result openUser() {
