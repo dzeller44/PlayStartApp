@@ -937,7 +937,6 @@ public class Application extends Controller {
 					flash("error", Messages.get("error.technical"));
 				}
 			}
-
 		}
 
 		// Save the user...
