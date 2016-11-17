@@ -82,7 +82,7 @@ public class Application extends Controller {
 
 	@Inject
 	MailerClient mailerClient;
-	
+
 	public static class AdminRegister {
 
 		public String approved;
@@ -920,26 +920,22 @@ public class Application extends Controller {
 			break;
 		}
 		if (approved != null) {
-			if (approved.equals("approved")) {
-				if (approved.equals("Y")) {
-					user.approved = "Y";
-					try {
-						sendMailManagerConfirmation(user);
-					} catch (Exception e) {
-						Logger.error("Can't send confirm email to approved emergency manager", e);
-						flash("error", Messages.get("error.technical"));
-					}
-				} else {
-					user.approved = "N";
-					try {
-						sendMailEMDenied(user);
-					} catch (Exception e) {
-						Logger.error("Can't send deny email to denied emergency manager", e);
-						flash("error", Messages.get("error.technical"));
-					}
+			if (approved.equals("Y")) {
+				user.approved = "Y";
+				try {
+					sendMailManagerConfirmation(user);
+				} catch (Exception e) {
+					Logger.error("Can't send confirm email to approved emergency manager", e);
+					flash("error", Messages.get("error.technical"));
 				}
 			} else {
 				user.approved = "N";
+				try {
+					sendMailEMDenied(user);
+				} catch (Exception e) {
+					Logger.error("Can't send deny email to denied emergency manager", e);
+					flash("error", Messages.get("error.technical"));
+				}
 			}
 
 		}
