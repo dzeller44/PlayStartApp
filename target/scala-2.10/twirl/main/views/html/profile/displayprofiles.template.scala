@@ -55,9 +55,9 @@ Seq[Any](format.raw/*1.41*/("""
 			<tbody>
 				"""),_display_(/*25.6*/for(profile <- profilesList) yield /*25.34*/ {_display_(Seq[Any](format.raw/*25.36*/("""
 				"""),format.raw/*26.5*/("""<tr>
-					<td><a href="/openprofile/"""),_display_(/*27.33*/profile/*27.40*/.name),format.raw/*27.45*/("""">"""),_display_(/*27.48*/profile/*27.55*/.name),format.raw/*27.60*/("""</a></td>
-					<td><a href="/openprofile/"""),_display_(/*28.33*/profile/*28.40*/.name),format.raw/*28.45*/("""">"""),_display_(/*28.48*/profile/*28.55*/.primaryNameFirst),format.raw/*28.72*/(""" """),_display_(/*28.74*/profile/*28.81*/.primaryNameLast),format.raw/*28.97*/("""</a></td>
-					<td><a href="/openprofile/"""),_display_(/*29.33*/profile/*29.40*/.name),format.raw/*29.45*/("""">"""),_display_(/*29.48*/profile/*29.55*/.services),format.raw/*29.64*/("""</a></td>
+					<td><a href="/editprofile/"""),_display_(/*27.33*/profile/*27.40*/.name),format.raw/*27.45*/("""">"""),_display_(/*27.48*/profile/*27.55*/.name),format.raw/*27.60*/("""</a></td>
+					<td><a href="/editprofile/"""),_display_(/*28.33*/profile/*28.40*/.name),format.raw/*28.45*/("""">"""),_display_(/*28.48*/profile/*28.55*/.primaryNameFirst),format.raw/*28.72*/(""" """),_display_(/*28.74*/profile/*28.81*/.primaryNameLast),format.raw/*28.97*/("""</a></td>
+					<td><a href="/editprofile/"""),_display_(/*29.33*/profile/*29.40*/.name),format.raw/*29.45*/("""">"""),_display_(/*29.48*/profile/*29.55*/.services),format.raw/*29.64*/("""</a></td>
 				</tr>
 				""")))}),format.raw/*31.6*/(""" 
 			"""),format.raw/*32.4*/("""</tbody>
@@ -84,9 +84,9 @@ Seq[Any](format.raw/*1.41*/("""
 object displayprofiles extends displayprofiles_Scope0.displayprofiles
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 17 15:11:30 MST 2016
+                  DATE: Fri Nov 18 14:50:55 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/displayprofiles.scala.html
-                  HASH: c6f3e032e00555e43aca0cba8adab6eda622ae49
+                  HASH: 4186c89bbabcb9d2e79a44857eb8afb7d27e93f5
                   MATRIX: 790->1|924->40|954->45|972->55|1011->57|1042->62|1082->76|1096->82|1156->122|1233->173|1247->179|1312->224|1388->274|1402->280|1453->311|1584->415|1612->416|1644->421|1704->454|1732->455|2113->810|2157->838|2197->840|2230->846|2295->884|2311->891|2337->896|2367->899|2383->906|2409->911|2479->954|2495->961|2521->966|2551->969|2567->976|2605->993|2634->995|2650->1002|2687->1018|2757->1061|2773->1068|2799->1073|2829->1076|2845->1083|2875->1092|2932->1119|2965->1125
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|40->9|40->9|41->10|42->11|42->11|56->25|56->25|56->25|57->26|58->27|58->27|58->27|58->27|58->27|58->27|59->28|59->28|59->28|59->28|59->28|59->28|59->28|59->28|59->28|60->29|60->29|60->29|60->29|60->29|60->29|62->31|63->32
                   -- GENERATED --

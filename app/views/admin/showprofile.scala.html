@@ -1,4 +1,4 @@
-@(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service], profile: Profile)
+@(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service], profile: Profile, servicesSelected: java.util.List[String])
 
 @main(null) {
 <section id="profileMain">
@@ -123,14 +123,12 @@
 		</div>
 		<div class="element-input">
 			@if(profileForm.hasGlobalErrors) {
-			<span class="errorMessageDisplay" style="color: #d9534f;">
-			@profileForm.globalError.message
-			</span>
+				<span class="errorMessageDisplay" style="color: #d9534f;">@profileForm.globalError.message</span>
 			}
 		</div>
 		<div class="submit">
-			<input type="submit" value="Submit" /> <a href="/admin"
-				class="buttonCancel">@Messages("goback")</a>
+			<input type="submit" value="Submit" />
+			<a href="/admin" class="buttonCancel">@Messages("goback")</a>
 		</div>
 		<div class="submit">
 			<a href="javascript:deleteProfile('@profile.name')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>

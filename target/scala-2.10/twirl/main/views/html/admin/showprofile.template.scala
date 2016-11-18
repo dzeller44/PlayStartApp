@@ -21,15 +21,15 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class showprofile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[Form[Application.ProfileRegister],java.util.List[Service],Profile,play.twirl.api.HtmlFormat.Appendable] {
+class showprofile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template4[Form[Application.ProfileRegister],java.util.List[Service],Profile,java.util.List[String],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service], profile: Profile):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service], profile: Profile, servicesSelected: java.util.List[String]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.107*/("""
+Seq[Any](format.raw/*1.149*/("""
 
 """),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 """),format.raw/*4.1*/("""<section id="profileMain">
@@ -154,17 +154,15 @@ Seq[Any](format.raw/*1.107*/("""
 		</div>
 		<div class="element-input">
 			"""),_display_(/*125.5*/if(profileForm.hasGlobalErrors)/*125.36*/ {_display_(Seq[Any](format.raw/*125.38*/("""
-			"""),format.raw/*126.4*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-			"""),_display_(/*127.5*/profileForm/*127.16*/.globalError.message),format.raw/*127.36*/("""
-			"""),format.raw/*128.4*/("""</span>
-			""")))}),format.raw/*129.5*/("""
-		"""),format.raw/*130.3*/("""</div>
+				"""),format.raw/*126.5*/("""<span class="errorMessageDisplay" style="color: #d9534f;">"""),_display_(/*126.64*/profileForm/*126.75*/.globalError.message),format.raw/*126.95*/("""</span>
+			""")))}),format.raw/*127.5*/("""
+		"""),format.raw/*128.3*/("""</div>
 		<div class="submit">
-			<input type="submit" value="Submit" /> <a href="/admin"
-				class="buttonCancel">"""),_display_(/*133.27*/Messages("goback")),format.raw/*133.45*/("""</a>
+			<input type="submit" value="Submit" />
+			<a href="/admin" class="buttonCancel">"""),_display_(/*131.43*/Messages("goback")),format.raw/*131.61*/("""</a>
 		</div>
 		<div class="submit">
-			<a href="javascript:deleteProfile('"""),_display_(/*136.40*/profile/*136.47*/.name),format.raw/*136.52*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
+			<a href="javascript:deleteProfile('"""),_display_(/*134.40*/profile/*134.47*/.name),format.raw/*134.52*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -175,9 +173,9 @@ Seq[Any](format.raw/*1.107*/("""
     }
   }
 
-  def render(profileForm:Form[Application.ProfileRegister],servicesList:java.util.List[Service],profile:Profile): play.twirl.api.HtmlFormat.Appendable = apply(profileForm,servicesList,profile)
+  def render(profileForm:Form[Application.ProfileRegister],servicesList:java.util.List[Service],profile:Profile,servicesSelected:java.util.List[String]): play.twirl.api.HtmlFormat.Appendable = apply(profileForm,servicesList,profile,servicesSelected)
 
-  def f:((Form[Application.ProfileRegister],java.util.List[Service],Profile) => play.twirl.api.HtmlFormat.Appendable) = (profileForm,servicesList,profile) => apply(profileForm,servicesList,profile)
+  def f:((Form[Application.ProfileRegister],java.util.List[Service],Profile,java.util.List[String]) => play.twirl.api.HtmlFormat.Appendable) = (profileForm,servicesList,profile,servicesSelected) => apply(profileForm,servicesList,profile,servicesSelected)
 
   def ref: this.type = this
 
@@ -190,11 +188,11 @@ Seq[Any](format.raw/*1.107*/("""
 object showprofile extends showprofile_Scope0.showprofile
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 17 15:11:30 MST 2016
+                  DATE: Fri Nov 18 14:50:55 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/showprofile.scala.html
-                  HASH: 938a82d1c3b22ab504fa05d371b36a020d63aaa8
-                  MATRIX: 822->1|1023->106|1053->111|1071->121|1110->123|1138->125|1748->708|1764->715|1790->720|1819->721|2127->1001|2144->1008|2174->1016|2204->1017|2364->1149|2381->1156|2412->1165|2442->1166|2587->1283|2604->1290|2631->1295|2661->1296|2849->1456|2866->1463|2894->1469|2924->1470|3115->1633|3132->1640|3158->1644|3188->1645|3869->2299|3885->2306|3923->2323|3952->2324|4159->2504|4175->2511|4213->2527|4243->2528|4560->2817|4589->2818|4619->2820|4648->2821|4775->2921|4791->2928|4825->2941|4854->2942|5209->3270|5225->3277|5259->3290|5288->3291|5641->3617|5657->3624|5697->3643|5726->3644|5935->3826|5951->3833|5991->3851|6021->3852|6340->4143|6369->4144|6399->4146|6428->4147|6557->4249|6573->4256|6609->4271|6638->4272|6997->4604|7013->4611|7049->4626|7078->4627|9186->6708|9227->6739|9268->6741|9301->6746|9392->6810|9413->6821|9455->6841|9488->6846|9532->6859|9564->6863|9710->6981|9750->6999|9857->7078|9874->7085|9901->7090
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|47->16|47->16|47->16|47->16|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|64->33|64->33|64->33|64->33|66->35|66->35|66->35|66->35|74->43|74->43|74->43|74->43|75->44|75->44|75->44|75->44|84->53|84->53|84->53|84->53|92->61|92->61|92->61|92->61|94->63|94->63|94->63|94->63|102->71|102->71|102->71|102->71|103->72|103->72|103->72|103->72|112->81|112->81|112->81|112->81|156->125|156->125|156->125|157->126|158->127|158->127|158->127|159->128|160->129|161->130|164->133|164->133|167->136|167->136|167->136
+                  HASH: e6acf8a452b944164f9c9adfd63a0c36b01b70a5
+                  MATRIX: 845->1|1088->148|1118->153|1136->163|1175->165|1203->167|1813->750|1829->757|1855->762|1884->763|2192->1043|2209->1050|2239->1058|2269->1059|2429->1191|2446->1198|2477->1207|2507->1208|2652->1325|2669->1332|2696->1337|2726->1338|2914->1498|2931->1505|2959->1511|2989->1512|3180->1675|3197->1682|3223->1686|3253->1687|3934->2341|3950->2348|3988->2365|4017->2366|4224->2546|4240->2553|4278->2569|4308->2570|4625->2859|4654->2860|4684->2862|4713->2863|4840->2963|4856->2970|4890->2983|4919->2984|5274->3312|5290->3319|5324->3332|5353->3333|5706->3659|5722->3666|5762->3685|5791->3686|6000->3868|6016->3875|6056->3893|6086->3894|6405->4185|6434->4186|6464->4188|6493->4189|6622->4291|6638->4298|6674->4313|6703->4314|7062->4646|7078->4653|7114->4668|7143->4669|9251->6750|9292->6781|9333->6783|9367->6789|9454->6848|9475->6859|9517->6879|9561->6892|9593->6896|9738->7013|9778->7031|9885->7110|9902->7117|9929->7122
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|47->16|47->16|47->16|47->16|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|51->20|64->33|64->33|64->33|64->33|66->35|66->35|66->35|66->35|74->43|74->43|74->43|74->43|75->44|75->44|75->44|75->44|84->53|84->53|84->53|84->53|92->61|92->61|92->61|92->61|94->63|94->63|94->63|94->63|102->71|102->71|102->71|102->71|103->72|103->72|103->72|103->72|112->81|112->81|112->81|112->81|156->125|156->125|156->125|157->126|157->126|157->126|157->126|158->127|159->128|162->131|162->131|165->134|165->134|165->134
                   -- GENERATED --
               */
           

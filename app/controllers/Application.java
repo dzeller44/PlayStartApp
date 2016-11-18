@@ -1,24 +1,43 @@
 package controllers;
 
-import models.User;
+import static play.data.Form.form;
+
+import java.awt.Desktop;
+import java.io.FileWriter;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import javax.inject.Inject;
+import org.apache.commons.mail.EmailException;
+import com.opencsv.CSVWriter;
+import controllers.helpers.AccessMiddleware;
+import managers.SessionData;
 import models.Profile;
 import models.RemovedProfile;
 import models.RemovedUser;
 import models.Service;
+import models.User;
 import models.enums.RoleType;
 import models.utils.AppException;
-import models.utils.Hash;
+import models.utils.Mail;
+import play.Configuration;
 import play.Logger;
 import play.data.Form;
 import play.data.validation.Constraints;
 import play.i18n.Messages;
+import play.libs.mailer.MailerClient;
 import play.mvc.Controller;
 import play.mvc.Result;
-import play.libs.Json;
 import views.html.index;
 import views.html.auth;
 import views.html.profile.profile;
 import views.html.profile.profilecreated;
+import views.html.profile.editprofile;
 import views.html.profile.displayprofiles;
 import views.html.admin.searchusers;
 import views.html.admin.searchprofiles;
@@ -37,33 +56,8 @@ import views.html.admin.deleteduser;
 import views.html.admin.deleteprofconfirm;
 import views.html.admin.deletedprofile;
 import views.html.admin.profilesaved;
-import views.html.admin.exportready;
+import views.html.exportready;
 import views.html.user.user;
-
-import com.avaje.ebean.Ebean;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.opencsv.CSVWriter;
-
-import controllers.helpers.AccessMiddleware;
-import managers.SessionData;
-
-import static play.data.Form.form;
-
-import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
-
-import models.utils.Mail;
-import play.Configuration;
-import play.libs.mailer.Email;
-import play.libs.mailer.MailerClient;
-import java.net.MalformedURLException;
-import java.net.URL;
-import javax.inject.Inject;
-import org.apache.commons.mail.EmailException;
 
 /**
  * Login and Logout. User: yesnault
@@ -566,26 +560,42 @@ public class Application extends Controller {
 	}
 
 	public Result exportUsers(String whatData) {
+
 		List<User> users = null;
+		String userRole = "";
+		String fileName = "";
+		// Download file to "Downloads" folder
+		String home = System.getProperty("user.home");
+		String fileLocation = home + "\\Downloads\\";
+		RoleType role = AccessMiddleware.getSessionRole();
+		if (role != null) {
+			userRole = role.getRoleTextName(role);
+		} else {
+			// Will force user back to home page, since no Role was found...
+			userRole = "";
+		}
 
 		try {
 			switch (whatData) {
 			case "EMNeedApproval":
 				users = User.findUnapprovedEM();
+				fileName = "em_need_approval";
 				break;
 			default:
 				users = User.find.all();
+				fileName = "all_users";
 				break;
 			}
 
-			String usersCSV = "C:\\WebDev\\users.csv";
-			System.out.println("Writing -----users.csv----------------");
-			CSVWriter usersWriter = new CSVWriter(new FileWriter(usersCSV));
+			String fileDate = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
+			fileName = fileLocation + fileName + "_" + fileDate + ".csv";
+			CSVWriter usersWriter = new CSVWriter(new FileWriter(fileName));
 			List<String[]> usersArr = new ArrayList<String[]>();
-			usersArr.add(new String[] { "ID", "Email", "Full Name" });
+			usersArr.add(new String[] { "ID", "Email", "Role" });
 
 			for (User user : users) {
-				usersArr.add(new String[] { new Long(user.getId()).toString(), user.getEmail(), user.fullname });
+				usersArr.add(new String[] { user.getFullname(), user.getEmail(),
+						user.getRoleNameString(user.getRole().toString()) });
 			}
 
 			usersWriter.writeAll(usersArr);
@@ -594,8 +604,38 @@ public class Application extends Controller {
 			ex.printStackTrace();
 		}
 
-		return ok(exportready.render());
+		return ok(exportready.render(fileName, userRole));
 
+	}
+
+	public Result exportOpenFile(String fileName) {
+
+		// Open the file that was exported...
+		try {
+			Desktop.getDesktop().open(new File(fileName));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		RoleType role = AccessMiddleware.getSessionRole();
+		if (role != null) {
+			switch (role.toString()) {
+			case "1":
+				return GO_USER;
+
+			case "2":
+				return GO_MANAGER;
+
+			case "3":
+				return GO_ADMIN;
+
+			default:
+				return GO_HOME;
+
+			}
+		} else {
+			return GO_HOME;
+		}
 	}
 
 	public Result findUser() {
@@ -671,23 +711,28 @@ public class Application extends Controller {
 			if (user != null && user.validated) {
 				boolean isAuth = AccessMiddleware.isAuthenticated();
 				RoleType role = AccessMiddleware.getSessionRole();
+				if (role != null) {
+					switch (role.toString()) {
+					case "1":
+						return GO_USER;
 
-				switch (role.toString()) {
-				case "1":
-					return GO_USER;
+					case "2":
+						return GO_MANAGER;
 
-				case "2":
-					return GO_MANAGER;
+					case "3":
+						return GO_ADMIN;
 
-				case "3":
-					return GO_ADMIN;
+					default:
+						return GO_HOME;
 
-				default:
+					}
+				} else {
+					Logger.debug("Application.index() - No Role - Clearing invalid session credentials");
+					session().clear();
 					return GO_HOME;
-
 				}
 			} else {
-				Logger.debug("Clearing invalid session credentials");
+				Logger.debug("Application.index() - Clearing invalid session credentials");
 				session().clear();
 			}
 		}
@@ -716,6 +761,18 @@ public class Application extends Controller {
 		return ok(auth.render(form(Login.class)));
 	}
 
+	public Result openProfileAdmin(String name) {
+		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+		List<Service> services = Service.find.all();
+		// Find profile and display...
+		Profile profile = Profile.findByName(name);
+		// Grab the current services...
+		String currentServices = profile.services;
+		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
+		return ok(showprofile.render(profileEntry, services, profile, selectedServices));
+		// return ok(showprofile.render(profileEntry, services, profile));
+	}
+
 	public Result openProfile(String name) {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 		List<Service> services = Service.find.all();
@@ -724,9 +781,8 @@ public class Application extends Controller {
 		// Grab the current services...
 		String currentServices = profile.services;
 		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
-		// return ok(showprofile.render(profileEntry, services, profile,
-		// selectedServices));
-		return ok(showprofile.render(profileEntry, services, profile));
+		return ok(editprofile.render(profileEntry, services, profile, selectedServices));
+		// return ok(showprofile.render(profileEntry, services, profile));
 	}
 
 	public Result openUser() {
@@ -875,7 +931,42 @@ public class Application extends Controller {
 		profile.dateUpdated = new Date();
 		profile.save();
 
-		return ok(profilesaved.render());
+		return ok(profilesaved.render("admin"));
+	}
+
+	public Result updateProfile(String name) {
+		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+
+		if (profileEntry.hasErrors()) {
+			List<Service> services = Service.find.all();
+			System.out.println("Save Profile - errors");
+			return badRequest(profile.render(profileEntry, services));
+		}
+		// Save the profile...
+		ProfileRegister profileForm = profileEntry.get();
+		System.out.println("Save Profile - good request");
+		Profile profile = Profile.findByName(name);
+		profile.name = profileForm.name;
+		profile.address = profileForm.address;
+		profile.address1 = profileForm.address1;
+		profile.city = profileForm.city;
+		profile.state = profileForm.state;
+		profile.zip = profileForm.zip;
+		profile.primaryNameFirst = profileForm.primaryNameFirst;
+		profile.primaryNameLast = profileForm.primaryNameLast;
+		profile.primaryPhone = profileForm.primaryPhone;
+		profile.primaryEmail = profileForm.primaryEmail;
+		profile.secondaryNameFirst = profileForm.secondaryNameFirst;
+		profile.secondaryNameLast = profileForm.secondaryNameLast;
+		profile.secondaryPhone = profileForm.secondaryPhone;
+		profile.secondaryEmail = profileForm.secondaryEmail;
+		profile.services = profileForm.services;
+		profile.servicesOther = profileForm.servicesOther;
+		profile.updatedBy = AccessMiddleware.getSessionEmail();
+		profile.dateUpdated = new Date();
+		profile.save();
+
+		return ok(profilesaved.render("user"));
 	}
 
 	public Result updateUser() {
