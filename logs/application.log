@@ -3,3 +3,4 @@
 2016-11-18 14:51:33,747 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
 2016-11-18 14:51:34,580 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
 2016-11-18 14:51:35,952 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-11-18 14:57:44,459 [INFO] from application in pool-6-thread-4 - Shutting down connection pool.
