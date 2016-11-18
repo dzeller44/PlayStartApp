@@ -317,6 +317,8 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String fullname;
+		
+		public String agency;
 
 		@Constraints.Required
 		public String inputPassword;
