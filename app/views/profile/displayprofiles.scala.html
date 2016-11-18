@@ -12,25 +12,26 @@
 	</script>
 	<section id="displayResults" style="padding: 30px;">
 		<div class="table-responsive">
-		<h5>All Users:</h5>
-		<table id="tableAll" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
-			<thead>
-				<tr>
-					<th>Business Name</th>
-					<th>Contact</th>
-					<th>Services</th>
-				</tr>
-			</thead>
-			<tbody>
-				@for(profile <- profilesList) {
-				<tr>
-					<td><a href="/editprofile/@profile.name">@profile.name</a></td>
-					<td><a href="/editprofile/@profile.name">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
-					<td><a href="/editprofile/@profile.name">@profile.services</a></td>
-				</tr>
-				} 
-			</tbody>
-		</table>
-		</div		
+			<h5>All Business Profiles:</h5>
+			<table id="tableAll" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
+				<thead>
+					<tr>
+						<th>Business Name</th>
+						<th>Contact</th>
+						<th>Services</th>
+					</tr>
+				</thead>
+				<tbody>
+					@for(profile <- profilesList) {
+					<tr>
+						<td><a href="/editprofile/@profile.name">@profile.name</a></td>
+						<td><a href="/editprofile/@profile.name">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
+						<td><a href="/editprofile/@profile.name">@profile.services</a></td>
+					</tr>
+					} 
+				</tbody>
+			</table>
+		</div>
+		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export This View</a></div>
 	</section>
 }

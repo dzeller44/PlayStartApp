@@ -51,6 +51,8 @@ GET    /exportusers/:data          controllers.Application.exportUsers(data: Str
 
 POST   /exportOpenFile/:fileName   controllers.Application.exportOpenFile(fileName: String)
 
+GET    /exportprofiles/:data       controllers.Application.exportProfiles(data: String)
+
 GET    /openuser                   controllers.Application.openUser()
 
 GET    /addadmin                   controllers.account.Signup.createAdmin()

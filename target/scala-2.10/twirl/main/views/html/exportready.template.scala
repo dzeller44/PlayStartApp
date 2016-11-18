@@ -76,7 +76,7 @@ Seq[Any](format.raw/*1.46*/("""
 object exportready extends exportready_Scope0.exportready
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 18 14:50:54 MST 2016
+                  DATE: Fri Nov 18 15:09:22 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/exportready.scala.html
                   HASH: 6fbdbd02648b4f8472e571b1b0bdd5b35175cc98
                   MATRIX: 764->1|903->45|933->50|951->60|990->62|1020->66|1326->346|1340->352|1405->397|1702->667|1739->683|1874->791|1903->799|1954->823|1993->841

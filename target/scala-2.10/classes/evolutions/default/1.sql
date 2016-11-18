@@ -112,6 +112,7 @@ create table user (
   id                        bigint auto_increment not null,
   email                     varchar(255),
   fullname                  varchar(255),
+  agency                    varchar(255),
   confirmation_token        varchar(255),
   password_hash             varchar(255),
   date_creation             datetime(6),

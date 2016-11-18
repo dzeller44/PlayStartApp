@@ -607,6 +607,52 @@ public class Application extends Controller {
 		return ok(exportready.render(fileName, userRole));
 
 	}
+	
+	public Result exportProfiles(String whatData) {
+
+		List<Profile> profiles = null;
+		String userRole = "";
+		String fileName = "";
+		// Download file to "Downloads" folder
+		String home = System.getProperty("user.home");
+		String fileLocation = home + "\\Downloads\\";
+		RoleType role = AccessMiddleware.getSessionRole();
+		if (role != null) {
+			userRole = role.getRoleTextName(role);
+		} else {
+			// Will force user back to home page, since no Role was found...
+			userRole = "";
+		}
+
+		try {
+			switch (whatData) {
+
+			default:
+				profiles = Profile.find.all();
+				fileName = "all_profiles";
+				break;
+			}
+
+			String fileDate = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
+			fileName = fileLocation + fileName + "_" + fileDate + ".csv";
+			CSVWriter outputFile = new CSVWriter(new FileWriter(fileName));
+			List<String[]> objectArray = new ArrayList<String[]>();
+			objectArray.add(new String[] { "Business Name", "Contact", "Services" });
+
+			for (Profile profile : profiles) {
+				objectArray.add(new String[] {profile.name, profile.primaryNameFirst + " " + profile.primaryNameLast, profile.services});
+			}
+
+			outputFile.writeAll(objectArray);
+			outputFile.close();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+
+		return ok(exportready.render(fileName, userRole));
+
+	}
+
 
 	public Result exportOpenFile(String fileName) {
 
