@@ -35,6 +35,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.index;
 import views.html.auth;
+import views.html.accessdenied;
 import views.html.profile.profile;
 import views.html.profile.profilecreated;
 import views.html.profile.editprofile;
@@ -73,6 +74,10 @@ public class Application extends Controller {
 	public static Result GO_MANAGER = redirect(routes.Application.managerHome());
 
 	public static Result GO_USER = redirect(routes.Application.userHome());
+
+	public static Result USER_LOGIN = redirect(routes.Application.openLogin());
+
+	public static Result ACCESS_DENIED = redirect(routes.Application.accessDenied());
 
 	@Inject
 	MailerClient mailerClient;
@@ -311,7 +316,7 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String fullname;
-		
+
 		public String agency;
 
 		@Constraints.Required
@@ -400,7 +405,12 @@ public class Application extends Controller {
 	}
 
 	public Result adminHome() {
-		return ok(admin.render(form(Login.class)));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			return ok(admin.render(form(Login.class)));
+		}
 	}
 
 	public Result adminSearch() {
@@ -453,106 +463,126 @@ public class Application extends Controller {
 	}
 
 	public Result deleteProfile(String name) {
-		// Locate the profile record and delete...
-		Profile profile = Profile.findByName(name);
-
-		if (profile != null) {
-			// Open profile record...
-			Logger.debug("Application.deleteProfile: Found Profile based on " + name);
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
 		} else {
-			// Display message...
-			Logger.debug("Application.deleteProfile: No Profile found based on " + name);
+			// Locate the profile record and delete...
+			Profile profile = Profile.findByName(name);
+
+			if (profile != null) {
+				// Open profile record...
+				Logger.debug("Application.deleteProfile: Found Profile based on " + name);
+			} else {
+				// Display message...
+				Logger.debug("Application.deleteProfile: No Profile found based on " + name);
+			}
+
+			// Create record in removed profiles table
+			// Capture profile and date/time
+			// Remove from profile table...
+			RemovedProfile removedProfile = new RemovedProfile();
+
+			// Copy the record over...
+			removedProfile.name = profile.name;
+			removedProfile.address = profile.address;
+			removedProfile.address1 = profile.address1;
+			removedProfile.city = profile.city;
+			removedProfile.state = profile.state;
+			removedProfile.zip = profile.zip;
+			removedProfile.primaryNameFirst = profile.primaryNameFirst;
+			removedProfile.primaryNameLast = profile.primaryNameLast;
+			removedProfile.primaryPhone = profile.primaryPhone;
+			removedProfile.primaryEmail = profile.primaryEmail;
+			removedProfile.secondaryNameFirst = profile.secondaryNameFirst;
+			removedProfile.secondaryNameLast = profile.secondaryNameLast;
+			removedProfile.secondaryPhone = profile.secondaryPhone;
+			removedProfile.secondaryEmail = profile.secondaryEmail;
+			removedProfile.services = profile.services;
+			removedProfile.servicesOther = profile.servicesOther;
+			removedProfile.dateCreation = profile.dateCreation;
+			removedProfile.profilekey = profile.profilekey;
+			removedProfile.updatedBy = profile.updatedBy;
+			removedProfile.dateUpdated = profile.dateUpdated;
+			removedProfile.userkey = profile.userkey;
+
+			// Set custom fields...
+			removedProfile.dateRemoved = new Date();
+			removedProfile.removedBy = AccessMiddleware.getSessionEmail();
+			removedProfile.save();
+
+			// Delete the profile...
+			profile.delete();
+
+			return ok(deletedprofile.render());
 		}
-
-		// Create record in removed profiles table
-		// Capture profile and date/time
-		// Remove from profile table...
-		RemovedProfile removedProfile = new RemovedProfile();
-
-		// Copy the record over...
-		removedProfile.name = profile.name;
-		removedProfile.address = profile.address;
-		removedProfile.address1 = profile.address1;
-		removedProfile.city = profile.city;
-		removedProfile.state = profile.state;
-		removedProfile.zip = profile.zip;
-		removedProfile.primaryNameFirst = profile.primaryNameFirst;
-		removedProfile.primaryNameLast = profile.primaryNameLast;
-		removedProfile.primaryPhone = profile.primaryPhone;
-		removedProfile.primaryEmail = profile.primaryEmail;
-		removedProfile.secondaryNameFirst = profile.secondaryNameFirst;
-		removedProfile.secondaryNameLast = profile.secondaryNameLast;
-		removedProfile.secondaryPhone = profile.secondaryPhone;
-		removedProfile.secondaryEmail = profile.secondaryEmail;
-		removedProfile.services = profile.services;
-		removedProfile.servicesOther = profile.servicesOther;
-		removedProfile.dateCreation = profile.dateCreation;
-		removedProfile.profilekey = profile.profilekey;
-		removedProfile.updatedBy = profile.updatedBy;
-		removedProfile.dateUpdated = profile.dateUpdated;
-		removedProfile.userkey = profile.userkey;
-
-		// Set custom fields...
-		removedProfile.dateRemoved = new Date();
-		removedProfile.removedBy = AccessMiddleware.getSessionEmail();
-		removedProfile.save();
-
-		// Delete the profile...
-		profile.delete();
-
-		return ok(deletedprofile.render());
 
 	}
 
 	public Result deleteProfileConfirm(String name) {
-		return ok(deleteprofconfirm.render(name));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			return ok(deleteprofconfirm.render(name));
+		}
 	}
 
 	public Result deleteUser(String email) {
-		// Locate the user record and delete...
-		User user = User.findByEmail(email);
-
-		if (user != null) {
-			// Open user record...
-			Logger.debug("Application.deleteUser: Found User based on " + email);
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
 		} else {
-			// Display message...
-			Logger.debug("Application.deleteUser: No User found based on " + email);
+			// Locate the user record and delete...
+			User user = User.findByEmail(email);
+
+			if (user != null) {
+				// Open user record...
+				Logger.debug("Application.deleteUser: Found User based on " + email);
+			} else {
+				// Display message...
+				Logger.debug("Application.deleteUser: No User found based on " + email);
+			}
+
+			// Create record in removedusers table
+			// Capture user and date/time
+			// Remove from user table...
+			RemovedUser removedUser = new RemovedUser();
+
+			// Copy the record over...
+			removedUser.email = user.getEmail();
+			removedUser.fullname = user.fullname;
+			removedUser.passwordHash = user.passwordHash;
+			removedUser.confirmationToken = user.confirmationToken;
+			removedUser.dateCreation = user.dateCreation;
+			removedUser.active = user.active;
+			removedUser.role = user.role;
+			removedUser.approved = user.approved;
+			removedUser.validated = user.validated;
+			removedUser.userkey = user.userkey;
+			removedUser.updatedBy = user.updatedBy;
+			removedUser.dateUpdated = user.dateUpdated;
+
+			// Set custom fields...
+			removedUser.dateRemoved = new Date();
+			removedUser.removedBy = AccessMiddleware.getSessionEmail();
+			removedUser.save();
+
+			// Delete the user...
+			user.delete();
+
+			return ok(deleteduser.render());
 		}
-
-		// Create record in removedusers table
-		// Capture user and date/time
-		// Remove from user table...
-		RemovedUser removedUser = new RemovedUser();
-
-		// Copy the record over...
-		removedUser.email = user.getEmail();
-		removedUser.fullname = user.fullname;
-		removedUser.passwordHash = user.passwordHash;
-		removedUser.confirmationToken = user.confirmationToken;
-		removedUser.dateCreation = user.dateCreation;
-		removedUser.active = user.active;
-		removedUser.role = user.role;
-		removedUser.approved = user.approved;
-		removedUser.validated = user.validated;
-		removedUser.userkey = user.userkey;
-		removedUser.updatedBy = user.updatedBy;
-		removedUser.dateUpdated = user.dateUpdated;
-
-		// Set custom fields...
-		removedUser.dateRemoved = new Date();
-		removedUser.removedBy = AccessMiddleware.getSessionEmail();
-		removedUser.save();
-
-		// Delete the user...
-		user.delete();
-
-		return ok(deleteduser.render());
 
 	}
 
 	public Result deleteUserConfirm(String email) {
-		return ok(deleteconfirm.render(email));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			return ok(deleteconfirm.render(email));
+		}
 	}
 
 	public Result displayUser(String actionType) {
@@ -560,142 +590,169 @@ public class Application extends Controller {
 	}
 
 	public Result exportUsers(String whatData) {
-
-		List<User> users = null;
-		String userRole = "";
-		String fileName = "";
-		// Download file to "Downloads" folder
-		String home = System.getProperty("user.home");
-		String fileLocation = home + "\\Downloads\\";
-		RoleType role = AccessMiddleware.getSessionRole();
-		if (role != null) {
-			userRole = role.getRoleTextName(role);
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
 		} else {
-			// Will force user back to home page, since no Role was found...
-			userRole = "";
-		}
-
-		try {
-			switch (whatData) {
-			case "EMNeedApproval":
-				users = User.findUnapprovedEM();
-				fileName = "em_need_approval";
-				break;
-			default:
-				users = User.find.all();
-				fileName = "all_users";
-				break;
+			List<User> users = null;
+			String userRole = "";
+			String fileName = "";
+			// Download file to "Downloads" folder
+			String home = System.getProperty("user.home");
+			String fileLocation = home + "\\Downloads\\";
+			RoleType role = AccessMiddleware.getSessionRole();
+			if (role != null) {
+				userRole = role.getRoleTextName(role);
+			} else {
+				// Will force user back to home page, since no Role was found...
+				userRole = "";
 			}
 
-			String fileDate = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
-			fileName = fileLocation + fileName + "_" + fileDate + ".csv";
-			CSVWriter usersWriter = new CSVWriter(new FileWriter(fileName));
-			List<String[]> usersArr = new ArrayList<String[]>();
-			usersArr.add(new String[] { "ID", "Email", "Role" });
+			try {
+				switch (whatData) {
+				case "EMNeedApproval":
+					users = User.findUnapprovedEM();
+					fileName = "em_need_approval";
+					break;
+				default:
+					users = User.find.all();
+					fileName = "all_users";
+					break;
+				}
 
-			for (User user : users) {
-				usersArr.add(new String[] { user.getFullname(), user.getEmail(),
-						user.getRoleNameString(user.getRole().toString()) });
+				String fileDate = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
+				fileName = fileLocation + fileName + "_" + fileDate + ".csv";
+				CSVWriter usersWriter = new CSVWriter(new FileWriter(fileName));
+				List<String[]> usersArr = new ArrayList<String[]>();
+				usersArr.add(new String[] { "ID", "Email", "Role" });
+
+				for (User user : users) {
+					usersArr.add(new String[] { user.getFullname(), user.getEmail(),
+							user.getRoleNameString(user.getRole().toString()) });
+				}
+
+				usersWriter.writeAll(usersArr);
+				usersWriter.close();
+			} catch (Exception ex) {
+				ex.printStackTrace();
 			}
 
-			usersWriter.writeAll(usersArr);
-			usersWriter.close();
-		} catch (Exception ex) {
-			ex.printStackTrace();
+			return ok(exportready.render(fileName, userRole));
 		}
-
-		return ok(exportready.render(fileName, userRole));
 
 	}
-	
+
 	public Result exportProfiles(String whatData) {
-
-		List<Profile> profiles = null;
-		String userRole = "";
-		String fileName = "";
-		// Download file to "Downloads" folder
-		String home = System.getProperty("user.home");
-		String fileLocation = home + "\\Downloads\\";
-		RoleType role = AccessMiddleware.getSessionRole();
-		if (role != null) {
-			userRole = role.getRoleTextName(role);
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
 		} else {
-			// Will force user back to home page, since no Role was found...
-			userRole = "";
-		}
-
-		try {
-			switch (whatData) {
-
-			default:
-				profiles = Profile.find.all();
-				fileName = "all_profiles";
-				break;
+			List<Profile> profiles = null;
+			String userRole = "";
+			String fileName = "";
+			// Download file to "Downloads" folder
+			String home = System.getProperty("user.home");
+			String fileLocation = home + "\\Downloads\\";
+			RoleType role = AccessMiddleware.getSessionRole();
+			if (role != null) {
+				userRole = role.getRoleTextName(role);
+			} else {
+				// Will force user back to home page, since no Role was found...
+				userRole = "";
 			}
 
-			String fileDate = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
-			fileName = fileLocation + fileName + "_" + fileDate + ".csv";
-			CSVWriter outputFile = new CSVWriter(new FileWriter(fileName));
-			List<String[]> objectArray = new ArrayList<String[]>();
-			objectArray.add(new String[] { "Business Name", "Contact", "Services" });
+			try {
+				switch (whatData) {
 
-			for (Profile profile : profiles) {
-				objectArray.add(new String[] {profile.name, profile.primaryNameFirst + " " + profile.primaryNameLast, profile.services});
+				default:
+					profiles = Profile.find.all();
+					fileName = "all_profiles";
+					break;
+				}
+
+				String fileDate = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
+				fileName = fileLocation + fileName + "_" + fileDate + ".csv";
+				CSVWriter outputFile = new CSVWriter(new FileWriter(fileName));
+				List<String[]> objectArray = new ArrayList<String[]>();
+				objectArray.add(new String[] { "Business Name", "Contact", "Services" });
+
+				for (Profile profile : profiles) {
+					objectArray.add(new String[] { profile.name,
+							profile.primaryNameFirst + " " + profile.primaryNameLast, profile.services });
+				}
+
+				outputFile.writeAll(objectArray);
+				outputFile.close();
+			} catch (Exception ex) {
+				ex.printStackTrace();
 			}
 
-			outputFile.writeAll(objectArray);
-			outputFile.close();
-		} catch (Exception ex) {
-			ex.printStackTrace();
+			return ok(exportready.render(fileName, userRole));
 		}
-
-		return ok(exportready.render(fileName, userRole));
 
 	}
-
 
 	public Result exportOpenFile(String fileName) {
-
-		// Open the file that was exported...
-		try {
-			Desktop.getDesktop().open(new File(fileName));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		RoleType role = AccessMiddleware.getSessionRole();
-		if (role != null) {
-			switch (role.toString()) {
-			case "1":
-				return GO_USER;
-
-			case "2":
-				return GO_MANAGER;
-
-			case "3":
-				return GO_ADMIN;
-
-			default:
-				return GO_HOME;
-
-			}
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
 		} else {
-			return GO_HOME;
+			// Open the file that was exported...
+			try {
+				Desktop.getDesktop().open(new File(fileName));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			RoleType role = AccessMiddleware.getSessionRole();
+			if (role != null) {
+				switch (role.toString()) {
+				case "1":
+					return GO_USER;
+
+				case "2":
+					return GO_MANAGER;
+
+				case "3":
+					return GO_ADMIN;
+
+				default:
+					return GO_HOME;
+
+				}
+			} else {
+				return GO_HOME;
+			}
 		}
 	}
 
 	public Result findUser() {
-		return ok(getuser.render(form(FindUser.class)));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			return ok(getuser.render(form(FindUser.class)));
+		}
 	}
 
 	public Result getAllProfiles() {
-		List<Profile> profiles = Profile.find.all();
-		return ok(searchprofiles.render(profiles));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			List<Profile> profiles = Profile.find.all();
+			return ok(searchprofiles.render(profiles));
+		}
 	}
 
 	public Result getAllUsers() {
-		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class), users));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			List<User> users = User.find.all();
+			return ok(searchusers.render(form(Login.class), users));
+		}
 	}
 
 	public Result getProfilesByUser() {
@@ -706,20 +763,25 @@ public class Application extends Controller {
 	}
 
 	public Result getUserByEmail() {
-		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
-
-		if (findUserForm.hasErrors()) {
-			System.out.println("Find User - errors");
-			return badRequest(getuser.render(findUserForm));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
 		} else {
-			// Find user and display...
-			System.out.println("Find User - good request");
-			String email = findUserForm.get().email;
-			User user = User.findByEmail(email);
-			String name = user.fullname;
-			RoleType role = user.role;
-			String roleToDisplay = role.getRoleTextName(role);
-			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
+			Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+
+			if (findUserForm.hasErrors()) {
+				System.out.println("Find User - errors");
+				return badRequest(getuser.render(findUserForm));
+			} else {
+				// Find user and display...
+				System.out.println("Find User - good request");
+				String email = findUserForm.get().email;
+				User user = User.findByEmail(email);
+				String name = user.fullname;
+				RoleType role = user.role;
+				String roleToDisplay = role.getRoleTextName(role);
+				return ok(showuser.render(findUserForm, email, name, roleToDisplay));
+			}
 		}
 
 	}
@@ -808,15 +870,19 @@ public class Application extends Controller {
 	}
 
 	public Result openProfileAdmin(String name) {
-		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
-		List<Service> services = Service.find.all();
-		// Find profile and display...
-		Profile profile = Profile.findByName(name);
-		// Grab the current services...
-		String currentServices = profile.services;
-		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
-		return ok(showprofile.render(profileEntry, services, profile, selectedServices));
-		// return ok(showprofile.render(profileEntry, services, profile));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+			List<Service> services = Service.find.all();
+			// Find profile and display...
+			Profile profile = Profile.findByName(name);
+			// Grab the current services...
+			String currentServices = profile.services;
+			List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
+			return ok(showprofile.render(profileEntry, services, profile, selectedServices));
+		}
 	}
 
 	public Result openProfile(String name) {
@@ -832,7 +898,12 @@ public class Application extends Controller {
 	}
 
 	public Result openUser() {
-		return ok(openuser.render());
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			return ok(openuser.render());
+		}
 	}
 
 	public Result processUserRequest(String actionType) {
@@ -926,6 +997,7 @@ public class Application extends Controller {
 		profile.city = profileForm.city;
 		profile.state = profileForm.state;
 		profile.zip = profileForm.zip;
+		profile.country = profileForm.country;
 		profile.primaryNameFirst = profileForm.primaryNameFirst;
 		profile.primaryNameLast = profileForm.primaryNameLast;
 		profile.primaryPhone = profileForm.primaryPhone;
@@ -946,38 +1018,45 @@ public class Application extends Controller {
 	}
 
 	public Result updateProfileAdmin(String name) {
-		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 
-		if (profileEntry.hasErrors()) {
-			List<Service> services = Service.find.all();
-			System.out.println("Save Profile - errors");
-			return badRequest(profile.render(profileEntry, services));
+			if (profileEntry.hasErrors()) {
+				List<Service> services = Service.find.all();
+				System.out.println("Save Profile - errors");
+				return badRequest(profile.render(profileEntry, services));
+			}
+			// Save the profile...
+			ProfileRegister profileForm = profileEntry.get();
+			System.out.println("Save Profile - good request");
+			Profile profile = Profile.findByName(name);
+			profile.name = profileForm.name;
+			profile.address = profileForm.address;
+			profile.address1 = profileForm.address1;
+			profile.city = profileForm.city;
+			profile.state = profileForm.state;
+			profile.zip = profileForm.zip;
+			profile.country = profileForm.country;
+			profile.primaryNameFirst = profileForm.primaryNameFirst;
+			profile.primaryNameLast = profileForm.primaryNameLast;
+			profile.primaryPhone = profileForm.primaryPhone;
+			profile.primaryEmail = profileForm.primaryEmail;
+			profile.secondaryNameFirst = profileForm.secondaryNameFirst;
+			profile.secondaryNameLast = profileForm.secondaryNameLast;
+			profile.secondaryPhone = profileForm.secondaryPhone;
+			profile.secondaryEmail = profileForm.secondaryEmail;
+			profile.services = profileForm.services;
+			profile.servicesOther = profileForm.servicesOther;
+			profile.updatedBy = AccessMiddleware.getSessionEmail();
+			profile.dateUpdated = new Date();
+			profile.save();
+
+			return ok(profilesaved.render("admin"));
 		}
-		// Save the profile...
-		ProfileRegister profileForm = profileEntry.get();
-		System.out.println("Save Profile - good request");
-		Profile profile = Profile.findByName(name);
-		profile.name = profileForm.name;
-		profile.address = profileForm.address;
-		profile.address1 = profileForm.address1;
-		profile.city = profileForm.city;
-		profile.state = profileForm.state;
-		profile.zip = profileForm.zip;
-		profile.primaryNameFirst = profileForm.primaryNameFirst;
-		profile.primaryNameLast = profileForm.primaryNameLast;
-		profile.primaryPhone = profileForm.primaryPhone;
-		profile.primaryEmail = profileForm.primaryEmail;
-		profile.secondaryNameFirst = profileForm.secondaryNameFirst;
-		profile.secondaryNameLast = profileForm.secondaryNameLast;
-		profile.secondaryPhone = profileForm.secondaryPhone;
-		profile.secondaryEmail = profileForm.secondaryEmail;
-		profile.services = profileForm.services;
-		profile.servicesOther = profileForm.servicesOther;
-		profile.updatedBy = AccessMiddleware.getSessionEmail();
-		profile.dateUpdated = new Date();
-		profile.save();
 
-		return ok(profilesaved.render("admin"));
 	}
 
 	public Result updateProfile(String name) {
@@ -998,6 +1077,7 @@ public class Application extends Controller {
 		profile.city = profileForm.city;
 		profile.state = profileForm.state;
 		profile.zip = profileForm.zip;
+		profile.country = profileForm.country;
 		profile.primaryNameFirst = profileForm.primaryNameFirst;
 		profile.primaryNameLast = profileForm.primaryNameLast;
 		profile.primaryPhone = profileForm.primaryPhone;
@@ -1016,74 +1096,79 @@ public class Application extends Controller {
 	}
 
 	public Result updateUser() {
-		String email;
-		String name;
-		String approved;
-		String role;
-		User user;
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			String email;
+			String name;
+			String approved;
+			String role;
+			User user;
 
-		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+			Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
 
-		// Get values from the form...
-		email = findUserForm.get().email;
-		name = findUserForm.get().fullname;
-		approved = findUserForm.get().approved;
-		role = findUserForm.get().role;
+			// Get values from the form...
+			email = findUserForm.get().email;
+			name = findUserForm.get().fullname;
+			approved = findUserForm.get().approved;
+			role = findUserForm.get().role;
 
-		Logger.debug("");
+			Logger.debug("");
 
-		if (findUserForm.hasErrors()) {
-			System.out.println("Update User - errors");
-			return badRequest(showuser.render(findUserForm, "", "", ""));
-		}
+			if (findUserForm.hasErrors()) {
+				System.out.println("Update User - errors");
+				return badRequest(showuser.render(findUserForm, "", "", ""));
+			}
 
-		// Find user and save changes...
-		System.out.println("Update User - good request");
+			// Find user and save changes...
+			System.out.println("Update User - good request");
 
-		// I know we have the user, but let's make sure we get the correct
-		// user...
-		user = User.findByEmail(email);
-		user.fullname = name;
-		switch (role) {
-		case "user":
-			user.role = RoleType.USER;
-			break;
-		case "manager":
-			user.role = RoleType.MANAGER;
-			break;
-		case "admin":
-			user.role = RoleType.ADMIN;
-			break;
-		default:
-			user.role = RoleType.UNDEFINED;
-			break;
-		}
-		if (approved != null) {
-			if (approved.equals("Y")) {
-				user.approved = "Y";
-				try {
-					sendMailManagerConfirmation(user);
-				} catch (Exception e) {
-					Logger.error("Can't send confirm email to approved emergency manager", e);
-					flash("error", Messages.get("error.technical"));
-				}
-			} else {
-				user.approved = "N";
-				try {
-					sendMailEMDenied(user);
-				} catch (Exception e) {
-					Logger.error("Can't send deny email to denied emergency manager", e);
-					flash("error", Messages.get("error.technical"));
+			// I know we have the user, but let's make sure we get the correct
+			// user...
+			user = User.findByEmail(email);
+			user.fullname = name;
+			switch (role) {
+			case "user":
+				user.role = RoleType.USER;
+				break;
+			case "manager":
+				user.role = RoleType.MANAGER;
+				break;
+			case "admin":
+				user.role = RoleType.ADMIN;
+				break;
+			default:
+				user.role = RoleType.UNDEFINED;
+				break;
+			}
+			if (approved != null) {
+				if (approved.equals("Y")) {
+					user.approved = "Y";
+					try {
+						sendMailManagerConfirmation(user);
+					} catch (Exception e) {
+						Logger.error("Can't send confirm email to approved emergency manager", e);
+						flash("error", Messages.get("error.technical"));
+					}
+				} else {
+					user.approved = "N";
+					try {
+						sendMailEMDenied(user);
+					} catch (Exception e) {
+						Logger.error("Can't send deny email to denied emergency manager", e);
+						flash("error", Messages.get("error.technical"));
+					}
 				}
 			}
+
+			// Save the user...
+			user.updatedBy = AccessMiddleware.getSessionEmail();
+			user.dateUpdated = new Date();
+			user.save();
+
+			return ok(saveduser.render());
 		}
-
-		// Save the user...
-		user.updatedBy = AccessMiddleware.getSessionEmail();
-		user.dateUpdated = new Date();
-		user.save();
-
-		return ok(saveduser.render());
 
 	}
 
@@ -1092,7 +1177,12 @@ public class Application extends Controller {
 	}
 
 	public Result userMaintenance() {
-		return ok(usermaint.render(form(Login.class)));
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+			return ACCESS_DENIED;
+		} else {
+			return ok(usermaint.render(form(Login.class)));
+		}
 	}
 
 	private void sendMailManagerConfirmation(User user) throws EmailException, MalformedURLException {
@@ -1121,6 +1211,40 @@ public class Application extends Controller {
 		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
+
+	}
+
+	public boolean hasCorrectAccess(RoleType accessRole) {
+		// Make sure user has correct role to access...
+		// Pass in Role user should have use...
+		// Compare with user's current role...
+
+		// Is the user authenticated?
+		boolean isAuth = AccessMiddleware.isAuthenticated();
+		if (isAuth) {
+			// Get the current role and compare...
+			RoleType currentRole = AccessMiddleware.getSessionRole();
+			if (currentRole == accessRole) {
+				// Good to go...
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
+
+	public Result accessDenied() {
+
+		// Get the current role and compare...
+		String roleToDisplay = "";
+		RoleType currentRole = AccessMiddleware.getSessionRole();
+		if (currentRole != null) {
+			roleToDisplay = currentRole.getRoleTextName(currentRole);
+		}
+		// Direct to access denied...
+		return ok(accessdenied.render(roleToDisplay));
 
 	}
 

@@ -22,15 +22,21 @@
 				Name:</label>
 				<div class="item-cont">
 					<input class="large" type="text" name="name" required="required"
-						placeholder="Business Name..." value=@profile.name /><span class="icon-place"></span>
+						placeholder="Business Name..." value="@profile.name" /><span class="icon-place"></span>
 				</div>
 			</div>
 			<div class="element-address">
-				<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required" value=@profile.address /><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address2" value=@profile.address1 /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" value=@profile.city /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required" value=@profile.state /><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required" value=@profile.zip /><span class="icon-place"></span></span><div class="country">
+				<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required" value="@profile.address" /><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address2" value="@profile.address1" /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" value="@profile.city" /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required" value="@profile.state" /><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required" value="@profile.zip" /><span class="icon-place"></span></span><div class="country">
 					<select name="country" required="required">
 						<option selected="selected" value="" disabled="disabled">--- Select a country ---</option>
-						<option value="United States">United States</option>
-						<option value="Canada">Canada</option>
+						@if(profile.country != "United States") {
+							<option value="United States">United States</option>
+							<option value="Canada">Canada</option>
+						}
+						else {
+							<option value="United States" selected>United States</option>
+							<option value="Canada">Canada</option>
+						}
 					</select>
 					<i></i><span class="icon-place"></span>
 				</div>
@@ -39,9 +45,9 @@
 				<label class="title"><span class="required">*</span>Primary Contact
 				Name:</label><span class="nameFirst"><input
 					placeholder="First Name..." type="text" size="8" name="primaryNameFirst"
-					required="required" value=@profile.primaryNameFirst /><span class="icon-place"></span></span><span
+					required="required" value="@profile.primaryNameFirst" /><span class="icon-place"></span></span><span
 					class="nameLast"><input placeholder="Last Name..."
-					type="text" size="14" name="primaryNameLast" required="required" value=@profile.primaryNameLast /><span
+					type="text" size="14" name="primaryNameLast" required="required" value="@profile.primaryNameLast" /><span
 					class="icon-place"></span></span>
 			</div>
 			<div class="element-phone">
@@ -50,7 +56,7 @@
 				<div class="item-cont">
 					<input class="large" type="tel"
 						pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="primaryPhone"
-						required="required" placeholder="Phone Number..." value=@profile.primaryPhone /><span
+						required="required" placeholder="Phone Number..." value="@profile.primaryPhone" /><span
 						class="icon-place"></span>
 				</div>
 			</div>
@@ -59,7 +65,7 @@
 				Email:</label>
 				<div class="item-cont">
 					<input class="large" type="email" name="primaryEmail" 
-						required="required" placeholder="Email..." value=@profile.primaryEmail /><span
+						required="required" placeholder="Email..." value="@profile.primaryEmail" /><span
 						class="icon-place"></span>
 				</div>
 			</div>
@@ -67,9 +73,9 @@
 				<label class="title"><span class="required">*</span>Secondary Contact
 				Name:</label><span class="nameFirst"><input
 					placeholder="First Name..." type="text" size="8" name="secondaryNameFirst"
-					required="required" value=@profile.secondaryNameFirst /><span class="icon-place"></span></span><span
+					required="required" value="@profile.secondaryNameFirst" /><span class="icon-place"></span></span><span
 					class="nameLast"><input placeholder="Last Name..."
-					type="text" size="14" name="secondaryNameLast" required="required" value=@profile.secondaryNameLast /><span
+					type="text" size="14" name="secondaryNameLast" required="required" value="@profile.secondaryNameLast" /><span
 					class="icon-place"></span></span>
 			</div>
 			<div class="element-phone">
@@ -78,7 +84,7 @@
 				<div class="item-cont">
 					<input class="large" type="tel"
 						pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="secondaryPhone"
-						required="required" placeholder="Phone Number..." value=@profile.secondaryPhone /><span
+						required="required" placeholder="Phone Number..." value="@profile.secondaryPhone" /><span
 						class="icon-place"></span>
 				</div>
 			</div>
@@ -87,7 +93,7 @@
 				Email:</label>
 				<div class="item-cont">
 					<input class="large" type="email" name="secondaryEmail" 
-						required="required" placeholder="Email..." value=@profile.secondaryEmail /><span
+						required="required" placeholder="Email..." value="@profile.secondaryEmail" /><span
 						class="icon-place"></span>
 				</div>
 			</div>
@@ -96,7 +102,7 @@
 				<div class="column column1">
 					@for(service <- servicesList) {
 						<label>
-							<input type="checkbox" @if(servicesSelected contains service.name) {checked} class="selectServices" name="selectServices" id="selectServices" value=@service.name>
+							<input type="checkbox" @if(servicesSelected contains service.name) {checked} class="selectServices" name="selectServices" id="selectServices" value="@service.name">
 							<span>@service.name</span>
 						</label>                    
 					}
@@ -108,7 +114,7 @@
 					<label class="title"><span class="required">*</span>Other:</label>
 					<div class="item-cont">
 						<input class="large" type="text" name="serviceOther" 
-							placeholder="Other..." /><span class="icon-place"></span>
+							placeholder="Other..."value="@profile.servicesOther" /><span class="icon-place"></span>
 					</div>
 				</div>
 				<span class="clearfix"></span>

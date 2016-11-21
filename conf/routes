@@ -13,6 +13,8 @@ GET    /logout                     controllers.Application.logout()
 GET    /auth                       controllers.Application.openLogin()
 POST   /auth                       controllers.Application.authenticate()
 
+GET    /accessdenied               controllers.Application.accessDenied()
+
 # User pages...
 GET    /user                       controllers.Application.userHome()
 

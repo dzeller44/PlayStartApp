@@ -39,6 +39,9 @@ public class Profile extends Model {
 
 	@Constraints.Required
 	public String zip;
+	
+	@Constraints.Required
+	public String country;
 
 	@Constraints.Required
 	public String primaryNameFirst;

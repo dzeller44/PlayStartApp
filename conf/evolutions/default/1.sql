@@ -11,6 +11,7 @@ create table profile (
   city                      varchar(255),
   state                     varchar(255),
   zip                       varchar(255),
+  country                   varchar(255),
   primary_name_first        varchar(255),
   primary_name_last         varchar(255),
   primary_phone             varchar(255),
