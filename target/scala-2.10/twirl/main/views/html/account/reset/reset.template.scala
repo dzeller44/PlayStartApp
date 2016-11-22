@@ -91,7 +91,7 @@ Seq[Any](format.raw/*1.71*/("""
 object reset extends reset_Scope0.reset
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 22 09:45:41 MST 2016
+                  DATE: Tue Nov 22 12:42:51 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/reset/reset.scala.html
                   HASH: dc4ed68409161f7ec403c352bf8d78bb5969fe77
                   MATRIX: 801->1|972->94|1004->118|1100->70|1128->89|1158->184|1186->187|1204->197|1243->199|1273->202|1634->536|1693->574|2092->947|2130->976|2170->978|2209->989|2310->1063|2328->1072|2369->1092|2408->1103|2453->1118|2483->1121|2574->1185|2615->1205|2685->1248|2724->1266|2867->1379

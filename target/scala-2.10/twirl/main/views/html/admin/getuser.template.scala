@@ -83,7 +83,7 @@ Seq[Any](format.raw/*1.44*/("""
 object getuser extends getuser_Scope0.getuser
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 22 09:45:41 MST 2016
+                  DATE: Tue Nov 22 12:42:51 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/getuser.scala.html
                   HASH: 98f13714c060c8ae58a3692b8cd78cc225676d87
                   MATRIX: 775->1|912->43|940->46|958->56|997->58|1025->60|1695->704|1736->736|1776->738|1815->749|1916->823|1937->835|1978->855|2017->866|2062->881|2092->884|2226->991|2265->1009

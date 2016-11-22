@@ -26,6 +26,9 @@ GET    /getprofiles                controllers.Application.getProfilesByUser()
 GET    /editprofile/:name          controllers.Application.openProfile(name: String)
 POST   /editprofile/:name          controllers.Application.updateProfile(name: String)
 
+GET    /useraccount                controllers.Application.openUserAccount(email: String)
+POST   /useraccount                controllers.Application.updateUserAccount()
+
 # Emergency Manager pages...
 GET    /em                         controllers.Application.managerHome()
 

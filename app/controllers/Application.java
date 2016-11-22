@@ -36,6 +36,7 @@ import play.mvc.Result;
 import views.html.index;
 import views.html.auth;
 import views.html.accessdenied;
+import views.html.useraccount;
 import views.html.profile.profile;
 import views.html.profile.profilecreated;
 import views.html.profile.editprofile;
@@ -159,7 +160,7 @@ public class Application extends Controller {
 		 * @return null if validation ok, string with details otherwise
 		 */
 		public String validate() {
-			System.out.println("Login - validate()");
+			Logger.debug("Login - validate()");
 			User user = null;
 			try {
 				user = User.authenticate(email, password);
@@ -441,17 +442,17 @@ public class Application extends Controller {
 		String errorMessage = "";
 
 		Form<Login> loginForm = form(Login.class).bindFromRequest();
-		System.out.println("authenticate");
+		Logger.debug("authenticate");
 		Form<Register> registerForm = form(Register.class);
 
 		if (loginForm.hasErrors()) {
-			System.out.println("authenticate - bad request");
+			Logger.debug("authenticate - bad request");
 			// return badRequest(index.render(registerForm, loginForm));
 			return badRequest(auth.render(loginForm));
 			// return badRequest(index.render());
 			// return badRequest();
 		} else {
-			System.out.println("authenticate - good request");
+			Logger.debug("authenticate - good request");
 			session("email", loginForm.get().email);
 
 			boolean isAuth = AccessMiddleware.isAuthenticated();
@@ -807,11 +808,11 @@ public class Application extends Controller {
 			Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
 
 			if (findUserForm.hasErrors()) {
-				System.out.println("Find User - errors");
+				Logger.debug("getUserByEmail - errors");
 				return badRequest(getuser.render(findUserForm));
 			} else {
 				// Find user and display...
-				System.out.println("Find User - good request");
+				Logger.debug("getUserByEmail - good request");
 				String email = findUserForm.get().email;
 				User user = User.findByEmail(email);
 				String name = user.fullname;
@@ -827,11 +828,11 @@ public class Application extends Controller {
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
 
 		if (findUserForm.hasErrors()) {
-			System.out.println("Find User - errors");
+			Logger.debug("getUserByUrl - errors");
 			return badRequest(getuser.render(findUserForm));
 		} else {
 			// Find user and display...
-			System.out.println("Find User - good request");
+			Logger.debug("getUserByUrl - good request");
 			User user = User.findByEmail(email);
 			String name = user.fullname;
 			// String role = user.role;
@@ -840,7 +841,6 @@ public class Application extends Controller {
 			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
 
 		}
-
 	}
 
 	public boolean hasCorrectAccess(RoleType accessRole) {
@@ -876,24 +876,30 @@ public class Application extends Controller {
 			User user = User.findByEmail(email);
 			if (user != null && user.validated) {
 				boolean isAuth = AccessMiddleware.isAuthenticated();
-				RoleType role = AccessMiddleware.getSessionRole();
-				if (role != null) {
-					switch (role.toString()) {
-					case "1":
-						return GO_USER;
+				if (isAuth) {
+					RoleType role = AccessMiddleware.getSessionRole();
+					if (role != null) {
+						switch (role.toString()) {
+						case "1":
+							return GO_USER;
 
-					case "2":
-						return GO_MANAGER;
+						case "2":
+							return GO_MANAGER;
 
-					case "3":
-						return GO_ADMIN;
+						case "3":
+							return GO_ADMIN;
 
-					default:
+						default:
+							return GO_HOME;
+
+						}
+					} else {
+						Logger.debug("Application.index() - No Role - Clearing invalid session credentials");
+						session().clear();
 						return GO_HOME;
-
 					}
 				} else {
-					Logger.debug("Application.index() - No Role - Clearing invalid session credentials");
+					Logger.debug("Application.index() - No user authenticated - Clearing invalid session credentials");
 					session().clear();
 					return GO_HOME;
 				}
@@ -923,8 +929,34 @@ public class Application extends Controller {
 	}
 
 	public Result openLogin() {
-		System.out.println("openLogin");
-		return ok(auth.render(form(Login.class)));
+		boolean isAuth = AccessMiddleware.isAuthenticated();
+		if (isAuth) {
+			RoleType role = AccessMiddleware.getSessionRole();
+			if (role != null) {
+				switch (role.toString()) {
+				case "1":
+					return GO_USER;
+
+				case "2":
+					return GO_MANAGER;
+
+				case "3":
+					return GO_ADMIN;
+
+				default:
+					return GO_HOME;
+
+				}
+			} else {
+				Logger.debug("Application.index() - No Role - Clearing invalid session credentials");
+				session().clear();
+				return ok(auth.render(form(Login.class)));
+			}
+		} else {
+			Logger.debug("Application.index() - No user authenticated - Clearing invalid session credentials");
+			session().clear();
+			return ok(auth.render(form(Login.class)));
+		}
 	}
 
 	public Result openProfileAdmin(String name) {
@@ -964,6 +996,21 @@ public class Application extends Controller {
 		}
 	}
 
+	public Result openUserAccount(String email) {
+		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+		User user = User.findByEmail(email);
+		String name = user.fullname;
+
+		if (findUserForm.hasErrors()) {
+			Logger.debug("Open User Account - errors");
+			return badRequest(useraccount.render(findUserForm, email, name));
+		} else {
+			// Find user and display...
+			Logger.debug("Open User Account - good request");
+			return ok(useraccount.render(findUserForm, email, name));
+		}
+	}
+
 	public Result processUserRequest(String actionType) {
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
 
@@ -977,11 +1024,11 @@ public class Application extends Controller {
 		switch (actionType) {
 		case "find":
 			if (findUserForm.hasErrors()) {
-				System.out.println("Find User - errors");
+				Logger.debug("processUserRequest - errors");
 				return badRequest(getuser.render(findUserForm));
 			}
 			// Find user and display...
-			System.out.println("Find User - good request");
+			Logger.debug("processUserRequest - good request");
 			email = findUserForm.get().email;
 			user = User.findByEmail(email);
 			name = user.fullname;
@@ -991,12 +1038,11 @@ public class Application extends Controller {
 		// break;
 		case "save":
 			if (findUserForm.hasErrors()) {
-				System.out.println("Update User - errors");
+				Logger.debug("processUserRequest - errors");
 				return badRequest(showuser.render(findUserForm, "", "", ""));
 			}
-
 			// Find user and save changes...
-			System.out.println("Update User - good request");
+			Logger.debug("processUserRequest - good request");
 			// Get values from the form...
 			email = findUserForm.get().email;
 			name = findUserForm.get().fullname;
@@ -1042,12 +1088,12 @@ public class Application extends Controller {
 
 		if (profileEntry.hasErrors()) {
 			List<Service> services = Service.find.all();
-			System.out.println("Save Profile - errors");
+			Logger.debug("Save Profile - errors");
 			return badRequest(profile.render(profileEntry, services));
 		}
 		// Save the profile...
 		ProfileRegister profileForm = profileEntry.get();
-		System.out.println("Save Profile - good request");
+		Logger.debug("Save Profile - good request");
 		Profile profile = new Profile();
 		profile.name = profileForm.name;
 		profile.address = profileForm.address;
@@ -1084,12 +1130,12 @@ public class Application extends Controller {
 
 			if (profileEntry.hasErrors()) {
 				List<Service> services = Service.find.all();
-				System.out.println("Save Profile - errors");
+				Logger.debug("updateProfileAdmin - errors");
 				return badRequest(profile.render(profileEntry, services));
 			}
 			// Save the profile...
 			ProfileRegister profileForm = profileEntry.get();
-			System.out.println("Save Profile - good request");
+			Logger.debug("updateProfileAdmin - good request");
 			Profile profile = Profile.findByName(name);
 			profile.name = profileForm.name;
 			profile.address = profileForm.address;
@@ -1122,12 +1168,12 @@ public class Application extends Controller {
 
 		if (profileEntry.hasErrors()) {
 			List<Service> services = Service.find.all();
-			System.out.println("Save Profile - errors");
+			Logger.debug("updateProfile - errors");
 			return badRequest(profile.render(profileEntry, services));
 		}
 		// Save the profile...
 		ProfileRegister profileForm = profileEntry.get();
-		System.out.println("Save Profile - good request");
+		Logger.debug("updateProfile - good request");
 		Profile profile = Profile.findByName(name);
 		profile.name = profileForm.name;
 		profile.address = profileForm.address;
@@ -1172,15 +1218,15 @@ public class Application extends Controller {
 			approved = findUserForm.get().approved;
 			role = findUserForm.get().role;
 
-			Logger.debug("");
+			Logger.debug("Update User");
 
 			if (findUserForm.hasErrors()) {
-				System.out.println("Update User - errors");
+				Logger.debug("Update User - errors");
 				return badRequest(showuser.render(findUserForm, "", "", ""));
 			}
 
 			// Find user and save changes...
-			System.out.println("Update User - good request");
+			Logger.debug("Update User - good request");
 
 			// I know we have the user, but let's make sure we get the correct
 			// user...
@@ -1228,6 +1274,41 @@ public class Application extends Controller {
 			return ok(saveduser.render());
 		}
 
+	}
+
+	public Result updateUserAccount() {
+		String email;
+		String name;
+		String approved;
+		String role;
+		User user;
+
+		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
+
+		// Get values from the form...
+		email = findUserForm.get().email;
+		name = findUserForm.get().fullname;
+		Logger.debug("Updating User Account");
+
+		if (findUserForm.hasErrors()) {
+			Logger.debug("Update User Account - errors");
+			return badRequest(useraccount.render(findUserForm, "", ""));
+		}
+
+		// Find user and save changes...
+		Logger.debug("Update User Account - good request");
+
+		// I know we have the user, but let's make sure we get the correct
+		// user...
+		user = User.findByEmail(email);
+		user.fullname = name;
+
+		// Save the user...
+		user.updatedBy = AccessMiddleware.getSessionEmail();
+		user.dateUpdated = new Date();
+		user.save();
+
+		return ok(saveduser.render());
 	}
 
 	public Result userHome() {

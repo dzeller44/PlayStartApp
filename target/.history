@@ -138,3 +138,9 @@ run
 clean
 compile
 run
+clean
+compile
+run
+clean
+compile
+run

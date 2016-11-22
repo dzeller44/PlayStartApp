@@ -1,4 +1,4 @@
-@(user: User = null, scripts: Html = Html(""), isLoggedIn: String = "")(content: Html)
+@(user: User = null, scripts: Html = Html(""), isLoggedIn: String = "", currentEmail: String=controllers.helpers.AccessMiddleware.getSessionEmail())(content: Html)
 
 <!DOCTYPE html>
 
@@ -96,7 +96,13 @@
 								<ul>
 									<li class="scroll_btn"><a href="/">Home</a></li>
 									<li class="scroll_btn"><a href="/signup">Register</a></li>
-  									<li class="scroll_btn"><a href="/auth">Admin</a></li>
+  									<li class="scroll_btn"><a href="/admin">Admin</a></li>
+  									@if(currentEmail == "") {
+  										<li class="scroll_btn"><a href="/auth">Login</a></li>
+  									} else {  										
+  										<li class="scroll_btn"><a href="/useraccount?email=@currentEmail">@currentEmail</a></li>
+  										<li class="scroll_btn"><a href="/logout">Logout</a></li>
+  									}
 								</ul>
 							</nav>
 						</div>
