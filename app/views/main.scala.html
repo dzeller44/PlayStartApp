@@ -99,9 +99,9 @@
   									<li class="scroll_btn"><a href="/admin">Admin</a></li>
   									@if(currentEmail == "") {
   										<li class="scroll_btn"><a href="/auth">Login</a></li>
-  									} else {  										
-  										<li class="scroll_btn"><a href="/useraccount?email=@currentEmail">@currentEmail</a></li>
-  										<li class="scroll_btn"><a href="/logout">Logout</a></li>
+  									} else {
+  									  	<li class="scroll_btn"><a href="/logout">Logout</a></li>									
+  										<li class="scroll_btn"><a href="/useraccount?email=@currentEmail" style="text-transform: lowercase;">@currentEmail</a></li>
   									}
 								</ul>
 							</nav>
