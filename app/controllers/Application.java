@@ -394,6 +394,19 @@ public class Application extends Controller {
 
 	}
 
+	public Result accessDenied() {
+
+		// Get the current role and compare...
+		String roleToDisplay = "";
+		RoleType currentRole = AccessMiddleware.getSessionRole();
+		if (currentRole != null) {
+			roleToDisplay = currentRole.getRoleTextName(currentRole);
+		}
+		// Direct to access denied...
+		return ok(accessdenied.render(roleToDisplay));
+
+	}
+
 	public Result addProfile() {
 		List<Service> services = Service.find.all();
 		return ok(profile.render(form(ProfileRegister.class), services));
@@ -751,7 +764,7 @@ public class Application extends Controller {
 			return ok(searchprofiles.render(profiles, services));
 		}
 	}
-	
+
 	public Result getProfilesByService(String service) {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
@@ -759,11 +772,11 @@ public class Application extends Controller {
 		} else {
 			// Find those profiles that contain the service...
 			List<Profile> profiles = null;
-			if(service.equals("All")) {
+			if (service.equals("All")) {
 				profiles = Profile.find.all();
 			} else {
 				profiles = Profile.findAllByService(service);
-			}			
+			}
 			List<Service> services = Service.find.all();
 			return ok(searchprofiles.render(profiles, services));
 		}
@@ -828,6 +841,27 @@ public class Application extends Controller {
 
 		}
 
+	}
+
+	public boolean hasCorrectAccess(RoleType accessRole) {
+		// Make sure user has correct role to access...
+		// Pass in Role user should have use...
+		// Compare with user's current role...
+
+		// Is the user authenticated?
+		boolean isAuth = AccessMiddleware.isAuthenticated();
+		if (isAuth) {
+			// Get the current role and compare...
+			RoleType currentRole = AccessMiddleware.getSessionRole();
+			if (currentRole == accessRole) {
+				// Good to go...
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -1235,40 +1269,6 @@ public class Application extends Controller {
 		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
-
-	}
-
-	public boolean hasCorrectAccess(RoleType accessRole) {
-		// Make sure user has correct role to access...
-		// Pass in Role user should have use...
-		// Compare with user's current role...
-
-		// Is the user authenticated?
-		boolean isAuth = AccessMiddleware.isAuthenticated();
-		if (isAuth) {
-			// Get the current role and compare...
-			RoleType currentRole = AccessMiddleware.getSessionRole();
-			if (currentRole == accessRole) {
-				// Good to go...
-				return true;
-			} else {
-				return false;
-			}
-		} else {
-			return false;
-		}
-	}
-
-	public Result accessDenied() {
-
-		// Get the current role and compare...
-		String roleToDisplay = "";
-		RoleType currentRole = AccessMiddleware.getSessionRole();
-		if (currentRole != null) {
-			roleToDisplay = currentRole.getRoleTextName(currentRole);
-		}
-		// Direct to access denied...
-		return ok(accessdenied.render(roleToDisplay));
 
 	}
 
