@@ -591,7 +591,7 @@ public class Application extends Controller {
 
 	public Result exportUsers(String whatData) {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			List<User> users = null;
@@ -644,7 +644,7 @@ public class Application extends Controller {
 
 	public Result exportProfiles(String whatData) {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			List<Profile> profiles = null;
@@ -700,7 +700,7 @@ public class Application extends Controller {
 
 	public Result exportOpenFile(String fileName) {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			// Open the file that was exported...
@@ -743,11 +743,29 @@ public class Application extends Controller {
 
 	public Result getAllProfiles() {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			List<Profile> profiles = Profile.find.all();
-			return ok(searchprofiles.render(profiles));
+			List<Service> services = Service.find.all();
+			return ok(searchprofiles.render(profiles, services));
+		}
+	}
+	
+	public Result getProfilesByService(String service) {
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
+			return ACCESS_DENIED;
+		} else {
+			// Find those profiles that contain the service...
+			List<Profile> profiles = null;
+			if(service.equals("All")) {
+				profiles = Profile.find.all();
+			} else {
+				profiles = Profile.findAllByService(service);
+			}			
+			List<Service> services = Service.find.all();
+			return ok(searchprofiles.render(profiles, services));
 		}
 	}
 

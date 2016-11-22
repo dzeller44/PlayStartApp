@@ -139,4 +139,14 @@ public class Profile extends Model {
 		return find.where().eq("userkey", userkey).findList();
 	}
 	
+	/**
+	 * Retrieves profiles that contain a service.
+	 *
+	 * @param servcice.
+	 * @return profiles if the service is found, null otherwise.
+	 */
+	public static List<Profile> findAllByService(String service) {
+		return find.where().contains("services", service).findList();
+	}
+	
 }

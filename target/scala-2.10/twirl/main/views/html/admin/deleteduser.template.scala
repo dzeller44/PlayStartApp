@@ -69,7 +69,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object deleteduser extends deleteduser_Scope0.deleteduser
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 22 08:24:40 MST 2016
+                  DATE: Tue Nov 22 09:45:41 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/deleteduser.scala.html
                   HASH: 866ce53684d85763af2da06224cb0614c9af71df
                   MATRIX: 845->1|858->7|897->9|926->12|1355->414|1408->446

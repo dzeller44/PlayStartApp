@@ -56,4 +56,11 @@ function joinServices() {
 
 }
 
-
+function getByServices() {
+	// Get selected service...
+	var e = document.getElementById("selectServices");
+	var service = e.options[e.selectedIndex].value;
+	console.log("service = " + service);
+	window.location.href = "/searchbyservice?service=" + service;
+	
+}
