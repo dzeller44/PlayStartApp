@@ -47,14 +47,14 @@ Seq[Any](format.raw/*1.38*/("""
 				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-1 margbot30"></div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/export">
+					<a class="services_item" href="/searchprofiles">
 						<p>
 							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*21.64*/(""""> <b>Export Data</b>
 						</p> <span>Export Records...</span>
 					</a>
 				</div>
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/search">
+					<a class="services_item" href="/searchprofiles">
 						<p>
 							<img src=""""),_display_(/*28.19*/routes/*28.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*28.67*/(""""> <b>Search Records</b>
 						</p> <span>Search Business Profiles...</span>
@@ -91,10 +91,10 @@ Seq[Any](format.raw/*1.38*/("""
 object manager extends manager_Scope0.manager
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 21 15:06:12 MST 2016
+                  DATE: Tue Nov 22 08:34:32 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/manager/manager.scala.html
-                  HASH: 2304a574d8e8bdf91a603885d74f4c4fe6fe4334
-                  MATRIX: 774->1|905->37|933->40|951->50|990->52|1018->54|1471->480|1486->486|1546->525|1769->721|1784->727|1847->769
+                  HASH: 6a982e0d097e96d4dc680b8104b00d311a9545d9
+                  MATRIX: 774->1|905->37|933->40|951->50|990->52|1018->54|1479->488|1494->494|1554->533|1785->737|1800->743|1863->785
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|52->21|52->21|52->21|59->28|59->28|59->28
                   -- GENERATED --
               */

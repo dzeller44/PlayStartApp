@@ -591,7 +591,7 @@ public class Application extends Controller {
 
 	public Result exportUsers(String whatData) {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			List<User> users = null;
@@ -644,7 +644,7 @@ public class Application extends Controller {
 
 	public Result exportProfiles(String whatData) {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			List<Profile> profiles = null;
@@ -674,11 +674,17 @@ public class Application extends Controller {
 				fileName = fileLocation + fileName + "_" + fileDate + ".csv";
 				CSVWriter outputFile = new CSVWriter(new FileWriter(fileName));
 				List<String[]> objectArray = new ArrayList<String[]>();
-				objectArray.add(new String[] { "Business Name", "Contact", "Services" });
+				objectArray.add(new String[] { "Business Name", "Business Address", "Business Address 1",
+						"Business City", "Business Zip", "Business Country", "Primary Contact", "Primary Contact Phone",
+						"Primary Contact Email", "Secondary Contact", "Secondary Contact Phone",
+						"Secondary Contact Email", "Services", "Services Other" });
 
 				for (Profile profile : profiles) {
-					objectArray.add(new String[] { profile.name,
-							profile.primaryNameFirst + " " + profile.primaryNameLast, profile.services });
+					objectArray.add(new String[] { profile.name, profile.address, profile.address1, profile.city,
+							profile.zip, profile.country, profile.primaryNameFirst + " " + profile.primaryNameLast,
+							profile.primaryPhone, profile.primaryEmail,
+							profile.secondaryNameFirst + " " + profile.secondaryNameLast, profile.secondaryPhone,
+							profile.secondaryEmail, profile.services, profile.servicesOther });
 				}
 
 				outputFile.writeAll(objectArray);
@@ -694,7 +700,7 @@ public class Application extends Controller {
 
 	public Result exportOpenFile(String fileName) {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			// Open the file that was exported...
@@ -737,7 +743,7 @@ public class Application extends Controller {
 
 	public Result getAllProfiles() {
 		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) != true) {
+		if (hasCorrectAccess(RoleType.ADMIN) && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
 		} else {
 			List<Profile> profiles = Profile.find.all();

@@ -1,0 +1,11 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\application.conf,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\cloudbees.conf,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\cloudbees.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\evolutions,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\mail.conf.example,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\mail.conf.example)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\messages.en,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\messages.en)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\messages.fr,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\messages.fr)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\play.plugins,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\play.plugins)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\routes,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\evolutions\default,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\WebDev\git\PlayAuthenticate\conf\evolutions\default\1.sql,C:\WebDev\git\PlayAuthenticate\target\scala-2.10\classes\evolutions\default\1.sql)[0m
