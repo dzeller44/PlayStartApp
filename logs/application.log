@@ -1,33 +1,14 @@
-2016-11-22 12:43:24,328 [INFO] from play.core.server.NettyServer in pool-6-thread-6 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-11-22 12:43:31,231 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-22 12:43:31,243 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-22 12:43:32,005 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-22 12:43:33,643 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-11-22 12:49:48,338 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
-2016-11-22 12:49:48,507 [WARN] from application in application-akka.actor.default-dispatcher-12 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-22 12:49:48,508 [INFO] from application in application-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2016-11-22 12:49:48,519 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-22 12:49:49,281 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-12 - Application started (Dev)
-2016-11-22 12:51:12,609 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
-2016-11-22 12:51:12,704 [WARN] from application in application-akka.actor.default-dispatcher-12 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-22 12:51:12,705 [INFO] from application in application-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2016-11-22 12:51:12,717 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-22 12:51:13,452 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-12 - Application started (Dev)
-2016-11-22 12:52:50,499 [INFO] from application in application-akka.actor.default-dispatcher-8 - Shutting down connection pool.
-2016-11-22 12:52:50,593 [WARN] from application in application-akka.actor.default-dispatcher-8 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-22 12:52:50,594 [INFO] from application in application-akka.actor.default-dispatcher-8 - Creating Pool for datasource 'default'
-2016-11-22 12:52:50,604 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-8 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-22 12:52:51,323 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
-2016-11-22 13:04:39,439 [INFO] from application in application-akka.actor.default-dispatcher-23 - Shutting down connection pool.
-2016-11-22 13:04:39,538 [WARN] from application in application-akka.actor.default-dispatcher-23 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-22 13:04:39,544 [INFO] from application in application-akka.actor.default-dispatcher-23 - Creating Pool for datasource 'default'
-2016-11-22 13:04:39,555 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-23 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-22 13:04:40,241 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-23 - Application started (Dev)
-2016-11-22 13:04:40,300 [ERROR] from application in application-akka.actor.default-dispatcher-8 - 
+2016-11-23 08:05:51,109 [INFO] from play.core.server.NettyServer in pool-6-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-11-23 08:06:03,659 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-23 08:06:03,674 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-11-23 08:06:04,430 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-23 08:06:06,043 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-11-23 08:26:31,185 [WARN] from play in application-akka.actor.default-dispatcher-17 - You are using status code '200' with flashing, which should only be used with a redirect status!
+2016-11-23 08:32:26,479 [ERROR] from application in application-akka.actor.default-dispatcher-50 - 
 
-! @726bh2l69 - Internal server error, for (GET) [/] ->
+! @726heb7bn - Internal server error, for (GET) [/editprofile/Acme] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: Unique expecting 0 or 1 rows but got [2]]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.10-2.4.6.jar:2.4.6]
@@ -55,14 +36,14 @@ play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPoint
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.NullPointerException: null
-	at views.html.main_Scope0$main.apply(main.template.scala:131) ~[classes/:na]
-	at views.html.index_Scope0$index.apply(index.template.scala:34) ~[classes/:na]
-	at views.html.index_Scope0$index.render(index.template.scala:88) ~[classes/:na]
-	at views.html.index.render(index.template.scala) ~[classes/:na]
-	at controllers.Application.index(Application.java:912) ~[classes/:2.4.6]
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:1037) ~[classes/:na]
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:1037) ~[classes/:na]
+Caused by: javax.persistence.PersistenceException: Unique expecting 0 or 1 rows but got [2]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findUnique(DefaultServer.java:1179) ~[avaje-ebeanorm-4.6.2.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findUnique(DefaultOrmQuery.java:957) ~[avaje-ebeanorm-4.6.2.jar:na]
+	at com.avaje.ebeaninternal.util.DefaultExpressionList.findUnique(DefaultExpressionList.java:217) ~[avaje-ebeanorm-4.6.2.jar:na]
+	at models.Profile.findByName(Profile.java:99) ~[classes/:na]
+	at controllers.Application.openProfile(Application.java:982) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$12$$anonfun$apply$12.apply(Routes.scala:1103) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$12$$anonfun$apply$12.apply(Routes.scala:1103) ~[classes/:na]
 	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
@@ -94,24 +75,75 @@ Caused by: java.lang.NullPointerException: null
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
 	... 6 common frames omitted
-2016-11-22 13:04:40,314 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
+2016-11-23 08:33:57,185 [ERROR] from play.core.server.netty.PlayDefaultUpstreamHandler in application-akka.actor.default-dispatcher-68 - Cannot invoke the action
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at play.data.Form.bind(Form.java:425) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at play.data.Form.bindFromRequest(Form.java:222) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at controllers.Application.authenticate(Application.java:444) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.http.DefaultHttpRequestHandler$1.call(DefaultHttpRequestHandler.java:20) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:485) ~[scala-library.jar:na]
+	at play.core.j.JavaAction.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.10-2.3.13.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at play.data.Form.bind(Form.java:422) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	... 40 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at managers.SessionData.createFromUser(SessionData.java:52) ~[classes/:na]
+	at controllers.helpers.AccessMiddleware.createUserSession(AccessMiddleware.java:109) ~[classes/:na]
+	at controllers.Application$Login.validate(Application.java:167) ~[classes/:na]
+	... 45 common frames omitted
+2016-11-23 08:33:57,197 [ERROR] from application in application-akka.actor.default-dispatcher-68 - 
 
-! @726bh2l7c - Internal server error, for (GET) [/] ->
+! @726hegbh6 - Internal server error, for (POST) [/auth] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.10-2.4.6.jar:2.4.6]
 	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.10-2.4.6.jar:2.4.6]
 	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.10-2.4.6.jar:2.4.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:151) [play-netty-server_2.10-2.4.6.jar:2.4.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:148) [play-netty-server_2.10-2.4.6.jar:2.4.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:266) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:262) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
 	at play.api.libs.iteratee.Execution$trampoline$.executeScheduled(Execution.scala:109) [play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:71) [play-iteratees_2.10-2.4.6.jar:2.4.6]
@@ -126,14 +158,12 @@ play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPoint
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.NullPointerException: null
-	at views.html.main_Scope0$main.apply(main.template.scala:131) ~[classes/:na]
-	at views.html.index_Scope0$index.apply(index.template.scala:34) ~[classes/:na]
-	at views.html.index_Scope0$index.render(index.template.scala:88) ~[classes/:na]
-	at views.html.index.render(index.template.scala) ~[classes/:na]
-	at controllers.Application.index(Application.java:912) ~[classes/:2.4.6]
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:1037) ~[classes/:na]
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:1037) ~[classes/:na]
+Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at play.data.Form.bind(Form.java:425) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at play.data.Form.bindFromRequest(Form.java:222) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at controllers.Application.authenticate(Application.java:444) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
 	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
@@ -160,29 +190,92 @@ Caused by: java.lang.NullPointerException: null
 	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:536) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:536) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
 	... 6 common frames omitted
-2016-11-22 13:04:45,604 [ERROR] from application in application-akka.actor.default-dispatcher-6 - 
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at play.data.Form.bind(Form.java:422) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	... 40 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at managers.SessionData.createFromUser(SessionData.java:52) ~[classes/:na]
+	at controllers.helpers.AccessMiddleware.createUserSession(AccessMiddleware.java:109) ~[classes/:na]
+	at controllers.Application$Login.validate(Application.java:167) ~[classes/:na]
+	... 45 common frames omitted
+2016-11-23 08:34:08,322 [ERROR] from play.core.server.netty.PlayDefaultUpstreamHandler in application-akka.actor.default-dispatcher-69 - Cannot invoke the action
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at play.data.Form.bind(Form.java:425) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at play.data.Form.bindFromRequest(Form.java:222) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at controllers.Application.authenticate(Application.java:444) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.http.DefaultHttpRequestHandler$1.call(DefaultHttpRequestHandler.java:20) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:485) ~[scala-library.jar:na]
+	at play.core.j.JavaAction.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.10-2.3.13.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at play.data.Form.bind(Form.java:422) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	... 40 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at managers.SessionData.createFromUser(SessionData.java:52) ~[classes/:na]
+	at controllers.helpers.AccessMiddleware.createUserSession(AccessMiddleware.java:109) ~[classes/:na]
+	at controllers.Application$Login.validate(Application.java:167) ~[classes/:na]
+	... 45 common frames omitted
+2016-11-23 08:34:08,331 [ERROR] from application in application-akka.actor.default-dispatcher-69 - 
 
-! @726bh3331 - Internal server error, for (GET) [/] ->
+! @726heh23c - Internal server error, for (POST) [/auth] ->
  
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[RuntimeException: java.lang.reflect.InvocationTargetException]]
 	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.10-2.4.6.jar:2.4.6]
 	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.10-2.4.6.jar:2.4.6]
 	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.10-2.4.6.jar:2.4.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:151) [play-netty-server_2.10-2.4.6.jar:2.4.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:148) [play-netty-server_2.10-2.4.6.jar:2.4.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:266) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:262) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
 	at play.api.libs.iteratee.Execution$trampoline$.executeScheduled(Execution.scala:109) [play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:71) [play-iteratees_2.10-2.4.6.jar:2.4.6]
@@ -197,14 +290,12 @@ play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPoint
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.lang.NullPointerException: null
-	at views.html.main_Scope0$main.apply(main.template.scala:131) ~[classes/:na]
-	at views.html.index_Scope0$index.apply(index.template.scala:34) ~[classes/:na]
-	at views.html.index_Scope0$index.render(index.template.scala:88) ~[classes/:na]
-	at views.html.index.render(index.template.scala) ~[classes/:na]
-	at controllers.Application.index(Application.java:912) ~[classes/:2.4.6]
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:1037) ~[classes/:na]
-	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$1$$anonfun$apply$1.apply(Routes.scala:1037) ~[classes/:na]
+Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at play.data.Form.bind(Form.java:425) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at play.data.Form.bindFromRequest(Form.java:222) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	at controllers.Application.authenticate(Application.java:444) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(Routes.scala:1067) ~[classes/:na]
 	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
 	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
@@ -231,18 +322,22 @@ Caused by: java.lang.NullPointerException: null
 	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:536) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:536) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
 	... 6 common frames omitted
-2016-11-22 13:07:24,367 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
-2016-11-22 13:07:24,463 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-22 13:07:24,464 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
-2016-11-22 13:07:24,471 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-22 13:07:25,170 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-11-22 13:18:27,479 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
-2016-11-22 13:18:27,577 [WARN] from application in application-akka.actor.default-dispatcher-12 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-22 13:18:27,578 [INFO] from application in application-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2016-11-22 13:18:27,586 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-22 13:18:28,237 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-12 - Application started (Dev)
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_101]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_101]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_101]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_101]
+	at play.data.Form.bind(Form.java:422) ~[play-java_2.10-2.4.6.jar:2.4.6]
+	... 40 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at managers.SessionData.createFromUser(SessionData.java:52) ~[classes/:na]
+	at controllers.helpers.AccessMiddleware.createUserSession(AccessMiddleware.java:109) ~[classes/:na]
+	at controllers.Application$Login.validate(Application.java:167) ~[classes/:na]
+	... 45 common frames omitted
+2016-11-23 08:44:52,141 [WARN] from play in application-akka.actor.default-dispatcher-167 - You are using status code '200' with flashing, which should only be used with a redirect status!
+2016-11-23 10:25:26,017 [INFO] from application in pool-6-thread-4 - Shutting down connection pool.

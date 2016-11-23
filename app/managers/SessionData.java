@@ -15,30 +15,6 @@ public class SessionData {
 	private String email;
 	private String userId;
 	private String userkey;
-
-	/**
-	 * 
-	 * @return
-	 */
-	public String getUserId() {
-		return userId;
-	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public String getEmail() {
-		return email;
-	}
-	
-	/**
-	 * 
-	 * @param email
-	 */
-	public void setEmail(String email) {
-		this.email = email;
-	}
 	
 	/**
 	 * 
@@ -57,19 +33,43 @@ public class SessionData {
 		
         return sessionData;
 	}
-
-
-	private void setUserId(String id) {
-		userId = id;
-	}
-
-
 	public static SessionData getNew() {
 		return new SessionData();
 	}
 
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getEmail() {
+		return email;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getUserId() {
+		return userId;
+	}
+
+
 	public String getUserkey() {
 		return userkey;
+	}
+
+
+	/**
+	 * 
+	 * @param email
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	private void setUserId(String id) {
+		userId = id;
 	}
 
 	public void setUserkey(String userkey) {
