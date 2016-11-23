@@ -1120,7 +1120,35 @@ public class Application extends Controller {
 
 		return ok(profilecreated.render());
 	}
+	
+	public void sendMailEMDenied(User user) throws EmailException, MalformedURLException {
+		String subject = Messages.get("mail.deny.subject");
 
+		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		urlString += "/confirm/" + user.confirmationToken;
+		URL url = new URL(urlString); // validate the URL, will throw an
+										// exception if bad.
+		String message = Messages.get("mail.deny.message", url.toString());
+
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);
+	}
+
+	private void sendMailManagerConfirmation(User user) throws EmailException, MalformedURLException {
+		String subject = Messages.get("mail.managerconfirm.subject");
+
+		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		urlString += "/confirm/" + user.confirmationToken;
+		URL url = new URL(urlString); // validate the URL, will throw an
+										// exception if bad.
+		String message = Messages.get("mail.managerconfirm.message", url.toString());
+
+		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);
+	}
+	
 	public Result updateProfileAdmin(String name) {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
@@ -1323,34 +1351,5 @@ public class Application extends Controller {
 			return ok(usermaint.render(form(Login.class)));
 		}
 	}
-
-	private void sendMailManagerConfirmation(User user) throws EmailException, MalformedURLException {
-		String subject = Messages.get("mail.managerconfirm.subject");
-
-		String urlString = "http://" + Configuration.root().getString("server.hostname");
-		urlString += "/confirm/" + user.confirmationToken;
-		URL url = new URL(urlString); // validate the URL, will throw an
-										// exception if bad.
-		String message = Messages.get("mail.managerconfirm.message", url.toString());
-
-		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
-		Mail mailer = new Mail(mailerClient);
-		mailer.sendMail(envelop);
-	}
-
-	public void sendMailEMDenied(User user) throws EmailException, MalformedURLException {
-		String subject = Messages.get("mail.deny.subject");
-
-		String urlString = "http://" + Configuration.root().getString("server.hostname");
-		urlString += "/confirm/" + user.confirmationToken;
-		URL url = new URL(urlString); // validate the URL, will throw an
-										// exception if bad.
-		String message = Messages.get("mail.deny.message", url.toString());
-
-		Mail.Envelop envelop = new Mail.Envelop(subject, message, user.getEmail());
-		Mail mailer = new Mail(mailerClient);
-		mailer.sendMail(envelop);
-
-	}
-
+	
 }
