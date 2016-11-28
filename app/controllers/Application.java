@@ -529,6 +529,8 @@ public class Application extends Controller {
 
 			// Delete the profile...
 			profile.delete();
+			
+			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "deleteProfile()", "Profile DELETED by Admin", AccessMiddleware.getSessionID());
 
 			return ok(deletedprofile.render());
 		}
@@ -587,6 +589,8 @@ public class Application extends Controller {
 			// Delete the user...
 			user.delete();
 
+			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User", "deleteUser()", "User DELETED by Admin", AccessMiddleware.getSessionID());
+			
 			return ok(deleteduser.render());
 		}
 
