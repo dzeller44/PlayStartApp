@@ -38,6 +38,32 @@ public class RemovedProfile extends Model {
 
 	@Constraints.Required
 	public String zip;
+	
+	@Constraints.Required
+	public String county;
+
+	@Constraints.Required
+	public String billname;
+	
+	@Constraints.Required
+	public String billaddress;
+
+	public String billaddress1;
+
+	@Constraints.Required
+	public String billcity;
+
+	@Constraints.Required
+	public String billstate;
+
+	@Constraints.Required
+	public String billzip;
+	
+	@Constraints.Required
+	public String billcountry;
+	
+	@Constraints.Required
+	public String billcounty;
 
 	@Constraints.Required
 	public String primaryNameFirst;

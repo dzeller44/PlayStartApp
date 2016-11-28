@@ -118,11 +118,11 @@
 	<classpathentry kind="lib" path="C:/activator-dist-1.3.10/repository/org.webbitserver/webbit/0.4.14/jars/webbit.jar"/>
 	<classpathentry kind="lib" path="C:/activator-dist-1.3.10/repository/org.seleniumhq.selenium/selenium-support/2.44.0/jars/selenium-support.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes"/>
-	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/routes"/>
-	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/twirl"/>
 	<classpathentry kind="lib" path="C:/WebDev/eclipse/libs/annotations-7.0.3.jar"/>
 	<classpathentry kind="lib" path="C:/WebDev/eclipse/libs/gson-2.2.4.jar"/>
 	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/lib/opencsv-3.8.jar"/>
+	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/twirl"/>
+	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/routes"/>
+	<classpathentry kind="lib" path="C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

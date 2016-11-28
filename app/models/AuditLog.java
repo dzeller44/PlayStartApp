@@ -50,6 +50,9 @@ public class AuditLog {
 
 	@Column(name = "ip")
 	private String ip;
+	
+	@Column(name = "path")
+	private String path;
 
 	@Column(name = "created")
 	private Date created;
@@ -182,6 +185,14 @@ public class AuditLog {
 		this.ip = ip;
 	}
 
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
 	/**
 	 * @return the created
 	 */
@@ -207,7 +218,10 @@ public class AuditLog {
 	 */
 	public static void setLog(String userId, String email, String context, String screen, String field, String value) {
 		String ip = Http.Context.current().request().remoteAddress();
-		setLog(userId, email, context, screen, field, value, ip);
+		String path = Http.Context.current().request().path();
+		String uri = Http.Context.current().request().uri();
+		String host = Http.Context.current().request().host();
+		setLog(userId, email, context, screen, field, value, ip, path);
 	}
 
 	/**
@@ -219,7 +233,7 @@ public class AuditLog {
 	 * @param value
 	 * @param ip
 	 */
-	public static void setLog(String userId, String email, String context, String screen, String field, String value, String ip) {
+	public static void setLog(String userId, String email, String context, String screen, String field, String value, String ip, String path) {
 		RoleType role = null;
 
 		if (role == null) {
@@ -240,6 +254,7 @@ public class AuditLog {
 		log.setValue(value);
 		log.setCreated(new Date());
 		log.setIp(ip);
+		log.setPath(path);
 		Ebean.save(log);
 
 	}

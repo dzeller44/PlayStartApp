@@ -186,20 +186,50 @@ public class Application extends Controller {
 	public static class ProfileRegister {
 
 		@Constraints.Required
+		public String name;
+		
+		@Constraints.Required
 		public String address;
 
 		public String address1;
 
 		@Constraints.Required
 		public String city;
+		
+		@Constraints.Required
+		public String state;
+
+		@Constraints.Required
+		public String zip;
 
 		@Constraints.Required
 		public String country;
+		
+		@Constraints.Required
+		public String county;
+		
+		@Constraints.Required
+		public String billname;
+		
+		@Constraints.Required
+		public String billaddress;
 
-		public Date dateCreation;
+		public String billaddress1;
 
 		@Constraints.Required
-		public String name;
+		public String billcity;
+		
+		@Constraints.Required
+		public String billstate;
+
+		@Constraints.Required
+		public String billzip;
+
+		@Constraints.Required
+		public String billcountry;
+		
+		@Constraints.Required
+		public String billcounty;
 
 		@Constraints.Required
 		public String primaryEmail;
@@ -229,12 +259,8 @@ public class Application extends Controller {
 		public String services;
 
 		public String servicesOther;
-
-		@Constraints.Required
-		public String state;
-
-		@Constraints.Required
-		public String zip;
+		
+		public Date dateCreation;
 
 		private boolean isBlank(String input) {
 			return input == null || input.isEmpty() || input.trim().isEmpty();
@@ -269,37 +295,69 @@ public class Application extends Controller {
 			if (isBlank(country)) {
 				return "Business Address Country is required";
 			}
+			
+			if (isBlank(county)) {
+				return "Business Address County is required";
+			}
 
+			if (isBlank(billname)) {
+				return "Billing Name is required";
+			}
+			
+			if (isBlank(billaddress)) {
+				return "Billing Address 1 is required";
+			}
+
+			if (isBlank(billcity)) {
+				return "Billing Address City is required";
+			}
+
+			if (isBlank(billstate)) {
+				return "Billing Address State is required";
+			}
+
+			if (isBlank(billzip)) {
+				return "Billing Address Zip is required";
+			}
+
+			if (isBlank(billcountry)) {
+				return "Billing Address Country is required";
+			}
+			
+			if (isBlank(billcounty)) {
+				return "Billing Address County is required";
+			}
+			
 			if (isBlank(primaryNameFirst)) {
-				return "Primary Contact First Name is required";
+				return "Business Hours Contact First Name is required";
 			}
 
 			if (isBlank(primaryNameLast)) {
-				return "Primary Contact Last Name is required";
+				return "Business Hours Contact Last Name is required";
 			}
 
 			if (isBlank(primaryPhone)) {
-				return "Primary Contact Phone is required";
+				return "Business Hours Contact Phone is required";
 			}
 
 			if (isBlank(primaryEmail)) {
-				return "Primary Contact Email is required";
+				return "Business Hours Contact Email is required";
 			}
 
 			if (isBlank(secondaryNameFirst)) {
-				return "Secondary Contact First Name is required";
+				return "After Hours Contact First Name is required";
 			}
 
 			if (isBlank(secondaryNameLast)) {
-				return "Secondary Contact Last Name is required";
+				return "After Hours Contact Last Name is required";
 			}
 
 			if (isBlank(secondaryPhone)) {
-				return "Secondary Contact Phone is required";
+				return "After Hours Contact Phone is required";
 			}
 
 			if (isBlank(secondaryEmail)) {
-				return "Secondary Contact Email is required";
+				return "After Hours Contact Email is required";
 			}
 
 			if (isBlank(services)) {
@@ -506,6 +564,15 @@ public class Application extends Controller {
 			removedProfile.city = profile.city;
 			removedProfile.state = profile.state;
 			removedProfile.zip = profile.zip;
+			removedProfile.county = profile.county;
+			removedProfile.billname = profile.billname;
+			removedProfile.billaddress = profile.billaddress;
+			removedProfile.billaddress1 = profile.billaddress1;
+			removedProfile.billcity = profile.billcity;
+			removedProfile.billstate = profile.billstate;
+			removedProfile.billzip = profile.billzip;
+			removedProfile.billcountry = profile.billcountry;
+			removedProfile.billcounty = profile.billcounty;
 			removedProfile.primaryNameFirst = profile.primaryNameFirst;
 			removedProfile.primaryNameLast = profile.primaryNameLast;
 			removedProfile.primaryPhone = profile.primaryPhone;
@@ -1108,6 +1175,15 @@ public class Application extends Controller {
 		profile.state = profileForm.state;
 		profile.zip = profileForm.zip;
 		profile.country = profileForm.country;
+		profile.county = profileForm.county;
+		profile.billname = profileForm.billname;
+		profile.billaddress = profileForm.billaddress;
+		profile.billaddress1 = profileForm.billaddress1;
+		profile.billcity = profileForm.billcity;
+		profile.billstate = profileForm.billstate;
+		profile.billzip = profileForm.billzip;
+		profile.billcountry = profileForm.billcountry;
+		profile.billcounty = profileForm.billcounty;
 		profile.primaryNameFirst = profileForm.primaryNameFirst;
 		profile.primaryNameLast = profileForm.primaryNameLast;
 		profile.primaryPhone = profileForm.primaryPhone;
@@ -1124,7 +1200,7 @@ public class Application extends Controller {
 		profile.userkey = AccessMiddleware.getSessionUserKey();
 		profile.save();
 
-		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "saveProfile()", "Profile saved", AccessMiddleware.getSessionID());
+		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "saveProfile()", "New Profile created and saved", AccessMiddleware.getSessionID());
 		
 		return ok(profilecreated.render());
 	}
@@ -1180,6 +1256,15 @@ public class Application extends Controller {
 			profile.state = profileForm.state;
 			profile.zip = profileForm.zip;
 			profile.country = profileForm.country;
+			profile.county = profileForm.county;
+			profile.billname = profileForm.billname;
+			profile.billaddress = profileForm.billaddress;
+			profile.billaddress1 = profileForm.billaddress1;
+			profile.billcity = profileForm.billcity;
+			profile.billstate = profileForm.billstate;
+			profile.billzip = profileForm.billzip;
+			profile.billcountry = profileForm.billcountry;
+			profile.billcounty = profileForm.billcounty;
 			profile.primaryNameFirst = profileForm.primaryNameFirst;
 			profile.primaryNameLast = profileForm.primaryNameLast;
 			profile.primaryPhone = profileForm.primaryPhone;
@@ -1220,6 +1305,15 @@ public class Application extends Controller {
 		profile.state = profileForm.state;
 		profile.zip = profileForm.zip;
 		profile.country = profileForm.country;
+		profile.county = profileForm.county;
+		profile.billname = profileForm.billname;
+		profile.billaddress = profileForm.billaddress;
+		profile.billaddress1 = profileForm.billaddress1;
+		profile.billcity = profileForm.billcity;
+		profile.billstate = profileForm.billstate;
+		profile.billzip = profileForm.billzip;
+		profile.billcountry = profileForm.billcountry;
+		profile.billcounty = profileForm.billcounty;
 		profile.primaryNameFirst = profileForm.primaryNameFirst;
 		profile.primaryNameLast = profileForm.primaryNameLast;
 		profile.primaryPhone = profileForm.primaryPhone;

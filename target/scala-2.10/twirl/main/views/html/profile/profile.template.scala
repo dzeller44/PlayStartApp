@@ -57,7 +57,7 @@ Seq[Any](format.raw/*1.89*/("""
 			</div>
 		</div>
 		<div class="element-address">
-			<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required"/><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address2" /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required"/><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required"/><span class="icon-place"></span></span><div class="country">
+			<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required"/><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address1" /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required"/><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required"/><span class="icon-place"></span></span><div class="country">
 				<select name="country" required="required">
 					<option value="" disabled="disabled">--- Select a country ---</option>
 					<option selected="selected" value="United States">United States</option>
@@ -65,9 +65,180 @@ Seq[Any](format.raw/*1.89*/("""
 				</select>
 				<i></i><span class="icon-place"></span>
 			</div>
+			<div class="element-select">
+				<label class="title"></label>
+				<div class="item-cont">
+					<div class="large">
+						<span>
+							<select name="county" required="required">
+								<option selected="selected" value="" disabled="disabled">--- Select a county ---</option>
+								<option value="Adams">Adams</option>
+								<option value="Alamosa">Alamosa</option>
+								<option value="Arapahoe">Arapahoe</option>
+								<option value="Archuleta">Archuleta</option>
+								<option value="Baca">Baca</option>
+								<option value="Bent">Bent</option>
+								<option value="Boulder">Boulder</option>
+								<option value="Broomfield">Broomfield</option>
+								<option value="Chaffee">Chaffee</option>
+								<option value="Cheyenne">Cheyenne</option>
+								<option value="Clear Creek">Clear Creek</option>
+								<option value="Conejos">Conejos</option>
+								<option value="Costilla">Costilla</option>
+								<option value="Crowley">Crowley</option>
+								<option value="Custer">Custer</option>
+								<option value="Delta">Delta</option>
+								<option value="Denver">Denver</option>
+								<option value="Dolores">Dolores</option>
+								<option value="Douglas">Douglas</option>
+								<option value="Eagle">Eagle</option>
+								<option value="Elbert">Elbert</option>
+								<option value="El Paso">El Paso</option>
+								<option value="Fremont">Fremont</option>
+								<option value="Garfield">Garfield</option>
+								<option value="Gilpin">Gilpin</option>
+								<option value="Grand">Grand</option>
+								<option value="Gunnison">Gunnison</option>
+								<option value="Hinsdale">Hinsdale</option>
+								<option value="Huerfano">Huerfano</option>
+								<option value="Jackson">Jackson</option>
+								<option value="Jefferson">Jefferson</option>
+								<option value="Kiowa">Kiowa</option>
+								<option value="Kit Carson">Kit Carson</option>
+								<option value="Lake">Lake</option>
+								<option value="La Plata">La Plata</option>
+								<option value="Larimer">Larimer</option>
+								<option value="Las Animas">Las Animas</option>
+								<option value="Lincoln">Lincoln</option>
+								<option value="Logan">Logan</option>
+								<option value="Mesa">Mesa</option>
+								<option value="Mineral">Mineral</option>
+								<option value="Moffat">Moffat</option>
+								<option value="Montezuma">Montezuma</option>
+								<option value="Montrose">Montrose</option>
+								<option value="Morgan">Morgan</option>
+								<option value="Otero">Otero</option>
+								<option value="Ouray">Ouray</option>
+								<option value="Park">Park</option>
+								<option value="Phillips">Phillips</option>
+								<option value="Pitkin">Pitkin</option>
+								<option value="Prowers">Prowers</option>
+								<option value="Pueblo">Pueblo</option>
+								<option value="Rio Blanco">Rio Blanco</option>
+								<option value="Rio Grande">Rio Grande</option>
+								<option value="Routt">Routt</option>
+								<option value="Saguache">Saguache</option>
+								<option value="San Juan">San Juan</option>
+								<option value="San Miguel">San Miguel</option>
+								<option value="Sedgwick">Sedgwick</option>
+								<option value="Summit">Summit</option>
+								<option value="Teller">Teller</option>
+								<option value="Washington">Washington</option>
+								<option value="Weld">Weld</option>
+								<option value="Yuma">Yuma</option>
+							</select>
+							<i></i><span class="icon-place"></span>
+						</span>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required">*</span>Billing Name:</label>
+			<div class="item-cont">
+				<input class="large" type="text" name="billname" required="required"
+					placeholder="Billing Name..." /><span class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-address">
+			<label class="title"><span class="required">*</span>Billing Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="billaddress" required="required"/><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="billaddress1" /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="billcity" /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="billstate" required="required"/><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="billzip" required="required"/><span class="icon-place"></span></span><div class="country">
+				<select name="billcountry" required="required">
+					<option value="" disabled="disabled">--- Select a country ---</option>
+					<option selected="selected" value="United States">United States</option>
+					<option value="Canada">Canada</option>
+				</select>
+				<i></i><span class="icon-place"></span>
+			</div>
+			<div class="element-select">
+				<label class="title"></label>
+				<div class="item-cont">
+					<div class="large">
+						<span>
+							<select name="billcounty" required="required">
+								<option selected="selected" value="" disabled="disabled">--- Select a county ---</option>
+								<option value="Adams">Adams</option>
+								<option value="Alamosa">Alamosa</option>
+								<option value="Arapahoe">Arapahoe</option>
+								<option value="Archuleta">Archuleta</option>
+								<option value="Baca">Baca</option>
+								<option value="Bent">Bent</option>
+								<option value="Boulder">Boulder</option>
+								<option value="Broomfield">Broomfield</option>
+								<option value="Chaffee">Chaffee</option>
+								<option value="Cheyenne">Cheyenne</option>
+								<option value="Clear Creek">Clear Creek</option>
+								<option value="Conejos">Conejos</option>
+								<option value="Costilla">Costilla</option>
+								<option value="Crowley">Crowley</option>
+								<option value="Custer">Custer</option>
+								<option value="Delta">Delta</option>
+								<option value="Denver">Denver</option>
+								<option value="Dolores">Dolores</option>
+								<option value="Douglas">Douglas</option>
+								<option value="Eagle">Eagle</option>
+								<option value="Elbert">Elbert</option>
+								<option value="El Paso">El Paso</option>
+								<option value="Fremont">Fremont</option>
+								<option value="Garfield">Garfield</option>
+								<option value="Gilpin">Gilpin</option>
+								<option value="Grand">Grand</option>
+								<option value="Gunnison">Gunnison</option>
+								<option value="Hinsdale">Hinsdale</option>
+								<option value="Huerfano">Huerfano</option>
+								<option value="Jackson">Jackson</option>
+								<option value="Jefferson">Jefferson</option>
+								<option value="Kiowa">Kiowa</option>
+								<option value="Kit Carson">Kit Carson</option>
+								<option value="Lake">Lake</option>
+								<option value="La Plata">La Plata</option>
+								<option value="Larimer">Larimer</option>
+								<option value="Las Animas">Las Animas</option>
+								<option value="Lincoln">Lincoln</option>
+								<option value="Logan">Logan</option>
+								<option value="Mesa">Mesa</option>
+								<option value="Mineral">Mineral</option>
+								<option value="Moffat">Moffat</option>
+								<option value="Montezuma">Montezuma</option>
+								<option value="Montrose">Montrose</option>
+								<option value="Morgan">Morgan</option>
+								<option value="Otero">Otero</option>
+								<option value="Ouray">Ouray</option>
+								<option value="Park">Park</option>
+								<option value="Phillips">Phillips</option>
+								<option value="Pitkin">Pitkin</option>
+								<option value="Prowers">Prowers</option>
+								<option value="Pueblo">Pueblo</option>
+								<option value="Rio Blanco">Rio Blanco</option>
+								<option value="Rio Grande">Rio Grande</option>
+								<option value="Routt">Routt</option>
+								<option value="Saguache">Saguache</option>
+								<option value="San Juan">San Juan</option>
+								<option value="San Miguel">San Miguel</option>
+								<option value="Sedgwick">Sedgwick</option>
+								<option value="Summit">Summit</option>
+								<option value="Teller">Teller</option>
+								<option value="Washington">Washington</option>
+								<option value="Weld">Weld</option>
+								<option value="Yuma">Yuma</option>
+							</select>
+							<i></i><span class="icon-place"></span>
+						</span>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="element-name">
-			<label class="title"><span class="required">*</span>Primary Contact
+			<label class="title"><span class="required">*</span>Business Hours Contact
 			Name:</label><span class="nameFirst"><input
 				placeholder="First Name..." type="text" size="8" name="primaryNameFirst"
 				required="required" /><span class="icon-place"></span></span><span
@@ -76,17 +247,17 @@ Seq[Any](format.raw/*1.89*/("""
 				class="icon-place"></span></span>
 		</div>
 		<div class="element-phone">
-			<label class="title"><span class="required">*</span>Primary Contact
+			<label class="title"><span class="required">*</span>Business Hours Contact
 			Phone Number:</label>
 			<div class="item-cont">
 				<input class="large" type="tel"
-					pattern="[+]?[\.\s\-\(\)\*\#0-9]"""),format.raw/*52.38*/("""{"""),format.raw/*52.39*/("""3,"""),format.raw/*52.41*/("""}"""),format.raw/*52.42*/("""" maxlength="24" name="primaryPhone"
+					pattern="[+]?[\.\s\-\(\)\*\#0-9]"""),format.raw/*223.38*/("""{"""),format.raw/*223.39*/("""3,"""),format.raw/*223.41*/("""}"""),format.raw/*223.42*/("""" maxlength="24" name="primaryPhone"
 					required="required" placeholder="Phone Number..." value="" /><span
 					class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-email">
-			<label class="title"><span class="required">*</span>Primary Contact
+			<label class="title"><span class="required">*</span>Business Hours Contact
 			Email:</label>
 			<div class="item-cont">
 				<input class="large" type="email" name="primaryEmail" value=""
@@ -95,7 +266,7 @@ Seq[Any](format.raw/*1.89*/("""
 			</div>
 		</div>
 		<div class="element-name">
-			<label class="title"><span class="required">*</span>Secondary Contact
+			<label class="title"><span class="required">*</span>After Hours Contact
 			Name:</label><span class="nameFirst"><input
 				placeholder="First Name..." type="text" size="8" name="secondaryNameFirst"
 				required="required" /><span class="icon-place"></span></span><span
@@ -104,17 +275,17 @@ Seq[Any](format.raw/*1.89*/("""
 				class="icon-place"></span></span>
 		</div>
 		<div class="element-phone">
-			<label class="title"><span class="required">*</span>Secondary Contact
+			<label class="title"><span class="required">*</span>After Hours Contact
 			Phone Number:</label>
 			<div class="item-cont">
 				<input class="large" type="tel"
-					pattern="[+]?[\.\s\-\(\)\*\#0-9]"""),format.raw/*80.38*/("""{"""),format.raw/*80.39*/("""3,"""),format.raw/*80.41*/("""}"""),format.raw/*80.42*/("""" maxlength="24" name="secondaryPhone"
+					pattern="[+]?[\.\s\-\(\)\*\#0-9]"""),format.raw/*251.38*/("""{"""),format.raw/*251.39*/("""3,"""),format.raw/*251.41*/("""}"""),format.raw/*251.42*/("""" maxlength="24" name="secondaryPhone"
 					required="required" placeholder="Phone Number..." value="" /><span
 					class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-email">
-			<label class="title"><span class="required">*</span>Secondary Contact
+			<label class="title"><span class="required">*</span>After Hours Contact
 			Email:</label>
 			<div class="item-cont">
 				<input class="large" type="email" name="secondaryEmail" value=""
@@ -125,10 +296,10 @@ Seq[Any](format.raw/*1.89*/("""
 		<div class="element-checkbox">
 			<label class="title"><span class="required">*</span>Services Provided:</label>
 			<div class="column column1">
-				"""),_display_(/*97.6*/for(service <- servicesList) yield /*97.34*/ {_display_(Seq[Any](format.raw/*97.36*/("""
-				    """),format.raw/*98.9*/("""<label><input type="checkbox" class="selectServices" name="selectServices" id="selectServices" value=""""),_display_(/*98.112*/service/*98.119*/.name),format.raw/*98.124*/(""""><span>"""),_display_(/*98.133*/service/*98.140*/.name),format.raw/*98.145*/("""</span></label>
-				""")))}),format.raw/*99.6*/("""
-			"""),format.raw/*100.4*/("""</div>
+				"""),_display_(/*268.6*/for(service <- servicesList) yield /*268.34*/ {_display_(Seq[Any](format.raw/*268.36*/("""
+				    """),format.raw/*269.9*/("""<label><input type="checkbox" class="selectServices" name="selectServices" id="selectServices" value=""""),_display_(/*269.112*/service/*269.119*/.name),format.raw/*269.124*/(""""><span>"""),_display_(/*269.133*/service/*269.140*/.name),format.raw/*269.145*/("""</span></label>
+				""")))}),format.raw/*270.6*/("""
+			"""),format.raw/*271.4*/("""</div>
 			
 			<input type="hidden" name="services" id="services">
 
@@ -142,13 +313,13 @@ Seq[Any](format.raw/*1.89*/("""
 			<span class="clearfix"></span>
 		</div>
 		<div class="element-input">
-			"""),_display_(/*114.5*/if(profileForm.hasGlobalErrors)/*114.36*/ {_display_(Seq[Any](format.raw/*114.38*/("""
-				"""),format.raw/*115.5*/("""<span class="errorMessageDisplay" style="color: #d9534f;">"""),_display_(/*115.64*/profileForm/*115.75*/.globalError.message),format.raw/*115.95*/("""</span>
-			""")))}),format.raw/*116.5*/("""
-		"""),format.raw/*117.3*/("""</div>
+			"""),_display_(/*285.5*/if(profileForm.hasGlobalErrors)/*285.36*/ {_display_(Seq[Any](format.raw/*285.38*/("""
+				"""),format.raw/*286.5*/("""<span class="errorMessageDisplay" style="color: #d9534f;">"""),_display_(/*286.64*/profileForm/*286.75*/.globalError.message),format.raw/*286.95*/("""</span>
+			""")))}),format.raw/*287.5*/("""
+		"""),format.raw/*288.3*/("""</div>
 		<div class="submit">
 			<input type="submit" value="Submit" /> <a href="/user"
-				class="buttonCancel">"""),_display_(/*120.27*/Messages("goback")),format.raw/*120.45*/("""</a>
+				class="buttonCancel">"""),_display_(/*291.27*/Messages("goback")),format.raw/*291.45*/("""</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -174,11 +345,11 @@ Seq[Any](format.raw/*1.89*/("""
 object profile extends profile_Scope0.profile
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 28 09:17:08 MST 2016
+                  DATE: Mon Nov 28 13:55:20 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/profile.scala.html
-                  HASH: 15a4542c82de3df476eb0d5b0d29654679ffef63
-                  MATRIX: 808->1|990->88|1020->93|1038->103|1077->105|1106->108|1196->171|1224->172|1258->180|1341->236|1369->237|1401->243|1502->317|1530->318|1563->325|1613->349|1640->350|1681->364|1709->365|1742->371|1770->372|4313->2887|4342->2888|4372->2890|4401->2891|5645->4107|5674->4108|5704->4110|5733->4111|6414->4766|6458->4794|6498->4796|6535->4806|6666->4909|6683->4916|6710->4921|6747->4930|6764->4937|6791->4942|6843->4964|6876->4969|7353->5419|7394->5450|7435->5452|7469->5458|7556->5517|7577->5528|7619->5548|7663->5561|7695->5565|7840->5682|7880->5700
-                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|40->9|40->9|41->10|41->10|42->11|42->11|83->52|83->52|83->52|83->52|111->80|111->80|111->80|111->80|128->97|128->97|128->97|129->98|129->98|129->98|129->98|129->98|129->98|129->98|130->99|131->100|145->114|145->114|145->114|146->115|146->115|146->115|146->115|147->116|148->117|151->120|151->120
+                  HASH: f5583e71948a9d5103677de49fc7de26f4a12650
+                  MATRIX: 808->1|990->88|1020->93|1038->103|1077->105|1106->108|1196->171|1224->172|1258->180|1341->236|1369->237|1401->243|1502->317|1530->318|1563->325|1613->349|1640->350|1681->364|1709->365|1742->371|1770->372|13000->11573|13030->11574|13061->11576|13091->11577|14347->12804|14377->12805|14408->12807|14438->12808|15122->13465|15167->13493|15208->13495|15246->13505|15378->13608|15396->13615|15424->13620|15462->13629|15480->13636|15508->13641|15561->13663|15594->13668|16071->14118|16112->14149|16153->14151|16187->14157|16274->14216|16295->14227|16337->14247|16381->14260|16413->14264|16558->14381|16598->14399
+                  LINES: 27->1|32->1|34->3|34->3|34->3|35->4|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|40->9|40->9|41->10|41->10|42->11|42->11|254->223|254->223|254->223|254->223|282->251|282->251|282->251|282->251|299->268|299->268|299->268|300->269|300->269|300->269|300->269|300->269|300->269|300->269|301->270|302->271|316->285|316->285|316->285|317->286|317->286|317->286|317->286|318->287|319->288|322->291|322->291
                   -- GENERATED --
               */
           

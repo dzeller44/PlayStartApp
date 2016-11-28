@@ -1,11 +1,133 @@
-2016-11-28 09:17:39,092 [INFO] from play.core.server.NettyServer in pool-31-thread-5 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-11-28 09:17:45,641 [WARN] from application in ForkJoinPool-2-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-28 09:17:45,652 [INFO] from application in ForkJoinPool-2-worker-1 - Creating Pool for datasource 'default'
-2016-11-28 09:17:46,474 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-2-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-28 09:17:51,218 [WARN] from com.avaje.ebeaninternal.server.core.DefaultServer in ForkJoinPool-2-worker-1 - JMX beans for Ebean server [default] already registered. Will try unregister/registerEbean:server=default2,key=AutoFetch
-2016-11-28 09:17:52,380 [INFO] from play.api.Play in ForkJoinPool-2-worker-1 - Application started (Dev)
-2016-11-28 09:24:57,630 [INFO] from application in application-akka.actor.default-dispatcher-32 - Shutting down connection pool.
-2016-11-28 09:24:57,762 [WARN] from application in application-akka.actor.default-dispatcher-32 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-28 09:24:57,762 [INFO] from application in application-akka.actor.default-dispatcher-32 - Creating Pool for datasource 'default'
-2016-11-28 09:24:57,771 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-32 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-28 09:25:02,691 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-32 - Application started (Dev)
+2016-11-28 13:55:56,697 [INFO] from play.core.server.NettyServer in pool-6-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-11-28 13:56:03,539 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-28 13:56:03,554 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-11-28 13:56:04,363 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-28 13:56:05,872 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-11-28 13:57:14,359 [INFO] from application in application-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2016-11-28 13:57:14,535 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-28 13:57:14,537 [INFO] from application in application-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2016-11-28 13:57:14,548 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-28 13:57:15,393 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2016-11-28 13:59:26,137 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2016-11-28 13:59:26,259 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-28 13:59:26,261 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2016-11-28 13:59:26,271 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-28 13:59:27,100 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2016-11-28 13:59:27,237 [ERROR] from play.core.server.netty.PlayDefaultUpstreamHandler in application-akka.actor.default-dispatcher-6 - Cannot invoke the action
+java.lang.NullPointerException: null
+	at models.AuditLog.setLog(AuditLog.java:249) ~[classes/:2.4.6]
+	at models.AuditLog.setLog(AuditLog.java:224) ~[classes/:2.4.6]
+	at controllers.Application.updateProfile(Application.java:1331) ~[classes/:2.4.6]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.apply(Routes.scala:1109) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.apply(Routes.scala:1109) ~[classes/:na]
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.http.DefaultHttpRequestHandler$1.call(DefaultHttpRequestHandler.java:20) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:485) ~[scala-library.jar:na]
+	at play.core.j.JavaAction.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.10-2.3.13.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+2016-11-28 13:59:27,252 [ERROR] from application in application-akka.actor.default-dispatcher-6 - 
+
+! @7283eifdi - Internal server error, for (POST) [/editprofile/Water%20Loop] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:266) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:262) [play-netty-server_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.executeScheduled(Execution.scala:109) [play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:71) [play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.10-2.3.13.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at models.AuditLog.setLog(AuditLog.java:249) ~[classes/:2.4.6]
+	at models.AuditLog.setLog(AuditLog.java:224) ~[classes/:2.4.6]
+	at controllers.Application.updateProfile(Application.java:1331) ~[classes/:2.4.6]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.apply(Routes.scala:1109) ~[classes/:na]
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.apply(Routes.scala:1109) ~[classes/:na]
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:136) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:127) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:70) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.http.DefaultHttpRequestHandler$1.call(DefaultHttpRequestHandler.java:20) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:485) ~[scala-library.jar:na]
+	at play.core.j.JavaAction.apply(JavaAction.scala:94) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	... 6 common frames omitted
+2016-11-28 14:01:11,310 [INFO] from application in application-akka.actor.default-dispatcher-13 - Shutting down connection pool.
+2016-11-28 14:01:11,416 [WARN] from application in application-akka.actor.default-dispatcher-13 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-28 14:01:11,416 [INFO] from application in application-akka.actor.default-dispatcher-13 - Creating Pool for datasource 'default'
+2016-11-28 14:01:11,430 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-13 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-28 14:01:12,435 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-13 - Application started (Dev)
+2016-11-28 14:02:38,771 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2016-11-28 14:02:38,974 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-28 14:02:38,975 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2016-11-28 14:02:38,985 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-28 14:02:39,820 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
