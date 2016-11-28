@@ -14,6 +14,7 @@ create table audit_log (
   value                     varchar(255),
   ip                        varchar(255),
   path                      varchar(255),
+  host                      varchar(255),
   created                   datetime(6),
   constraint pk_audit_log primary key (id))
 ;

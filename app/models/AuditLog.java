@@ -53,6 +53,9 @@ public class AuditLog {
 	
 	@Column(name = "path")
 	private String path;
+	
+	@Column(name = "host")
+	private String host;
 
 	@Column(name = "created")
 	private Date created;
@@ -193,6 +196,14 @@ public class AuditLog {
 		this.path = path;
 	}
 
+	public String getHost() {
+		return host;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
 	/**
 	 * @return the created
 	 */
@@ -219,9 +230,8 @@ public class AuditLog {
 	public static void setLog(String userId, String email, String context, String screen, String field, String value) {
 		String ip = Http.Context.current().request().remoteAddress();
 		String path = Http.Context.current().request().path();
-		String uri = Http.Context.current().request().uri();
 		String host = Http.Context.current().request().host();
-		setLog(userId, email, context, screen, field, value, ip, path);
+		setLog(userId, email, context, screen, field, value, ip, path, host);
 	}
 
 	/**
@@ -233,7 +243,7 @@ public class AuditLog {
 	 * @param value
 	 * @param ip
 	 */
-	public static void setLog(String userId, String email, String context, String screen, String field, String value, String ip, String path) {
+	public static void setLog(String userId, String email, String context, String screen, String field, String value, String ip, String path, String host) {
 		RoleType role = null;
 
 		if (role == null) {
@@ -246,7 +256,12 @@ public class AuditLog {
 
 		AuditLog log = new AuditLog();
 		log.setUserId(userId);
-		log.setRole(role.toString());
+		if (role != null) {
+			log.setRole(role.toString());
+		}
+		else {
+			log.setRole("N/A");
+		}		
 		log.setEmail(email);
 		log.setContext(context);
 		log.setScreen(screen);
@@ -255,6 +270,7 @@ public class AuditLog {
 		log.setCreated(new Date());
 		log.setIp(ip);
 		log.setPath(path);
+		log.setHost(host);
 		Ebean.save(log);
 
 	}
