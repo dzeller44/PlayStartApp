@@ -45,7 +45,7 @@
 					<div class="item-cont">
 						<div class="large">
 							<span>
-								<select name="county" required="required" value="@profile.county">
+								<select name="county" required="required">
 									<option disabled="disabled">--- Select a county ---</option>
 									<option @if(profile.county == "Adams") {selected="selected"}>Adams</option>
 									<option @if(profile.county == "Alamosa") {selected="selected"}>Alamosa</option>
@@ -144,72 +144,72 @@
 					<div class="item-cont">
 						<div class="large">
 							<span>
-								<select name="billcounty" required="required" value="@profile.billcounty">
+								<select name="billcounty" required="required">
 									<option value="" disabled="disabled">--- Select a county ---</option>
-									<option @if(profile.county == "Adams") {selected="selected"}>Adams</option>
-									<option @if(profile.county == "Alamosa") {selected="selected"}>Alamosa</option>
-									<option @if(profile.county == "Arapahoe") {selected="selected"}>Arapahoe</option>
-									<option @if(profile.county == "Archuleta") {selected="selected"}>Archuleta</option>
-									<option @if(profile.county == "Baca") {selected="selected"}>Baca</option>
-									<option @if(profile.county == "Bent") {selected="selected"}>Bent</option>
-									<option @if(profile.county == "Boulder") {selected="selected"}>Boulder</option>
-									<option @if(profile.county == "Broomfield") {selected="selected"}>Broomfield</option>
-									<option @if(profile.county == "Chaffee") {selected="selected"}>Chaffee</option>
-									<option @if(profile.county == "Cheyenne") {selected="selected"}>Cheyenne</option>
-									<option @if(profile.county == "Clear Creek") {selected="selected"}>Clear Creek</option>
-									<option @if(profile.county == "Conejos") {selected="selected"}>Conejos</option>
-									<option @if(profile.county == "Costilla") {selected="selected"}>Costilla</option>
-									<option @if(profile.county == "Crowley") {selected="selected"}>Crowley</option>
-									<option @if(profile.county == "Custer") {selected="selected"}>Custer</option>
-									<option @if(profile.county == "Delta") {selected="selected"}>Delta</option>
-									<option @if(profile.county == "Denver") {selected="selected"}>Denver</option>
-									<option @if(profile.county == "Dolores") {selected="selected"}>Dolores</option>
-									<option @if(profile.county == "Douglas") {selected="selected"}>Douglas</option>
-									<option @if(profile.county == "Eagle") {selected="selected"}>Eagle</option>
-									<option @if(profile.county == "Elbert") {selected="selected"}>Elbert</option>
-									<option @if(profile.county == "El Paso") {selected="selected"}>El Paso</option>
-									<option @if(profile.county == "Fremont") {selected="selected"}>Fremont</option>
-									<option @if(profile.county == "Garfield") {selected="selected"}>Garfield</option>
-									<option @if(profile.county == "Gilpin") {selected="selected"}>Gilpin</option>
-									<option @if(profile.county == "Grand") {selected="selected"}>Grand</option>
-									<option @if(profile.county == "Gunnison") {selected="selected"}>Gunnison</option>
-									<option @if(profile.county == "Hinsdale") {selected="selected"}>Hinsdale</option>
-									<option @if(profile.county == "Huerfano") {selected="selected"}>Huerfano</option>
-									<option @if(profile.county == "Jackson") {selected="selected"}>Jackson</option>
-									<option @if(profile.county == "Jefferson") {selected="selected"}>Jefferson</option>
-									<option @if(profile.county == "Kiowa") {selected="selected"}>Kiowa</option>
-									<option @if(profile.county == "Kit Carson") {selected="selected"}>Kit Carson</option>
-									<option @if(profile.county == "Lake") {selected="selected"}>Lake</option>
-									<option @if(profile.county == "La Plata") {selected="selected"}>La Plata</option>
-									<option @if(profile.county == "Larimer") {selected="selected"}>Larimer</option>
-									<option @if(profile.county == "Las Animas") {selected="selected"}>Las Animas</option>
-									<option @if(profile.county == "Lincoln") {selected="selected"}>Lincoln</option>
-									<option @if(profile.county == "Logan") {selected="selected"}>Logan</option>
-									<option @if(profile.county == "Mesa") {selected="selected"}>Mesa</option>
-									<option @if(profile.county == "Mineral") {selected="selected"}>Mineral</option>
-									<option @if(profile.county == "Moffat") {selected="selected"}>Moffat</option>
-									<option @if(profile.county == "Montezuma") {selected="selected"}>Montezuma</option>
-									<option @if(profile.county == "Montrose") {selected="selected"}>Montrose</option>
-									<option @if(profile.county == "Morgan") {selected="selected"}>Morgan</option>
-									<option @if(profile.county == "Otero") {selected="selected"}>Otero</option>
-									<option @if(profile.county == "Ouray") {selected="selected"}>Ouray</option>
-									<option @if(profile.county == "Park") {selected="selected"}>Park</option>
-									<option @if(profile.county == "Phillips") {selected="selected"}>Phillips</option>
-									<option @if(profile.county == "Pitkin") {selected="selected"}>Pitkin</option>
-									<option @if(profile.county == "Prowers") {selected="selected"}>Prowers</option>
-									<option @if(profile.county == "Pueblo") {selected="selected"}>Pueblo</option>
-									<option @if(profile.county == "Rio Blanco") {selected="selected"}>Rio Blanco</option>
-									<option @if(profile.county == "Rio Grande") {selected="selected"}>Rio Grande</option>
-									<option @if(profile.county == "Routt") {selected="selected"}>Routt</option>
-									<option @if(profile.county == "Saguache") {selected="selected"}>Saguache</option>
-									<option @if(profile.county == "San Juan") {selected="selected"}>San Juan</option>
-									<option @if(profile.county == "San Miguel") {selected="selected"}>San Miguel</option>
-									<option @if(profile.county == "Sedgwick") {selected="selected"}>Sedgwick</option>
-									<option @if(profile.county == "Summit") {selected="selected"}>Summit</option>
-									<option @if(profile.county == "Teller") {selected="selected"}>Teller</option>
-									<option @if(profile.county == "Washington") {selected="selected"}>Washington</option>
-									<option @if(profile.county == "Weld") {selected="selected"}>Weld</option>
-									<option @if(profile.county == "Yuma") {selected="selected"}>Yuma</option>
+									<option @if(profile.billcounty == "Adams") {selected="selected"}>Adams</option>
+									<option @if(profile.billcounty == "Alamosa") {selected="selected"}>Alamosa</option>
+									<option @if(profile.billcounty == "Arapahoe") {selected="selected"}>Arapahoe</option>
+									<option @if(profile.billcounty == "Archuleta") {selected="selected"}>Archuleta</option>
+									<option @if(profile.billcounty == "Baca") {selected="selected"}>Baca</option>
+									<option @if(profile.billcounty == "Bent") {selected="selected"}>Bent</option>
+									<option @if(profile.billcounty == "Boulder") {selected="selected"}>Boulder</option>
+									<option @if(profile.billcounty == "Broomfield") {selected="selected"}>Broomfield</option>
+									<option @if(profile.billcounty == "Chaffee") {selected="selected"}>Chaffee</option>
+									<option @if(profile.billcounty == "Cheyenne") {selected="selected"}>Cheyenne</option>
+									<option @if(profile.billcounty == "Clear Creek") {selected="selected"}>Clear Creek</option>
+									<option @if(profile.billcounty == "Conejos") {selected="selected"}>Conejos</option>
+									<option @if(profile.billcounty == "Costilla") {selected="selected"}>Costilla</option>
+									<option @if(profile.billcounty == "Crowley") {selected="selected"}>Crowley</option>
+									<option @if(profile.billcounty == "Custer") {selected="selected"}>Custer</option>
+									<option @if(profile.billcounty == "Delta") {selected="selected"}>Delta</option>
+									<option @if(profile.billcounty == "Denver") {selected="selected"}>Denver</option>
+									<option @if(profile.billcounty == "Dolores") {selected="selected"}>Dolores</option>
+									<option @if(profile.billcounty == "Douglas") {selected="selected"}>Douglas</option>
+									<option @if(profile.billcounty == "Eagle") {selected="selected"}>Eagle</option>
+									<option @if(profile.billcounty == "Elbert") {selected="selected"}>Elbert</option>
+									<option @if(profile.billcounty == "El Paso") {selected="selected"}>El Paso</option>
+									<option @if(profile.billcounty == "Fremont") {selected="selected"}>Fremont</option>
+									<option @if(profile.billcounty == "Garfield") {selected="selected"}>Garfield</option>
+									<option @if(profile.billcounty == "Gilpin") {selected="selected"}>Gilpin</option>
+									<option @if(profile.billcounty == "Grand") {selected="selected"}>Grand</option>
+									<option @if(profile.billcounty == "Gunnison") {selected="selected"}>Gunnison</option>
+									<option @if(profile.billcounty == "Hinsdale") {selected="selected"}>Hinsdale</option>
+									<option @if(profile.billcounty == "Huerfano") {selected="selected"}>Huerfano</option>
+									<option @if(profile.billcounty == "Jackson") {selected="selected"}>Jackson</option>
+									<option @if(profile.billcounty == "Jefferson") {selected="selected"}>Jefferson</option>
+									<option @if(profile.billcounty == "Kiowa") {selected="selected"}>Kiowa</option>
+									<option @if(profile.billcounty == "Kit Carson") {selected="selected"}>Kit Carson</option>
+									<option @if(profile.billcounty == "Lake") {selected="selected"}>Lake</option>
+									<option @if(profile.billcounty == "La Plata") {selected="selected"}>La Plata</option>
+									<option @if(profile.billcounty == "Larimer") {selected="selected"}>Larimer</option>
+									<option @if(profile.billcounty == "Las Animas") {selected="selected"}>Las Animas</option>
+									<option @if(profile.billcounty == "Lincoln") {selected="selected"}>Lincoln</option>
+									<option @if(profile.billcounty == "Logan") {selected="selected"}>Logan</option>
+									<option @if(profile.billcounty == "Mesa") {selected="selected"}>Mesa</option>
+									<option @if(profile.billcounty == "Mineral") {selected="selected"}>Mineral</option>
+									<option @if(profile.billcounty == "Moffat") {selected="selected"}>Moffat</option>
+									<option @if(profile.billcounty == "Montezuma") {selected="selected"}>Montezuma</option>
+									<option @if(profile.billcounty == "Montrose") {selected="selected"}>Montrose</option>
+									<option @if(profile.billcounty == "Morgan") {selected="selected"}>Morgan</option>
+									<option @if(profile.billcounty == "Otero") {selected="selected"}>Otero</option>
+									<option @if(profile.billcounty == "Ouray") {selected="selected"}>Ouray</option>
+									<option @if(profile.billcounty == "Park") {selected="selected"}>Park</option>
+									<option @if(profile.billcounty == "Phillips") {selected="selected"}>Phillips</option>
+									<option @if(profile.billcounty == "Pitkin") {selected="selected"}>Pitkin</option>
+									<option @if(profile.billcounty == "Prowers") {selected="selected"}>Prowers</option>
+									<option @if(profile.billcounty == "Pueblo") {selected="selected"}>Pueblo</option>
+									<option @if(profile.billcounty == "Rio Blanco") {selected="selected"}>Rio Blanco</option>
+									<option @if(profile.billcounty == "Rio Grande") {selected="selected"}>Rio Grande</option>
+									<option @if(profile.billcounty == "Routt") {selected="selected"}>Routt</option>
+									<option @if(profile.billcounty == "Saguache") {selected="selected"}>Saguache</option>
+									<option @if(profile.billcounty == "San Juan") {selected="selected"}>San Juan</option>
+									<option @if(profile.billcounty == "San Miguel") {selected="selected"}>San Miguel</option>
+									<option @if(profile.billcounty == "Sedgwick") {selected="selected"}>Sedgwick</option>
+									<option @if(profile.billcounty == "Summit") {selected="selected"}>Summit</option>
+									<option @if(profile.billcounty == "Teller") {selected="selected"}>Teller</option>
+									<option @if(profile.billcounty == "Washington") {selected="selected"}>Washington</option>
+									<option @if(profile.billcounty == "Weld") {selected="selected"}>Weld</option>
+									<option @if(profile.billcounty == "Yuma") {selected="selected"}>Yuma</option>
 								</select>
 								<i></i><span class="icon-place"></span>
 							</span>
