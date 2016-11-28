@@ -28,7 +28,10 @@ public class AuditLog {
 	private Integer id;
 
 	@Column(name = "user_id")
-	private Integer userId;
+	private String userId;
+
+	@Column(name = "email")
+	private String email;
 
 	@Column(name = "role")
 	private String role;
@@ -69,7 +72,7 @@ public class AuditLog {
 	/**
 	 * @return the userId
 	 */
-	public Integer getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
@@ -77,8 +80,16 @@ public class AuditLog {
 	 * @param userId
 	 *            the userId to set
 	 */
-	public void setUserId(Integer userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	/**
@@ -194,16 +205,11 @@ public class AuditLog {
 	 * @param field
 	 * @param value
 	 */
-	public static void setLog(Integer userId, String context, String screen, String field, String value) {
-		setLog(userId, context, screen, field, value, Http.Context.current().request().remoteAddress());
-	}
-	public static void setLog(Long userId, String context, String screen, String field, String value) {
-		
-		Integer id = userId.intValue();
-		setLog(id, context, screen, field, value, Http.Context.current().request().remoteAddress());
+	public static void setLog(String userId, String email, String context, String screen, String field, String value) {
+		String ip = Http.Context.current().request().remoteAddress();
+		setLog(userId, email, context, screen, field, value, ip);
 	}
 
-	
 	/**
 	 * 
 	 * @param userId
@@ -213,11 +219,11 @@ public class AuditLog {
 	 * @param value
 	 * @param ip
 	 */
-	public static void setLog(Integer userId, String context, String screen, String field, String value, String ip) {
+	public static void setLog(String userId, String email, String context, String screen, String field, String value, String ip) {
 		RoleType role = null;
 
 		if (role == null) {
-			User user = Ebean.find(models.User.class).where().eq("id", userId).findUnique();
+			User user = Ebean.find(models.User.class).where().eq("email", email).findUnique();
 			if (user != null)
 				role = user.getRole();
 			else
@@ -227,6 +233,7 @@ public class AuditLog {
 		AuditLog log = new AuditLog();
 		log.setUserId(userId);
 		log.setRole(role.toString());
+		log.setEmail(email);
 		log.setContext(context);
 		log.setScreen(screen);
 		log.setField(field);
@@ -234,6 +241,6 @@ public class AuditLog {
 		log.setCreated(new Date());
 		log.setIp(ip);
 		Ebean.save(log);
-		
+
 	}
 }

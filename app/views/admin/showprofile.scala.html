@@ -1,135 +1,133 @@
 @(profileForm: Form[Application.ProfileRegister], servicesList: java.util.List[Service], profile: Profile, servicesSelected: java.util.List[String])
 
 @main(null) {
-<section id="profileMain">
-	<form class="formoid-solid-dark"
-		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post" action="">
-		<div class="title">
-			<h2>Business Profile</h2>
-		</div>
-		<div class="element-input">
-			<label class="title"><span class="required">*</span>Business
-			Name:</label>
-			<div class="item-cont">
-				<input class="large" type="text" name="name" required="required"
-					placeholder="Business Name..." value="@profile.name" /><span class="icon-place"></span>
+	<script type="text/javascript">
+		$(document).ready(function(){		 
+			$('input[name=selectServices]').on('change', function() {
+				$('#services').val($('input[name=selectServices]:checked').map(function() {
+					return this.value;
+				}).get());
+			});
+		});
+	</script>
+	<section id="profileMain">
+		<form class="formoid-solid-dark"
+			style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+			method="post" action="">
+			<div class="title">
+				<h2>Business Profile</h2>
 			</div>
-		</div>
-		<div class="element-address">
-			<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required" value=@profile.address /><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address2" value=@profile.address1 /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" value=@profile.city /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required" value=@profile.state /><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required" value=@profile.zip /><span class="icon-place"></span></span><div class="country">
-				<select name="country" required="required">
-					<option selected="selected" value="" disabled="disabled">--- Select a country ---</option>
-					<option value="United States">United States</option>
-					<option value="Canada">Canada</option>
-				</select>
-				<i></i><span class="icon-place"></span>
-			</div>
-		</div>
-		<div class="element-name">
-			<label class="title"><span class="required">*</span>Primary Contact
-			Name:</label><span class="nameFirst"><input
-				placeholder="First Name..." type="text" size="8" name="primaryNameFirst"
-				required="required" value=@profile.primaryNameFirst /><span class="icon-place"></span></span><span
-				class="nameLast"><input placeholder="Last Name..."
-				type="text" size="14" name="primaryNameLast" required="required" value=@profile.primaryNameLast /><span
-				class="icon-place"></span></span>
-		</div>
-		<div class="element-phone">
-			<label class="title"><span class="required">*</span>Primary Contact
-			Phone Number:</label>
-			<div class="item-cont">
-				<input class="large" type="tel"
-					pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="primaryPhone"
-					required="required" placeholder="Phone Number..." value=@profile.primaryPhone /><span
-					class="icon-place"></span>
-			</div>
-		</div>
-		<div class="element-email">
-			<label class="title"><span class="required">*</span>Primary Contact
-			Email:</label>
-			<div class="item-cont">
-				<input class="large" type="email" name="primaryEmail" 
-					required="required" placeholder="Email..." value=@profile.primaryEmail /><span
-					class="icon-place"></span>
-			</div>
-		</div>
-		<div class="element-name">
-			<label class="title"><span class="required">*</span>Secondary Contact
-			Name:</label><span class="nameFirst"><input
-				placeholder="First Name..." type="text" size="8" name="secondaryNameFirst"
-				required="required" value=@profile.secondaryNameFirst /><span class="icon-place"></span></span><span
-				class="nameLast"><input placeholder="Last Name..."
-				type="text" size="14" name="secondaryNameLast" required="required" value=@profile.secondaryNameLast /><span
-				class="icon-place"></span></span>
-		</div>
-		<div class="element-phone">
-			<label class="title"><span class="required">*</span>Secondary Contact
-			Phone Number:</label>
-			<div class="item-cont">
-				<input class="large" type="tel"
-					pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="secondaryPhone"
-					required="required" placeholder="Phone Number..." value=@profile.secondaryPhone /><span
-					class="icon-place"></span>
-			</div>
-		</div>
-		<div class="element-email">
-			<label class="title"><span class="required">*</span>Secondary Contact
-			Email:</label>
-			<div class="item-cont">
-				<input class="large" type="email" name="secondaryEmail" 
-					required="required" placeholder="Email..." value=@profile.secondaryEmail /><span
-					class="icon-place"></span>
-			</div>
-		</div>
-		<div class="element-checkbox">
-			<label class="title">Services Provided:<span class="required">*</span></label>
-			<div class="column column1">
-				<label><input type="checkbox"
-					onclick="profileServicesOtherShowHide(this);" name="services"
-					value="waterbottled" ><span>Water
-				Bottled</span></label> <label><input type="checkbox" name="services"
-					value="waterbulk" ><span>Water
-				Bulk</span></label> <label><input type="checkbox" name="services"
-					value="sanitation" ><span>Sanitation/Toilet/Sink</span></label>
-				<label><input type="checkbox" name="services"
-					value="dumpster"><span>Dumpsters</span></label>
-				<label><input type="checkbox" name="services"
-					value="shower" ><span>Showers</span></label> <label><input
-					type="checkbox" name="services" value="generator" ><span>Generators</span></label> <label><input
-					type="checkbox" name="services" value="pump"
-					><span>Pumps</span></label> <label><input
-					type="checkbox" name="services" value="heavyequip"
-					><span>Heavy Equipment</span></label> <label><input
-					type="checkbox" name="services" value="fuel"
-					><span>Fuel</span></label> <label><input
-					type="checkbox" name="services" value="sandbags"
-					><span>Sandbags</span></label> <label><input
-					type="checkbox" name="services" value="tempfacility"
-					><span>Temporary Facilities</span></label> <label><input
-					type="checkbox" name="services" value="profserv"
-					><span>Professional Services</span></label> <label><input
-					type="checkbox" name="services" value="other"
-					><span>Other (Please List)</span></label>
-			</div>
-			<div id="otherService" class="element-input">
-				<label class="title"><span class="required">*</span>Other:</label>
+			<div class="element-input">
+				<label class="title"><span class="required">*</span>Business
+				Name:</label>
 				<div class="item-cont">
-					<input class="large" type="text" name="serviceOther" 
-						placeholder="Other..." /><span class="icon-place"></span>
+					<input class="large" type="text" name="name" required="required"
+						placeholder="Business Name..." value="@profile.name" /><span class="icon-place"></span>
 				</div>
 			</div>
-			<span class="clearfix"></span>
-		</div>
-		<div class="element-input">
-			@if(profileForm.hasGlobalErrors) {
-				<span class="errorMessageDisplay" style="color: #d9534f;">@profileForm.globalError.message</span>
-			}
-		</div>
-		<div class="submit">
-			<input type="submit" value="Submit" />
-			<a href="/admin" class="buttonCancel">@Messages("goback")</a>
-		</div>
+			<div class="element-address">
+				<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required" value="@profile.address" /><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address2" value="@profile.address1" /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" value="@profile.city" /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required" value="@profile.state" /><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required" value="@profile.zip" /><span class="icon-place"></span></span><div class="country">
+					<select name="country" required="required">
+						<option value="" disabled="disabled">--- Select a country ---</option>
+						@if(profile.country != "United States") {
+							<option value="United States">United States</option>
+							<option selected="selected" value="Canada">Canada</option>
+						}
+						else {
+							<option selected="selected" value="United States">United States</option>
+							<option value="Canada">Canada</option>
+						}
+					</select>
+					<i></i><span class="icon-place"></span>
+				</div>
+			</div>
+			<div class="element-name">
+				<label class="title"><span class="required">*</span>Primary Contact
+				Name:</label><span class="nameFirst"><input
+					placeholder="First Name..." type="text" size="8" name="primaryNameFirst"
+					required="required" value="@profile.primaryNameFirst" /><span class="icon-place"></span></span><span
+					class="nameLast"><input placeholder="Last Name..."
+					type="text" size="14" name="primaryNameLast" required="required" value="@profile.primaryNameLast" /><span
+					class="icon-place"></span></span>
+			</div>
+			<div class="element-phone">
+				<label class="title"><span class="required">*</span>Primary Contact
+				Phone Number:</label>
+				<div class="item-cont">
+					<input class="large" type="tel"
+						pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="primaryPhone"
+						required="required" placeholder="Phone Number..." value="@profile.primaryPhone" /><span
+						class="icon-place"></span>
+				</div>
+			</div>
+			<div class="element-email">
+				<label class="title"><span class="required">*</span>Primary Contact
+				Email:</label>
+				<div class="item-cont">
+					<input class="large" type="email" name="primaryEmail" 
+						required="required" placeholder="Email..." value="@profile.primaryEmail" /><span
+						class="icon-place"></span>
+				</div>
+			</div>
+			<div class="element-name">
+				<label class="title"><span class="required">*</span>Secondary Contact
+				Name:</label><span class="nameFirst"><input
+					placeholder="First Name..." type="text" size="8" name="secondaryNameFirst"
+					required="required" value="@profile.secondaryNameFirst" /><span class="icon-place"></span></span><span
+					class="nameLast"><input placeholder="Last Name..."
+					type="text" size="14" name="secondaryNameLast" required="required" value="@profile.secondaryNameLast" /><span
+					class="icon-place"></span></span>
+			</div>
+			<div class="element-phone">
+				<label class="title"><span class="required">*</span>Secondary Contact
+				Phone Number:</label>
+				<div class="item-cont">
+					<input class="large" type="tel"
+						pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="secondaryPhone"
+						required="required" placeholder="Phone Number..." value="@profile.secondaryPhone" /><span
+						class="icon-place"></span>
+				</div>
+			</div>
+			<div class="element-email">
+				<label class="title"><span class="required">*</span>Secondary Contact
+				Email:</label>
+				<div class="item-cont">
+					<input class="large" type="email" name="secondaryEmail" 
+						required="required" placeholder="Email..." value="@profile.secondaryEmail" /><span
+						class="icon-place"></span>
+				</div>
+			</div>
+			<div class="element-checkbox">
+				<label class="title">Services Provided:<span class="required">*</span></label>
+				<div class="column column1">
+					@for(service <- servicesList) {
+						<label>
+							<input type="checkbox" @if(servicesSelected contains service.name) {checked} class="selectServices" name="selectServices" id="selectServices" value="@service.name">
+							<span>@service.name</span>
+						</label>                    
+					}
+				</div>
+				
+				<input type="hidden" name="services" id="services">
+	
+				<div id="otherService" class="element-input">
+					<label class="title"><span class="required">*</span>Other:</label>
+					<div class="item-cont">
+						<input class="large" type="text" name="serviceOther" 
+							placeholder="Other..."value="@profile.servicesOther" /><span class="icon-place"></span>
+					</div>
+				</div>
+				<span class="clearfix"></span>
+			</div>
+			<div class="element-input">
+				@if(profileForm.hasGlobalErrors) {
+					<span class="errorMessageDisplay" style="color: #d9534f;">@profileForm.globalError.message</span>
+				}
+			</div>
+			<div class="submit">
+				<input type="submit" value="Submit" />
+				<a href="/admin" class="buttonCancel">@Messages("goback")</a>
+			</div>
 		<div class="submit">
 			<a href="javascript:deleteProfile('@profile.name')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
 		</div>

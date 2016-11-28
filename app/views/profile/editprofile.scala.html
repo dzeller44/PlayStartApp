@@ -28,13 +28,13 @@
 			<div class="element-address">
 				<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required" value="@profile.address" /><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address2" value="@profile.address1" /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" value="@profile.city" /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required" value="@profile.state" /><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required" value="@profile.zip" /><span class="icon-place"></span></span><div class="country">
 					<select name="country" required="required">
-						<option selected="selected" value="" disabled="disabled">--- Select a country ---</option>
+						<option value="" disabled="disabled">--- Select a country ---</option>
 						@if(profile.country != "United States") {
 							<option value="United States">United States</option>
-							<option value="Canada">Canada</option>
+							<option selected="selected" value="Canada">Canada</option>
 						}
 						else {
-							<option value="United States" selected>United States</option>
+							<option selected="selected" value="United States">United States</option>
 							<option value="Canada">Canada</option>
 						}
 					</select>

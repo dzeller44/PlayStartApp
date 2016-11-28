@@ -59,8 +59,8 @@ Seq[Any](format.raw/*1.89*/("""
 		<div class="element-address">
 			<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input placeholder="Street Address" type="text" name="address" required="required"/><span class="icon-place"></span></span><span class="addr2"><input placeholder="Address Line 2" type="text" name="address2" /><span class="icon-place"></span></span><span class="city"><input placeholder="City" type="text" name="city" /><span class="icon-place"></span></span><span class="state"><input placeholder="State / Province / Region" type="text" name="state" required="required"/><span class="icon-place"></span></span><span class="zip"><input placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required"/><span class="icon-place"></span></span><div class="country">
 				<select name="country" required="required">
-					<option selected="selected" value="" disabled="disabled">--- Select a country ---</option>
-					<option value="United States">United States</option>
+					<option value="" disabled="disabled">--- Select a country ---</option>
+					<option selected="selected" value="United States">United States</option>
 					<option value="Canada">Canada</option>
 				</select>
 				<i></i><span class="icon-place"></span>
@@ -174,9 +174,9 @@ Seq[Any](format.raw/*1.89*/("""
 object profile extends profile_Scope0.profile
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 23 10:25:33 MST 2016
+                  DATE: Mon Nov 28 09:17:08 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/profile.scala.html
-                  HASH: ea7e49d23b53dba0be67511eabc26ed684f5a7da
+                  HASH: 15a4542c82de3df476eb0d5b0d29654679ffef63
                   MATRIX: 808->1|990->88|1020->93|1038->103|1077->105|1106->108|1196->171|1224->172|1258->180|1341->236|1369->237|1401->243|1502->317|1530->318|1563->325|1613->349|1640->350|1681->364|1709->365|1742->371|1770->372|4313->2887|4342->2888|4372->2890|4401->2891|5645->4107|5674->4108|5704->4110|5733->4111|6414->4766|6458->4794|6498->4796|6535->4806|6666->4909|6683->4916|6710->4921|6747->4930|6764->4937|6791->4942|6843->4964|6876->4969|7353->5419|7394->5450|7435->5452|7469->5458|7556->5517|7577->5528|7619->5548|7663->5561|7695->5565|7840->5682|7880->5700
                   LINES: 27->1|32->1|34->3|34->3|34->3|35->4|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|40->9|40->9|41->10|41->10|42->11|42->11|83->52|83->52|83->52|83->52|111->80|111->80|111->80|111->80|128->97|128->97|128->97|129->98|129->98|129->98|129->98|129->98|129->98|129->98|130->99|131->100|145->114|145->114|145->114|146->115|146->115|146->115|146->115|147->116|148->117|151->120|151->120
                   -- GENERATED --

@@ -1,0 +1,103 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET    /                           controllers.Application.index()
+GET    /dashboard                  controllers.Dashboard.index()
+
+POST   /login                      controllers.Application.authenticate()
+GET    /logout                     controllers.Application.logout()
+
+# Authenticates/Logins the user...
+GET    /auth                       controllers.Application.openLogin()
+POST   /auth                       controllers.Application.authenticate()
+
+GET    /accessdenied               controllers.Application.accessDenied()
+
+# User pages...
+GET    /user                       controllers.Application.userHome()
+
+GET    /addprofile                 controllers.Application.addProfile()
+POST   /addprofile                 controllers.Application.saveProfile()
+
+GET    /getprofiles                controllers.Application.getProfilesByUser()
+
+GET    /editprofile/:name          controllers.Application.openProfile(name: String)
+POST   /editprofile/:name          controllers.Application.updateProfile(name: String)
+
+GET    /useraccount                controllers.Application.openUserAccount(email: String)
+POST   /useraccount                controllers.Application.updateUserAccount()
+
+# Emergency Manager pages...
+GET    /em                         controllers.Application.managerHome()
+
+# Admin pages...
+GET    /admin                      controllers.Application.adminHome()
+
+GET    /adminuser                  controllers.Application.userMaintenance()
+
+GET    /search                     controllers.Application.getAllUsers()
+
+GET    /searchprofiles             controllers.Application.getAllProfiles()
+
+GET    /searchbyservice            controllers.Application.getProfilesByService(service: String)
+
+GET    /openprofile/:name          controllers.Application.openProfileAdmin(name: String)
+POST   /openprofile/:name          controllers.Application.updateProfileAdmin(name: String)
+
+GET    /deleteprofile/:name        controllers.Application.deleteProfileConfirm(name: String)
+POST   /deleteprofile/:name        controllers.Application.deleteProfile(name: String)
+
+GET    /finduser                   controllers.Application.findUser()
+POST   /finduser                   controllers.Application.getUserByEmail()
+
+POST   /updateuser                 controllers.Application.updateUser()
+
+GET    /exportusers/:data          controllers.Application.exportUsers(data: String)
+
+POST   /exportOpenFile/:fileName   controllers.Application.exportOpenFile(fileName: String)
+
+GET    /exportprofiles/:data       controllers.Application.exportProfiles(data: String)
+
+GET    /openuser                   controllers.Application.openUser()
+
+GET    /addadmin                   controllers.account.Signup.createAdmin()
+POST   /addadmin                   controllers.account.Signup.saveAdmin()
+
+GET    /finduserurl                controllers.Application.getUserByUrl(email: String)
+
+GET    /deleteuser/:email          controllers.Application.deleteUserConfirm(email: String)
+POST   /deleteuser/:email          controllers.Application.deleteUser(email: String)
+
+GET    /resetadmin/:token          controllers.account.Reset.resetAdmin(token:String)
+POST   /resetadmin/:token          controllers.account.Reset.runResetAdmin(token:String)
+
+
+# User settings...
+GET    /settings                   controllers.account.settings.Index.index()
+GET    /settings/password          controllers.account.settings.Password.index()
+POST   /settings/password          controllers.account.settings.Password.runPassword()
+GET    /settings/email             controllers.account.settings.Email.index()
+POST   /settings/email             controllers.account.settings.Email.runEmail()
+
+# Registers the user, sending an email to confirm the account.
+GET    /signup                     controllers.account.Signup.create()
+POST   /signup                     controllers.account.Signup.save()
+
+# Accessed when the user confirms the registration.
+GET    /confirm/:confirmToken      controllers.account.Signup.confirm(confirmToken:String)
+
+# Displays a page to send a reset email given the user's email.
+GET    /reset/ask                  controllers.account.Reset.ask()
+POST   /reset/ask                  controllers.account.Reset.runAsk()
+
+# Resets the password using the password.
+GET    /reset/:token               controllers.account.Reset.reset(token:String)
+POST   /reset/:token               controllers.account.Reset.runReset(token:String)
+
+GET    /email/:token               controllers.account.settings.Email.validateEmail(token:String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET    /assets/*file               controllers.Assets.at(path="/public", file)
+

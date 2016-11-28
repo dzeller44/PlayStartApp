@@ -17,6 +17,7 @@ import org.apache.commons.mail.EmailException;
 import com.opencsv.CSVWriter;
 import controllers.helpers.AccessMiddleware;
 import managers.SessionData;
+import models.AuditLog;
 import models.Profile;
 import models.RemovedProfile;
 import models.RemovedUser;
@@ -165,6 +166,7 @@ public class Application extends Controller {
 			try {
 				user = User.authenticate(email, password);
 				SessionData createUserSession = AccessMiddleware.createUserSession(user);
+				AuditLog.setLog(user.fullname, user.getEmail(), "Login", "validate()", "User authenticated", user.fullname);
 			} catch (AppException e) {
 				errMessage = Messages.get("error.technical");
 				return errMessage;
@@ -1118,6 +1120,8 @@ public class Application extends Controller {
 		profile.userkey = AccessMiddleware.getSessionUserKey();
 		profile.save();
 
+		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "saveProfile()", "Profile saved", AccessMiddleware.getSessionID());
+		
 		return ok(profilecreated.render());
 	}
 	
@@ -1186,6 +1190,8 @@ public class Application extends Controller {
 			profile.dateUpdated = new Date();
 			profile.save();
 
+			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "updateProfileAdmin()", "Profile updated by Admin", AccessMiddleware.getSessionID());
+						
 			return ok(profilesaved.render("admin"));
 		}
 
@@ -1224,6 +1230,8 @@ public class Application extends Controller {
 		profile.dateUpdated = new Date();
 		profile.save();
 
+		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "updateProfile()", "Profile updated by user", AccessMiddleware.getSessionID());
+		
 		return ok(profilesaved.render("user"));
 	}
 
@@ -1335,7 +1343,9 @@ public class Application extends Controller {
 		user.updatedBy = AccessMiddleware.getSessionEmail();
 		user.dateUpdated = new Date();
 		user.save();
-
+		
+		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User Account", "updateUserAccount()", "User account updated", AccessMiddleware.getSessionID());
+		
 		return ok(saveduser.render());
 	}
 
