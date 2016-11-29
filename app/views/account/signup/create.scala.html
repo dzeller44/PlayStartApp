@@ -1,111 +1,98 @@
 @(signupForm: Form[Application.Register])
 
 @main(null) {
-
-
-<script src="@routes.Assets.at("js/jquery/jquery-latest.js")" type="text/javascript"></script>
-<script>
-$(document).ready(function() {
-    $("input[name$='role']").click(function() {
-        var test = $(this).val();
-
-        $("div.desc").hide();
-        $("#" + test).show();
-    });
-});
-</script>
-
-<section id="signup">
-	<!-- Start Formoid form-->
-	<form class="formoid-solid-dark"
-		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
-		method="post" action="">
-		<div class="title">
-			<h2>New User Registration</h2>
-		</div>
-		<div class="element-input">
-			<label class="title"><span class="required">*</span>User
-				Name:</label>
-			<div class="item-cont">
-				<input class="large" type="text" name="fullname" required="required"
-					placeholder="Choose a user name..." /><span class="icon-place"></span>
-			</div>
-		</div>
-		<div class="element-input">
-			<label class="title"><span class="required">*</span>Email:</label>
-			<div class="item-cont">
-				<input class="large" type="email" name="email" required="required"
-					placeholder="Enter your email..." /><span class="icon-place"></span>
-			</div>
-		</div>
-		<div class="element-password">
-			<label class="title"><span class="required">*</span>Password:</label>
-			<div class="item-cont">
-				<input class="large" type="password" name="inputPassword" value=""
-					required="required" placeholder="Create a password..." /><span
-					class="icon-place"></span>
-			</div>
-		</div>
-		
-		<div class="element-radio">
-			<label class="title"><span class="required">*</span>Account
-				Role:</label>
-			<div class="column column1">
-				<label>
-					<input type="radio" name="role" value="user"
-					required="required" /><span>Business User</span>
-				</label>
-				<label>
-					<input
-					type="radio" name="role" value="manager" required="required" /><span>Emergency
-						Manager</span>
-				</label>
-			</div>
-		<span class="clearfix"></span>
-			
-				<div id="user" class="desc" style="display: none;">
-				</div>	
-		
-				<div id="manager" class="desc" style="display: none;">
-					<div class="element-input">
-							<label class="title">Agency:</label>
-						<div class="item-cont">
-							<input class="large" type="text" name="agency" value="" placeholder="Which agency..." /><span class="icon-place"></span>
-						</div>
-					</div>
-				</div>
-		</div>
-		
-
-		<div class="element-checkbox">
-			<div class="column column1">
-				<label><input type="checkbox" name="checkbox[]"
-					value="option 1" / required="required"><span>I agree
-						with the terms and conditions *</span></label>
-			</div>
-			<span class="clearfix"></span>
-		</div>
-		<div class="element-input">
-		    @if(signupForm.hasGlobalErrors) {
-        		<span class="errorMessageDisplay" style="color: #d9534f;">
-            		@signupForm.globalError.message
-        		</span>
-   			}
-		</div>
-		<div class="submit">
-			<!-- <input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" /> -->
-			<input type="submit" value="Submit" /> <a href="/"
-				class="buttonCancel">@Messages("goback")</a>
-		</div>
-		<!-- This is needed for bottom shadow to appear... -->
-		<div></div>
-	</form>
-
-	<div class="loginBlock">
-		<a href="/auth"><div class="loginText">@Messages("account.exists")</div></a>
-		<a href="/reset/ask"><div class="loginText">@Messages("forgot.password")</div></a>
-	</div>
-
-</section>
+	<script src="@routes.Assets.at("js/jquery/jquery-latest.js")" type="text/javascript"></script>
+	<script>
+	   $(document).ready(function() {
+	       $("input[name$='role']").click(function() {
+	           var test = $(this).val();
+	   
+	           $("div.desc").hide();
+	           $("#" + test).show();
+	       });
+	   });
+	</script>
+	<section id="signup">
+	   <!-- Start Formoid form-->
+	   <form class="formoid-solid-dark"
+	      style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+	      method="post" action="">
+	      <div class="title">
+	         <h2>New User Registration</h2>
+	      </div>
+	      <div class="element-input">
+	         <label class="title"><span class="required">*</span>User
+	         Name:</label>
+	         <div class="item-cont">
+	            <input class="large" type="text" name="fullname" required="required"
+	               placeholder="Choose a user name..." /><span class="icon-place"></span>
+	         </div>
+	      </div>
+	      <div class="element-input">
+	         <label class="title"><span class="required">*</span>Email:</label>
+	         <div class="item-cont">
+	            <input class="large" type="email" name="email" required="required"
+	               placeholder="Enter your email..." /><span class="icon-place"></span>
+	         </div>
+	      </div>
+	      <div class="element-password">
+	         <label class="title"><span class="required">*</span>Password:</label>
+	         <div class="item-cont">
+	            <input class="large" type="password" name="inputPassword" value=""
+	               required="required" placeholder="Create a password..." /><span
+	               class="icon-place"></span>
+	         </div>
+	      </div>
+	      <div class="element-radio">
+	         <label class="title"><span class="required">*</span>Account Role:</label>
+	         <div class="column column1">
+	            <label>
+	            	<input type="radio" name="role" value="user" required="required" /><span>Business User</span>
+	            </label>
+	            <label>
+	            	<input type="radio" name="role" value="manager" required="required" /><span>Emergency Manager</span>
+	            </label>
+	         </div>
+	         <span class="clearfix"></span>
+	         <div id="user" class="desc" style="display: none;">
+	         </div>
+	         <div id="manager" class="desc" style="display: none;">
+	            <div class="element-input">
+	               <label class="title">Agency:</label>
+	               <div class="item-cont">
+	                  <input class="large" type="text" name="agency" value="" placeholder="Which agency..." /><span class="icon-place"></span>
+	               </div>
+	            </div>
+	         </div>
+	      </div>
+	      <div class="element-checkbox">
+	         <div class="column column1">
+	            <label><input type="checkbox" name="checkbox[]"
+	               value="option 1" / required="required"><span>I agree with the terms and conditions *</span></label>
+	         </div>
+	         <span class="clearfix"></span>
+	      </div>
+	      <div class="element-input">
+	         @if(signupForm.hasGlobalErrors) {
+	         	<span class="errorMessageDisplay" style="color: #d9534f;"> @signupForm.globalError.message</span>
+	         }
+	      </div>
+	      <div class="submit">
+	         <!-- <input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" /> -->
+	         <input type="submit" value="Submit" /> <a href="/"
+	            class="buttonCancel">@Messages("goback")</a>
+	      </div>
+	      <!-- This is needed for bottom shadow to appear... -->
+	      <div></div>
+	   </form>
+	   <div class="loginBlock">
+	      <a href="/auth">
+	         <div class="loginText">@Messages("account.exists")</div>
+	      </a>
+	      <a href="/reset/ask">
+	         <div class="loginText">@Messages("forgot.password")</div>
+	      </a>
+	   </div>
+	</section>
 
 }

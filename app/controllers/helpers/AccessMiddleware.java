@@ -99,7 +99,6 @@ public class AccessMiddleware extends Controller {
 		return sessionData.getUserkey();
 	}
 
-
 	/**
 	 * 
 	 * @param user

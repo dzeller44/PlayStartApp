@@ -83,7 +83,7 @@ Seq[Any](format.raw/*1.23*/("""
 object deleteprofconfirm extends deleteprofconfirm_Scope0.deleteprofconfirm
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 17 15:11:30 MST 2016
+                  DATE: Mon Nov 28 13:55:19 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/deleteprofconfirm.scala.html
                   HASH: 4cfc21205109a2fe22cb43a2aeeb2a1956bd429a
                   MATRIX: 775->1|891->22|921->27|939->37|978->39|1008->43|1648->656|1680->667|1709->668|1904->836|1936->847|1965->848|2208->1064|2247->1082|2393->1198

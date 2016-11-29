@@ -1,4 +1,4 @@
-@(profilesList: java.util.List[Profile])
+@(profilesList: java.util.List[Profile], servicesList: java.util.List[Service])
 
 @main(null) {
 
@@ -8,17 +8,31 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#tableAll").tablesorter();
+			$(".selectServices").change(function() {
+				getByServices();
+			});
 		});
 	</script>
 	<section id="displayResults" style="padding: 30px;">
 		<div class="table-responsive">
-		<h5>All Users:</h5>
+		<h5>All Business Profiles:</h5>
+		<div class="element-select"><label class="title"></label><div class="item-cont"><div class="large"><span>
+			<select class="selectServices" name="selectServices" id="selectServices">
+				<option selected="selected" value="" disabled="disabled">--- Select service ---</option>
+				<option value="All">All</option>
+				@for(service <- servicesList) {
+					<option value="@service.name">@service.name</option>
+				}
+			</select>
+		<i></i><span class="icon-place"></span></span></div></div></div>
 		<table id="tableAll" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
 			<thead>
 				<tr>
 					<th>Business Name</th>
 					<th>Contact</th>
+					<th>Phone</th>
 					<th>Services</th>
+					<th>County</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -26,11 +40,14 @@
 				<tr>
 					<td><a href="/openprofile/@profile.name">@profile.name</a></td>
 					<td><a href="/openprofile/@profile.name">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
+					<td><a href="/openprofile/@profile.name">@profile.primaryPhone</a></td>
 					<td><a href="/openprofile/@profile.name">@profile.services</a></td>
+					<td><a href="/openprofile/@profile.name">@profile.county</a></td>
 				</tr>
 				} 
 			</tbody>
 		</table>
-		</div		
+		</div>
+		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export This View</a></div>	
 	</section>
 }

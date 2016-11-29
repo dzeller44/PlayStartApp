@@ -1,3 +1,5 @@
+@(userRole: String)
+
 @main() {
 
  <section id="profileCreated">
@@ -11,7 +13,7 @@
 			<label class="title"><span class="required"></span>@Messages("profile.save")</label>
 		</div>
 		<div class="submit">
-			<input type="submit" onclick="window.location.href='/admin'" value="Continue" />
+			<input type="submit" onclick="window.location.href='/@userRole'" value="Continue" />
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>

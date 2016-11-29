@@ -3,6 +3,22 @@
 
 # --- !Ups
 
+create table audit_log (
+  id                        integer auto_increment not null,
+  user_id                   varchar(255),
+  email                     varchar(255),
+  role                      varchar(255),
+  context                   varchar(255),
+  screen                    varchar(255),
+  field                     varchar(255),
+  value                     varchar(255),
+  ip                        varchar(255),
+  path                      varchar(255),
+  host                      varchar(255),
+  created                   datetime(6),
+  constraint pk_audit_log primary key (id))
+;
+
 create table profile (
   id                        bigint auto_increment not null,
   name                      varchar(255),
@@ -11,6 +27,16 @@ create table profile (
   city                      varchar(255),
   state                     varchar(255),
   zip                       varchar(255),
+  country                   varchar(255),
+  county                    varchar(255),
+  billname                  varchar(255),
+  billaddress               varchar(255),
+  billaddress1              varchar(255),
+  billcity                  varchar(255),
+  billstate                 varchar(255),
+  billzip                   varchar(255),
+  billcountry               varchar(255),
+  billcounty                varchar(255),
   primary_name_first        varchar(255),
   primary_name_last         varchar(255),
   primary_phone             varchar(255),
@@ -37,6 +63,15 @@ create table removed_profile (
   city                      varchar(255),
   state                     varchar(255),
   zip                       varchar(255),
+  county                    varchar(255),
+  billname                  varchar(255),
+  billaddress               varchar(255),
+  billaddress1              varchar(255),
+  billcity                  varchar(255),
+  billstate                 varchar(255),
+  billzip                   varchar(255),
+  billcountry               varchar(255),
+  billcounty                varchar(255),
   primary_name_first        varchar(255),
   primary_name_last         varchar(255),
   primary_phone             varchar(255),
@@ -112,6 +147,7 @@ create table user (
   id                        bigint auto_increment not null,
   email                     varchar(255),
   fullname                  varchar(255),
+  agency                    varchar(255),
   confirmation_token        varchar(255),
   password_hash             varchar(255),
   date_creation             datetime(6),
@@ -134,6 +170,8 @@ create table user (
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
+
+drop table audit_log;
 
 drop table profile;
 

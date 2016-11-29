@@ -39,6 +39,35 @@ public class Profile extends Model {
 
 	@Constraints.Required
 	public String zip;
+	
+	@Constraints.Required
+	public String country;
+	
+	@Constraints.Required
+	public String county;
+
+	@Constraints.Required
+	public String billname;
+	
+	@Constraints.Required
+	public String billaddress;
+
+	public String billaddress1;
+
+	@Constraints.Required
+	public String billcity;
+
+	@Constraints.Required
+	public String billstate;
+
+	@Constraints.Required
+	public String billzip;
+	
+	@Constraints.Required
+	public String billcountry;
+	
+	@Constraints.Required
+	public String billcounty;
 
 	@Constraints.Required
 	public String primaryNameFirst;
@@ -134,6 +163,16 @@ public class Profile extends Model {
 	 */
 	public static List<Profile> findAllByUserKey(String userkey) {
 		return find.where().eq("userkey", userkey).findList();
+	}
+	
+	/**
+	 * Retrieves profiles that contain a service.
+	 *
+	 * @param servcice.
+	 * @return profiles if the service is found, null otherwise.
+	 */
+	public static List<Profile> findAllByService(String service) {
+		return find.where().contains("services", service).findList();
 	}
 	
 }
