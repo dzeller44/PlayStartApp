@@ -12,6 +12,31 @@
 	       });
 	   });
 	</script>
+	
+	<script>
+
+		jQuery(function(){
+        $("#submit").click(function(){
+        $(".error").hide();
+        var hasError = false;
+        var passwordVal = $("#inputPassword").val();
+        var checkVal = $("#password-check").val();
+        if (passwordVal == '') {
+            $("#inputPassword").after('<span class="error">Please enter a password.</span>');
+            hasError = true;
+        } else if (checkVal == '') {
+            $("#password-check").after('<span class="error">Please re-enter your password.</span>');
+            hasError = true;
+        } else if (passwordVal != checkVal ) {
+            $("#password-check").after('<span class="error">Passwords do not match.</span>');
+            hasError = true;
+        }
+        if(hasError == true) {return false;}
+    		});
+		});
+
+	</script>
+	
 	<section id="signup">
 	   <!-- Start Formoid form-->
 	   <form class="formoid-solid-dark"
@@ -35,14 +60,25 @@
 	               placeholder="Enter your email..." /><span class="icon-place"></span>
 	         </div>
 	      </div>
+	          
 	      <div class="element-password">
 	         <label class="title"><span class="required">*</span>Password:</label>
 	         <div class="item-cont">
-	            <input class="large" type="password" name="inputPassword" value=""
+	            <input class="large" type="password" name="inputPassword" id="inputPassword" value=""
 	               required="required" placeholder="Create a password..." /><span
 	               class="icon-place"></span>
 	         </div>
 	      </div>
+	      
+	      <div class="element-password">
+	         <label class="title"><span class="required">*</span>Re-enter Password:</label>
+	         <div class="item-cont">
+	            <input class="large" type="password" name="password-check" id="password-check" value=""
+	               required="required" placeholder="Re-enter password..." /><span
+	               class="icon-place"></span>
+	         </div>
+	      </div>
+	          
 	      <div class="element-radio">
 	         <label class="title"><span class="required">*</span>Account Role:</label>
 	         <div class="column column1">
@@ -79,7 +115,7 @@
 	      </div>
 	      <div class="submit">
 	         <!-- <input type="submit" a href="controllers.account.routes.Signup.save();" value="Submit" /> -->
-	         <input type="submit" value="Submit" /> <a href="/"
+	         <input type="submit" value="Submit" id="submit"/> <a href="/"
 	            class="buttonCancel">@Messages("goback")</a>
 	      </div>
 	      <!-- This is needed for bottom shadow to appear... -->
