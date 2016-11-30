@@ -64,7 +64,7 @@ Seq[Any](format.raw/*1.14*/("""
 object password extends password_Scope0.password
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 28 13:55:19 MST 2016
+                  DATE: Wed Nov 30 12:17:19 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/settings/password.scala.html
                   HASH: 438deb870b78cf02cdc18c096271d54c2ec9bb25
                   MATRIX: 766->1|888->13|916->32|943->34|955->39|997->73|1036->75|1068->82|1125->119|1157->126|1185->134|1218->141|1291->205|1331->207|1367->216|1486->308|1524->325|1577->348

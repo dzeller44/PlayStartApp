@@ -16,15 +16,22 @@
 	<section id="displayResults" style="padding: 30px;">
 		<div class="table-responsive">
 		<h5>All Business Profiles:</h5>
-		<div class="element-select"><label class="title"></label><div class="item-cont"><div class="large"><span>
-			<select class="selectServices" name="selectServices" id="selectServices">
-				<option selected="selected" value="" disabled="disabled">--- Select service ---</option>
-				<option value="All">All</option>
-				@for(service <- servicesList) {
-					<option value="@service.name">@service.name</option>
-				}
-			</select>
-		<i></i><span class="icon-place"></span></span></div></div></div>
+		<div class="element-select">
+			<div class="selectDropdownField">
+				<div class="large">
+					<span>
+						<select class="selectServices" name="selectServices" id="selectServices">
+							<option selected="selected" value="" disabled="disabled">--- Filter By Service Type ---</option>
+							<option value="All">All</option>
+							@for(service <- servicesList) {
+								<option value="@service.name">@service.name</option>
+							}
+						</select>
+						<i></i><span class="iconPlacement"></span>
+					</span>
+				</div>
+			</div>
+		</div>
 		<table id="tableAll" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
 			<thead>
 				<tr>

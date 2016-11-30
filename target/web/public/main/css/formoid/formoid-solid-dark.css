@@ -1373,3 +1373,76 @@ bootstrap
   width: 16px;
   height: 16px;
 }
+
+/*
+	Custom select/dropdown field used in searchprofiles.scala.html
+*/
+.selectDropdownField{
+  margin:0 auto;
+}
+.selectDropdownField>div,
+.selectDropdownField>.title{
+  margin: 8px;
+}
+
+.selectDropdownField .large{
+  width: 25%;
+  *width: 23%;
+}
+
+.selectDropdownField{
+  font-size: 1em;
+  line-height: 1.231;
+}
+
+.selectDropdownField>div{
+  position: relative;
+}
+
+.selectDropdownField div, formoid-solid-dark select {
+  font-family: inherit;
+  color: inherit;
+}
+
+.selectDropdownField select {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #bdc3c7;
+  -webkit-transition: border-color 0.5s ease-in-out;
+  transition: border-color 0.5s ease-in-out;
+  border-radius:3px;
+  padding: 10px 10px 9px 2.3em;  
+  outline:none;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: normal;  
+  font-size: 1em;
+}
+
+.selectDropdownField  select{
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.selectDropdownField {
+  position: relative;
+}
+
+.iconPlacement:before {
+  position: absolute;
+  font: 1em 'icons';
+  vertical-align: top;
+  top: 15px;
+  left: 0.9em;
+  pointer-events: none;
+  color: #A2A6A8;
+  z-index: 2;
+}
+
+.element-select .selectDropdownField .iconPlacement:before {
+  top: 12px;
+  content: '\e801';
+}

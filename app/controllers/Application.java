@@ -166,7 +166,8 @@ public class Application extends Controller {
 			try {
 				user = User.authenticate(email, password);
 				SessionData createUserSession = AccessMiddleware.createUserSession(user);
-				AuditLog.setLog(user.fullname, user.getEmail(), "Login", "validate()", "User authenticated", user.fullname);
+				AuditLog.setLog(user.fullname, user.getEmail(), "Login", "validate()", "User authenticated",
+						user.fullname);
 			} catch (AppException e) {
 				errMessage = Messages.get("error.technical");
 				return errMessage;
@@ -187,7 +188,7 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String name;
-		
+
 		@Constraints.Required
 		public String address;
 
@@ -195,7 +196,7 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String city;
-		
+
 		@Constraints.Required
 		public String state;
 
@@ -204,13 +205,13 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String country;
-		
+
 		@Constraints.Required
 		public String county;
-		
+
 		@Constraints.Required
 		public String billname;
-		
+
 		@Constraints.Required
 		public String billaddress;
 
@@ -218,7 +219,7 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String billcity;
-		
+
 		@Constraints.Required
 		public String billstate;
 
@@ -227,7 +228,7 @@ public class Application extends Controller {
 
 		@Constraints.Required
 		public String billcountry;
-		
+
 		@Constraints.Required
 		public String billcounty;
 
@@ -259,7 +260,7 @@ public class Application extends Controller {
 		public String services;
 
 		public String servicesOther;
-		
+
 		public Date dateCreation;
 
 		private boolean isBlank(String input) {
@@ -295,7 +296,7 @@ public class Application extends Controller {
 			if (isBlank(country)) {
 				return "Business Address Country is required";
 			}
-			
+
 			if (isBlank(county)) {
 				return "Business Address County is required";
 			}
@@ -303,7 +304,7 @@ public class Application extends Controller {
 			if (isBlank(billname)) {
 				return "Billing Name is required";
 			}
-			
+
 			if (isBlank(billaddress)) {
 				return "Billing Address 1 is required";
 			}
@@ -323,11 +324,11 @@ public class Application extends Controller {
 			if (isBlank(billcountry)) {
 				return "Billing Address Country is required";
 			}
-			
+
 			if (isBlank(billcounty)) {
 				return "Billing Address County is required";
 			}
-			
+
 			if (isBlank(primaryNameFirst)) {
 				return "Business Hours Contact First Name is required";
 			}
@@ -596,8 +597,9 @@ public class Application extends Controller {
 
 			// Delete the profile...
 			profile.delete();
-			
-			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "deleteProfile()", "Profile DELETED by Admin", AccessMiddleware.getSessionID());
+
+			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile",
+					"deleteProfile()", "Profile DELETED by Admin", AccessMiddleware.getSessionID());
 
 			return ok(deletedprofile.render());
 		}
@@ -656,8 +658,9 @@ public class Application extends Controller {
 			// Delete the user...
 			user.delete();
 
-			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User", "deleteUser()", "User DELETED by Admin", AccessMiddleware.getSessionID());
-			
+			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User", "deleteUser()",
+					"User DELETED by Admin", AccessMiddleware.getSessionID());
+
 			return ok(deleteduser.render());
 		}
 
@@ -762,16 +765,18 @@ public class Application extends Controller {
 				CSVWriter outputFile = new CSVWriter(new FileWriter(fileName));
 				List<String[]> objectArray = new ArrayList<String[]>();
 				objectArray.add(new String[] { "Business Name", "Business Address", "Business Address 1",
-						"Business City", "Business Zip", "Business Country", "Primary Contact", "Primary Contact Phone",
-						"Primary Contact Email", "Secondary Contact", "Secondary Contact Phone",
-						"Secondary Contact Email", "Services", "Services Other" });
+						"Business City", "Business Zip", "Business Country", "Billing Name", "Billing Address",
+						"Billing Address 1", "Billing City", "Billing Zip", "Billing Country", "Business Hours Contact",
+						"Business Hours Contact Phone", "Business Hours Contact Email", "After Hours Contact",
+						"After Hours Contact Phone", "After Hours Contact Email", "Services", "Services Other" });
 
 				for (Profile profile : profiles) {
 					objectArray.add(new String[] { profile.name, profile.address, profile.address1, profile.city,
-							profile.zip, profile.country, profile.primaryNameFirst + " " + profile.primaryNameLast,
-							profile.primaryPhone, profile.primaryEmail,
-							profile.secondaryNameFirst + " " + profile.secondaryNameLast, profile.secondaryPhone,
-							profile.secondaryEmail, profile.services, profile.servicesOther });
+							profile.zip, profile.country, profile.billname, profile.billaddress, profile.billaddress1,
+							profile.billcity, profile.billzip, profile.billcountry,
+							profile.primaryNameFirst + " " + profile.primaryNameLast, profile.primaryPhone,
+							profile.primaryEmail, profile.secondaryNameFirst + " " + profile.secondaryNameLast,
+							profile.secondaryPhone, profile.secondaryEmail, profile.services, profile.servicesOther });
 				}
 
 				outputFile.writeAll(objectArray);
@@ -1200,11 +1205,12 @@ public class Application extends Controller {
 		profile.userkey = AccessMiddleware.getSessionUserKey();
 		profile.save();
 
-		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "saveProfile()", "New Profile created and saved", AccessMiddleware.getSessionID());
-		
+		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "saveProfile()",
+				"New Profile created and saved", AccessMiddleware.getSessionID());
+
 		return ok(profilecreated.render());
 	}
-	
+
 	public void sendMailEMDenied(User user) throws EmailException, MalformedURLException {
 		String subject = Messages.get("mail.deny.subject");
 
@@ -1232,7 +1238,7 @@ public class Application extends Controller {
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
 	}
-	
+
 	public Result updateProfileAdmin(String name) {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
@@ -1279,8 +1285,9 @@ public class Application extends Controller {
 			profile.dateUpdated = new Date();
 			profile.save();
 
-			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "updateProfileAdmin()", "Profile updated by Admin", AccessMiddleware.getSessionID());
-						
+			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile",
+					"updateProfileAdmin()", "Profile updated by Admin", AccessMiddleware.getSessionID());
+
 			return ok(profilesaved.render("admin"));
 		}
 
@@ -1328,8 +1335,9 @@ public class Application extends Controller {
 		profile.dateUpdated = new Date();
 		profile.save();
 
-		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "updateProfile()", "Profile updated by user", AccessMiddleware.getSessionID());
-		
+		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile",
+				"updateProfile()", "Profile updated by user", AccessMiddleware.getSessionID());
+
 		return ok(profilesaved.render("user"));
 	}
 
@@ -1441,9 +1449,10 @@ public class Application extends Controller {
 		user.updatedBy = AccessMiddleware.getSessionEmail();
 		user.dateUpdated = new Date();
 		user.save();
-		
-		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User Account", "updateUserAccount()", "User account updated", AccessMiddleware.getSessionID());
-		
+
+		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User Account",
+				"updateUserAccount()", "User account updated", AccessMiddleware.getSessionID());
+
 		return ok(saveduser.render());
 	}
 
@@ -1459,5 +1468,5 @@ public class Application extends Controller {
 			return ok(usermaint.render(form(Login.class)));
 		}
 	}
-	
+
 }
