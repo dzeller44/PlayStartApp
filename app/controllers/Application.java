@@ -986,7 +986,6 @@ public class Application extends Controller {
 
 						default:
 							return GO_HOME;
-
 						}
 					} else {
 						Logger.debug("Application.index() - No Role - Clearing invalid session credentials");
