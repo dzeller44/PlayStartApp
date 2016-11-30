@@ -45,14 +45,14 @@ Seq[Any](format.raw/*1.54*/("""
 				Name:</label>
 			<div class="item-cont">
 				<input class="large" type="text" name="fullname" required="required"
-					placeholder="Choose a user name..." /><span class="icon-place"></span>
+					placeholder="Enter the Admin's Name..." /><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-input">
 			<label class="title"><span class="required">*</span>Email:</label>
 			<div class="item-cont">
 				<input class="large" type="email" name="email" required="required"
-					placeholder="Enter your email..." /><span class="icon-place"></span>
+					placeholder="Enter the Admin's email..." /><span class="icon-place"></span>
 			</div>
 		</div>
 		<div class="element-input">
@@ -93,10 +93,10 @@ Seq[Any](format.raw/*1.54*/("""
 object createadmin extends createadmin_Scope0.createadmin
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 30 12:17:19 MST 2016
+                  DATE: Wed Nov 30 13:06:18 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/createadmin.scala.html
-                  HASH: 881fbd657683069a27f4d7e5c1d6c4d00b4c6eb4
-                  MATRIX: 788->1|935->53|963->56|981->66|1020->68|1048->70|2020->1016|2066->1053|2106->1055|2145->1066|2246->1140|2272->1157|2313->1177|2352->1188|2397->1203|2427->1206|2569->1321|2608->1339|2746->1447
+                  HASH: d38b35747d100f34610707a032f2aca33c4353bd
+                  MATRIX: 788->1|935->53|963->56|981->66|1020->68|1048->70|2031->1027|2077->1064|2117->1066|2156->1077|2257->1151|2283->1168|2324->1188|2363->1199|2408->1214|2438->1217|2580->1332|2619->1350|2757->1458
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|59->28|59->28|59->28|60->29|61->30|61->30|61->30|62->31|63->32|64->33|67->36|67->36|75->44
                   -- GENERATED --
               */
