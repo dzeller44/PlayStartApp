@@ -43,6 +43,8 @@ GET    /searchprofiles             controllers.Application.getAllProfiles()
 
 GET    /searchbyservice            controllers.Application.getProfilesByService(service: String)
 
+GET    /searchbycounty             controllers.Application.getProfilesByCounty(county: String)
+
 GET    /openprofile/:name          controllers.Application.openProfileAdmin(name: String)
 POST   /openprofile/:name          controllers.Application.updateProfileAdmin(name: String)
 

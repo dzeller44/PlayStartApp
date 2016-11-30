@@ -843,6 +843,23 @@ public class Application extends Controller {
 			return ok(searchprofiles.render(profiles, services));
 		}
 	}
+	
+	public Result getProfilesByCounty(String county) {
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
+			return ACCESS_DENIED;
+		} else {
+			// Find those profiles that contain the service...
+			List<Profile> profiles = null;
+			if (county.equals("All")) {
+				profiles = Profile.find.all();
+			} else {
+				profiles = Profile.findAllByCounty(county);
+			}
+			List<Service> services = Service.find.all();
+			return ok(searchprofiles.render(profiles, services));
+		}
+	}
 
 	public Result getProfilesByService(String service) {
 		// Check Role...

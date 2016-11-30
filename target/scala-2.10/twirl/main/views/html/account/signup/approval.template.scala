@@ -69,7 +69,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object approval extends approval_Scope0.approval
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 30 12:17:19 MST 2016
+                  DATE: Wed Nov 30 13:59:20 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/approval.scala.html
                   HASH: 6e735046d46551d407c7461d986fe75462e43951
                   MATRIX: 848->1|861->7|900->9|931->14|1368->424|1420->455

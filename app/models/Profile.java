@@ -146,9 +146,9 @@ public class Profile extends Model {
 	}
 
 	/**
-	 * Retrieves a profile by unique profile key.
+	 * Retrieves a profile by unique profile key
 	 *
-	 * @param unique profile key.
+	 * @param unique profile key
 	 * @return a profile if the unique profile key is found, null otherwise.
 	 */
 	public static Profile findByProfileKey(String profileKey) {
@@ -156,9 +156,9 @@ public class Profile extends Model {
 	}
 	
 	/**
-	 * Retrieves a profile by unique user key.
+	 * Retrieves a profile by unique user key
 	 *
-	 * @param unique user key.
+	 * @param unique user key
 	 * @return a profile if the unique user key is found, null otherwise.
 	 */
 	public static List<Profile> findAllByUserKey(String userkey) {
@@ -168,11 +168,19 @@ public class Profile extends Model {
 	/**
 	 * Retrieves profiles that contain a service.
 	 *
-	 * @param servcice.
+	 * @param service
 	 * @return profiles if the service is found, null otherwise.
 	 */
 	public static List<Profile> findAllByService(String service) {
 		return find.where().contains("services", service).findList();
+	}
+	
+	/**
+	 * @param county
+	 * @return profiles if the county is found, null otherwise.
+	 */
+	public static List<Profile> findAllByCounty(String county) {
+		return find.where().eq("county", county).findList();
 	}
 	
 }

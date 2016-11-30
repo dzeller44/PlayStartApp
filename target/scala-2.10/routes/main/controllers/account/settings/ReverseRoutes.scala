@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 30 12:17:18 MST 2016
+// @DATE:Wed Nov 30 13:59:57 MST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -10,29 +10,29 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:78
+// @LINE:80
 package controllers.account.settings {
 
-  // @LINE:81
+  // @LINE:83
   class ReverseEmail(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:99
+    // @LINE:101
     def validateEmail(token:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "email/" + implicitly[PathBindable[String]].unbind("token", dynamicString(token)))
     }
   
-    // @LINE:82
+    // @LINE:84
     def runEmail(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "settings/email")
     }
   
-    // @LINE:81
+    // @LINE:83
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "settings/email")
@@ -40,20 +40,20 @@ package controllers.account.settings {
   
   }
 
-  // @LINE:79
+  // @LINE:81
   class ReversePassword(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:79
+    // @LINE:81
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "settings/password")
     }
   
-    // @LINE:80
+    // @LINE:82
     def runPassword(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "settings/password")
@@ -61,14 +61,14 @@ package controllers.account.settings {
   
   }
 
-  // @LINE:78
+  // @LINE:80
   class ReverseIndex(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:78
+    // @LINE:80
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "settings")

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Wed Nov 30 12:17:18 MST 2016
+// @DATE:Wed Nov 30 13:59:57 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -11,11 +11,11 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:65
+// @LINE:67
 package controllers.account.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:65
+  // @LINE:67
   class ReverseSignup(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.account.javascript {
     }
 
   
-    // @LINE:66
+    // @LINE:68
     def saveAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Signup.saveAdmin",
       """
@@ -33,7 +33,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:85
+    // @LINE:87
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Signup.create",
       """
@@ -43,7 +43,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:65
+    // @LINE:67
     def createAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Signup.createAdmin",
       """
@@ -53,7 +53,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:89
+    // @LINE:91
     def confirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Signup.confirm",
       """
@@ -63,7 +63,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:86
+    // @LINE:88
     def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Signup.save",
       """
@@ -75,7 +75,7 @@ package controllers.account.javascript {
   
   }
 
-  // @LINE:73
+  // @LINE:75
   class ReverseReset(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -83,7 +83,7 @@ package controllers.account.javascript {
     }
 
   
-    // @LINE:96
+    // @LINE:98
     def reset: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.reset",
       """
@@ -93,7 +93,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:97
+    // @LINE:99
     def runReset: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.runReset",
       """
@@ -103,7 +103,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:74
+    // @LINE:76
     def runResetAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.runResetAdmin",
       """
@@ -113,7 +113,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:73
+    // @LINE:75
     def resetAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.resetAdmin",
       """
@@ -123,7 +123,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:92
+    // @LINE:94
     def ask: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.ask",
       """
@@ -133,7 +133,7 @@ package controllers.account.javascript {
       """
     )
   
-    // @LINE:93
+    // @LINE:95
     def runAsk: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.account.Reset.runAsk",
       """

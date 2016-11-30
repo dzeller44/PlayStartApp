@@ -42,7 +42,10 @@ Seq[Any](format.raw/*1.80*/("""
 			$(".selectServices").change(function() """),format.raw/*11.43*/("""{"""),format.raw/*11.44*/("""
 				"""),format.raw/*12.5*/("""getByServices();
 			"""),format.raw/*13.4*/("""}"""),format.raw/*13.5*/(""");
-		"""),format.raw/*14.3*/("""}"""),format.raw/*14.4*/(""");
+			$(".selectCounty").change(function() """),format.raw/*14.41*/("""{"""),format.raw/*14.42*/("""
+				"""),format.raw/*15.5*/("""getByCounty();
+			"""),format.raw/*16.4*/("""}"""),format.raw/*16.5*/(""");
+		"""),format.raw/*17.3*/("""}"""),format.raw/*17.4*/(""");
 	</script>
 	<section id="displayResults" style="padding: 30px;">
 		<div class="table-responsive">
@@ -54,10 +57,88 @@ Seq[Any](format.raw/*1.80*/("""
 						<select class="selectServices" name="selectServices" id="selectServices">
 							<option selected="selected" value="" disabled="disabled">--- Filter By Service Type ---</option>
 							<option value="All">All</option>
-							"""),_display_(/*26.9*/for(service <- servicesList) yield /*26.37*/ {_display_(Seq[Any](format.raw/*26.39*/("""
-								"""),format.raw/*27.9*/("""<option value=""""),_display_(/*27.25*/service/*27.32*/.name),format.raw/*27.37*/("""">"""),_display_(/*27.40*/service/*27.47*/.name),format.raw/*27.52*/("""</option>
-							""")))}),format.raw/*28.9*/("""
-						"""),format.raw/*29.7*/("""</select>
+							"""),_display_(/*29.9*/for(service <- servicesList) yield /*29.37*/ {_display_(Seq[Any](format.raw/*29.39*/("""
+								"""),format.raw/*30.9*/("""<option value=""""),_display_(/*30.25*/service/*30.32*/.name),format.raw/*30.37*/("""">"""),_display_(/*30.40*/service/*30.47*/.name),format.raw/*30.52*/("""</option>
+							""")))}),format.raw/*31.9*/("""
+						"""),format.raw/*32.7*/("""</select>
+						<i></i><span class="iconPlacement"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="searchProfileText"> - OR - </div>
+		<div class="element-select">
+			<div class="selectDropdownField">
+				<div class="large">
+					<span>
+						<select class="selectCounty" name="selectCounty" id="selectCounty">
+							<option selected="selected" value="" disabled="disabled">--- Filter By County ---</option>
+							<option value="All">All</option>
+							<option value="Adams">Adams</option>
+							<option value="Alamosa">Alamosa</option>
+							<option value="Arapahoe">Arapahoe</option>
+							<option value="Archuleta">Archuleta</option>
+							<option value="Baca">Baca</option>
+							<option value="Bent">Bent</option>
+							<option value="Boulder">Boulder</option>
+							<option value="Broomfield">Broomfield</option>
+							<option value="Chaffee">Chaffee</option>
+							<option value="Cheyenne">Cheyenne</option>
+							<option value="Clear Creek">Clear Creek</option>
+							<option value="Conejos">Conejos</option>
+							<option value="Costilla">Costilla</option>
+							<option value="Crowley">Crowley</option>
+							<option value="Custer">Custer</option>
+							<option value="Delta">Delta</option>
+							<option value="Denver">Denver</option>
+							<option value="Dolores">Dolores</option>
+							<option value="Douglas">Douglas</option>
+							<option value="Eagle">Eagle</option>
+							<option value="Elbert">Elbert</option>
+							<option value="El Paso">El Paso</option>
+							<option value="Fremont">Fremont</option>
+							<option value="Garfield">Garfield</option>
+							<option value="Gilpin">Gilpin</option>
+							<option value="Grand">Grand</option>
+							<option value="Gunnison">Gunnison</option>
+							<option value="Hinsdale">Hinsdale</option>
+							<option value="Huerfano">Huerfano</option>
+							<option value="Jackson">Jackson</option>
+							<option value="Jefferson">Jefferson</option>
+							<option value="Kiowa">Kiowa</option>
+							<option value="Kit Carson">Kit Carson</option>
+							<option value="Lake">Lake</option>
+							<option value="La Plata">La Plata</option>
+							<option value="Larimer">Larimer</option>
+							<option value="Las Animas">Las Animas</option>
+							<option value="Lincoln">Lincoln</option>
+							<option value="Logan">Logan</option>
+							<option value="Mesa">Mesa</option>
+							<option value="Mineral">Mineral</option>
+							<option value="Moffat">Moffat</option>
+							<option value="Montezuma">Montezuma</option>
+							<option value="Montrose">Montrose</option>
+							<option value="Morgan">Morgan</option>
+							<option value="Otero">Otero</option>
+							<option value="Ouray">Ouray</option>
+							<option value="Park">Park</option>
+							<option value="Phillips">Phillips</option>
+							<option value="Pitkin">Pitkin</option>
+							<option value="Prowers">Prowers</option>
+							<option value="Pueblo">Pueblo</option>
+							<option value="Rio Blanco">Rio Blanco</option>
+							<option value="Rio Grande">Rio Grande</option>
+							<option value="Routt">Routt</option>
+							<option value="Saguache">Saguache</option>
+							<option value="San Juan">San Juan</option>
+							<option value="San Miguel">San Miguel</option>
+							<option value="Sedgwick">Sedgwick</option>
+							<option value="Summit">Summit</option>
+							<option value="Teller">Teller</option>
+							<option value="Washington">Washington</option>
+							<option value="Weld">Weld</option>
+							<option value="Yuma">Yuma</option>
+						</select>
 						<i></i><span class="iconPlacement"></span>
 					</span>
 				</div>
@@ -74,16 +155,16 @@ Seq[Any](format.raw/*1.80*/("""
 				</tr>
 			</thead>
 			<tbody>
-				"""),_display_(/*46.6*/for(profile <- profilesList) yield /*46.34*/ {_display_(Seq[Any](format.raw/*46.36*/("""
-				"""),format.raw/*47.5*/("""<tr>
-					<td><a href="/openprofile/"""),_display_(/*48.33*/profile/*48.40*/.name),format.raw/*48.45*/("""">"""),_display_(/*48.48*/profile/*48.55*/.name),format.raw/*48.60*/("""</a></td>
-					<td><a href="/openprofile/"""),_display_(/*49.33*/profile/*49.40*/.name),format.raw/*49.45*/("""">"""),_display_(/*49.48*/profile/*49.55*/.primaryNameFirst),format.raw/*49.72*/(""" """),_display_(/*49.74*/profile/*49.81*/.primaryNameLast),format.raw/*49.97*/("""</a></td>
-					<td><a href="/openprofile/"""),_display_(/*50.33*/profile/*50.40*/.name),format.raw/*50.45*/("""">"""),_display_(/*50.48*/profile/*50.55*/.primaryPhone),format.raw/*50.68*/("""</a></td>
-					<td><a href="/openprofile/"""),_display_(/*51.33*/profile/*51.40*/.name),format.raw/*51.45*/("""">"""),_display_(/*51.48*/profile/*51.55*/.services),format.raw/*51.64*/("""</a></td>
-					<td><a href="/openprofile/"""),_display_(/*52.33*/profile/*52.40*/.name),format.raw/*52.45*/("""">"""),_display_(/*52.48*/profile/*52.55*/.county),format.raw/*52.62*/("""</a></td>
+				"""),_display_(/*127.6*/for(profile <- profilesList) yield /*127.34*/ {_display_(Seq[Any](format.raw/*127.36*/("""
+				"""),format.raw/*128.5*/("""<tr>
+					<td><a href="/openprofile/"""),_display_(/*129.33*/profile/*129.40*/.name),format.raw/*129.45*/("""">"""),_display_(/*129.48*/profile/*129.55*/.name),format.raw/*129.60*/("""</a></td>
+					<td><a href="/openprofile/"""),_display_(/*130.33*/profile/*130.40*/.name),format.raw/*130.45*/("""">"""),_display_(/*130.48*/profile/*130.55*/.primaryNameFirst),format.raw/*130.72*/(""" """),_display_(/*130.74*/profile/*130.81*/.primaryNameLast),format.raw/*130.97*/("""</a></td>
+					<td><a href="/openprofile/"""),_display_(/*131.33*/profile/*131.40*/.name),format.raw/*131.45*/("""">"""),_display_(/*131.48*/profile/*131.55*/.primaryPhone),format.raw/*131.68*/("""</a></td>
+					<td><a href="/openprofile/"""),_display_(/*132.33*/profile/*132.40*/.name),format.raw/*132.45*/("""">"""),_display_(/*132.48*/profile/*132.55*/.services),format.raw/*132.64*/("""</a></td>
+					<td><a href="/openprofile/"""),_display_(/*133.33*/profile/*133.40*/.name),format.raw/*133.45*/("""">"""),_display_(/*133.48*/profile/*133.55*/.county),format.raw/*133.62*/("""</a></td>
 				</tr>
-				""")))}),format.raw/*54.6*/(""" 
-			"""),format.raw/*55.4*/("""</tbody>
+				""")))}),format.raw/*135.6*/(""" 
+			"""),format.raw/*136.4*/("""</tbody>
 		</table>
 		</div>
 		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export This View</a></div>	
@@ -108,11 +189,11 @@ Seq[Any](format.raw/*1.80*/("""
 object searchprofiles extends searchprofiles_Scope0.searchprofiles
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 30 12:40:42 MST 2016
+                  DATE: Wed Nov 30 14:03:58 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/searchprofiles.scala.html
-                  HASH: aefa4e3bff73d33afa9ea5ace28f75b3b169ce49
-                  MATRIX: 810->1|983->79|1013->84|1031->94|1070->96|1101->101|1141->115|1155->121|1215->161|1292->212|1306->218|1371->263|1447->313|1461->319|1512->350|1643->454|1671->455|1703->460|1804->533|1833->534|1866->540|1914->561|1942->562|1975->568|2003->569|2512->1052|2556->1080|2596->1082|2633->1092|2676->1108|2692->1115|2718->1120|2748->1123|2764->1130|2790->1135|2839->1154|2874->1162|3278->1540|3322->1568|3362->1570|3395->1576|3460->1614|3476->1621|3502->1626|3532->1629|3548->1636|3574->1641|3644->1684|3660->1691|3686->1696|3716->1699|3732->1706|3770->1723|3799->1725|3815->1732|3852->1748|3922->1791|3938->1798|3964->1803|3994->1806|4010->1813|4044->1826|4114->1869|4130->1876|4156->1881|4186->1884|4202->1891|4232->1900|4302->1943|4318->1950|4344->1955|4374->1958|4390->1965|4418->1972|4475->1999|4508->2005
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|40->9|40->9|41->10|42->11|42->11|43->12|44->13|44->13|45->14|45->14|57->26|57->26|57->26|58->27|58->27|58->27|58->27|58->27|58->27|58->27|59->28|60->29|77->46|77->46|77->46|78->47|79->48|79->48|79->48|79->48|79->48|79->48|80->49|80->49|80->49|80->49|80->49|80->49|80->49|80->49|80->49|81->50|81->50|81->50|81->50|81->50|81->50|82->51|82->51|82->51|82->51|82->51|82->51|83->52|83->52|83->52|83->52|83->52|83->52|85->54|86->55
+                  HASH: 50ca5fe5aeb4bf2a7ee75d1177272238a930dbd2
+                  MATRIX: 810->1|983->79|1013->84|1031->94|1070->96|1101->101|1141->115|1155->121|1215->161|1292->212|1306->218|1371->263|1447->313|1461->319|1512->350|1643->454|1671->455|1703->460|1804->533|1833->534|1866->540|1914->561|1942->562|2014->606|2043->607|2076->613|2122->632|2150->633|2183->639|2211->640|2720->1123|2764->1151|2804->1153|2841->1163|2884->1179|2900->1186|2926->1191|2956->1194|2972->1201|2998->1206|3047->1225|3082->1233|7099->5223|7144->5251|7185->5253|7219->5259|7285->5297|7302->5304|7329->5309|7360->5312|7377->5319|7404->5324|7475->5367|7492->5374|7519->5379|7550->5382|7567->5389|7606->5406|7636->5408|7653->5415|7691->5431|7762->5474|7779->5481|7806->5486|7837->5489|7854->5496|7889->5509|7960->5552|7977->5559|8004->5564|8035->5567|8052->5574|8083->5583|8154->5626|8171->5633|8198->5638|8229->5641|8246->5648|8275->5655|8333->5682|8367->5688
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|40->9|40->9|41->10|42->11|42->11|43->12|44->13|44->13|45->14|45->14|46->15|47->16|47->16|48->17|48->17|60->29|60->29|60->29|61->30|61->30|61->30|61->30|61->30|61->30|61->30|62->31|63->32|158->127|158->127|158->127|159->128|160->129|160->129|160->129|160->129|160->129|160->129|161->130|161->130|161->130|161->130|161->130|161->130|161->130|161->130|161->130|162->131|162->131|162->131|162->131|162->131|162->131|163->132|163->132|163->132|163->132|163->132|163->132|164->133|164->133|164->133|164->133|164->133|164->133|166->135|167->136
                   -- GENERATED --
               */
           

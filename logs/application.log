@@ -1,50 +1,15 @@
-2016-11-30 12:17:55,725 [INFO] from play.core.server.NettyServer in pool-6-thread-6 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-11-30 12:18:01,962 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:18:01,976 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-30 12:18:02,758 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:18:04,082 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-11-30 12:20:01,261 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
-2016-11-30 12:20:01,441 [WARN] from application in application-akka.actor.default-dispatcher-11 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:20:01,442 [INFO] from application in application-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2016-11-30 12:20:01,449 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-11 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:20:02,020 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-11 - Application started (Dev)
-2016-11-30 12:21:15,216 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
-2016-11-30 12:21:15,337 [WARN] from application in application-akka.actor.default-dispatcher-11 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:21:15,347 [INFO] from application in application-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2016-11-30 12:21:15,356 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-11 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:21:15,838 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-11 - Application started (Dev)
-2016-11-30 12:22:52,691 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2016-11-30 12:22:52,826 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:22:52,826 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2016-11-30 12:22:52,844 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:22:53,301 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2016-11-30 12:24:51,405 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
-2016-11-30 12:24:51,522 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:24:51,522 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
-2016-11-30 12:24:51,530 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:24:51,949 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2016-11-30 12:32:05,583 [INFO] from application in application-akka.actor.default-dispatcher-11 - Shutting down connection pool.
-2016-11-30 12:32:05,658 [WARN] from application in application-akka.actor.default-dispatcher-11 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:32:05,660 [INFO] from application in application-akka.actor.default-dispatcher-11 - Creating Pool for datasource 'default'
-2016-11-30 12:32:05,669 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-11 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:32:06,102 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-11 - Application started (Dev)
-2016-11-30 12:39:39,922 [INFO] from application in application-akka.actor.default-dispatcher-29 - Shutting down connection pool.
-2016-11-30 12:39:40,001 [WARN] from application in application-akka.actor.default-dispatcher-29 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:39:40,001 [INFO] from application in application-akka.actor.default-dispatcher-29 - Creating Pool for datasource 'default'
-2016-11-30 12:39:40,008 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-29 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:39:40,417 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-29 - Application started (Dev)
-2016-11-30 12:40:45,045 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
-2016-11-30 12:40:45,173 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:40:45,175 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
-2016-11-30 12:40:45,186 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:40:45,599 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
-2016-11-30 12:43:28,243 [INFO] from application in application-akka.actor.default-dispatcher-10 - Shutting down connection pool.
-2016-11-30 12:43:28,308 [WARN] from application in application-akka.actor.default-dispatcher-10 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 12:43:28,308 [INFO] from application in application-akka.actor.default-dispatcher-10 - Creating Pool for datasource 'default'
-2016-11-30 12:43:28,317 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-10 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 12:43:28,695 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-10 - Application started (Dev)
-2016-11-30 13:06:20,267 [INFO] from application in application-akka.actor.default-dispatcher-72 - Shutting down connection pool.
-2016-11-30 13:06:20,371 [WARN] from application in application-akka.actor.default-dispatcher-72 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
-2016-11-30 13:06:20,372 [INFO] from application in application-akka.actor.default-dispatcher-72 - Creating Pool for datasource 'default'
-2016-11-30 13:06:20,389 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-72 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
-2016-11-30 13:06:20,939 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-72 - Application started (Dev)
+2016-11-30 14:00:06,506 [INFO] from play.core.server.NettyServer in pool-65-thread-2 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-11-30 14:00:11,798 [WARN] from application in ForkJoinPool-2-worker-1 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-30 14:00:11,807 [INFO] from application in ForkJoinPool-2-worker-1 - Creating Pool for datasource 'default'
+2016-11-30 14:00:12,542 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-2-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-30 14:00:13,682 [INFO] from play.api.Play in ForkJoinPool-2-worker-1 - Application started (Dev)
+2016-11-30 14:01:21,688 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2016-11-30 14:01:21,799 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-30 14:01:21,801 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2016-11-30 14:01:21,817 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-30 14:01:22,298 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-11-30 14:04:00,605 [INFO] from application in application-akka.actor.default-dispatcher-5 - Shutting down connection pool.
+2016-11-30 14:04:00,729 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-30 14:04:00,730 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
+2016-11-30 14:04:00,746 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-30 14:04:01,372 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)

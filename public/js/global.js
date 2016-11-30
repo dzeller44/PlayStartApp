@@ -53,7 +53,6 @@ function joinServices() {
 	console.log("finalValues = " + finalValues);
 	document.getElementById("services").value = finalValues;
 	window.location.href = "/saveprofile?services=" + finalValues;
-
 }
 
 function getByServices() {
@@ -61,6 +60,13 @@ function getByServices() {
 	var e = document.getElementById("selectServices");
 	var service = e.options[e.selectedIndex].value;
 	console.log("service = " + service);
-	window.location.href = "/searchbyservice?service=" + service;
-	
+	window.location.href = "/searchbyservice?service=" + service;	
+}
+
+function getByCounty() {
+	// Get profiles by county...
+	var e = document.getElementById("selectCounty");
+	var fieldValue = e.options[e.selectedIndex].value;
+	console.log("county = " + fieldValue);
+	window.location.href = "/searchbycounty?county=" + fieldValue;	
 }
