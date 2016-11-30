@@ -13,3 +13,13 @@
 2016-11-30 14:04:00,730 [INFO] from application in application-akka.actor.default-dispatcher-5 - Creating Pool for datasource 'default'
 2016-11-30 14:04:00,746 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-5 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
 2016-11-30 14:04:01,372 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-11-30 14:06:29,617 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2016-11-30 14:06:29,715 [WARN] from application in application-akka.actor.default-dispatcher-6 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-30 14:06:29,715 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2016-11-30 14:06:29,725 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-30 14:06:30,170 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2016-11-30 14:29:38,416 [INFO] from application in application-akka.actor.default-dispatcher-19 - Shutting down connection pool.
+2016-11-30 14:29:38,535 [WARN] from application in application-akka.actor.default-dispatcher-19 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-11-30 14:29:38,537 [INFO] from application in application-akka.actor.default-dispatcher-19 - Creating Pool for datasource 'default'
+2016-11-30 14:29:38,549 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-19 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-11-30 14:29:39,008 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-19 - Application started (Dev)
