@@ -43,6 +43,12 @@ public class User extends Model {
 
 	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date dateCreation;
+	
+	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	public Date datePasswordRemind;
+	
+	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	public Date dateRemind;
 
 	@Formats.NonEmpty
 	public Boolean validated = false;

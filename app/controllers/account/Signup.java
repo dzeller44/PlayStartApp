@@ -28,6 +28,7 @@ import views.html.admin.createdadmin;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
@@ -117,6 +118,19 @@ public class Signup extends Controller {
 				user.role = RoleType.UNDEFINED;
 				break;
 			}
+			// Create reminder dates...
+			// Update account...
+			Calendar cal = null;
+			Date result = null;
+			cal = Calendar.getInstance();
+			cal.add(Calendar.MONTH, 6);
+			result = cal.getTime();
+			user.dateRemind = result;
+			// Password...
+			cal = Calendar.getInstance();
+			cal.add(Calendar.MONTH, 3);
+			result = cal.getTime();
+			user.datePasswordRemind = result;
 			user.save();
 
 			// if user.role is "manager" set approved to "N"

@@ -12,6 +12,8 @@ reset=Reset
 cancel=Cancel
 submit=Submit
 
+main.email.address=co-assist@state.co.us
+
 account.not.validated.check.mail=Account not validated. Check your emails.
 account.successfully.validated=Account successfully validated
 account.settings.email.successful=Email successfully validated ({0})

@@ -52,6 +52,7 @@ create table profile (
   userkey                   varchar(255),
   updated_by                varchar(255),
   date_updated              datetime(6),
+  date_remind               datetime(6),
   constraint pk_profile primary key (id))
 ;
 
@@ -151,6 +152,8 @@ create table user (
   confirmation_token        varchar(255),
   password_hash             varchar(255),
   date_creation             datetime(6),
+  date_password_remind      datetime(6),
+  date_remind               datetime(6),
   validated                 tinyint(1) default 0,
   role                      integer,
   approved                  varchar(255),

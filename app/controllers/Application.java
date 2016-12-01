@@ -8,10 +8,12 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Calendar;
 import javax.inject.Inject;
 import org.apache.commons.mail.EmailException;
 import com.opencsv.CSVWriter;
@@ -262,6 +264,8 @@ public class Application extends Controller {
 		public String servicesOther;
 
 		public Date dateCreation;
+		
+		public Date dateRemind;
 
 		private boolean isBlank(String input) {
 			return input == null || input.isEmpty() || input.trim().isEmpty();
@@ -1218,7 +1222,14 @@ public class Application extends Controller {
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
 		profile.profilekey = profile.createProfileKey();
-		profile.userkey = AccessMiddleware.getSessionUserKey();
+		profile.userkey = AccessMiddleware.getSessionUserKey();		
+		// Reminder date - 6 months out...
+		//System.out.println("LocalDateTime: " + LocalDateTime.now().plusMonths(6));
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.MONTH, 6);
+		Date result = cal.getTime();
+		//System.out.println("Date: " + result);
+		profile.dateRemind = result;		
 		profile.save();
 
 		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "saveProfile()",
