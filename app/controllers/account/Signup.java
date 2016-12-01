@@ -28,6 +28,8 @@ import views.html.admin.createdadmin;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
@@ -124,7 +126,9 @@ public class Signup extends Controller {
 			Date result = null;
 			cal = Calendar.getInstance();
 			cal.add(Calendar.MONTH, 6);
-			result = cal.getTime();
+			result = cal.getTime();			
+			//DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+			//String dateOnly = dateFormat.format(result);			
 			user.dateRemind = result;
 			// Password...
 			cal = Calendar.getInstance();

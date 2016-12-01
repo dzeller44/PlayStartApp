@@ -44,10 +44,10 @@ public class User extends Model {
 	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date dateCreation;
 	
-	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	@Formats.DateTime(pattern = "yyyy-MM-dd")
 	public Date datePasswordRemind;
 	
-	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	@Formats.DateTime(pattern = "yyyy-MM-dd")
 	public Date dateRemind;
 
 	@Formats.NonEmpty
@@ -74,39 +74,6 @@ public class User extends Model {
 
 	// -- Queries (long id, user.class)
 	public static Model.Finder<Long, User> find = new Model.Finder<Long, User>(Long.class, User.class);
-
-	/**
-	 * Retrieve a user from an email.
-	 *
-	 * @param email
-	 *            email to search
-	 * @return a user
-	 */
-	public static User findByEmail(String email) {
-		return find.where().eq("email", email).findUnique();
-	}
-
-	/**
-	 * Retrieve a user from a fullname.
-	 *
-	 * @param fullname
-	 *            Full name
-	 * @return a user
-	 */
-	public static User findByFullname(String fullname) {
-		return find.where().eq("fullname", fullname).findUnique();
-	}
-
-	/**
-	 * Retrieves a user from a confirmation token.
-	 *
-	 * @param token
-	 *            the confirmation token to use.
-	 * @return a user if the confirmation token is found, null otherwise.
-	 */
-	public static User findByConfirmationToken(String token) {
-		return find.where().eq("confirmationToken", token).findUnique();
-	}
 
 	/**
 	 * Authenticate a User, from a email and clear password.
@@ -174,7 +141,45 @@ public class User extends Model {
 
 		return userKey;
 	}
+	
+	/**
+	 * Retrieve a user from an email.
+	 *
+	 * @param email
+	 *            email to search
+	 * @return a user
+	 */
+	public static User findByEmail(String email) {
+		return find.where().eq("email", email).findUnique();
+	}
 
+
+	/**
+	 * Retrieves a user from a confirmation token.
+	 *
+	 * @param token
+	 *            the confirmation token to use.
+	 * @return a user if the confirmation token is found, null otherwise.
+	 */
+	public static User findByConfirmationToken(String token) {
+		return find.where().eq("confirmationToken", token).findUnique();
+	}
+	
+	/**
+	 * Retrieve a user from a fullname.
+	 *
+	 * @param fullname
+	 *            Full name
+	 * @return a user
+	 */
+	public static User findByFullname(String fullname) {
+		return find.where().eq("fullname", fullname).findUnique();
+	}
+
+	public static List<User> findByRemindDate(Date remindDate) {
+		return find.where().eq("dateRemind", remindDate).findList();
+	}
+	
 	/**
 	 * Retrieves a user by unique user key.
 	 *

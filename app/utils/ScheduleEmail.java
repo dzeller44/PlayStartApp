@@ -76,6 +76,24 @@ public final class ScheduleEmail {
 
 					long startTime = System.currentTimeMillis();
 					long endTime = 0;
+					
+					// Get today's date, add 6 months...
+					// Search users (and profiles????) based on that date...
+					// Get list of users, grab email...
+					// Create email per user (or one email with BCC???)...
+					Calendar cal = Calendar.getInstance();
+					cal.add(Calendar.MONTH, 6);
+					Date result = cal.getTime();
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 
 					String cid = "1234";
 					Email email = new Email();
