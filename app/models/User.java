@@ -10,6 +10,8 @@ import play.Logger;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -32,7 +34,7 @@ public class User extends Model {
 	@Formats.NonEmpty
 	@Column(unique = true)
 	public String fullname;
-	
+
 	public String agency;
 
 	public String confirmationToken;
@@ -43,10 +45,10 @@ public class User extends Model {
 
 	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date dateCreation;
-	
+
 	@Formats.DateTime(pattern = "yyyy-MM-dd")
 	public Date datePasswordRemind;
-	
+
 	@Formats.DateTime(pattern = "yyyy-MM-dd")
 	public Date dateRemind;
 
@@ -66,9 +68,9 @@ public class User extends Model {
 	@Constraints.Required
 	@Formats.NonEmpty
 	public String userkey;
-	
+
 	public String updatedBy;
-	
+
 	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date dateUpdated;
 
@@ -141,7 +143,7 @@ public class User extends Model {
 
 		return userKey;
 	}
-	
+
 	/**
 	 * Retrieve a user from an email.
 	 *
@@ -153,7 +155,6 @@ public class User extends Model {
 		return find.where().eq("email", email).findUnique();
 	}
 
-
 	/**
 	 * Retrieves a user from a confirmation token.
 	 *
@@ -164,7 +165,7 @@ public class User extends Model {
 	public static User findByConfirmationToken(String token) {
 		return find.where().eq("confirmationToken", token).findUnique();
 	}
-	
+
 	/**
 	 * Retrieve a user from a fullname.
 	 *
@@ -177,9 +178,31 @@ public class User extends Model {
 	}
 
 	public static List<User> findByRemindDate(Date remindDate) {
-		return find.where().eq("dateRemind", remindDate).findList();
+		// Need to search for a date range...
+		// Create a day before and a day after and use as parameters...
+		Calendar cal = null;
+		// Before date...
+		cal = Calendar.getInstance();
+		cal.setTime(remindDate);
+		cal.add(Calendar.DATE, -1);
+		Date beforeDate = cal.getTime();
+		System.out.println("beforeDate: " + beforeDate);
+		// After date...
+		// Date has changed by a day earlier...
+		// We need to add 2 days now to get day after the original remind
+		// date...
+		cal.add(Calendar.DATE, 2);
+		Date afterDate = cal.getTime();
+		System.out.println("afterDate: " + afterDate);
+
+		// Query...
+		return find
+				.where()
+				.gt("dateRemind", beforeDate)
+				.lt("dateRemind", afterDate)
+				.findList();
 	}
-	
+
 	/**
 	 * Retrieves a user by unique user key.
 	 *
@@ -190,7 +213,7 @@ public class User extends Model {
 	public static User findByUserKey(String userKey) {
 		return find.where().eq("userkey", userKey).findUnique();
 	}
-	
+
 	public static List<User> findUnapprovedEM() {
 		return find.where().eq("approved", "N").findList();
 	}
@@ -232,17 +255,17 @@ public class User extends Model {
 	public void setRole(RoleType role) {
 		this.role = role;
 	}
-	
+
 	public String getRoleName(RoleType role) {
 		String roleToDisplay = role.getRoleTextName(role);
 		return roleToDisplay;
 	}
-	
+
 	public String getRoleNameString(String role) {
 		String roleToDisplay = RoleType.getRoleTextNameString(role);
 		return roleToDisplay;
 	}
-	
+
 	public String getFullname() {
 		return fullname;
 	}
@@ -258,6 +281,5 @@ public class User extends Model {
 	public void setUserkey(String userkey) {
 		this.userkey = userkey;
 	}
-
 
 }

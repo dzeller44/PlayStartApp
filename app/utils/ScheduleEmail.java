@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
@@ -14,6 +15,7 @@ import org.apache.commons.mail.EmailException;
 import com.google.inject.Singleton;
 
 import akka.actor.Cancellable;
+import models.User;
 import play.Configuration;
 import play.Logger;
 import play.Play;
@@ -83,10 +85,8 @@ public final class ScheduleEmail {
 					// Create email per user (or one email with BCC???)...
 					Calendar cal = Calendar.getInstance();
 					cal.add(Calendar.MONTH, 6);
-					Date result = cal.getTime();
-					
-					
-					
+					Date checkDate = cal.getTime();					
+					List<User> users = User.findByRemindDate(checkDate);
 					
 					
 					
