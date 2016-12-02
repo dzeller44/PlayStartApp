@@ -52,7 +52,7 @@ signup.valid.email=Invalid Email
 signup.email.confirmed=Success - your email has been confirmed and your account is activated.
 
 password.message=Password must be 8 characters, contain 1 UPPERCASE character, 1 lowercase character, 1 number, and 1 special character.
-password.pattern=(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$!%^&+=])(?=\\S+$).{8,}
+password.pattern=(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$!%^&+=])(?=\\S+$).{8,}
 
 resetpassword=Reset Password
 resetpassword.mailsent=An email has been sent to reset your password.  Please check your inbox.
@@ -88,6 +88,9 @@ mail.deny.message=CO-Assist <br> Your Emergency Manager account had been denied 
 
 mail.welcome.subject=Welcome to CO-Assist
 mail.welcome.message=Welcome to CO-Assist. <br> Your account is validated. Enjoy !
+
+mail.contact.subject=Message from CO-Assist
+mail.admin.address=coassist@gmail.com
 
 mail.reset.ask.subject=CO-Assist - New password
 # Cannot use You've unescaped here, as the single quote stops the {0}

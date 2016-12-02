@@ -144,7 +144,7 @@ public class Signup extends Controller {
 				user.save();
 				
 				//Replace with admin email, either shared inbox or database lookup
-				String admin = new String("admin@test.com");
+				String admin = Messages.get("mail.admin.address");
 				
 				sendMailAdminConfirm(admin, user.getEmail());
 				

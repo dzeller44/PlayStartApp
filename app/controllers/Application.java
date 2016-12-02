@@ -63,6 +63,8 @@ import views.html.admin.deletedprofile;
 import views.html.admin.profilesaved;
 import views.html.exportready;
 import views.html.user.user;
+import views.html.contact;
+import views.html.contactsent;
 
 /**
  * Login and Logout. User: yesnault
@@ -416,7 +418,7 @@ public class Application extends Controller {
 				// Need to make sure we have:
 				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1
 				// Number; 1 Special Character
-				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$!%^&+=])(?=\\S+$).{8,}";
+				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$!%^&+=])(?=\\S+$).{8,}";
 				if (!inputPassword.matches(passwordPattern)) {
 					return Messages.get("password.message");
 				}
@@ -1503,5 +1505,45 @@ public class Application extends Controller {
 			return ok(usermaint.render(form(Login.class)));
 		}
 	}
+	
+	public static class Contact {
+
+		public String name;
+
+		public String email;
+
+		public String message;
+
+
+	}
+
+	public Result contact() {
+			return ok(contact.render(form(Contact.class)));
+	}
+	
+	public Result contactSend() throws EmailException {
+		Form<Contact> contact = form(Contact.class).bindFromRequest();
+		
+		String name = contact.get().name;
+		String email = contact.get().email;
+		String message = contact.get().message;
+		
+		String subject = Messages.get("mail.contact.subject");
+		String messageToSend = new String ("Message from: " + name + "\n at email address: " + email + "\n Message: " + message);
+		
+		String to = Messages.get("mail.admin.address");
+		
+		//create and send the email to the admin shared mailbox, containing name, email and message from contact form.
+		//send a copy to the email entered in the contact form.
+		
+		Mail.Envelop envelop = new Mail.Envelop(subject, messageToSend, to);
+		Mail.Envelop envelop2 = new Mail.Envelop(subject, messageToSend, email);
+		Mail mailer = new Mail(mailerClient);
+	    mailer.sendMail(envelop);
+	    mailer.sendMail(envelop2);
+
+		return ok(contactsent.render());
+	}	
+	
 
 }
