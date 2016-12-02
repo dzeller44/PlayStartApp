@@ -54,7 +54,7 @@ public class Reset extends Controller {
 			else {
 				// Need to make sure we have:
 				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1 Number; 1 Special Character
-				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$!%^&+=])(?=\\S+$).{8,}";
+				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$!%^&+=])(?=\\S+$).{8,}";
 				if(!password.matches(passwordPattern)) {
 					return Messages.get("password.message");
 				}
