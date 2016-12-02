@@ -36,6 +36,7 @@ import play.i18n.Messages;
 import play.libs.mailer.MailerClient;
 import play.mvc.Controller;
 import play.mvc.Result;
+import utils.ScheduleEmail;
 import views.html.index;
 import views.html.auth;
 import views.html.accessdenied;
@@ -840,6 +841,9 @@ public class Application extends Controller {
 	}
 
 	public Result getAllProfiles() {
+		
+		ScheduleEmail.schedule();
+		
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;
