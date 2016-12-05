@@ -157,7 +157,7 @@ public final class ScheduleEmail {
 					endTime = System.currentTimeMillis();
 					long timeneeded = ((startTime - endTime) / 1000);
 					System.out.println("Time===>" + timeneeded);
-					schedule(); // Schedule for next time
+					scheduleReminder(); // Schedule for next time
 
 					AuditLog.setLog("Scheduler", "Scheduler Email", "ScheduleEmail", "schedule()",
 							"ScheduleEmail for 6 months reminder ran - time was " + timeneeded, "Server");

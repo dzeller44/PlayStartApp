@@ -841,9 +841,6 @@ public class Application extends Controller {
 	}
 
 	public Result getAllProfiles() {
-		
-		ScheduleEmail.schedule();
-		
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
 			return ACCESS_DENIED;

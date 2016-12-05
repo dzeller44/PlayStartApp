@@ -302,10 +302,22 @@
 				<input type="submit" value="Submit" />
 				<a href="/admin" class="buttonCancel">@Messages("goback")</a>
 			</div>
-		<div class="submit">
-			<a href="javascript:deleteProfile('@profile.name')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
-		</div>
-		<!-- This is needed for bottom shadow to appear... -->
+			<div class="submit">
+				<a href="javascript:deleteProfile('@profile.name')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
+			</div>
+			<div class="modifiedSection">
+				<table class="modifiedTable">
+					<tr>
+						<td>Modified By:</td>
+						<td>@profile.updatedBy</td>
+					</tr>
+					<tr>
+						<td>Last Modified:</td>
+						<td>@profile.dateUpdated</td>
+					</tr>
+				</table>
+			</div>
+			<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
 	</form>
 </section>
