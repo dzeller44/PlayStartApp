@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Mon Dec 05 10:44:24 MST 2016
+// @DATE:Mon Dec 05 15:51:40 MST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:109
+  // @LINE:107
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:109
+    // @LINE:107
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -63,7 +63,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:38
+    // @LINE:36
     def managerHome: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.managerHome",
       """
@@ -73,7 +73,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:62
+    // @LINE:60
     def updateUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.updateUser",
       """
@@ -83,7 +83,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:49
+    // @LINE:47
     def getProfilesByService: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getProfilesByService",
       """
@@ -93,7 +93,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:70
+    // @LINE:68
     def openUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openUser",
       """
@@ -103,7 +103,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:47
+    // @LINE:45
     def getAllProfiles: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getAllProfiles",
       """
@@ -113,7 +113,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:41
+    // @LINE:39
     def adminHome: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.adminHome",
       """
@@ -123,7 +123,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:31
+    // @LINE:29
     def openProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openProfile",
       """
@@ -133,7 +133,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:75
+    // @LINE:73
     def getUserByUrl: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getUserByUrl",
       """
@@ -143,7 +143,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:66
+    // @LINE:64
     def exportOpenFile: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.exportOpenFile",
       """
@@ -153,22 +153,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:68
+    // @LINE:66
     def exportProfiles: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.exportProfiles",
       """
         function(data) {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "exportprofiles/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("data", encodeURIComponent(data))})
-        }
-      """
-    )
-  
-    // @LINE:27
-    def twoColumn: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.twoColumn",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "twocol"})
         }
       """
     )
@@ -183,7 +173,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:60
+    // @LINE:58
     def getUserByEmail: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getUserByEmail",
       """
@@ -203,7 +193,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:56
+    // @LINE:54
     def deleteProfileConfirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.deleteProfileConfirm",
       """
@@ -213,7 +203,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:32
+    // @LINE:30
     def updateProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.updateProfile",
       """
@@ -223,7 +213,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:51
+    // @LINE:49
     def getProfilesByCounty: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getProfilesByCounty",
       """
@@ -243,7 +233,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:41
     def userMaintenance: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.userMaintenance",
       """
@@ -273,7 +263,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:54
+    // @LINE:52
     def updateProfileAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.updateProfileAdmin",
       """
@@ -303,7 +293,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:57
+    // @LINE:55
     def deleteProfile: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.deleteProfile",
       """
@@ -313,7 +303,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:53
+    // @LINE:51
     def openProfileAdmin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openProfileAdmin",
       """
@@ -323,7 +313,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:77
+    // @LINE:75
     def deleteUserConfirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.deleteUserConfirm",
       """
@@ -333,7 +323,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:59
+    // @LINE:57
     def findUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.findUser",
       """
@@ -343,7 +333,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:27
     def getProfilesByUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getProfilesByUser",
       """
@@ -353,7 +343,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:78
+    // @LINE:76
     def deleteUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.deleteUser",
       """
@@ -377,7 +367,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:45
+    // @LINE:43
     def getAllUsers: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.getAllUsers",
       """
@@ -407,7 +397,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:34
+    // @LINE:32
     def openUserAccount: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.openUserAccount",
       """
@@ -417,7 +407,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:35
+    // @LINE:33
     def updateUserAccount: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.updateUserAccount",
       """
@@ -427,7 +417,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:64
+    // @LINE:62
     def exportUsers: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.exportUsers",
       """

@@ -24,8 +24,6 @@ GET    /user                       controllers.Application.userHome()
 GET    /addprofile                 controllers.Application.addProfile()
 POST   /addprofile                 controllers.Application.saveProfile()
 
-GET    /twocol                     controllers.Application.twoColumn()
-
 GET    /getprofiles                controllers.Application.getProfilesByUser()
 
 GET    /editprofile/:name          controllers.Application.openProfile(name: String)

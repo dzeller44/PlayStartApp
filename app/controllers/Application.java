@@ -66,7 +66,6 @@ import views.html.exportready;
 import views.html.user.user;
 import views.html.contact;
 import views.html.contactsent;
-import views.html.user.twocol;
 
 /**
  * Login and Logout. User: yesnault
