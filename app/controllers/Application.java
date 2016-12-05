@@ -66,6 +66,7 @@ import views.html.exportready;
 import views.html.user.user;
 import views.html.contact;
 import views.html.contactsent;
+import views.html.user.twocol;
 
 /**
  * Login and Logout. User: yesnault
@@ -485,7 +486,7 @@ public class Application extends Controller {
 		 * name='servicesThis' value=@service>@service <br> }
 		 */
 	}
-
+	
 	public Result adminHome() {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {

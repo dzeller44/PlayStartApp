@@ -9,8 +9,8 @@ GET    /dashboard                  controllers.Dashboard.index()
 POST   /login                      controllers.Application.authenticate()
 GET    /logout                     controllers.Application.logout()
 
-GET    /contact						controllers.Application.contact()
-POST   /contact						controllers.Application.contactSend()
+GET    /contact                    controllers.Application.contact()
+POST   /contact                    controllers.Application.contactSend()
 
 # Authenticates/Logins the user...
 GET    /auth                       controllers.Application.openLogin()
@@ -23,6 +23,8 @@ GET    /user                       controllers.Application.userHome()
 
 GET    /addprofile                 controllers.Application.addProfile()
 POST   /addprofile                 controllers.Application.saveProfile()
+
+GET    /twocol                     controllers.Application.twoColumn()
 
 GET    /getprofiles                controllers.Application.getProfilesByUser()
 

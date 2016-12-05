@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/git/PlayAuthenticate/conf/routes
-// @DATE:Mon Dec 05 07:43:15 MST 2016
+// @DATE:Mon Dec 05 10:44:24 MST 2016
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:107
+  // @LINE:109
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:107
+    // @LINE:109
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -50,64 +50,70 @@ package controllers {
     }
 
   
-    // @LINE:36
+    // @LINE:38
     def managerHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "em")
     }
   
-    // @LINE:60
+    // @LINE:62
     def updateUser(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "updateuser")
     }
   
-    // @LINE:47
+    // @LINE:49
     def getProfilesByService(service:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "searchbyservice" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("service", service)))))
     }
   
-    // @LINE:68
+    // @LINE:70
     def openUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "openuser")
     }
   
-    // @LINE:45
+    // @LINE:47
     def getAllProfiles(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "searchprofiles")
     }
   
-    // @LINE:39
+    // @LINE:41
     def adminHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "admin")
     }
   
-    // @LINE:29
+    // @LINE:31
     def openProfile(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "editprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:73
+    // @LINE:75
     def getUserByUrl(email:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "finduserurl" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)))))
     }
   
-    // @LINE:64
+    // @LINE:66
     def exportOpenFile(fileName:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "exportOpenFile/" + implicitly[PathBindable[String]].unbind("fileName", dynamicString(fileName)))
     }
   
-    // @LINE:66
+    // @LINE:68
     def exportProfiles(data:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "exportprofiles/" + implicitly[PathBindable[String]].unbind("data", dynamicString(data)))
+    }
+  
+    // @LINE:27
+    def twoColumn(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "twocol")
     }
   
     // @LINE:13
@@ -116,7 +122,7 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "contact")
     }
   
-    // @LINE:58
+    // @LINE:60
     def getUserByEmail(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "finduser")
@@ -128,19 +134,19 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "user")
     }
   
-    // @LINE:54
+    // @LINE:56
     def deleteProfileConfirm(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "deleteprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:30
+    // @LINE:32
     def updateProfile(name:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "editprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:49
+    // @LINE:51
     def getProfilesByCounty(county:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "searchbycounty" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("county", county)))))
@@ -152,7 +158,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:41
+    // @LINE:43
     def userMaintenance(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "adminuser")
@@ -170,7 +176,7 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "addprofile")
     }
   
-    // @LINE:52
+    // @LINE:54
     def updateProfileAdmin(name:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "openprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
@@ -188,37 +194,37 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "accessdenied")
     }
   
-    // @LINE:55
+    // @LINE:57
     def deleteProfile(name:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "deleteprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:51
+    // @LINE:53
     def openProfileAdmin(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "openprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:75
+    // @LINE:77
     def deleteUserConfirm(email:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "deleteuser/" + implicitly[PathBindable[String]].unbind("email", dynamicString(email)))
     }
   
-    // @LINE:57
+    // @LINE:59
     def findUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "finduser")
     }
   
-    // @LINE:27
+    // @LINE:29
     def getProfilesByUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "getprofiles")
     }
   
-    // @LINE:76
+    // @LINE:78
     def deleteUser(email:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "deleteuser/" + implicitly[PathBindable[String]].unbind("email", dynamicString(email)))
@@ -238,7 +244,7 @@ package controllers {
     
     }
   
-    // @LINE:43
+    // @LINE:45
     def getAllUsers(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "search")
@@ -256,19 +262,19 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "contact")
     }
   
-    // @LINE:32
+    // @LINE:34
     def openUserAccount(email:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "useraccount" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)))))
     }
   
-    // @LINE:33
+    // @LINE:35
     def updateUserAccount(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "useraccount")
     }
   
-    // @LINE:62
+    // @LINE:64
     def exportUsers(data:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "exportusers/" + implicitly[PathBindable[String]].unbind("data", dynamicString(data)))

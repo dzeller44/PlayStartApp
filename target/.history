@@ -214,3 +214,8 @@ compile
 clean
 compile
 run
+clean
+run
+clean
+compile
+run
