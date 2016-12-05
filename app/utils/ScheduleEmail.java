@@ -40,7 +40,7 @@ public final class ScheduleEmail {
 
 	private static Cancellable scheduler;
 
-	public static void schedule() {
+	public static void scheduleReminder() {
 		try {
 
 			// Set the Time
@@ -142,37 +142,17 @@ public final class ScheduleEmail {
 						// Grab email address and create email...
 						String emailAddress = user.getEmail();
 						Email email = new Email();
-						email.setSubject(Messages.get("email.remind.subject"));
-						email.setFrom(Messages.get("email.principal.address"));
 						email.addTo(emailAddress);
+						email.setFrom(Messages.get("email.principal.address"));
+						email.setSubject(Messages.get("email.remind.subject"));
 						email.setBodyText(Messages.get("email.remind.message"));
-						email.setBodyHtml("<html><body><p>An <b>html</b> message...</p></body></html>");
+						//email.setBodyHtml("<html><body><p>An <b>html</b> message...</p></body></html>");
 						Play.application().injector().instanceOf(MailerClient.class).send(email);
 						counter++;
 					}
 					AuditLog.setLog("Scheduler", "Scheduler Email", "ScheduleEmail", "schedule()",
 							"ScheduleEmail for 6 months reminder found " + counter + " Users to send an email to",
 							"Server");
-
-					/*
-					 * String cid = "1234"; Email email = new Email();
-					 * email.setSubject("Simple email");
-					 * email.setFrom("Mister FROM <from@email.com>");
-					 * email.addTo("Miss TO <to@email.com>");
-					 * email.setBodyText("A text message"); email.
-					 * setBodyHtml("<html><body><p>An <b>html</b> message with cid <img src=\"cid:"
-					 * + cid + "\"></p></body></html>");
-					 * Play.application().injector().instanceOf(MailerClient.
-					 * class).send(email);
-					 * 
-					 * // Mail.Envelop envelop = new Mail.Envelop("test",
-					 * "Test", // "test@google.com"); // Mail mailer = new
-					 * Mail(mailerClient); // mailer.sendMail(envelop);
-					 * 
-					 * // try { // sendMailAdminConfirm(); // } catch
-					 * (MalformedURLException | EmailException e) { //
-					 * e.printStackTrace(); // }
-					 */
 
 					endTime = System.currentTimeMillis();
 					long timeneeded = ((startTime - endTime) / 1000);

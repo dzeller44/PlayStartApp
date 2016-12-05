@@ -186,14 +186,14 @@ public class User extends Model {
 		cal.setTime(remindDate);
 		cal.add(Calendar.DATE, -1);
 		Date beforeDate = cal.getTime();
-		System.out.println("beforeDate: " + beforeDate);
+		Logger.debug("User findByRemindDate - beforeDate: " + beforeDate);
 		// After date...
 		// Date has changed by a day earlier...
 		// We need to add 2 days now to get day after the original remind
 		// date...
 		cal.add(Calendar.DATE, 2);
 		Date afterDate = cal.getTime();
-		System.out.println("afterDate: " + afterDate);
+		Logger.debug("User findByRemindDate - afterDate: " + afterDate);
 
 		// Query...
 		return find

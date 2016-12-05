@@ -1,26 +1,27 @@
 package models;
 
-import models.utils.Mail;
-import play.Configuration;
-import play.Logger;
-import play.data.format.Formats;
-import play.data.validation.Constraints;
-import com.avaje.ebean.Model;
-import play.i18n.Messages;
-import play.libs.mailer.Email;
-import play.libs.mailer.MailerClient;
-
-import javax.annotation.Nullable;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
-import javax.persistence.Column;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
+
+import javax.annotation.Nullable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+
+import com.avaje.ebean.Model;
+
+import models.utils.Mail;
+import play.Configuration;
+import play.Logger;
+import play.data.format.Formats;
+import play.data.validation.Constraints;
+import play.i18n.Messages;
+import play.libs.mailer.MailerClient;
 
 /**
  * @author wsargent
@@ -34,7 +35,7 @@ public class Token extends Model {
     @Id
     public String token;
 
-   @Constraints.Required
+    @Constraints.Required
     @Formats.NonEmpty
     @Column(name="user_id")
     public Long userId;
