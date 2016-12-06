@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
@@ -14,6 +15,8 @@ import org.apache.commons.mail.EmailException;
 import com.google.inject.Singleton;
 
 import akka.actor.Cancellable;
+import models.AuditLog;
+import models.User;
 import play.Configuration;
 import play.Logger;
 import play.Play;
@@ -37,7 +40,7 @@ public final class ScheduleEmail {
 
 	private static Cancellable scheduler;
 
-	public static void schedule() {
+	public static void scheduleReminder() {
 		try {
 
 			// Set the Time
@@ -66,60 +69,98 @@ public final class ScheduleEmail {
 					TimeUnit.MILLISECONDS);
 
 			Logger.debug("Scheduling to run at " + nextValidTimeAfter);
+			AuditLog.setLog("Scheduler", "Scheduler Email", "ScheduleEmail", "schedule()",
+					"ScheduleEmail will run at " + nextValidTimeAfter,
+					"Server");
+			
+			/* -------------------------------------------------------------------------------
+			// TEST
+			Logger.debug("Running scheduler");
+			// Do your tasks here
 
+			long startTime = System.currentTimeMillis();
+			long endTime = 0;
+
+			// Get today's date, add 6 months...
+			// Search users (and profiles????) based on that date...
+			// Get list of users, grab email...
+			// Create email per user (or one email with BCC???)...
+			Calendar cal = Calendar.getInstance();
+			cal.add(Calendar.MONTH, 6);
+			Date checkDate = cal.getTime();
+			List<User> users = User.findByRemindDate(checkDate);
+
+			int counter = 0;
+			for (User user : users) {
+				// Grab email address and create email...
+				String emailAddress = user.getEmail();
+				Email email = new Email();
+				email.setSubject(Messages.get("email.remind.subject"));
+				email.setFrom(Messages.get("email.principal.address"));
+				email.addTo(emailAddress);
+				email.setBodyText(Messages.get("email.remind.message"));
+				email.setBodyHtml("<html><body><p>An <b>html</b> message...</p></body></html>");
+				Play.application().injector().instanceOf(MailerClient.class).send(email);
+				counter++;
+			}
+			AuditLog.setLog("Scheduler", "Scheduler Email", "ScheduleEmail", "schedule()",
+					"ScheduleEmail for 6 months reminder found " + counter + " Users to send an email to",
+					"Server");
+			endTime = System.currentTimeMillis();
+			long timeneeded = ((startTime - endTime) / 1000);
+			System.out.println("Time===>" + timeneeded);
+			schedule(); // Schedule for next time
+
+			AuditLog.setLog("Scheduler", "Scheduler Email", "ScheduleEmail", "schedule()",
+					"ScheduleEmail for 6 months reminder ran - time was " + timeneeded, "Server");
+			
+			
+			------------------------------------------------------------------------------- */
+					
+			
 			setScheduler(Akka.system().scheduler().scheduleOnce(d, new Runnable() {
 
 				@Override
 				public void run() {
-					Logger.debug("Ruuning scheduler");
+					Logger.debug("Running scheduler");
 					// Do your tasks here
 
 					long startTime = System.currentTimeMillis();
 					long endTime = 0;
-					
+
 					// Get today's date, add 6 months...
 					// Search users (and profiles????) based on that date...
 					// Get list of users, grab email...
 					// Create email per user (or one email with BCC???)...
 					Calendar cal = Calendar.getInstance();
 					cal.add(Calendar.MONTH, 6);
-					Date result = cal.getTime();
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
+					Date checkDate = cal.getTime();
+					List<User> users = User.findByRemindDate(checkDate);
 
-					String cid = "1234";
-					Email email = new Email();
-					email.setSubject("Simple email");
-					email.setFrom("Mister FROM <from@email.com>");
-					email.addTo("Miss TO <to@email.com>");
-					email.setBodyText("A text message");
-					email.setBodyHtml("<html><body><p>An <b>html</b> message with cid <img src=\"cid:" + cid
-							+ "\"></p></body></html>");
-					Play.application().injector().instanceOf(MailerClient.class).send(email);
-
-					// Mail.Envelop envelop = new Mail.Envelop("test", "Test",
-					// "test@google.com");
-					// Mail mailer = new Mail(mailerClient);
-					// mailer.sendMail(envelop);
-
-					// try {
-					// sendMailAdminConfirm();
-					// } catch (MalformedURLException | EmailException e) {
-					// e.printStackTrace();
-					// }
+					int counter = 0;
+					for (User user : users) {
+						// Grab email address and create email...
+						String emailAddress = user.getEmail();
+						Email email = new Email();
+						email.addTo(emailAddress);
+						email.setFrom(Messages.get("email.principal.address"));
+						email.setSubject(Messages.get("email.remind.subject"));
+						email.setBodyText(Messages.get("email.remind.message"));
+						//email.setBodyHtml("<html><body><p>An <b>html</b> message...</p></body></html>");
+						Play.application().injector().instanceOf(MailerClient.class).send(email);
+						counter++;
+					}
+					AuditLog.setLog("Scheduler", "Scheduler Email", "ScheduleEmail", "schedule()",
+							"ScheduleEmail for 6 months reminder found " + counter + " Users to send an email to",
+							"Server");
 
 					endTime = System.currentTimeMillis();
 					long timeneeded = ((startTime - endTime) / 1000);
 					System.out.println("Time===>" + timeneeded);
-					schedule(); // Schedule for next time
+					scheduleReminder(); // Schedule for next time
+
+					AuditLog.setLog("Scheduler", "Scheduler Email", "ScheduleEmail", "schedule()",
+							"ScheduleEmail for 6 months reminder ran - time was " + timeneeded, "Server");
 				}
 
 			}, Akka.system().dispatcher()));

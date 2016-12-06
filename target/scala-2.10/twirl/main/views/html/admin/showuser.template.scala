@@ -91,21 +91,20 @@ Seq[Any](format.raw/*1.99*/("""
  				</label>
  			</div>
   			<span class="clearfix"></span>
-  		</div>
-  				
+  		</div>	
 		<div class="element-input">
-		    """),_display_(/*66.8*/if(findUserForm.hasGlobalErrors)/*66.40*/ {_display_(Seq[Any](format.raw/*66.42*/("""
-        		"""),format.raw/*67.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-            		"""),_display_(/*68.16*/findUserForm/*68.28*/.globalError.message),format.raw/*68.48*/("""
-        		"""),format.raw/*69.11*/("""</span>
-   			""")))}),format.raw/*70.8*/("""
-		"""),format.raw/*71.3*/("""</div>
+		    """),_display_(/*65.8*/if(findUserForm.hasGlobalErrors)/*65.40*/ {_display_(Seq[Any](format.raw/*65.42*/("""
+        		"""),format.raw/*66.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*67.16*/findUserForm/*67.28*/.globalError.message),format.raw/*67.48*/("""
+        		"""),format.raw/*68.11*/("""</span>
+   			""")))}),format.raw/*69.8*/("""
+		"""),format.raw/*70.3*/("""</div>
 		<div class="submit">
-			<input type="submit" value="""),_display_(/*73.32*/Messages("submit")),format.raw/*73.50*/(""" """),format.raw/*73.51*/("""/>
-			<a href="/admin" class="buttonCancel">"""),_display_(/*74.43*/Messages("goback")),format.raw/*74.61*/("""</a>
+			<input type="submit" value="""),_display_(/*72.32*/Messages("submit")),format.raw/*72.50*/(""" """),format.raw/*72.51*/("""/>
+			<a href="/admin" class="buttonCancel">"""),_display_(/*73.43*/Messages("goback")),format.raw/*73.61*/("""</a>
 		</div>
 		<div class="submit">
-			<a href="javascript:deleteUser('"""),_display_(/*77.37*/userEmail),format.raw/*77.46*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
+			<a href="javascript:deleteUser('"""),_display_(/*76.37*/userEmail),format.raw/*76.46*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -113,7 +112,7 @@ Seq[Any](format.raw/*1.99*/("""
 
 </section>
 
-""")))}),format.raw/*85.2*/("""
+""")))}),format.raw/*84.2*/("""
 """))
       }
     }
@@ -134,11 +133,11 @@ Seq[Any](format.raw/*1.99*/("""
 object showuser extends showuser_Scope0.showuser
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 01 14:03:46 MST 2016
+                  DATE: Mon Dec 05 08:11:37 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/showuser.scala.html
-                  HASH: 2defaec27d9b9d3a3d44f01500f4a30cb12238ca
-                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1434->420|1448->426|1493->451|1850->781|1879->789|2197->1080|2227->1089|2527->1362|2556->1370|2613->1401|2644->1423|2684->1425|2720->1434|2923->1607|2958->1615|2991->1620|3020->1621|3056->1630|3255->1802|3283->1803|3318->1811|3918->2385|3959->2417|3999->2419|4039->2431|4141->2506|4162->2518|4203->2538|4243->2550|4289->2566|4320->2570|4410->2633|4449->2651|4478->2652|4551->2698|4590->2716|4693->2792|4723->2801|4924->2972
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|49->18|49->18|56->25|56->25|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|97->66|97->66|97->66|98->67|99->68|99->68|99->68|100->69|101->70|102->71|104->73|104->73|104->73|105->74|105->74|108->77|108->77|116->85
+                  HASH: 34dc2cb3fa7a2c5ede1f61b9fdf46cd97ff3fe8d
+                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1434->420|1448->426|1493->451|1850->781|1879->789|2197->1080|2227->1089|2527->1362|2556->1370|2613->1401|2644->1423|2684->1425|2720->1434|2923->1607|2958->1615|2991->1620|3020->1621|3056->1630|3255->1802|3283->1803|3318->1811|3911->2378|3952->2410|3992->2412|4032->2424|4134->2499|4155->2511|4196->2531|4236->2543|4282->2559|4313->2563|4403->2626|4442->2644|4471->2645|4544->2691|4583->2709|4686->2785|4716->2794|4917->2965
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|49->18|49->18|56->25|56->25|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|96->65|96->65|96->65|97->66|98->67|98->67|98->67|99->68|100->69|101->70|103->72|103->72|103->72|104->73|104->73|107->76|107->76|115->84
                   -- GENERATED --
               */
           

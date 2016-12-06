@@ -12,7 +12,9 @@ reset=Reset
 cancel=Cancel
 submit=Submit
 
-main.email.address=co-assist@state.co.us
+email.principal.address=co-assist@state.co.us
+email.remind.subject=CO-Assist: Please update your User Profile.
+email.remind.message=Please take the time to update your CO-Assist User Profile.
 
 account.not.validated.check.mail=Account not validated. Check your emails.
 account.successfully.validated=Account successfully validated

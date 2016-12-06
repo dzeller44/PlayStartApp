@@ -36,6 +36,7 @@ import play.i18n.Messages;
 import play.libs.mailer.MailerClient;
 import play.mvc.Controller;
 import play.mvc.Result;
+import utils.ScheduleEmail;
 import views.html.index;
 import views.html.auth;
 import views.html.accessdenied;
@@ -895,14 +896,6 @@ public class Application extends Controller {
 	}
 
 	public Result getProfilesByUser() {
-		
-		/*
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.MONTH, 6);
-		Date remindDate = cal.getTime();
-		List<User> users = User.findByRemindDate(remindDate);
-		*/
-		
 		// Grab the current user's userkey...
 		String userkey = AccessMiddleware.getSessionUserKey();
 		List<Profile> profiles = Profile.findAllByUserKey(userkey);
