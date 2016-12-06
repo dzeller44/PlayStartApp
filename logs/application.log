@@ -101,3 +101,8 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:233) ~[mail-1.4.5.jar:1.4.5]
 	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1938) ~[mail-1.4.5.jar:1.4.5]
 	... 20 common frames omitted
+2016-12-01 15:35:31,945 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
+2016-12-01 15:35:33,334 [WARN] from application in application-akka.actor.default-dispatcher-12 - application.conf @ file:/C:/WebDev/git/PlayAuthenticate/target/scala-2.10/classes/application.conf: 31: user is deprecated, use username instead
+2016-12-01 15:35:33,336 [INFO] from application in application-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
+2016-12-01 15:35:33,361 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2016-12-01 15:35:41,792 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-12 - Application started (Dev)
