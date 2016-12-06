@@ -31,6 +31,8 @@ public class RemovedUser extends Model {
     @Formats.NonEmpty
     @Column(unique = true)
     public String fullname;
+    
+    public String agency;
 
     public String confirmationToken;
 
