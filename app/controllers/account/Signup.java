@@ -25,6 +25,8 @@ import views.html.account.signup.created;
 import views.html.account.signup.approval;
 import views.html.admin.createadmin;
 import views.html.admin.createdadmin;
+import views.html.account.signup.duplicateuser;
+import views.html.account.signup.duplicateadmin;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -143,7 +145,6 @@ public class Signup extends Controller {
 				user.approved = "N";
 				user.save();
 				
-				//Replace with admin email, either shared inbox or database lookup
 				String admin = Messages.get("mail.admin.address");
 				
 				sendMailAdminConfirm(admin, user.getEmail());
@@ -161,7 +162,7 @@ public class Signup extends Controller {
 			flash("error", Messages.get("error.technical"));
 		}
 		return badRequest(create.render(registerForm));
-		// return badRequest(create.render());
+		//return badRequest(create.render());
 	}
 
 	public Result saveAdmin() throws EmailException {
@@ -217,8 +218,9 @@ public class Signup extends Controller {
 		// Check unique email
 		if (User.findByEmail(email) != null) {
 			flash("error", Messages.get("error.email.already.exist"));
-			return badRequest(create.render(registerForm));
+			//return badRequest(create.render(registerForm));
 			// return badRequest(create.render());
+			return ok(duplicateuser.render(email));
 		}
 
 		return null;
@@ -237,7 +239,8 @@ public class Signup extends Controller {
 		// Check unique email
 		if (User.findByEmail(email) != null) {
 			flash("error", Messages.get("error.email.already.exist"));
-			return badRequest(createadmin.render(registerForm));
+			//return badRequest(createadmin.render(registerForm));
+			return ok(duplicateadmin.render(email));
 		}
 
 		return null;
@@ -333,4 +336,6 @@ public class Signup extends Controller {
 		Mail mailer = new Mail(mailerClient);
 		mailer.sendMail(envelop);
 	}
+	
+	
 }
