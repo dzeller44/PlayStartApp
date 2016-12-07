@@ -219,8 +219,8 @@
 				<label class="title"><span class="required">*</span>Business Hours Contact
 				Phone Number:</label>
 				<div class="item-cont">
-					<input class="large" type="tel"
-						pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="primaryPhone"
+					<input class="large" type="tel" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')"
+						pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="primaryPhone"
 						required="required" placeholder="Phone Number..." value="" /><span
 						class="icon-place"></span>
 				</div>
@@ -247,8 +247,8 @@
 				<label class="title"><span class="required">*</span>After Hours Contact
 				Phone Number:</label>
 				<div class="item-cont">
-					<input class="large" type="tel"
-						pattern="[+]?[\.\s\-\(\)\*\#0-9]{3,}" maxlength="24" name="secondaryPhone"
+					<input class="large" type="tel" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')"
+						pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="secondaryPhone"
 						required="required" placeholder="Phone Number..." value="" /><span
 						class="icon-place"></span>
 				</div>
