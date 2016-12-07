@@ -47,7 +47,7 @@ Seq[Any](format.raw/*1.38*/("""
 			<!-- ROW -->
 			<div class="row">
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/signup">
+					<a class="services_item" href="/adduser">
 						<p>
 							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*21.62*/(""""> <b>Add User</b>
 						</p> <span>Add new user...</span>
@@ -106,10 +106,10 @@ Seq[Any](format.raw/*1.38*/("""
 object usermaint extends usermaint_Scope0.usermaint
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 05 10:44:25 MST 2016
+                  DATE: Wed Dec 07 08:53:24 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/usermaint.scala.html
-                  HASH: cc8125eeb67d3b6ac9a8620e2d268e415c633e84
-                  MATRIX: 776->1|907->37|935->40|953->50|992->52|1021->55|1407->414|1422->420|1480->457|1700->650|1715->656|1773->693|2004->897|2019->903|2079->942|2311->1147|2326->1153|2389->1195
+                  HASH: ea0779b4a628b28c710c6e9f27ddbbc09c52729a
+                  MATRIX: 776->1|907->37|935->40|953->50|992->52|1021->55|1408->415|1423->421|1481->458|1701->651|1716->657|1774->694|2005->898|2020->904|2080->943|2312->1148|2327->1154|2390->1196
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|66->35|66->35|66->35|73->42|73->42|73->42
                   -- GENERATED --
               */
