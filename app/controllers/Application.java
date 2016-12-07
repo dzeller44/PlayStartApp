@@ -485,7 +485,7 @@ public class Application extends Controller {
 		 * name='servicesThis' value=@service>@service <br> }
 		 */
 	}
-
+	
 	public Result adminHome() {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
@@ -646,6 +646,7 @@ public class Application extends Controller {
 			// Copy the record over...
 			removedUser.email = user.getEmail();
 			removedUser.fullname = user.fullname;
+			removedUser.agency = user.agency;
 			removedUser.passwordHash = user.passwordHash;
 			removedUser.confirmationToken = user.confirmationToken;
 			removedUser.dateCreation = user.dateCreation;
