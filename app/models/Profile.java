@@ -129,15 +129,17 @@ public class Profile extends Model {
     }
     
 	public String createProfileKey() {
-		String profileKey = UUID.randomUUID().toString().replaceAll("-", "");
+		String profileKey = null;
 
 		// Make sure it is unique...
+		profilekey = UUID.randomUUID().toString().replaceAll("-", "");
 		Boolean isUnique = false;
 		while (!isUnique) {
 			Profile profile = Profile.findByProfileKey(profileKey);
 			if (profile != null) {
 				// Found profile, not unique...
 				Logger.debug("Profile.createprofileKey: profile Key " + profileKey + " is not unique, creating a new one...");
+				profilekey = UUID.randomUUID().toString().replaceAll("-", "");
 			} else {
 				// profile Key is unique...
 				Logger.debug("Profile.createprofileKey: profile Key " + profileKey + " is unique.");
