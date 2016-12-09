@@ -170,9 +170,12 @@ public class Application extends Controller {
 			User user = null;
 			try {
 				user = User.authenticate(email, password);
+				if(user != null){
 				SessionData createUserSession = AccessMiddleware.createUserSession(user);
+				
 				AuditLog.setLog(user.fullname, user.getEmail(), "Login", "validate()", "User authenticated",
 						user.fullname);
+				}
 			} catch (AppException e) {
 				errMessage = Messages.get("error.technical");
 				return errMessage;
@@ -261,7 +264,7 @@ public class Application extends Controller {
 		@Constraints.Required
 		public String secondaryPhone;
 
-		@Constraints.Required
+		//@Constraints.Required
 		public String services;
 
 		public String servicesOther;
@@ -1081,7 +1084,8 @@ public class Application extends Controller {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 		List<Service> services = Service.find.all();
 		// Find profile and display...
-		Profile profile = Profile.findByName(name);
+		//Profile profile = Profile.findByName(name);
+		Profile profile = Profile.findByProfileKey(name);
 		// Grab the current services...
 		String currentServices = profile.services;
 		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
