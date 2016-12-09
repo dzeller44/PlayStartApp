@@ -1064,7 +1064,7 @@ public class Application extends Controller {
 		}
 	}
 
-	public Result openProfileAdmin(String name) {
+	public Result openProfileAdmin(String key) {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
 			return ACCESS_DENIED;
@@ -1072,7 +1072,7 @@ public class Application extends Controller {
 			Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 			List<Service> services = Service.find.all();
 			// Find profile and display...
-			Profile profile = Profile.findByName(name);
+			Profile profile = Profile.findByProfileKey(key);
 			// Grab the current services...
 			String currentServices = profile.services;
 			List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
@@ -1080,12 +1080,12 @@ public class Application extends Controller {
 		}
 	}
 
-	public Result openProfile(String name) {
+	public Result openProfile(String key) {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 		List<Service> services = Service.find.all();
 		// Find profile and display...
 		//Profile profile = Profile.findByName(name);
-		Profile profile = Profile.findByProfileKey(name);
+		Profile profile = Profile.findByProfileKey(key);
 		// Grab the current services...
 		String currentServices = profile.services;
 		List<String> selectedServices = new ArrayList<String>(Arrays.asList(currentServices.split(",")));
@@ -1274,7 +1274,7 @@ public class Application extends Controller {
 		mailer.sendMail(envelop);
 	}
 
-	public Result updateProfileAdmin(String name) {
+	public Result updateProfileAdmin(String key) {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
 			return ACCESS_DENIED;
@@ -1289,7 +1289,7 @@ public class Application extends Controller {
 			// Save the profile...
 			ProfileRegister profileForm = profileEntry.get();
 			Logger.debug("updateProfileAdmin - good request");
-			Profile profile = Profile.findByName(name);
+			Profile profile = Profile.findByProfileKey(key);
 			profile.name = profileForm.name;
 			profile.address = profileForm.address;
 			profile.address1 = profileForm.address1;
@@ -1328,7 +1328,7 @@ public class Application extends Controller {
 
 	}
 
-	public Result updateProfile(String name) {
+	public Result updateProfile(String key) {
 		Form<ProfileRegister> profileEntry = form(ProfileRegister.class).bindFromRequest();
 
 		if (profileEntry.hasErrors()) {
@@ -1339,7 +1339,7 @@ public class Application extends Controller {
 		// Save the profile...
 		ProfileRegister profileForm = profileEntry.get();
 		Logger.debug("updateProfile - good request");
-		Profile profile = Profile.findByName(name);
+		Profile profile = Profile.findByProfileKey(key);
 		profile.name = profileForm.name;
 		profile.address = profileForm.address;
 		profile.address1 = profileForm.address1;

@@ -128,11 +128,12 @@ public class Profile extends Model {
         return find.where().eq("name", name).findUnique();
     }
     
+    
 	public String createProfileKey() {
 		String profileKey = null;
 
 		// Make sure it is unique...
-		profilekey = UUID.randomUUID().toString().replaceAll("-", "");
+		profileKey = UUID.randomUUID().toString().replaceAll("-", "");
 		Boolean isUnique = false;
 		while (!isUnique) {
 			Profile profile = Profile.findByProfileKey(profileKey);

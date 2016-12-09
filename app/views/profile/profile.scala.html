@@ -220,7 +220,7 @@
 				Phone Number:</label>
 				<div class="item-cont">
 					<input class="large" type="tel" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')"
-						onvalid = "this.setCustomValidity('')" pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="primaryPhone"
+						oninput = "this.setCustomValidity('')" pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="primaryPhone"
 						required="required" placeholder="Phone Number..." value="" /><span
 						class="icon-place"></span>
 				</div>
@@ -248,7 +248,7 @@
 				Phone Number:</label>
 				<div class="item-cont">
 					<input class="large" type="tel" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')"
-						onvalid = "this.setCustomValidity('')" pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="secondaryPhone"
+						oninput = "this.setCustomValidity('')" pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="secondaryPhone"
 						required="required" placeholder="Phone Number..." value="" /><span
 						class="icon-place"></span>
 				</div>
