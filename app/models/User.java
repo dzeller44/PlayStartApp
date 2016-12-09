@@ -125,15 +125,17 @@ public class User extends Model {
 	}
 
 	public String createUserKey() {
-		String userKey = UUID.randomUUID().toString().replaceAll("-", "");
+		String userKey = null;
 
 		// Make sure it is unique...
+		userKey = UUID.randomUUID().toString().replaceAll("-", "");
 		Boolean isUnique = false;
 		while (!isUnique) {
 			User user = User.findByUserKey(userKey);
 			if (user != null) {
 				// Found user, not unique...
 				Logger.debug("User.createUserKey: User Key " + userKey + " is not unique, creating a new one...");
+				userKey = UUID.randomUUID().toString().replaceAll("-", "");
 			} else {
 				// User Key is unique...
 				Logger.debug("User.createUserKey: User Key " + userKey + " is unique.");
