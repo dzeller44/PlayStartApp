@@ -24,9 +24,9 @@
 				<tbody>
 					@for(profile <- profilesList) {
 					<tr>
-						<td><a href="/editprofile/@profile.name">@profile.name</a></td>
-						<td><a href="/editprofile/@profile.name">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
-						<td><a href="/editprofile/@profile.name">@profile.services</a></td>
+						<td><a href="/editprofile/@profile.profilekey">@profile.name</a></td>
+						<td><a href="/editprofile/@profile.profilekey">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
+						<td><a href="/editprofile/@profile.profilekey">@profile.services</a></td>
 					</tr>
 					} 
 				</tbody>
