@@ -103,6 +103,21 @@ public class User extends Model {
 
 	public void changePassword(String password) throws AppException {
 		this.passwordHash = Hash.createPassword(password);
+
+		// Create reminder dates...
+		// Update account...
+		Calendar cal = null;
+		Date result = null;
+		cal = Calendar.getInstance();
+		cal.add(Calendar.MONTH, 6);
+		result = cal.getTime();
+		this.dateRemind = result;
+		// Password...
+		cal = Calendar.getInstance();
+		cal.add(Calendar.MONTH, 3);
+		result = cal.getTime();
+		this.datePasswordRemind = result;
+
 		this.save();
 	}
 
@@ -198,11 +213,7 @@ public class User extends Model {
 		Logger.debug("User findByRemindDate - afterDate: " + afterDate);
 
 		// Query...
-		return find
-				.where()
-				.gt("dateRemind", beforeDate)
-				.lt("dateRemind", afterDate)
-				.findList();
+		return find.where().gt("dateRemind", beforeDate).lt("dateRemind", afterDate).findList();
 	}
 
 	/**

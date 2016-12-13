@@ -267,7 +267,7 @@ public class Application extends Controller {
 		public String servicesOther;
 
 		public Date dateCreation;
-		
+
 		public Date dateRemind;
 
 		private boolean isBlank(String input) {
@@ -485,7 +485,7 @@ public class Application extends Controller {
 		 * name='servicesThis' value=@service>@service <br> }
 		 */
 	}
-	
+
 	public Result adminHome() {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
@@ -851,7 +851,7 @@ public class Application extends Controller {
 			return ok(searchprofiles.render(profiles, services));
 		}
 	}
-	
+
 	public Result getProfilesByCounty(String county) {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
@@ -1226,14 +1226,15 @@ public class Application extends Controller {
 		profile.servicesOther = profileForm.servicesOther;
 		profile.dateCreation = new Date();
 		profile.profilekey = profile.createProfileKey();
-		profile.userkey = AccessMiddleware.getSessionUserKey();		
+		profile.userkey = AccessMiddleware.getSessionUserKey();
 		// Reminder date - 6 months out...
-		//System.out.println("LocalDateTime: " + LocalDateTime.now().plusMonths(6));
+		// System.out.println("LocalDateTime: " +
+		// LocalDateTime.now().plusMonths(6));
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, 6);
 		Date result = cal.getTime();
-		//System.out.println("Date: " + result);
-		profile.dateRemind = result;		
+		// System.out.println("Date: " + result);
+		profile.dateRemind = result;
 		profile.save();
 
 		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile", "saveProfile()",
@@ -1314,6 +1315,11 @@ public class Application extends Controller {
 			profile.servicesOther = profileForm.servicesOther;
 			profile.updatedBy = AccessMiddleware.getSessionEmail();
 			profile.dateUpdated = new Date();
+			// Reset reminder date - 6 months out...
+			Calendar cal = Calendar.getInstance();
+			cal.add(Calendar.MONTH, 6);
+			Date result = cal.getTime();
+			profile.dateRemind = result;
 			profile.save();
 
 			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile",
@@ -1364,6 +1370,11 @@ public class Application extends Controller {
 		profile.servicesOther = profileForm.servicesOther;
 		profile.updatedBy = AccessMiddleware.getSessionEmail();
 		profile.dateUpdated = new Date();
+		// Reset reminder date - 6 months out...
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.MONTH, 6);
+		Date result = cal.getTime();
+		profile.dateRemind = result;
 		profile.save();
 
 		AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "Profile",
@@ -1499,7 +1510,7 @@ public class Application extends Controller {
 			return ok(usermaint.render(form(Login.class)));
 		}
 	}
-	
+
 	public static class Contact {
 
 		public String name;
@@ -1508,36 +1519,36 @@ public class Application extends Controller {
 
 		public String message;
 
-
 	}
 
 	public Result contact() {
-			return ok(contact.render(form(Contact.class)));
+		return ok(contact.render(form(Contact.class)));
 	}
-	
+
 	public Result contactSend() throws EmailException {
 		Form<Contact> contact = form(Contact.class).bindFromRequest();
-		
+
 		String name = contact.get().name;
 		String email = contact.get().email;
 		String message = contact.get().message;
-		
+
 		String subject = Messages.get("mail.contact.subject");
-		String messageToSend = new String ("Message from: " + name + "\n at email address: " + email + "\n Message: " + message);
-		
+		String messageToSend = new String(
+				"Message from: " + name + "\n at email address: " + email + "\n Message: " + message);
+
 		String to = Messages.get("mail.admin.address");
-		
-		//create and send the email to the admin shared mailbox, containing name, email and message from contact form.
-		//send a copy to the email entered in the contact form.
-		
+
+		// create and send the email to the admin shared mailbox, containing
+		// name, email and message from contact form.
+		// send a copy to the email entered in the contact form.
+
 		Mail.Envelop envelop = new Mail.Envelop(subject, messageToSend, to);
 		Mail.Envelop envelop2 = new Mail.Envelop(subject, messageToSend, email);
 		Mail mailer = new Mail(mailerClient);
-	    mailer.sendMail(envelop);
-	    mailer.sendMail(envelop2);
+		mailer.sendMail(envelop);
+		mailer.sendMail(envelop2);
 
 		return ok(contactsent.render());
-	}	
-	
+	}
 
 }
