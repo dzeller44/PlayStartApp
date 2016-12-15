@@ -1628,12 +1628,12 @@ ul.project_info li span {
 footer {
 	overflow: hidden;
 	position: fixed;
-	z-index: 1;
+	z-index: 9999;
 	bottom: 0;
 	left: 50%;
 	opacity: 0;
 	width: 100%;
-	padding: 40px 0 10px;
+	padding: 10px 0 5px;
 	color: #999;
 	background-color: #4d5757;
 	transform: translateX(-50%);

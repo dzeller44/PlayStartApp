@@ -251,7 +251,7 @@ Seq[Any](format.raw/*1.89*/("""
 				Phone Number:</label>
 				<div class="item-cont">
 					<input class="large" type="tel" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')"
-						onvalid = "this.setCustomValidity('')" pattern="\d"""),format.raw/*223.57*/("""{"""),format.raw/*223.58*/("""3"""),format.raw/*223.59*/("""}"""),format.raw/*223.60*/("""[\-]\d"""),format.raw/*223.66*/("""{"""),format.raw/*223.67*/("""3"""),format.raw/*223.68*/("""}"""),format.raw/*223.69*/("""[\-]\d"""),format.raw/*223.75*/("""{"""),format.raw/*223.76*/("""4"""),format.raw/*223.77*/("""}"""),format.raw/*223.78*/("""" maxlength="24" name="primaryPhone"
+						oninput = "this.setCustomValidity('')" pattern="\d"""),format.raw/*223.57*/("""{"""),format.raw/*223.58*/("""3"""),format.raw/*223.59*/("""}"""),format.raw/*223.60*/("""[\-]\d"""),format.raw/*223.66*/("""{"""),format.raw/*223.67*/("""3"""),format.raw/*223.68*/("""}"""),format.raw/*223.69*/("""[\-]\d"""),format.raw/*223.75*/("""{"""),format.raw/*223.76*/("""4"""),format.raw/*223.77*/("""}"""),format.raw/*223.78*/("""" maxlength="24" name="primaryPhone"
 						required="required" placeholder="Phone Number..." value="" /><span
 						class="icon-place"></span>
 				</div>
@@ -279,7 +279,7 @@ Seq[Any](format.raw/*1.89*/("""
 				Phone Number:</label>
 				<div class="item-cont">
 					<input class="large" type="tel" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')"
-						onvalid = "this.setCustomValidity('')" pattern="\d"""),format.raw/*251.57*/("""{"""),format.raw/*251.58*/("""3"""),format.raw/*251.59*/("""}"""),format.raw/*251.60*/("""[\-]\d"""),format.raw/*251.66*/("""{"""),format.raw/*251.67*/("""3"""),format.raw/*251.68*/("""}"""),format.raw/*251.69*/("""[\-]\d"""),format.raw/*251.75*/("""{"""),format.raw/*251.76*/("""4"""),format.raw/*251.77*/("""}"""),format.raw/*251.78*/("""" maxlength="24" name="secondaryPhone"
+						oninput = "this.setCustomValidity('')" pattern="\d"""),format.raw/*251.57*/("""{"""),format.raw/*251.58*/("""3"""),format.raw/*251.59*/("""}"""),format.raw/*251.60*/("""[\-]\d"""),format.raw/*251.66*/("""{"""),format.raw/*251.67*/("""3"""),format.raw/*251.68*/("""}"""),format.raw/*251.69*/("""[\-]\d"""),format.raw/*251.75*/("""{"""),format.raw/*251.76*/("""4"""),format.raw/*251.77*/("""}"""),format.raw/*251.78*/("""" maxlength="24" name="secondaryPhone"
 						required="required" placeholder="Phone Number..." value="" /><span
 						class="icon-place"></span>
 				</div>
@@ -345,9 +345,9 @@ Seq[Any](format.raw/*1.89*/("""
 object profile extends profile_Scope0.profile
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 13 09:47:49 MST 2016
+                  DATE: Thu Dec 15 08:53:20 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/profile.scala.html
-                  HASH: e77abf3bf2451c6baa13eccae0a648e15d0746c3
+                  HASH: 004e45e85429f317824cd26228ce4eed13f640d2
                   MATRIX: 808->1|990->88|1020->93|1038->103|1077->105|1106->108|1196->171|1224->172|1258->180|1341->236|1369->237|1401->243|1502->317|1530->318|1563->325|1613->349|1640->350|1681->364|1709->365|1742->371|1770->372|13319->11892|13349->11893|13379->11894|13409->11895|13444->11901|13474->11902|13504->11903|13534->11904|13569->11910|13599->11911|13629->11912|13659->11913|15051->13276|15081->13277|15111->13278|15141->13279|15176->13285|15206->13286|15236->13287|15266->13288|15301->13294|15331->13295|15361->13296|15391->13297|16092->13971|16137->13999|16178->14001|16218->14012|16350->14115|16368->14122|16396->14127|16434->14136|16452->14143|16480->14148|16534->14171|16568->14177|17060->14642|17101->14673|17142->14675|17177->14682|17264->14741|17285->14752|17327->14772|17372->14786|17405->14791|17553->14911|17593->14929
                   LINES: 27->1|32->1|34->3|34->3|34->3|35->4|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|39->8|40->9|40->9|41->10|41->10|42->11|42->11|254->223|254->223|254->223|254->223|254->223|254->223|254->223|254->223|254->223|254->223|254->223|254->223|282->251|282->251|282->251|282->251|282->251|282->251|282->251|282->251|282->251|282->251|282->251|282->251|299->268|299->268|299->268|300->269|300->269|300->269|300->269|300->269|300->269|300->269|301->270|302->271|316->285|316->285|316->285|317->286|317->286|317->286|317->286|318->287|319->288|322->291|322->291
                   -- GENERATED --
