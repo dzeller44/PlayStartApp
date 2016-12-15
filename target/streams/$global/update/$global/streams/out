@@ -1,26 +1,26 @@
 [0m[[0minfo[0m] [0mUpdating {file:/C:/WebDev/git/PlayAuthenticate/}root...[0m
-[0m[[0mdebug[0m] [0m:: resolving dependencies :: playstartapp#playstartapp_2.10;1.0-SNAPSHOT[0m
+[0m[[0mdebug[0m] [0m:: resolving dependencies :: co-assist#co-assist_2.10;1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, fork-run][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
 [0m[[0mdebug[0m] [0m	refresh = false[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.5 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@23caca62[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4dec02c0[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.5[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.5 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.5] org.scala-lang#scala-library;2.10.5[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-enhancer;1.1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-enhancer;1.1.0 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-enhancer;1.1.0[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-enhancer;1.1.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.javassist#javassist;3.18.2-GA ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.javassist#javassist;3.18.2-GA {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
@@ -31,14 +31,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#twirl-api_2.10;1.1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#twirl-api_2.10;1.1.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#twirl-api_2.10;1.1.1[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#twirl-api_2.10;1.1.1 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->runtime(*)][0m
@@ -55,14 +55,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-ebean_2.10;1.0.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-ebean_2.10;1.0.0 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-ebean_2.10;1.0.0[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-ebean_2.10;1.0.0 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->com.typesafe.play#play-java-jdbc_2.10;2.4.0 [compile->master(compile)][0m
@@ -615,14 +615,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm;4.6.2 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-server_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-server_2.10;2.4.6 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-server_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-server_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -990,14 +990,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-java_2.10;2.4.6 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -1182,18 +1182,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.4.6->org.apache.tomcat#tomcat-servlet-api;8.0.21 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.4.6->org.javassist#javassist;3.19.0-GA [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-java_2.10;2.4.6->org.javassist#javassist;3.19.0-GA [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-netty-server_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-netty-server_2.10;2.4.6 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-netty-server_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-netty-server_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.play#play-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -1231,14 +1231,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->io.netty#netty;3.10.4.Final [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.netty#netty-http-pipelining;1.1.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.netty#netty-http-pipelining;1.1.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-jdbc_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-jdbc_2.10;2.4.6 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-jdbc_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-jdbc_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.10;2.4.6->com.typesafe.play#play-jdbc-api_2.10;2.4.6 [compile->master(compile)][0m
@@ -1326,18 +1326,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.10;2.4.6->com.h2database#h2;1.4.187 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.10;2.4.6->tyrex#tyrex;1.0.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-jdbc_2.10;2.4.6->tyrex#tyrex;1.0.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-cache_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-cache_2.10;2.4.6 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-cache_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-cache_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -1363,22 +1363,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->net.sf.ehcache#ehcache-core;2.6.11 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->net.sf.ehcache#ehcache-core;2.6.11 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.mindrot#jbcrypt;0.3m ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.mindrot#jbcrypt;0.3m {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.mindrot#jbcrypt;0.3m[0m
 [0m[[0mdebug[0m] [0m	found org.mindrot#jbcrypt;0.3m in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-mailer_2.10;3.0.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-mailer_2.10;3.0.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-mailer_2.10;3.0.1[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-mailer_2.10;3.0.1 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [compile->master(compile)][0m
@@ -1414,22 +1414,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving mysql#mysql-connector-java;5.1.34 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: mysql#mysql-connector-java;5.1.34 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: mysql#mysql-connector-java;5.1.34[0m
 [0m[[0mdebug[0m] [0m	found mysql#mysql-connector-java;5.1.34 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#filters-helpers_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#filters-helpers_2.10;2.4.6 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#filters-helpers_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#filters-helpers_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -1438,25 +1438,25 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->master(compile)][0m
@@ -1465,10 +1465,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->com.typesafe.play#play-java-jdbc_2.10;2.4.0 [compile->master(compile)][0m
@@ -2021,10 +2021,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -2037,14 +2037,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.play#play-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -2068,14 +2068,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -2095,14 +2095,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [compile->master(compile)][0m
@@ -2126,14 +2126,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies javax.mail#mail;1.4.5->javax.activation#activation;1.1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -2142,26 +2142,26 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->master(compile)][0m
@@ -2170,10 +2170,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->com.typesafe.play#play-java-jdbc_2.10;2.4.0 [compile->master(compile)][0m
@@ -2722,10 +2722,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -2738,14 +2738,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.play#play-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -2769,14 +2769,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -2796,14 +2796,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [compile->master(compile)][0m
@@ -2827,14 +2827,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies javax.mail#mail;1.4.5->javax.activation#activation;1.1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -2843,14 +2843,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-test_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-test_2.10;2.4.6 {test=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-test_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-test_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -3301,29 +3301,29 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->com.google.code.findbugs#jsr305;2.0.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->org.fluentlenium#fluentlenium-core;0.10.3 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->org.fluentlenium#fluentlenium-core;0.10.3 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [compile-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->master(compile)][0m
@@ -3332,10 +3332,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->com.typesafe.play#play-java-jdbc_2.10;2.4.0 [compile->master(compile)][0m
@@ -3884,10 +3884,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -3900,14 +3900,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.play#play-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -3931,14 +3931,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -3958,14 +3958,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [compile->master(compile)][0m
@@ -3989,14 +3989,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies javax.mail#mail;1.4.5->javax.activation#activation;1.1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -4005,28 +4005,28 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [runtime-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [runtime-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->master(compile)][0m
@@ -4035,10 +4035,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->com.typesafe.play#play-java-jdbc_2.10;2.4.0 [compile->master(compile)][0m
@@ -4587,10 +4587,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -4603,14 +4603,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.play#play-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -4634,14 +4634,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -4661,14 +4661,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [compile->master(compile)][0m
@@ -4692,14 +4692,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies javax.mail#mail;1.4.5->javax.activation#activation;1.1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -4708,28 +4708,28 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [test-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [test-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [compile->master(compile)][0m
@@ -4738,10 +4738,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#twirl-api_2.10;1.1.1->org.apache.commons#commons-lang3;3.4 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.10;1.1.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->com.typesafe.play#play-java-jdbc_2.10;2.4.0 [compile->master(compile)][0m
@@ -5290,10 +5290,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-ebean_2.10;1.0.0->org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm-agent;4.5.3->javax.persistence#persistence-api;1.0 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-ebean_2.10;1.0.0 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -5306,14 +5306,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-server_2.10;2.4.6->com.typesafe.play#play-iteratees_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-java_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-netty-server_2.10;2.4.6->com.typesafe.play#play-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -5337,14 +5337,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.1.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.netty#netty-http-pipelining;1.1.4->io.netty#netty;3.10.4.Final [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-jdbc_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-cache_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -5364,14 +5364,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.6.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies net.sf.ehcache#ehcache-core;2.6.11->org.slf4j#slf4j-api;1.7.12 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-cache_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.mindrot#jbcrypt;0.3m [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-mailer_2.10;3.0.1->org.apache.commons#commons-email;1.3.3 [compile->master(compile)][0m
@@ -5395,14 +5395,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies javax.mail#mail;1.4.5->javax.activation#activation;1.1.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-email;1.3.3->javax.activation#activation;1.1.1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-mailer_2.10;3.0.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.34 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [compile->master(compile)][0m
@@ -5411,10 +5411,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#filters-helpers_2.10;2.4.6->com.typesafe.play#play_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#filters-helpers_2.10;2.4.6 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-test_2.10;2.4.6->com.typesafe.play#play-netty-server_2.10;2.4.6 [compile->master(compile)][0m
@@ -5709,22 +5709,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.seleniumhq.selenium#selenium-support;2.44.0->org.seleniumhq.selenium#selenium-remote-driver;2.44.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.seleniumhq.selenium#selenium-java;2.44.0->org.webbitserver#webbit;0.4.14 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.seleniumhq.selenium#selenium-java;2.44.0->org.webbitserver#webbit;0.4.14 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-test_2.10;2.4.6 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [plugin][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [plugin][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [sources][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [sources][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docs'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [docs][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [docs][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-omnidoc_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#play-omnidoc_2.10;2.4.6 {docs=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-omnidoc_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-omnidoc_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-omnidoc_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-omnidoc_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-omnidoc_2.10;2.4.6->com.typesafe.play#play-docs_2.10;2.4.6 [compile->master(compile)][0m
@@ -6193,18 +6193,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-omnidoc_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-omnidoc_2.10;2.4.6->com.typesafe.play#play-docs_2.10;2.4.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#play-omnidoc_2.10;2.4.6->com.typesafe.play#play-docs_2.10;2.4.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.10;2.4.6 [docs->master][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [pom][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [pom][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'scala-tool'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [scala-tool][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [scala-tool][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->default][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.5 {scala-tool=[default, optional(default)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.5[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.10.5 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.5->org.scala-lang#scala-library;2.10.5 [compile->default][0m
@@ -6222,8 +6222,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.5->org.scala-lang#scala-reflect;2.10.5 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.5->org.scala-lang#scala-library;2.10.5 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.10.5 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.5->org.scala-lang#jline;2.10.5 [optional->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#jline;2.10.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.5 {optional=[compile(*), master(compile)]}[0m
@@ -6236,20 +6236,20 @@
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4[0m
 [0m[[0mdebug[0m] [0m	found org.fusesource.jansi#jansi;1.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.5->org.fusesource.jansi#jansi;1.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->default][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.5 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'fork-run'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for playstartapp#playstartapp_2.10;1.0-SNAPSHOT [fork-run][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for co-assist#co-assist_2.10;1.0-SNAPSHOT [fork-run][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#fork-run_2.10;2.4.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#fork-run_2.10;2.4.6 {fork-run=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#fork-run_2.10;2.4.6[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#fork-run_2.10;2.4.6 in sbt-chain[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#fork-run_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#fork-run_2.10;2.4.6->org.scala-lang#scala-library;2.10.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#fork-run_2.10;2.4.6->com.typesafe.play#fork-run-protocol_2.10;2.4.6 [compile->master(compile)][0m
@@ -6606,7 +6606,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#fork-run_2.10;2.4.6->com.typesafe.sbtrc#actor-client-2-10;0.3.1 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#fork-run_2.10;2.4.6->net.contentobjects.jnotify#jnotify;0.94-play-1 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#fork-run_2.10;2.4.6->net.contentobjects.jnotify#jnotify;0.94-play-1 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies playstartapp#playstartapp_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies co-assist#co-assist_2.10;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.10;2.4.6 [fork-run->master][0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.5!scala-library.jar[0m
@@ -6763,20 +6763,20 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control;0.13.8-M3!control.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.10;2.3.8!akka-actor_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.10;2.3.8!akka-testkit_2.10.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 7380ms :: artifacts dl 166ms[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT compile produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT runtime produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT test produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT provided produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT optional produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT compile-internal produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT runtime-internal produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT test-internal produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT plugin produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT sources produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT docs produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT pom produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT scala-tool produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	report for playstartapp#playstartapp_2.10;1.0-SNAPSHOT fork-run produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\playstartapp-playstartapp_2.10-fork-run.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (7380ms resolve - 166ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 6437ms :: artifacts dl 174ms[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT compile produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT runtime produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT test produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT provided produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT optional produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT compile-internal produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT runtime-internal produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT test-internal produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT plugin produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT sources produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT docs produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT pom produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT scala-tool produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	report for co-assist#co-assist_2.10;1.0-SNAPSHOT fork-run produced in C:\WebDev\git\PlayAuthenticate\target\resolution-cache\reports\co-assist-co-assist_2.10-fork-run.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (6437ms resolve - 174ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

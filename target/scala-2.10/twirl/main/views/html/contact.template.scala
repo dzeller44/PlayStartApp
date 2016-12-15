@@ -108,7 +108,7 @@ Seq[Any](format.raw/*1.38*/("""
 object contact extends contact_Scope0.contact
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 08:53:18 MST 2016
+                  DATE: Thu Dec 15 10:29:29 MST 2016
                   SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/contact.scala.html
                   HASH: 9ec6c8806cd44f5b92f8069d5c8c26bdbcc74dea
                   MATRIX: 768->1|899->37|932->45|945->51|984->53|1014->57|2397->1413|2437->1431

@@ -37,3 +37,4 @@ java.lang.RuntimeException: There is no HTTP Context available from here.
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [na:1.8.0_101]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [na:1.8.0_101]
 2016-12-15 08:55:18,051 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-12-15 10:14:59,871 [INFO] from application in pool-6-thread-5 - Shutting down connection pool.

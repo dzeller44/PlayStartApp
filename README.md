@@ -1,4 +1,4 @@
-# PlayStartApp
+# CO-Assist
 
 This is a sample application using Play Framework (See tags https://github.com/yesnault/PlayStartApp/tags for download)
 

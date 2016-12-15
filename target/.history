@@ -230,3 +230,9 @@ run
 clean
 compile
 run
+dist
+clean
+compile
+dist
+clean
+compile
