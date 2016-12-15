@@ -236,3 +236,15 @@ compile
 dist
 clean
 compile
+dist
+clean
+compile
+dist
+clean
+compile
+clean
+compile
+dist
+clean
+compile
+run 80
